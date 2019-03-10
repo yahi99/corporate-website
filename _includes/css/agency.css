@@ -85,7 +85,7 @@ h6 {
 .open .dropdown-toggle.btn-primary {
     border-color: #{{ site.data.template.color.primary }};
     color: #fff;
-    background-color: #{{ site.data.template.color.secondary }};
+    background-color: #{{ site.data.template.color.primary-hover }};
 }
 
 .btn-primary:active,
@@ -110,7 +110,7 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
     border-color: #{{ site.data.template.color.primary }};
-    background-color: #{{ site.data.template.color.primary }};
+    background-color: #{{ site.data.template.color.primary-hover }};
 }
 
 .btn-primary .badge {
@@ -137,7 +137,7 @@ fieldset[disabled] .btn-primary.active {
 .open .dropdown-toggle.btn-xl {
     border-color: #{{ site.data.template.color.primary }};
     color: #fff;
-    background-color: #{{ site.data.template.color.secondary }};
+    background-color: #{{ site.data.template.color.primary-hover }};
 }
 
 .btn-xl:active,
@@ -162,7 +162,7 @@ fieldset[disabled] .btn-xl:active,
 .btn-xl[disabled].active,
 fieldset[disabled] .btn-xl.active {
     border-color: #{{ site.data.template.color.primary }};
-    background-color: #{{ site.data.template.color.primary }};
+    background-color: #{{ site.data.template.color.primary-hover }};
 }
 
 .btn-xl .badge {
@@ -202,7 +202,7 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-    background-color: #{{ site.data.template.color.primary }};
+    background-color: #{{ site.data.template.color.primary-hover }};
 }
 
 .navbar-default .nav li a {
@@ -219,7 +219,7 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .nav li a:hover,
 .navbar-default .nav li a:focus {
     outline: 0;
-    color: #{{ site.data.template.color.primary }};
+    color: #{{ site.data.template.color.primary-hover }};
 }
 
 .navbar-default .navbar-nav>.active>a {
@@ -269,7 +269,7 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url('{{ site.baseurl }}/img/header-bg.jpg');
+    background-image: url('{{ site.baseurl }}/img/header-bg-5-red.jpg');
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
@@ -763,7 +763,7 @@ ul.social-buttons li a {
 ul.social-buttons li a:hover,
 ul.social-buttons li a:focus,
 ul.social-buttons li a:active {
-    background-color: #{{ site.data.template.color.primary }};
+    background-color: #{{ site.data.template.color.primary-hover }};
 }
 
 .btn:focus,
