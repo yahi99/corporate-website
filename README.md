@@ -1,2 +1,2 @@
 # corporate-website
-This repository holds the Bright Softwares corporate websote
+This repository holds the Bright Softwares corporate website
