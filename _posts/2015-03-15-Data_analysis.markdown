@@ -7,7 +7,7 @@ date: 2015-03-15
 img: data-analysis.jpeg
 thumbnail: data-analysis-thumbnail.jpeg
 alt: image-alt
-project-date: April 2015
+project-date: March 2015
 client: Various customers
 category: Data analysis
 description: What started as a way of speeding up my business is now a service I offer to clients with complex needs for structuring data:
