@@ -4,9 +4,9 @@ subtitle: Creation and Administration
 layout: default
 modal-id: 3
 date: 2014-07-16
-img: linux_server.png
-thumbnail: linux_server-thumbnail.png
-alt: image-alt
+img: linux_server.jpg
+thumbnail: linux_server-thumbnail.jpg
+alt: Linux logo sitting inside a datacenter
 project-date: April 2014
 client: Various customers
 category: Server management
