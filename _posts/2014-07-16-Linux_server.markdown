@@ -12,7 +12,7 @@ client: Various customers
 category: Server management
 description: We have 5+ years experience on linux server management and am passionate about it. If you need to setup new application or fix an existing one, wait, don't go anywhere! You're at the perfect place. :) 
 
-I can fix all types of issues which includes:- 
+I can fix all types of issues which includes:
 
 - Server Setup 
 - Server Configuration. 
