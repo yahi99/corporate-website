@@ -10,7 +10,7 @@ alt: A man editing complex data.
 project-date: March 2015
 client: Various customers
 category: Data analysis
-description: What started as a way of speeding up my business is now a service I offer to clients with complex needs for structuring data:
+description: What started as a way of speeding up my business is now a service I offer to clients with complex needs for structuring data.
 - Stripping and filtering data (remove unwanted garbage, trailing text, spaces)
 - Extracting data (pull relevant strings from files or sites)
 - Sorting (sort by value, date, specific keyword)
