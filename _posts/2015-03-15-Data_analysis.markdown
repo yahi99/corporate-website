@@ -18,6 +18,6 @@ description: What started as a way of speeding up my business is now a service I
 - Create arrays, tables, columns (ingest large data sets and restructure into new formats)
 - Programmatic scripting of data intake and delivery (e.g. invoice generation, EU central bank currency rate comparisons, creation of daily stubs and propagation of files)
 
-If you have data, it can be transformed -- out of a mess of meaningless information and into usable, tangible insights for your business.
+If you have data, it can be transformed, out of a mess, of meaningless information and into usable, tangible insights for your business.
 
 ---
