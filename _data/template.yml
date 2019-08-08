@@ -1,14 +1,19 @@
 # Color settings (hex-codes without the leading hash-tag)
 color:
   #primary: fed136
-  primary: 31395a
+  #primary: 31395a
+  primary: 025159
   #secondary: fec503   
-  secondary: 5c607e   
+  #secondary: 5c607e   
+  secondary: 039656   
   #secondary-dark: 333
-  secondary-dark: 1d2031
+  #secondary-dark: 1d2031
+  secondary-dark: 027373
   #muted: 777
-  muted: c9c5d5
-  primary-hover: a8a4b9
+  #muted: c9c5d5
+  muted: D9CEC5
+  #primary-hover: a8a4b9
+  primary-hover: 03A6A6
 
 # Font Families
 font:
