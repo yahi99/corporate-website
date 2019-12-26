@@ -1,10 +1,10 @@
 ---
 title: Le MOCA
 subtitle: Art
-layout: default
-modal-id: 1
+layout: post
+author: full
 date: 2018-03-08
-img: lemocca-2.png
+image: lemocca-2.png
 thumbnail: lemocca-2-thumbnail.png
 alt: Le Moca landing page
 project-date: March 2018
@@ -13,3 +13,5 @@ category: Web Development
 description: A beautiful project, baked in Art.
 
 ---
+
+An e-commerce web site.
