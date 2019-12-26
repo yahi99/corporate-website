@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+    <nav>
+        <ul>
+            {% for article in site.articles %}
+                <li>
+                    <a href="/blog/{{ path }}">{{ article.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+
+    <body id="page-top" class="index">
+    
+    {{ content }}
+
+    </body>
+</html>
