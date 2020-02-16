@@ -3,7 +3,7 @@ layout: post
 title:  "How to Copy a Formula Down an Entire Column in Google Sheets"
 author: "Full"
 categories: [ data-analysis ]
-description: "fake body!!!"
+description: "You are working inside a Google Spreadsheet where a formula needs to copied down to the last row of the sheet. You also need the formula to be added automatically when a new row is added to the Google Sheet."
 image: "https://sergioafanou.github.io/blog/assets/images/12.jpg"
 ---
 
