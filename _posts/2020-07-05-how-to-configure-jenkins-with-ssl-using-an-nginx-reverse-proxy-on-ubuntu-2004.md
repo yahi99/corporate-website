@@ -4,7 +4,7 @@ title:  "How To Configure Jenkins with SSL Using an Nginx Reverse Proxy on Ubunt
 author: "Full"
 categories: [ docker ]
 description: "fake body!!!"
-image: "https://sergio.afanou.com/assets/images/image-midres-82.jpg"
+image: "https://sergio.afanou.com/assets/images/image-midres-32.jpg"
 ---
 
 
