@@ -40,6 +40,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-archives
+  - jekyll-minimagick
     
 # Archives
 jekyll-archives:
@@ -114,6 +115,33 @@ social:
 address:
   - line: Quartier Attiegou, Togo 200
   - line: Lomé, Togo
+
+
+mini_magick:
+  portfolio_thumbnail:
+    source: img/portfolio/original
+    destination: img/portfolio/thumbnail/
+    resize: "400x390^"
+    gravity: "center"
+    extent: "400x390"
+  portfolio_large:
+    source: img/portfolio/original
+    destination: img/portfolio/large/
+    resize: "600x450^"
+    gravity: "center"
+    extent: "600x450"
+  posts_thumbnail:
+    source: imgtest/src
+    destination: imgtest/dest/thumbnail_images/
+    resize: "400x390^"
+    gravity: "center"
+    extent: "400x390"
+  posts_large:
+    source: imgtest/src
+    destination: imgtest/dest/large_images/
+    resize: "600x450^"
+    gravity: "center"
+    extent: "600x450"
 
 # Build settings
 markdown: kramdown
