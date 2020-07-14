@@ -5,6 +5,7 @@ layout: default
 modal-id: 7
 date: 2018-07-15
 img: kibalo.png
+image1: kibalo.png
 thumbnail: kibalo-thumbnail.png
 alt: Kibalo website homepage
 project-date: July 2018
