@@ -1,2 +1,7 @@
 _site/
 .DS_Store
+.jekyll-cache
+.jekyll-metadata
+.sass-cache/
+img/highresolution.zip
+img/highresolution/
