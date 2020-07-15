@@ -17,6 +17,17 @@ APP_NAME = "brightsoftwares_corporate_website"
 LATEST_RELEASE = $(shell ls -tp -w 1 *zip | head --lines=1)
 
 IMAGE_QUALITY=86
+PORTFOLIO_SRC=$(wildcard img/portfolio/original/*.png img/portfolio/original/*.gif img/portfolio/original/*.jpeg img/portfolio/original/*.jpg)
+PORTFOLIO_THUMBNAIL_SRC=$(subst img/portfolio/original, img/portfolio/thumbnail, $(PORTFOLIO_SRC))
+PORTFOLIO_LARGE_SRC=$(subst img/portfolio/original, img/portfolio/large, $(PORTFOLIO_SRC))
+
+LOGO_SRC=$(wildcard img/logos/original/*.png img/logos/original/*.gif img/logos/original/*.jpeg img/logos/original/*.jpg)
+LOGO_THUMBNAIL_SRC=$(subst img/logos/original, img/logos/thumbnail, $(LOGO_SRC))
+LOGO_LARGE_SRC=$(subst img/logos/original, img/logos/large, $(LOGO_SRC))
+
+TEAM_SRC=$(wildcard img/team/original/*.png img/team/original/*.gif img/team/original/*.jpeg img/team/original/*.jpg)
+TEAM_THUMBNAIL_SRC=$(subst img/team/original, img/team/thumbnail, $(TEAM_SRC))
+TEAM_LARGE_SRC=$(subst img/team/original, img/team/large, $(TEAM_SRC))
 
 
 help:
@@ -26,36 +37,35 @@ help:
 
 images: portfolio logo team ## Generate images in portfolio and logo
 
-portfolio:  ## Generate portfolio thumbnail and large images
-	@echo Processing thumbnails
-	-mogrify -path img/portfolio/thumbnail -resize 400x390 -quality $(IMAGE_QUALITY) img/portfolio/original/*.png
-	-mogrify -path img/portfolio/thumbnail -resize 400x390 -quality $(IMAGE_QUALITY) img/portfolio/original/*.jpg
-	-mogrify -path img/portfolio/thumbnail -resize 400x390 -quality $(IMAGE_QUALITY) img/portfolio/original/*.gif
+
+img/portfolio/thumbnail/%: img/portfolio/original/%
+	mogrify -path $(dir $@) -resize 400x390 -quality $(IMAGE_QUALITY) $<
+
+img/portfolio/large/%: img/portfolio/original/%
+	mogrify -path $(dir $@) -resize 400x390 -quality $(IMAGE_QUALITY) $<
+
+img/logos/thumbnail/%: img/logos/original/%
+	mogrify -path $(dir $@) -resize 400x390 -quality $(IMAGE_QUALITY) $<
+
+img/logos/large/%: img/logos/original/%
+	mogrify -path $(dir $@) -resize 400x390 -quality $(IMAGE_QUALITY) $<
+
+img/team/thumbnail/%: img/team/original/%
+	mogrify -path $(dir $@) -resize 400x390 -quality $(IMAGE_QUALITY) $<
+
+img/team/large/%: img/team/original/%
+	mogrify -path $(dir $@) -resize 400x390 -quality $(IMAGE_QUALITY) $<
 	
-	@echo Processing large
-	-mogrify -path img/portfolio/large -resize 600x450 -quality $(IMAGE_QUALITY) img/portfolio/original/*.png 
-	-mogrify -path img/portfolio/large -resize 600x450 -quality $(IMAGE_QUALITY) img/portfolio/original/*.jpg
-	-mogrify -path img/portfolio/large -resize 600x450 -quality $(IMAGE_QUALITY) img/portfolio/original/*.gif
 
-logo:  ## Generate logo thumbnail
-	@echo Processing thumbnails
-	-mogrify -path img/logos/thumbnail -resize 50x50 -quality $(IMAGE_QUALITY) img/logos/original/*.png
-	-mogrify -path img/logos/thumbnail -resize 50x50 -quality $(IMAGE_QUALITY) img/logos/original/*.jpg
-	-mogrify -path img/logos/thumbnail -resize 50x50 -quality $(IMAGE_QUALITY) img/logos/original/*.gif
+portfolio: $(PORTFOLIO_THUMBNAIL_SRC) $(PORTFOLIO_LARGE_SRC) ## Generate portfolio thumbnail and large images
+	@echo Portfolio done.
 
-	@echo Processing large
-	-mogrify -path img/logos/large -resize 50x50 -quality $(IMAGE_QUALITY) img/logos/original/*.png
-	-mogrify -path img/logos/large -resize 50x50 -quality $(IMAGE_QUALITY) img/logos/original/*.jpg
-	-mogrify -path img/logos/large -resize 50x50 -quality $(IMAGE_QUALITY) img/logos/original/*.gif
+logo: $(LOGO_THUMBNAIL_SRC) $(LOGO_LARGE_SRC) ## Generate logo thumbnail
+	@echo Logos done.
 
 
-team:  ## Generate team images in the right size
-	@echo Processing thumbnails
-	@-mogrify -path img/team/thumbnail -resize 225x225 -quality $(IMAGE_QUALITY) img/team/original/*.png
-	@-mogrify -path img/team/thumbnail -resize 225x225 -quality $(IMAGE_QUALITY) img/team/original/*.jpg
-	@-mogrify -path img/team/thumbnail -resize 225x225 -quality $(IMAGE_QUALITY) img/team/original/*.gif
+team: $(TEAM_THUMBNAIL_SRC) $(TEAM_LARGE_SRC) ## Generate team images in the right size
+	@echo Team done.
 
-	@echo Processing large
-	@-mogrify -path img/team/large -resize 225x225 -quality $(IMAGE_QUALITY) img/team/original/*.png
-	@-mogrify -path img/team/large -resize 225x225 -quality $(IMAGE_QUALITY) img/team/original/*.jpg
-	@-mogrify -path img/team/large -resize 225x225 -quality $(IMAGE_QUALITY) img/team/original/*.gif
+clean-images:
+	rm $(PORTFOLIO_THUMBNAIL_SRC) $(PORTFOLIO_LARGE_SRC) $(LOGO_THUMBNAIL_SRC) $(LOGO_LARGE_SRC) $(TEAM_THUMBNAIL_SRC) $(TEAM_LARGE_SRC)
