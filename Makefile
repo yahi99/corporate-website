@@ -45,16 +45,16 @@ img/portfolio/large/%: img/portfolio/original/%
 	mogrify -path $(dir $@) -resize 400x390 -quality $(IMAGE_QUALITY) $<
 
 img/logos/thumbnail/%: img/logos/original/%
-	mogrify -path $(dir $@) -resize 400x390 -quality $(IMAGE_QUALITY) $<
+	mogrify -path $(dir $@) -resize 32x32 -quality $(IMAGE_QUALITY) $<
 
 img/logos/large/%: img/logos/original/%
-	mogrify -path $(dir $@) -resize 400x390 -quality $(IMAGE_QUALITY) $<
+	mogrify -path $(dir $@) -resize 55x55 -quality $(IMAGE_QUALITY) $<
 
 img/team/thumbnail/%: img/team/original/%
-	mogrify -path $(dir $@) -resize 400x390 -quality $(IMAGE_QUALITY) $<
+	mogrify -path $(dir $@) -resize 225x225 -quality $(IMAGE_QUALITY) $<
 
 img/team/large/%: img/team/original/%
-	mogrify -path $(dir $@) -resize 400x390 -quality $(IMAGE_QUALITY) $<
+	mogrify -path $(dir $@) -resize 225x225 -quality $(IMAGE_QUALITY) $<
 	
 
 portfolio: $(PORTFOLIO_THUMBNAIL_SRC) $(PORTFOLIO_LARGE_SRC) ## Generate portfolio thumbnail and large images
