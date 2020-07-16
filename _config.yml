@@ -117,7 +117,7 @@ address:
 
 
 # Google Analytics
-google_analytics: '134921119'
+google_analytics: 'UA-134921119-1'
 
 # Build settings
 markdown: kramdown
