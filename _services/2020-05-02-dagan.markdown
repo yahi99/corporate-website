@@ -1,0 +1,18 @@
+---
+title: Dagan Magazine, femme togolaise
+subtitle: Online magazine intended to women
+layout: default
+modal-id: 11
+date: 2020-05-02
+img: dagan.png
+thumbnail: dagan.png
+alt: Dagan magazine website homepage
+project-date: June 2019
+client: Dagan Magazine
+category: Web Development
+description: Dagan magazine's new issue is in the kiosks. 🥰 Go get it quickly in booths. and don't hesitate to tag us (in the comments or in story) with your favorite magazine, we're sharing everything again 📽 Enjoy your reading!
+
+---
+
+
+Visit the site live at <https://daganmag.com/>{: target="_blank"}

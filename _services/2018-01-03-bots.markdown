@@ -13,3 +13,41 @@ category: AI Development
 description: Currently, our bot provides instantaneous support to 60% of all chatting customers, and has reduced our queued visitors by over 50%.
 
 ---
+
+# Table of contents
+{:.no_toc}
+
+* A markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
+{:toc}
+
+
+## WhatsApp bots
+
+We use various solutions according to the customer usecase.
+
+### The Permit bot
+
+For this customer, we needed to allow him to distribute permits through WhatsApp.
+
+Here is a demoonstration.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yW792GrMPGc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+## Telegram bots
+
+Most of our telegram bots are written using :
+
+- Python
+- Javascript
+
+### The telegram automatic poster bot
+
+For this bot, the customer needs to have a bot that send posts at a scheduled date.
+We developed it using python.
+
+#### Features 
+
+- Create a post
+- Schedule it and let the system post it for you at the scheduled date.
+
