@@ -39,22 +39,22 @@ images: portfolio logo team ## Generate images in portfolio and logo
 
 
 img/portfolio/thumbnail/%: img/portfolio/original/%
-	mogrify -path $(dir $@) -resize 400x390 -quality $(IMAGE_QUALITY) $<
+	mogrify -path $(dir $@) -resize 400 -extent 400x390^ -gravity center -quality $(IMAGE_QUALITY) $<
 
 img/portfolio/large/%: img/portfolio/original/%
-	mogrify -path $(dir $@) -resize 400x390 -quality $(IMAGE_QUALITY) $<
+	mogrify -path $(dir $@) -resize 400 -extent 400x390^ -gravity center -quality $(IMAGE_QUALITY) $<
 
 img/logos/thumbnail/%: img/logos/original/%
-	mogrify -path $(dir $@) -resize 32x32 -quality $(IMAGE_QUALITY) $<
+	mogrify -path $(dir $@) -resize 32 -extent 32x32 -gravity center -quality $(IMAGE_QUALITY) $<
 
 img/logos/large/%: img/logos/original/%
-	mogrify -path $(dir $@) -resize 55x55 -quality $(IMAGE_QUALITY) $<
+	mogrify -path $(dir $@) -resize 55 -extent 55x55 -gravity center -quality $(IMAGE_QUALITY) $<
 
 img/team/thumbnail/%: img/team/original/%
-	mogrify -path $(dir $@) -resize 225x225 -quality $(IMAGE_QUALITY) $<
+	mogrify -path $(dir $@) -resize 225 -extent 225x225 -gravity center -quality $(IMAGE_QUALITY) $<
 
 img/team/large/%: img/team/original/%
-	mogrify -path $(dir $@) -resize 225x225 -quality $(IMAGE_QUALITY) $<
+	mogrify -path $(dir $@) -resize 225 -extent 225x225 -gravity center -quality $(IMAGE_QUALITY) $<
 	
 
 portfolio: $(PORTFOLIO_THUMBNAIL_SRC) $(PORTFOLIO_LARGE_SRC) ## Generate portfolio thumbnail and large images
