@@ -4,7 +4,7 @@ title:  "How To Build a Slackbot in Python on Ubuntu 20.04"
 author: "Full"
 categories: [ slack ]
 description: "fake body!!!"
-featured: "true"
+featured: true
 image: "https://sergio.afanou.com/assets/images/image-midres-31.jpg"
 ---
 
