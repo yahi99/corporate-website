@@ -281,7 +281,7 @@ Work
     &lt;!-- Bootstrap CSS --&gt;
     &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"&gt;
 
-    &lt;title&gt;{% block title %} {% endblock %}&lt;/title&gt;
+    &lt;title&gt;{ block title } { endblock }&lt;/title&gt;
   &lt;/head&gt;
   &lt;body&gt;
     &lt;nav class="navbar navbar-expand-md navbar-light bg-light"&gt;
@@ -298,7 +298,7 @@ Work
         &lt;/div&gt;
     &lt;/nav&gt;
     &lt;div class="container"&gt;
-        {% block content %} {% endblock %}
+        { block content } { endblock }
     &lt;/div&gt;
 
     &lt;!-- Optional JavaScript --&gt;
@@ -317,23 +317,23 @@ Work
 <pre class="code-pre custom_prefix prefixed"><code><ul class="prefixed"><li class="line" prefix="(env)sammy@localhost:$">nano templates/index.html
 </li></ul></code></pre>
 <p>Add the following code to <code>index.html</code>:</p>
-<div class="code-label " title="flask_todo/templates/index.html">flask_todo/templates/index.html</div><pre class="code-pre "><code class="code-highlight language-html">{% extends 'base.html' %}
+<div class="code-label " title="flask_todo/templates/index.html">flask_todo/templates/index.html</div><pre class="code-pre "><code class="code-highlight language-html">{ extends 'base.html' }
 
-{% block content %}
-    &lt;h1&gt;{% block title %} Welcome to FlaskTodo {% endblock %}&lt;/h1&gt;
-    {% for list, items in lists.items() %}
+{ block content }
+    &lt;h1&gt;{ block title } Welcome to FlaskTodo { endblock }&lt;/h1&gt;
+    { for list, items in lists.items() }
         &lt;div class="card" style="width: 18rem; margin-bottom: 50px;"&gt;
             &lt;div class="card-header"&gt;
                 &lt;h3&gt;{{ list }}&lt;/h3&gt;
             &lt;/div&gt;
             &lt;ul class="list-group list-group-flush"&gt;
-                {% for item in items %}
+                { for item in items }
                     &lt;li class="list-group-item"&gt;{{ item['content'] }}&lt;/li&gt;
-                {% endfor %}
+                { endfor }
             &lt;/ul&gt;
         &lt;/div&gt;
-    {% endfor %}
-{% endblock %}
+    { endfor }
+{ endblock }
 </code></pre>
 <p>Here you use a <code>for</code> loop to go through each item of the <code>lists</code> dictionary, you display the list title as a card header inside an <code>&lt;h3&gt;</code> tag, and then use a list group to display each to-do item that belongs to the list in an <code>&lt;li&gt;</code> tag. This follows the same rules explained in the <code>list_example.py</code> program.</p>
 
@@ -375,10 +375,10 @@ Work
 <pre class="code-pre custom_prefix prefixed"><code><ul class="prefixed"><li class="line" prefix="(env)sammy@localhost:$">nano templates/create.html
 </li></ul></code></pre>
 <p>Add the following HTML code to <code>create.html</code>:</p>
-<div class="code-label " title="flask_todo/templates/create.html">flask_todo/templates/create.html</div><pre class="code-pre "><code class="code-highlight language-html">{% extends 'base.html' %}
+<div class="code-label " title="flask_todo/templates/create.html">flask_todo/templates/create.html</div><pre class="code-pre "><code class="code-highlight language-html">{ extends 'base.html' }
 
-{% block content %}
-&lt;h1&gt;{% block title %} Create a New Item {% endblock %}&lt;/h1&gt;
+{ block content }
+&lt;h1&gt;{ block title } Create a New Item { endblock }&lt;/h1&gt;
 
 &lt;form method="post"&gt;
     &lt;div class="form-group"&gt;
@@ -391,24 +391,24 @@ Work
     &lt;div class="form-group"&gt;
         &lt;label for="list"&gt;List&lt;/label&gt;
         &lt;select class="form-control" name="list"&gt;
-            {% for list in lists %}
-                {% if list['title'] == request.form['list'] %}
+            { for list in lists }
+                { if list['title'] == request.form['list'] }
                     &lt;option value="{{ request.form['list'] }}" selected&gt;
                         {{ request.form['list'] }}
                     &lt;/option&gt;
-                {% else %}
+                { else }
                     &lt;option value="{{ list['title'] }}"&gt;
                         {{ list['title'] }}
                     &lt;/option&gt;
-                {% endif %}
-            {% endfor %}
+                { endif }
+            { endfor }
         &lt;/select&gt;
     &lt;/div&gt;
     &lt;div class="form-group"&gt;
         &lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
     &lt;/div&gt;
 &lt;/form&gt;
-{% endblock %}
+{ endblock }
 </code></pre>
 <p>Save and close the file.</p>
 
@@ -477,10 +477,10 @@ def create():
     &lt;/div&gt;
 &lt;/nav&gt;
 &lt;div class="container"&gt;
-    <span class="highlight">{% for message in get_flashed_messages() %}</span>
+    <span class="highlight">{ for message in get_flashed_messages() }</span>
     <span class="highlight">    &lt;div class="alert alert-danger"&gt;{{ message }}&lt;/div&gt;</span>
-    <span class="highlight">{% endfor %}</span>
-    {% block content %} {% endblock %}
+    <span class="highlight">{ endfor }</span>
+    {block content } { endblock }
 &lt;/div&gt;
 </code></pre>
 <p>Save and close the file.</p>
