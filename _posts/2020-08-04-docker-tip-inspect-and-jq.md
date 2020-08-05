@@ -4,7 +4,7 @@ title:  "Docker tip : inspect and jq"
 author: "Full"
 categories: [ docker ]
 description: "fake body!!!"
-image: "https://sergio.afanou.com/assets/images/image-midres-56.jpg"
+image: "https://sergio.afanou.com/assets/images/image-midres-55.jpg"
 ---
 
 
