@@ -4,7 +4,7 @@ title: Blog
 permalink: /blog/
 ---
 
-{% if page.url == "/blog" %}
+{% if page.url == "/blog/" %}
 
 <!-- Featured
 ================================================== -->
