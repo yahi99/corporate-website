@@ -20,7 +20,22 @@
    <script src="{{ "/js/chatbox.js" | prepend: site.baseurl }}"></script>
 
    <!-- pwa register JavaScript -->
-   <script src="{{ "/js/pwa-register.js" | prepend: site.baseurl }}"></script>
+   <script type="text/javascript">
+      if ("serviceWorker" in navigator) {
+  if (navigator.serviceWorker.controller) {
+    console.log("An active service worker found, no need to register");
+  } else {
+    // Register the service worker
+    navigator.serviceWorker
+      .register("{{ site.baseurl }}/js/serviceworker.js", {
+        scope: "./"
+      })
+      .then(function (reg) {
+        console.log("Service worker has been registered for scope: " + reg.scope);
+      });
+  }
+}
+   </script>
 
    <!-- Kommunicate chatbox JavaScript -->
    <script type="text/javascript">
