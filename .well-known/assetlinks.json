@@ -1,0 +1,5 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target" : { "namespace": "android_app", "package_name": "com.bright_softwares.twa",
+                   "sha256_cert_fingerprints": ["60:76:28:70:C6:95:C8:08:B4:C4:FD:87:CD:0F:FD:CE:8A:89:24:26:3E:B9:D4:F7:99:A1:DF:C5:B0:E9:90:29"] }
+    }]
