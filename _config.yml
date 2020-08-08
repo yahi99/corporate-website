@@ -14,7 +14,7 @@ color: "#025159"
 title: Bright Softwares
 email: full@bright-softwares.com
 description: "We provide solutions to our customers challenges. Our teams based in Paris and Lomé provide high value expertise to engineer the best solutions."
-include: ["_pages"]
+include: ["_pages", ".well-known"]
 newsletter-url: "https://script.google.com/macros/s/AKfycbzoZaSJeefov3apqLqvLmVffsRKDkCt9NQSI9QNlfWtbs4kvdo/exec"
 
 # Authors
