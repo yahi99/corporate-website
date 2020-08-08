@@ -1,6 +1,8 @@
-----
+---
 layout: default
-----
+title: Conditions Générales de vente et d'utilisation
+permalink: /conditions/
+---
 
 
 
