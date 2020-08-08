@@ -2,7 +2,8 @@
 url: https://bright-softwares.com
 #baseurl: /
 logo-light: img/logos/large/brightsoftwares-light.png
-logo: 'img/logos/large/brightsoftwares-dark.png'
+logo-dark: img/logos/large/brightsoftwares-dark.png
+logo: 'img/logos/large/brightsoftwares-light.png'
 favicon: 'assets/favicon/favicon.ico'
 name: Bright Softwares
 short_name: "bs"
