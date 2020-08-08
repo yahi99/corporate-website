@@ -5,6 +5,11 @@ logo-light: img/logos/large/brightsoftwares-light.png
 logo: 'img/logos/large/brightsoftwares-dark.png'
 favicon: 'assets/favicon/favicon.ico'
 name: Bright Softwares
+short_name: "ms"
+
+language: "en"
+lang_direction: "ltr"
+color: "#abc123"
 
 title: Bright Softwares
 email: full@bright-softwares.com
