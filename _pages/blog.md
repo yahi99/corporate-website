@@ -1,7 +1,7 @@
 ---
 layout: post-default
 title: Blog
-permalink: /blog
+permalink: /blog/
 ---
 
 {% if page.url == "/blog" %}
