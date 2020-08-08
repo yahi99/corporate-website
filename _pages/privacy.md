@@ -1,8 +1,8 @@
-----
+---
 layout: post-default
 title: Declaration de confidentialité
 permalink: /privacy
-----
+---
 
 DÉCLARATION DE CONFIDENTIALITÉ
 
