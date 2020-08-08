@@ -27,7 +27,7 @@
   } else {
     // Register the service worker
     navigator.serviceWorker
-      .register("{{ site.baseurl }}/js/serviceworker.js", {
+      .register({{ "/js/serviceworker.js" | prepend: site.baseurl }}, {
         scope: "./"
       })
       .then(function (reg) {
