@@ -4,11 +4,12 @@ title: Declaration de confidentialité
 permalink: /privacy
 ---
 
-DÉCLARATION DE CONFIDENTIALITÉ
+
+# DÉCLARATION DE CONFIDENTIALITÉ
 
 _____
 
-ARTICLE 1 – RENSEIGNEMENTS PERSONNELS RECUEILLIS
+## ARTICLE 1 – RENSEIGNEMENTS PERSONNELS RECUEILLIS
 
 Lorsque vous effectuez un achat sur notre boutique, dans le cadre de notre processus d’achat et de vente, nous recueillons les renseignements personnels que vous nous fournissez, tels que votre nom, votre adresse et votre adresse e-mail.
 
@@ -17,7 +18,7 @@ Lorsque vous naviguez sur notre boutique, nous recevons également automatiqueme
 Marketing par e-mail (le cas échéant): Avec votre permission, nous pourrions vous envoyer des e-mails au sujet de notre boutique, de nouveaux produits et d’autres mises à jour.
 
 
-ARTICLE 2 - CONSENTEMENT
+## ARTICLE 2 - CONSENTEMENT
 
 Comment obtenez-vous mon consentement?
 
@@ -31,12 +32,12 @@ Comment puis-je retirer mon consentement?
 Si après nous avoir donné votre consentement, vous changez d’avis et ne consentez plus à ce que nous puissions vous contacter, recueillir vos renseignements ou les divulguer, vous pouvez nous en aviser en nous contactant à ofijojo@yopmail.com ou par courrier à: Bright Softwares 92 Rue Jeanne d'Arc, Paris, J, 75013, France
 
 
-ARTICLE 3 – DIVULGATION
+## ARTICLE 3 – DIVULGATION
 
 Nous pouvons divulguer vos renseignements personnels si la loi nous oblige à le faire ou si vous violez nos Conditions Générales de Vente et d’Utilisation.
 
 
-ARTICLE 4 – SHOPIFY
+## ARTICLE 4 – SHOPIFY
 
 Notre boutique est hébergée sur Shopify Inc. Ils nous fournissent la plate-forme e-commerce en ligne qui nous permet de vous vendre nos services et produits.
 
@@ -54,7 +55,7 @@ Les exigences de la norme PCI-DSS permettent d’assurer le traitement sécuris�
 Pour plus d’informations, veuillez consulter les Conditions d’Utilisation de Shopify ici ou la Politique de Confidentialité ici.
 
 
-ARTICLE 5 – SERVICES FOURNIS PAR DES TIERS
+## ARTICLE 5 – SERVICES FOURNIS PAR DES TIERS
 
 
 De manière générale, les fournisseurs tiers que nous utilisons vont uniquement recueillir, utiliser et divulguer vos renseignements dans la mesure du nécessaire pour pouvoir réaliser les services qu’ils nous fournissent.
@@ -75,7 +76,7 @@ Liens
 Vous pourriez être amené à quitter notre site web en cliquant sur certains liens présents sur notre site. Nous n’assumons aucune responsabilité quant aux pratiques de confidentialité exercées par ces autres sites et vous recommandons de lire attentivement leurs politiques de confidentialité.
 
 
-ARTICLE 6 – SÉCURITÉ
+## ARTICLE 6 – SÉCURITÉ
 
 Pour protéger vos données personnelles, nous prenons des précautions raisonnables et suivons les meilleures pratiques de l’industrie pour nous assurer qu’elles ne soient pas perdues, détournées, consultées, divulguées, modifiées ou détruites de manière inappropriée.
 
@@ -97,12 +98,12 @@ _secure_session_id, identificateur unique de session
 storefront_digest, identificateur unique, indéfini si la boutique possède un mot de passe, il est utilisé pour savoir si le visiteur actuel a accès.
 
 
-ARTICLE 7 – ÂGE DE CONSENTEMENT
+## ARTICLE 7 – ÂGE DE CONSENTEMENT
 
 En utilisant ce site, vous déclarez que vous avez au moins l’âge de la majorité dans votre État ou province de résidence, et que vous nous avez donné votre consentement pour permettre à toute personne d’âge mineur à votre charge d’utiliser ce site web.
 
 
-ARTICLE 8 – MODIFICATIONS APPORTÉES À LA PRÉSENTE POLITIQUE DE CONFIDENTIALITÉ
+## ARTICLE 8 – MODIFICATIONS APPORTÉES À LA PRÉSENTE POLITIQUE DE CONFIDENTIALITÉ
 
 Nous nous réservons le droit de modifier la présente politique de confidentialité à tout moment, donc veuillez s’il vous plait la consulter fréquemment. Les changements et les clarifications prendront effet immédiatement après leur publication sur le site web. Si nous apportons des changements au contenu de cette politique, nous vous aviserons ici qu’elle a été mise à jour, pour que vous sachiez quels renseignements nous recueillons, la manière dont nous les utilisons, et dans quelles circonstances nous les divulguons, s’il y a lieu de le faire.
 
@@ -117,4 +118,4 @@ Si vous souhaitez: accéder à, corriger, modifier ou supprimer toute informatio
 
 [92 Rue Jeanne d'Arc, Paris, J, 75013, France]
 
-----
+_____
