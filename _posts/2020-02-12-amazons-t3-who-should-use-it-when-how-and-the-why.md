@@ -3,7 +3,6 @@ layout: post
 title:  "Amazon’s T3 – Who should use it, when, how and the why?"
 author: "Full"
 categories: [ aws ]
-description: "fake body!!!"
 image: "https://sergio.afanou.com/assets/images/image-midres-6.jpg"
 ---
 
