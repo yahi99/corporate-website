@@ -3,7 +3,6 @@ layout: post
 title:  "Migrate Your Current VPS (Linode, Rackspace, AWS EC2) to DigitalOcean"
 author: "Full"
 categories: [ aws ]
-description: "fake body!!!"
 image: "https://sergio.afanou.com/assets/images/image-midres-22.jpg"
 ---
 
