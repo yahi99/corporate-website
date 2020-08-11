@@ -3,6 +3,7 @@ layout: post
 title:  "Amazon’s T3 – Who should use it, when, how and the why?"
 author: "Full"
 categories: [ aws ]
+description: "T2 standard got vastly misunderstood due to its CPU throttling over baseline, to which Amazon introduced T2 unlimited – with a way to overcome the CPU throttling with a pay for credit mechanism for the period the EC2 ran over the baseline."
 image: "https://sergio.afanou.com/assets/images/image-midres-6.jpg"
 ---
 
