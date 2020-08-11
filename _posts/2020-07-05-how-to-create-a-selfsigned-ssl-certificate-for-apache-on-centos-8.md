@@ -3,7 +3,8 @@ layout: post
 title:  "How To Create a Self-Signed SSL Certificate for Apache on CentOS 8"
 author: "Full"
 categories: [ ubuntu ]
-description: "fake body!!!"
+description: "TLS, or “transport layer security” — and its predecessor SSL — are protocols used to wrap normal traffic in a protected, encrypted wrapper. Using this technology, servers can safely send information to their clients without their messages being intercepted or read by an outside party.
+In this guide, we will show you how to create and use a self-signed SSL certificate with the Apache web server on a CentOS 8 machine."
 image: "https://sergio.afanou.com/assets/images/image-midres-46.jpg"
 ---
 
