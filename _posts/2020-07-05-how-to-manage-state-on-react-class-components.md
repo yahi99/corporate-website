@@ -3,7 +3,7 @@ layout: post
 title:  "How To Manage State on React Class Components"
 author: "Full"
 categories: [ javascript ]
-description: "fake body!!!"
+description: "In React, state refers to a structure that keeps track of how data changes over time in your application. Managing state is a crucial skill in React because it allows you to make interactive components and dynamic web applications. State is used for everything from tracking form inputs to capturing dynamic data from an API. In this tutorial, you’ll run through an example of managing state on class-based components."
 image: "https://sergio.afanou.com/assets/images/image-midres-43.jpg"
 ---
 
