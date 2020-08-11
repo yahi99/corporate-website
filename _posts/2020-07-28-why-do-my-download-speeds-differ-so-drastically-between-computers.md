@@ -3,7 +3,7 @@ layout: post
 title:  "Why Do My Download Speeds Differ So Drastically Between Computers?"
 author: "Full"
 categories: [ productivity ]
-description: "fake body!!!"
+description: "The good news? Measuring that ROI is arguably easier than ever for small businesses. By stressing efficiency and using the right tools, uncovering and tracking new leads, traffic and revenue don’t have to feel like a guessing game. Making it all happen starts with a process of defining what positive results look like and identifying the most efficient paths to achieving those results."
 image: "https://sergio.afanou.com/assets/images/image-midres-49.jpg"
 ---
 
