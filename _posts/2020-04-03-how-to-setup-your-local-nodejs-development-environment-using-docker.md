@@ -3,7 +3,7 @@ layout: post
 title:  "How To Setup Your Local Node.js Development Environment Using Docker"
 author: "Full"
 categories: [ docker ]
-description: "fake body!!!"
+description: "Docker is the defacto toolset for building modern applications and setting up a CI/CD pipeline – helping you build, ship and run your applications in containers on-prem and in the cloud. Whether you’re running on simple compute instances such as AWS EC2 or Azure VMs or something a little more fancy like a hosted Kubernetes service like AWS EKS or Azure AKS, Docker’s toolset is your new BFF. "
 image: "https://sergio.afanou.com/assets/images/image-midres-11.jpg"
 ---
 
