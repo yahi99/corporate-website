@@ -3,7 +3,7 @@ layout: post
 title:  "Do I Need a New Cable Modem If I'm Stuck Working From Home?"
 author: "Full"
 categories: [ productivity ]
-description: "fake body!!!"
+description: "I\xe2\x80\x99m going to go with the good ol\xe2\x80\x99 \xe2\x80\x9cIt depends.\xe2\x80\x9d However, I first want to commend you for actually owning your own cable modem instead of coughing up $14 or so each month for Comcast to rent you one of their *meh* modem/router combinations. There\xe2\x80\x99s no reason you should be paying a fee to rent that which you can purchase yourself. Of course, this also means that you\xe2\x80\x99ll have to buy a new cable modem if, or when, your internet plan exceeds your modem\xe2\x80\x99s capabilities."
 image: "https://sergio.afanou.com/assets/images/image-midres-50.jpg"
 ---
 
