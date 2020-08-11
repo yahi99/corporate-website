@@ -3,7 +3,7 @@ layout: post
 title:  "How To Use One-to-Many Database Relationships with Flask and SQLite"
 author: "Full"
 categories: [ database ]
-description: "fake body!!!"
+description: "Flask is a framework for building web applications using the Python language, and SQLite is a database engine that can be used with Python to store application data. In this tutorial, you will use Flask with SQLite to create a to-do application where users can create lists of to-do items. You will learn how to use SQLite with Flask and how one-to-many database relationships work."
 image: "https://sergio.afanou.com/assets/images/image-midres-48.jpg"
 ---
 
