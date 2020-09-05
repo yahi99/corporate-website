@@ -3,72 +3,82 @@ layout: post
 title:  "How to Send and Receive Faxes Online Without a Fax Machine or Phone Line"
 author: "Full"
 categories: [ fax ]
-description: "Let’s be honest: Kubernetes is complicated. And since we’re obsessed with simplifying the developer experience, we continually ask ourselves: How do we make using Kubernetes easier?
+description: " Some slowmoving businesses and government agencies may not accept documents over email, forcing you to fax them in. If you are forced to send a fax, you can do it from your computer for free.
 
-It’s with this in mind that we’re pleased to announce DigitalOcean Container Registryhttps://www.digitalocean.com/products/containerregistry/ and our fastgrowing collection of more than fifteen Kubernetes 1Click Appshttps://marketplace.digitalocean.com/category/kubernetes. Together, these enhancements make developme"
+ How Fax Machines Work and Why They’re So Inconvenient
+
+
+ This isn’t as easy as it should be. Fax machines are all connected to the plain old telephone lines. When you use a standard fax machine, that fax machine places a phone call to the number you specify. The fax machine at the destination number answ"
 image: "https://sergio.afanou.com/assets/images/image-midres-26.jpg"
 ---
 
 
-Let’s be honest: Kubernetes is complicated. And since we’re obsessed with simplifying the developer experience, we continually ask ourselves: How do we make using Kubernetes easier?
+ Some slow-moving businesses and government agencies may not accept documents over email, forcing you to fax them in. If you are forced to send a fax, you can do it from your computer for free.
 
-It’s with this in mind that we’re pleased to announce [DigitalOcean Container Registry](https://www.digitalocean.com/products/container-registry/) and our fast-growing collection of more than fifteen [Kubernetes 1-Click Apps](https://marketplace.digitalocean.com/category/kubernetes). Together, these enhancements make development and operations with Kubernetes much smoother sailing.
+ How Fax Machines Work (and Why They’re So Inconvenient)
+-------------------------------------------------------
 
-Easily store and manage private container images
-------------------------------------------------
+ This isn’t as easy as it should be. Fax machines are all connected to the plain old telephone lines. When you use a standard fax machine, that fax machine places a phone call to the number you specify. The fax machine at the destination number answers and the document is transmitted over a telephone call.
 
-After building your apps into Docker containers, you’ll often want to store container images in a centralized location called a container registry. From there, you can pull images into a Kubernetes cluster or VM, whether it’s a development, testing, staging, or production environment.
-
-While you can post your container images on the open Internet freely using a service like Docker Hub, clearly you won’t want to do that with confidential software. And while you can also build and operate a registry on your own private network, it’s probably not the best use of your engineers’ time. That’s why we’re excited to introduce a new managed service: [DigitalOcean Container Registry](https://www.digitalocean.com/products/container-registry/), now available in Early Access. DigitalOcean Container Registry is all of these:
-
-* **Simple** - Build your container images on any machine, and push them to DigitalOcean Container Registry with the [Docker CLI](https://docs.docker.com/engine/reference/commandline/cli/). DigitalOcean Kubernetes seamlessly integrates with this service to facilitate continuous deployment using container images stored there.
-* **Private** - Protect sensitive software by storing container images in private repositories. With [DigitalOcean Teams](https://www.digitalocean.com/products/teams/), you can easily give access to coworkers – and no one else.
-* **Secure** - Transfer container images over high speed HTTPS connections to servers across four continents. Container images are stored safely and encrypted at rest.
-* **Fast** - Store your container images near your Kubernetes clusters and Droplets and enjoy low latency and free transfer over the private network.
-![](https://images.prismic.io/www-static/68b2e34b-cee8-428f-bd65-e1089df8c047_digitalocean-container-registry-ui.png?auto=compress,format)
-
-*Container Registry is integrated into the Images section of cloud.digitalocean.com*
-
-We’ll be inviting folks to try [DigitalOcean Container Registry](https://www.digitalocean.com/products/container-registry/) in the weeks ahead. And the service is free to use during the Early Access program.
-
-Deploy software to clusters with 1-Click Apps
----------------------------------------------
-
-DigitalOcean introduced 1-Click Apps back in 2012, making it super simple to deploy popular software stacks to your VMs. We’ve now brought the same 1-Click experience to Kubernetes, so you can easily deploy complex software packages to your clusters.
-
-Within [DigitalOcean Marketplace](https://marketplace.digitalocean.com/), you’ll find a dedicated [Kubernetes section](https://marketplace.digitalocean.com/category/kubernetes) with more than fifteen 1-Click Apps specifically packaged and tested for deployment to DigitalOcean Kubernetes.
-
-![](https://images.prismic.io/www-static/4a9bc9d3-593f-47bb-a6fd-857a36e8a3c4_digitalocean-kubernetes-1-click-apps.png?auto=compress,format)
-
-Broadly speaking, you can think about Kubernetes apps as addressing various use cases:
-
-* **Critical cluster operations** - [Monitoring Stack](https://marketplace.digitalocean.com/apps/kubernetes-monitoring-stack), [Grafana Loki](https://marketplace.digitalocean.com/apps/grafana-loki), [Linkerd](https://marketplace.digitalocean.com/apps/linkerd), [Netdata](https://marketplace.digitalocean.com/apps/netdata), [Red Sky Ops](https://marketplace.digitalocean.com/apps/red-sky-ops), [NGINX Ingress Controller](https://marketplace.digitalocean.com/apps/nginx-ingress-controller), and [Metrics](https://marketplace.digitalocean.com/apps/kubernetes-metrics-server) help with fundamentals like monitoring, performance, logging, or security.
-* **Developer-friendly tools** - [OpenFaaS](https://marketplace.digitalocean.com/apps/openfaas-kubernetes), [KubeMQ](https://marketplace.digitalocean.com/apps/kubemq), [Okteto](https://marketplace.digitalocean.com/apps/okteto-1), [OpenEBS](https://marketplace.digitalocean.com/apps/openebs-1), [Argo CD](https://marketplace.digitalocean.com/apps/argo-cd), and [Moon](https://marketplace.digitalocean.com/apps/moon) create easily consumable APIs or services for your development teams
-* **Consumer or enterprise apps** - [Wordpress](https://marketplace.digitalocean.com/apps/wordpress-kubernetes) , [Mattermost](https://marketplace.digitalocean.com/apps/mattermost-operator), [1Password SCIM Bridge](https://marketplace.digitalocean.com/apps/1password-scim-bridge) run popular services you can use for hobbies or work.
-We continue to add new applications to the DigitalOcean Marketplace almost every week. If you’d like to submit your Kubernetes application for consideration, submit a pull request on our [Marketplace Github repo](https://github.com/digitalocean/marketplace-kubernetes/blob/master/CONTRIBUTING.md).
-
-New DigitalOcean Kubernetes features and customers
---------------------------------------------------
-
-Like many of you do for your products, we continuously deliver new features and enhancements for DigitalOcean Kubernetes. We recently introduced support for [Kubernetes 1.16](https://kubernetes.io/blog/2019/09/18/kubernetes-1-16-release-announcement/), and in case you missed it, last month we announced [cluster autoscaling](https://www.digitalocean.com/docs/kubernetes/how-to/configure-autoscaling/), [minor version upgrades](https://www.digitalocean.com/docs/kubernetes/how-to/upgrade-cluster/), and [tokenized authentication](https://www.digitalocean.com/docs/kubernetes/how-to/connect-to-cluster/).
-
-![](https://images.prismic.io/www-static/703a0786-3d3b-4499-af91-0a34d09e36be_digitalocean-kubernetes-autoscale-1.png?auto=compress,format)
-
-With every new feature, we eat our own dog food to make sure that things work. [Read how DigitalOcean Marketplace runs at global scale using DigitalOcean Kubernetes](https://blog.digitalocean.com/how-we-launched-our-marketplace-using-digitalocean-kubernetes-part-1/).
-
-And, with thousands of DigitalOcean Kubernetes clusters running successfully every day, you can have confidence in our platform. Here’s what Paritosh Gupta, CTO of [Orai](http://www.orai.com/) – an AI speech coach and [Hatch](https://www.digitalocean.com/hatch/) startup – had to say about his experience:
-
-*“Setting up DigitalOcean Kubernetes was super fast. Our team can easily add new features and update the machine learning models that power the Orai app. We can ensure our technology stack processes everything in realtime, without worrying about the time or cost to rebuild our infrastructure.” -  
-**Paritosh Gupta, CTO***
+ This process was invented before the Internet and seems laughably archaic at this point. To perform a fax, a person may type up a document, print it out, and scan it into the fax machine which sends it over the phone line. The person receiving the fax may then scan the faxed document and turn it back into a digital file. They’ve come full circle — the document was sent from one computer to another computer with much additional work and lost image quality.
 
 
-Get started with DigitalOcean Kubernetes and Container Registry today
----------------------------------------------------------------------
 
-Hopefully the new features and enhancements make it easier for you to set up and operate your Kubernetes clusters in production. It takes just a few minutes to try DigitalOcean Kubernetes. Simply [sign into your account and spin up](https://cloud.digitalocean.com/kubernetes/clusters/new). You can also check out our new [Kubernetes curriculum on the DigitalOcean Community](https://www.digitalocean.com/community/curriculums/kubernetes-for-full-stack-developers) to help you learn what has become the de facto container orchestration platform. We’re also hosting a [series of webinars to help you advance your Kubernetes skills](https://go.digitalocean.com/WEBAdvanced-K8s-With-DO-General_MainLandingPagev1).
+ Ideally, you’d be able to submit a document via email or a more secure online method. Many businesses consider fax a secure method of transmitting documents, but it really isn’t — if someone was snooping on the phone line, they could easily intercept all the faxed documents.
 
-If you’d like to discuss how to use DigitalOcean Kubernetes to run your applications, we invite you to [contact our sales team](https://www.digitalocean.com/company/contact/sales/). Or, if you happen to be at [KubeCon in San Diego](https://events19.linuxfoundation.org/events/kubecon-cloudnativecon-north-america-2019/) this week, come by our booth (G18) or [one of our tech talks](https://kccncna19.sched.com/?searchstring=digitalocean) to speak with me, our engineers, and developer advocates.
+ There’s no way to connect to a fax machine directly over the Internet, as the fax machine is only connected to telephone lines. To perform a fax online, we’ll need some sort of gateway that accepts documents via the Internet and transmits the document to a fax machine. That’s where the below services come in. Give them a document and they’ll do the annoying work of dialing up the fax machine and sending your document over the telephone line.
 
-Happy Kubecon!  
-Phil Dougherty, Senior Product Manager
+ ![junk-scanner-and-fax-machine](https://www.howtogeek.com/wp-content/uploads/2013/07/xjunk-scanner-and-fax-machine.jpg.pagespeed.gp+jp+jw+pj+ws+js+rj+rp+rw+ri+cp+md.ic.5fEKaNBYh0.jpg "junk-scanner-and-fax-machine")
+
+ You Could Fax With Just Your Computer, But…
+-------------------------------------------
+
+ You could skip the below services, of course. Microsoft Windows even contains a Fax and Scan application that allows you to send faxes. The catch is that you’d need your computer connected to the phone line — yes, this means that you’d need a dial-up fax modem. You’d also need a landline telephone connection and you’d have to tell people to stay off the phone when you’re sending faxes, just like in the old dial-up Internet days. Of course, if you were faxing a lot, you could pay for a dedicated fax telephone line — this might even be necessary if you were receiving a lot of faxes.
+
+ This obviously isn’t ideal. Sure, if you need to send quite a few faxes, go ahead and buy a fax machine or modem and hook it up to your landline. But you probably don’t need to send and receive faxes this often — you hopefully just need to send the occasional fax whenever you bump into an organization that’s stuck in the past.
+
+ Scan the Document or Use an Existing Digital File
+-------------------------------------------------
+
+
+ The basic process is simple. First, you’ll need to scan the document you want to fax, just as if you were going to send that document over email. if you don’t have a scanner lying around, you may want to try [scanning it with your smartphone](/). If the document is already a file on your computer, congratulations — you don’t have to scan anything.
+
+ With the document now in digital form, you can send it along to a service that will do the annoying fax work for you.
+
+ ![scanner](https://www.howtogeek.com/wp-content/uploads/2013/07/xscanner.jpg.pagespeed.gp+jp+jw+pj+ws+js+rj+rp+rw+ri+cp+md.ic.PZ9bsvEbfp.jpg "scanner")
+
+ Send Faxes Online, Free
+-----------------------
+
+ There are so many online fax services out there that it’s hard to make an informed decision about which one to choose. The first thing to consider is what kind of a user you are, how often you’ll be faxing, and what features you need.
+
+
+ If you are going to be sending sensitive faxes all the time, or you work for a company and you’re trying to choose a service, [RingCentral Fax](https://prf.hn/click/camref:1101l3Rga/creativeref:1011l40328/pubref:ct168841), which is partially owned by Cisco and AT&T, is probably the best choice for your needs, especially since they have a lot of great security features and support for multiple users with separate fax lines.
+
+ It has all the features you can imagine, including integrations with Outlook, Google Drive, Dropbox, Box, and you can even get a toll-free number. It also has a lot of security features that would be useful for businesses or people that are transmitting secure information.
+
+ Of course, if you just want to send a few faxes, you can sign up for one of their cheap plans… and then just cancel after a month or two.
+
+ **Occasional User**
+
+ If you do need to send the occasional fax, we recommend signing up for a free trial of [MyFax](http://www.kqzyfj.com/click-3607085-12001188?sid=ct168841), which will let you send up to 100 pages, which is more pages per month than most people have to fax per year. If you do need to fax frequently, you can [upgrade to a regular plan](http://www.tkqlhce.com/click-3607085-10423449?sid=ct168841).
+
+ ![](https://www.howtogeek.com/wp-content/uploads/2019/09/ximg_5d702ddff3e50.png.pagespeed.gp+jp+jw+pj+ws+js+rj+rp+rw+ri+cp+md.ic.u-c7GF0Eek.png)
+
+ Receiving Faxes
+---------------
+
+ If you do need to receive faxes, you’ll have to sign up for a paid service. The service will need to establish a dedicated phone number for your fax line, and that costs money. 
+
+[RingCentral](https://prf.hn/click/camref:1101l3Rga/creativeref:1011l40328/pubref:ct168841), [MyFax](http://www.tkqlhce.com/click-3607085-10423449?sid=ct168841), and many other services will do this if you pay.
+
+
+ Luckily, you should at least be able to get a free trial — 
+
+[RingCentral](https://prf.hn/click/camref:1101l3Rga/creativeref:1011l40328/pubref:ct168841) offers 30 days of free fax receiving, for example.
+
+ There are many fax services to use, and if you just need to send the occasional fax, you can manage to do that for free, but if you want to receive a fax, you’ll end up needing to sign up for a trial account. You can always cancel if you want.
+
+ Image Credit: [Matt Jiggins on Flickr](http://www.flickr.com/photos/mattjiggins/4009310821/), [David Voegtle on Flickr](http://www.flickr.com/photos/spiffie/2665155921/)
+
 
