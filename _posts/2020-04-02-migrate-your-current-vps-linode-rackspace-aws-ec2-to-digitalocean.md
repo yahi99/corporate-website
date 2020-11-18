@@ -3,7 +3,8 @@ layout: post
 title:  "Migrate Your Current VPS (Linode, Rackspace, AWS EC2) to DigitalOcean"
 author: "Full"
 categories: [ aws ]
-description: "fake body!!!"
+description: "Migrating between VPS providers can seem like a daunting task. Like DigitalOcean, other VPS providers, such as Linode and Rackspace, provide root access. This allows you to transfer all of the necessary files to your new DigitalOcean VPS.
+For this guide, we will demonstrate how to transfer a simple WordPress blog from Linode to a DigitalOcean cloud server."
 image: "https://sergio.afanou.com/assets/images/image-midres-22.jpg"
 ---
 

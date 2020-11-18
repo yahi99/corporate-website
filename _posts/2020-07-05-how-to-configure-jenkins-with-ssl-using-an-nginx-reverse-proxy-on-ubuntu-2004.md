@@ -3,7 +3,9 @@ layout: post
 title:  "How To Configure Jenkins with SSL Using an Nginx Reverse Proxy on Ubuntu 20.04"
 author: "Full"
 categories: [ docker ]
-description: "fake body!!!"
+description: "By default, Jenkins comes with its own built-in Winstone web server listening on port 8080, which is convenient for getting started. It’s also a good idea, however, to secure Jenkins with SSL to protect passwords and sensitive data transmitted through the web interface.
+
+In this tutorial, you will configure Nginx as a reverse proxy to direct client requests to Jenkins."
 image: "https://sergio.afanou.com/assets/images/image-midres-32.jpg"
 ---
 

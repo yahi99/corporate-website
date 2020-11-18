@@ -3,7 +3,7 @@ layout: post
 title:  "Top 5 Questions from “How to become a Docker Power User” session at DockerCon 2020"
 author: "Full"
 categories: [ docker ]
-description: "fake body!!!"
+description: "It was a fantastic experience hosting my first ever virtual conference session. The commute to my home office was great, and I even picked up a coffee on the way before my session started. No more waiting in lines, queueing for food, or sitting on the conference floor somewhere in a corner to check emails."
 image: "https://sergio.afanou.com/assets/images/image-midres-28.jpg"
 ---
 

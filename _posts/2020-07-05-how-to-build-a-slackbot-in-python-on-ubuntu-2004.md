@@ -3,7 +3,7 @@ layout: post
 title:  "How To Build a Slackbot in Python on Ubuntu 20.04"
 author: "Full"
 categories: [ slack ]
-description: "fake body!!!"
+description: "Slack is a communication platform designed for workplace productivity. It includes features such as direct messaging, public and private channels, voice and video calls, and bot integrations. A Slackbot is an automated program that can perform a variety of functions in Slack, from sending messages to triggering tasks to alerting on certain events."
 featured: true
 image: "https://sergio.afanou.com/assets/images/image-midres-31.jpg"
 ---

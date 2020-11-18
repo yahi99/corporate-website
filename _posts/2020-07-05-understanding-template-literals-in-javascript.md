@@ -3,7 +3,7 @@ layout: post
 title:  "Understanding Template Literals in JavaScript"
 author: "Full"
 categories: [ javascript ]
-description: "fake body!!!"
+description: "The 2015 edition of the ECMAScript specification (ES6) added template literals to the JavaScript language. Template literals are a new form of making strings in JavaScript that add a lot of powerful new capabilities, such as creating multi-line strings more easily and using placeholders to embed expressions in a string. In addition, an advanced feature called tagged template literals allows you to perform operations on the expressions within a string. All of these capabilities increase your options for string manipulation as a developer, letting you generate dynamic strings that could be used for URLs or functions that customize HTML elements."
 image: "https://sergio.afanou.com/assets/images/image-midres-36.jpg"
 ---
 

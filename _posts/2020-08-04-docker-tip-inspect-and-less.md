@@ -3,14 +3,14 @@ layout: post
 title:  "Docker tip : inspect and less"
 author: "Full"
 categories: [ docker ]
-description: "fake body!!!"
+description: "This isn’t so much a docker tip, as it is a jq tip. If you haven’t heard of jq, it is a great tool for parsing JSON from the command line. This also makes it a great tool to see what is happening in a container instead of having to use the –format specifier which I can never remember how to use exactly"
 image: "https://sergio.afanou.com/assets/images/image-midres-15.jpg"
 ---
 
 
 
 
-<h3>Docker inspect and jq</h3>
+<h3>Docker inspect and less</h3>
 
 <p>This isn’t so much a docker tip, as it is a jq tip. If you haven’t heard of jq, it is a great tool for parsing JSON from the command line. This also makes it a great tool to see what is happening in a container instead of having to use the –format specifier which I can never remember how to use exactly:</p>
 
