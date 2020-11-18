@@ -87,7 +87,9 @@ var handleResult = function (result) {
 var createCheckoutSession = function () {
   var inputEl = document.getElementById('quantity-input');
   var quantity = parseInt(inputEl.value);
-  var priceid = document.getElementById('stripe-priceid');
+  var spriceid = document.getElementById('stripe-priceid');
+
+  console.log(JSON.stringify(spriceid))
 
   return fetch('https://paybrightsoftwares.herokuapp.com/create-checkout-session', {
     method: 'POST',
@@ -96,7 +98,7 @@ var createCheckoutSession = function () {
     },
     body: JSON.stringify({
       quantity: quantity,
-      priceid: priceid,
+      priceid: spriceid.textContent,
       locale: i18next.language.toLowerCase().split('-')[0],
     }),
   }).then(function (result) {
