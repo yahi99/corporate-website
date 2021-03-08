@@ -21,4 +21,4 @@ jobs:
           
       - uses: helaili/jekyll-action@v2
         with:
-            token: ${{ secrets.GITHUB_TOKEN }}
+            token: ${{ secrets.GITHB_TOKEN }}
