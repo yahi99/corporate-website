@@ -46,7 +46,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-archives
-  - mini_magick
+  - jekyll-minimagick
     
 # Archives
 jekyll-archives:
