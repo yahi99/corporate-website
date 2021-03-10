@@ -32,8 +32,8 @@
     }
 
     if(readCookie('cookie-notice-dismissed')=='true') {
-        {% include js.html %}
-        {% include chatbutton.html %}
+		{% assign cookie_accepted = "1" %} 
+		console.log("Consent already agreed");
     } else {
         document.getElementById('cookie-notice').style.display = 'block';
     }
@@ -44,3 +44,8 @@
     });
 
 </script>
+
+{% if cookie_accepted == "1" %}
+	{% include js.html %}
+	{% include chatbutton.html %}
+{% endif %}
