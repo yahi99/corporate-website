@@ -36,8 +36,12 @@ help:
 builddev:
 	docker build . -t "fullbright/jekyll:0.1"
 
+startdev-win: builddev
+	docker run --rm --label=jekyll --volume=%CD%:/jekyll  -p 4000:4000 fullbright/jekyll:0.1 serve --host 0.0.0.0 --incremental
+
 startdev: builddev
-	docker run --rm --label=jekyll --volume=%CD%:/jekyll  -p 4000:4000 fullbright/jekyll:0.1 build --watch
+	docker run --rm --label=jekyll --volume=$(PWD):/jekyll  -p 4000:4000 fullbright/jekyll:0.1 serve --host 0.0.0.0 --incremental
+	
 
 images: portfolio logo team ## Generate images in portfolio and logo
 
