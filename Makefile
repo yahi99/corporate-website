@@ -33,7 +33,11 @@ TEAM_LARGE_SRC=$(subst img/team/original, img/team/large, $(TEAM_SRC))
 help:
 	@awk 'BEGIN {FS = ":.*##"; } /^[a-zA-Z_-]+:.*?##/ { printf "$(PRIMARY_COLOR)%-20s$(NO_COLOR) %s\n", $$1, $$2 }' $(MAKEFILE_LIST) | sort
 
+builddev:
+	docker build . -t "fullbright/jekyll:0.1"
 
+startdev: builddev
+	docker run --rm --label=jekyll --volume=%CD%:/jekyll  -p 4000:4000 fullbright/jekyll:0.1 build --watch
 
 images: portfolio logo team ## Generate images in portfolio and logo
 
