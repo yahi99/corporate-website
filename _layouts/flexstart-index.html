@@ -6,13 +6,15 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta content="" name="description">
+  <meta content="{{ site.description }}" name="description">
 
-  <meta content="" name="keywords"> 
+  <meta content="web e-commerce articifial intelligence ai automation" name="keywords">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="manifest" href="manifest.json">
 
   <!-- Favicons -->
-  <link href="assets/flexstart-img/favicon.png" rel="icon">
-  <link href="assets/flexstart-img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- <link href="assets/flexstart-img/favicon.png" rel="icon">
+  <link href="assets/flexstart-img/apple-touch-icon.png" rel="apple-touch-icon"> -->
   <!-- The favicon items -->
   <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon.ico/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon.ico/apple-icon-60x60.png">
