@@ -30,12 +30,12 @@ permalink: /pay
     <link rel="stylesheet" href="{{ baseurl }}{{ "/css/stripe/global.css" | prepend: site.baseurl }}" />
     <!-- Load Stripe.js on your website. -->
     <script src="https://js.stripe.com/v3/"></script>
-    <script src="{{ '/js/stripe-script.js' | prepend: site.url }}" defer></script>
+    <script src="{{ "/js/stripe-script.js" | prepend: site.url }}" defer></script>
     <!-- Load translation files and libraries. -->
     <script src="https://unpkg.com/i18next/i18next.js"></script>
     <script src="https://unpkg.com/i18next-xhr-backend/i18nextXHRBackend.js"></script>
     <script src="https://unpkg.com/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.js"></script>
-    <script src="{{ '/js/stripe-translation.js' | prepend: site.url }}" defer></script>
+    <script src="{{ "/js/stripe-translation.js" | prepend: site.url }}" defer></script>
   </head>
 
   <body>
@@ -74,6 +74,47 @@ permalink: /pay
           ></button>
         </section>
         <div id="error-message"></div>
+      </div>
+
+
+      <div class="card">
+
+        <!--Card content-->
+        <form class="card-body">
+
+          <!--Grid row-->
+          <div class="row">
+
+            <!--Grid column-->
+            <div class="col-md-6 mb-2">
+
+              <!--invoiceid-->
+              <div class="md-form ">
+                <input type="text" id="invoice_id" class="form-control">
+                <label for="invoiceid" class="">Invoice ID</label>
+              </div>
+
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-md-6 mb-2">
+
+              <!--password-->
+              <div class="md-form">
+                <input type="text" id="password" class="form-control">
+                <label for="password" class="">Password</label>
+              </div>
+
+            </div>
+            <!--Grid column-->
+
+          </div>
+          <!--Grid row-->
+          <button id="invoiceckeck" class="btn btn-primary btn-lg btn-block" type="submit">OK</button>
+
+        </form>
+        <div id="result"></div>
       </div>
     </div>
   </body>

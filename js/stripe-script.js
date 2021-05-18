@@ -1,6 +1,8 @@
 // The max and min number of photos a customer can purchase
 var MIN_PHOTOS = 1;
 var MAX_PHOTOS = 10;
+//var REMOTE_SERVER = "https://paybrightsoftwares.herokuapp.com";
+var REMOTE_SERVER = "http://localhost:4242";
 
 var basicPhotoButton = document.getElementById('basic-photo-button');
 document
@@ -91,7 +93,7 @@ var createCheckoutSession = function () {
 
   console.log(JSON.stringify(spriceid))
 
-  return fetch('https://paybrightsoftwares.herokuapp.com/create-checkout-session', {
+  return fetch(REMOTE_SERVER + '/create-checkout-session', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -106,8 +108,29 @@ var createCheckoutSession = function () {
   });
 };
 
+// Check if the invoice is valid before continue to payment
+var checkInvoice = function () {
+  var inputEl = document.getElementById('invoice_id');
+  var spriceid = document.getElementById('password');
+
+  console.log(JSON.stringify(spriceid))
+
+  return fetch(REMOTE_SERVER + '/get-invoice', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      "invoice_id": inputEl.value,
+      "password": spriceid.value,
+    }),
+  }).then(function (result) {
+    return result.json();
+  });
+};
+
 /* Get your Stripe publishable key to initialize Stripe.js */
-fetch('https://paybrightsoftwares.herokuapp.com/config')
+fetch(REMOTE_SERVER + '/config')
   .then(function (result) {
     return result.json();
   })
@@ -123,6 +146,14 @@ fetch('https://paybrightsoftwares.herokuapp.com/config')
             sessionId: data.sessionId,
           })
           .then(handleResult);
+      });
+    });
+
+    // Setup event handler to check the invoice on submit
+    document.querySelector('#invoiceckeck').addEventListener('click', function (evt) {
+      evt.preventDefault();
+      checkInvoice().then(function (data) {
+        document.getElementById('result').innerHTML = JSON.stringify(data);
       });
     });
   });

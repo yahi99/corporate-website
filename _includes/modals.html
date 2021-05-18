@@ -35,6 +35,15 @@
                             </ul>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
+                        <!-- <div class="modal-relatedservices">
+                            <ul>
+                                {% for service in site.services %}
+                                  {% if service.category == post.category %}
+                                      <li><a href="{{ service.url }}">{{ service.title }}</a></li>
+                                  {% endif %}
+                                {% endfor %}
+                              </ul>
+                        </div> -->
                     </div>
                 </div>
             </div>
