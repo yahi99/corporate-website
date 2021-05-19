@@ -10,6 +10,7 @@ alt: MissJos landing page
 project-date: March 2018
 client: MissJos
 category: Web Development
+type: web
 description: A beautiful project, baked in talent.
 
 ---

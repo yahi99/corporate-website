@@ -10,6 +10,7 @@ alt: SCCD website homepage
 project-date: July 2019
 client: SCCD
 category: Web Development
+type: web
 description: La société CCD est une Société de Commissionnaires et consultants en douane. Elle regorge en son sein des professionnels du transit maritime, aérien et terrestre qui interviennent aussi bien à l’import qu’à l’export. Elle assure un service complet en procédure de dédouanement de marchandises, en transport-logistiques et multimodales avec des équipements de points adaptés à cet effet. Elle assure des prestations su mesure au Togo et à l’international spécialisée dans le transport maritime par groupage de marchandises en provenance de l’Asie, l’Europe ainsi que les provinces de l’Amérique du Nord et plus précisément le Togo et les pays desservis par le port Autonome de Lomé notamment les pays de l’hinterland.
 
 ---

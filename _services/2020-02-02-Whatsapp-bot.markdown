@@ -11,6 +11,7 @@ alt: A presentation of the whatsapp permit management bot
 project-date: Feb 2020
 client: A whatsapp customer
 category: Bot Development
+type: ai
 description: A bot that can help sellers manage their permit and help the government control sellers that have a valid permit.
 
 ---

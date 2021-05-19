@@ -10,6 +10,7 @@ alt: A man editing complex data.
 project-date: March 2015
 client: Various customers
 category: Data analysis
+type: app
 description: If you have data, it can be transformed, out of a mess, of meaningless information and into usable, tangible insights for your business.
 
 ---

@@ -10,6 +10,7 @@ alt: A bot
 project-date: January 2018
 client: Various customers
 category: AI Development
+type: app
 description: Currently, our bot provides instantaneous support to 60% of all chatting customers, and has reduced our queued visitors by over 50%.
 
 ---

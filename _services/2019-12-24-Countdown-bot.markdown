@@ -11,6 +11,7 @@ alt: A screenshot of the countdown
 project-date: July 2018
 client: A telegram customer
 category: Bot Development
+type: ai
 description: Very useful bot that can help your users know when a special event will start.
 
 ---
