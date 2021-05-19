@@ -28,6 +28,7 @@ LOGO_LARGE_SRC=$(subst img/logos/original, img/logos/large, $(LOGO_SRC))
 TEAM_SRC=$(wildcard img/team/original/*.png img/team/original/*.gif img/team/original/*.jpeg img/team/original/*.jpg)
 TEAM_THUMBNAIL_SRC=$(subst img/team/original, img/team/thumbnail, $(TEAM_SRC))
 TEAM_LARGE_SRC=$(subst img/team/original, img/team/large, $(TEAM_SRC))
+TEAM_FLEXSTART_SRC=$(subst img/team/original, img/team/flexstart, $(TEAM_SRC))
 
 
 help:
@@ -64,6 +65,10 @@ img/team/thumbnail/%: img/team/original/%
 img/team/large/%: img/team/original/%
 	mogrify -path $(dir $@) -resize 225 -extent 225x225 -gravity center -quality $(IMAGE_QUALITY) $<
 	
+img/team/flexstart/%: img/team/original/%
+	mogrify -path $(dir $@) -resize 600 -extent 600x600 -gravity center -quality $(IMAGE_QUALITY) $<
+
+
 
 portfolio: $(PORTFOLIO_THUMBNAIL_SRC) $(PORTFOLIO_LARGE_SRC) ## Generate portfolio thumbnail and large images
 	@echo Portfolio done.
@@ -72,8 +77,8 @@ logo: $(LOGO_THUMBNAIL_SRC) $(LOGO_LARGE_SRC) ## Generate logo thumbnail
 	@echo Logos done.
 
 
-team: $(TEAM_THUMBNAIL_SRC) $(TEAM_LARGE_SRC) ## Generate team images in the right size
+team: $(TEAM_THUMBNAIL_SRC) $(TEAM_LARGE_SRC) $(TEAM_FLEXSTART_SRC) ## Generate team images in the right size
 	@echo Team done.
 
 clean-images:
-	rm $(PORTFOLIO_THUMBNAIL_SRC) $(PORTFOLIO_LARGE_SRC) $(LOGO_THUMBNAIL_SRC) $(LOGO_LARGE_SRC) $(TEAM_THUMBNAIL_SRC) $(TEAM_LARGE_SRC)
+	rm $(PORTFOLIO_THUMBNAIL_SRC) $(PORTFOLIO_LARGE_SRC) $(LOGO_THUMBNAIL_SRC) $(LOGO_LARGE_SRC) $(TEAM_THUMBNAIL_SRC) $(TEAM_LARGE_SRC) $(TEAM_FLEXSTART_SRC)
