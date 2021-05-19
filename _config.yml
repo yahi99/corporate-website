@@ -76,6 +76,7 @@ people:
 - name: Full Bright
   pic: 1
   position: AI solutions designer
+  description: Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum exercitationem iure minima enim corporis et voluptate.
   social:
     - title: twitter
       url: #
@@ -87,6 +88,7 @@ people:
 - name: Kekeli Afanou
   pic: 2
   position: Cloud Nerd
+  description: Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum exercitationem iure minima enim corporis et voluptate.
   social:
     - title: twitter
       url: #
@@ -98,6 +100,19 @@ people:
 - name: Christoli Wonegou
   pic: 3
   position: Lead Developer
+  description: Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum exercitationem iure minima enim corporis et voluptate.
+  social:
+    - title: twitter
+      url: #
+    - title: facebook
+      url: #
+    - title: google-plus
+      url: #
+
+- name: Isa Bryant
+  pic: isa2
+  position: Marketing & Communication
+  description: Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum exercitationem iure minima enim corporis et voluptate.
   social:
     - title: twitter
       url: #
