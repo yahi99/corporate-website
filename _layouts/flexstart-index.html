@@ -1109,32 +1109,27 @@
 
         <div class="row">
 
+          {% for post in site.posts limit:3 %}
           <div class="col-lg-4">
             <div class="post-box">
-              <div class="post-img"><img src="assets/flexstart-img/blog/blog-1.jpg" class="img-fluid" alt=""></div>
-              <span class="post-date">Tue, September 15</span>
-              <h3 class="post-title">Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit</h3>
-              <a href="blog-singe.html" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
+              <div class="post-img">
+                {% if post.image %}
 
-          <div class="col-lg-4">
-            <div class="post-box">
-              <div class="post-img"><img src="assets/flexstart-img/blog/blog-2.jpg" class="img-fluid" alt=""></div>
-              <span class="post-date">Fri, August 28</span>
-              <h3 class="post-title">Et repellendus molestiae qui est sed omnis voluptates magnam</h3>
-              <a href="blog-singe.html" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
+                    {% if site.lazyimages == "enabled" %}
+                        <img class="img-fluid" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ site.baseurl }}/{{ post.image }}{% endif %}" alt="{{ post.title }}">
+                    {% else %}
+                        <img class="img-fluid" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ site.baseurl }}/img/portfolio/{{ post.image }}{% endif %}" alt="{{ post.title }}"> 
+                    {% endif %}
 
-          <div class="col-lg-4">
-            <div class="post-box">
-              <div class="post-img"><img src="assets/flexstart-img/blog/blog-3.jpg" class="img-fluid" alt=""></div>
-              <span class="post-date">Mon, July 11</span>
-              <h3 class="post-title">Quia assumenda est et veritatis aut quae</h3>
-              <a href="blog-singe.html" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+                {% endif %}
+                <!-- <img src="assets/flexstart-img/blog/blog-1.jpg" class="img-fluid" alt=""> -->
+              </div>
+              <span class="post-date">{{ post.date | date: '%A %d %B, %Y' }}</span>
+              <h3 class="post-title">{{ post.title }}</h3>
+              <a href="{{ site.baseurl }}{{ post.url }}" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
+          {% endfor %}
 
         </div>
 
@@ -1189,47 +1184,6 @@
             </div>
 
           </div>
-
-          <!-- <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" class="php-email-form">
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your First Name" required>
-                </div>
-
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="lastname" placeholder="Your Last Name" required>
-                </div>
-
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required>
-                </div>
-
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="phone" placeholder="Your phone number" required>
-                </div>
-
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required>
-                </div>
-
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
-                </div>
-
-              </div>
-            </form>
-
-          </div> -->
 
           <div id="mauticform_wrapper_brightsoftwarescontact" class="mauticform_wrapper col-lg-6">
             <form class="php-email-form" autocomplete="false" role="form" method="post" action="https://marketing.bright-softwares.com/form/submit?formId=5" id="mauticform_brightsoftwarescontact" data-mautic-form="brightsoftwarescontact" enctype="multipart/form-data">
