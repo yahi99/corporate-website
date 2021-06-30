@@ -1,0 +1,38 @@
+<!-- ======= Recent Blog Posts Section ======= -->
+<section id="recent-blog-posts" class="recent-blog-posts">
+  <div class="container" data-aos="fade-up">
+    <header class="section-header">
+      <h2>Blog</h2>
+      <p>Recent posts form our Blog</p>
+    </header>
+
+    <div class="row">
+      {% for post in site.posts limit:3 %}
+      <div class="col-lg-4">
+        <div class="post-box">
+          <div class="post-img">
+            {% if post.image %} {% if site.lazyimages == "enabled" %} <img
+            class="img-fluid"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+            data-src="{% if post.image contains "://" %}{{ post.image }}{% else
+            %}{{ site.baseurl }}/{{ post.image }}{% endif %}" alt="{{ post.title
+            }}"> {% else %} <img class="img-fluid" src="{% if post.image
+            contains "://" %}{{ post.image }}{% else %}{{ site.baseurl
+            }}/img/portfolio/{{ post.image }}{% endif %}" alt="{{ post.title
+            }}"> {% endif %} {% endif %}
+            <!-- <img src="/assets/flexstart-img/blog/blog-1.jpg" class="img-fluid" alt=""> -->
+          </div>
+          <span class="post-date">{{ post.date | date: '%A %d %B, %Y' }}</span>
+          <h3 class="post-title">{{ post.title }}</h3>
+          <a
+            href="{{ site.baseurl }}{{ post.url }}"
+            class="readmore stretched-link mt-auto"
+            ><span>Read More</span><i class="bi bi-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!-- End Recent Blog Posts Section -->

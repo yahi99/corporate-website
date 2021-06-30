@@ -1,816 +1,422 @@
 <!DOCTYPE html>
 <html lang="en">
+  {% include flexstart-head.html %}
+  <body>
+    {% include flexstart-header.html %} 
+    {% include flexstart-hero.html %} 
+        
+    <main id="main">
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about">
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+          <div class="container" data-aos="fade-up">
+            <div class="row gx-0">
 
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta content="{{ site.description }}" name="description">
-
-  <meta content="web e-commerce articifial intelligence ai automation" name="keywords">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="manifest" href="manifest.json">
-
-  <!-- Favicons -->
-  <!-- <link href="assets/flexstart-img/favicon.png" rel="icon">
-  <link href="assets/flexstart-img/apple-touch-icon.png" rel="apple-touch-icon"> -->
-  <!-- The favicon items -->
-  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon.ico/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon.ico/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon.ico/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon.ico/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon.ico/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon.ico/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon.ico/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon.ico/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon.ico/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/favicon.ico/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon.ico/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon.ico/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon.ico/favicon-16x16.png">
-  <!--<link rel="manifest" href="{{ "/assets/favicon.ico/manifest.json" | prepend: site.baseurl }}">-->
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="/assets/favicon.ico/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="{{ 'assets/flexstart-vendor/bootstrap/css/bootstrap.min.css' | prepend: site.baseurl }}" rel="stylesheet">
-  <link href="{{ 'assets/flexstart-vendor/bootstrap-icons/bootstrap-icons.css' | prepend: site.baseurl }}" rel="stylesheet">
-  <link href="{{ 'assets/flexstart-vendor/aos/aos.css' | prepend: site.baseurl }}" rel="stylesheet">
-  <link href="{{ 'assets/flexstart-vendor/remixicon/remixicon.css' | prepend: site.baseurl }}" rel="stylesheet">
-  <link href="{{ 'assets/flexstart-vendor/swiper/swiper-bundle.min.css' | prepend: site.baseurl }}" rel="stylesheet">
-  <link href="{{ 'assets/flexstart-vendor/glightbox/css/glightbox.min.css' | prepend: site.baseurl }}" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="{{ 'assets/flexstart-css/style.css' | prepend: site.baseurl }}" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: FlexStart - v1.1.1
-  * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-  {% if jekyll.environment == 'production' %}
-        {% include analytics.html %}
-  {% endif %}
-</head>
-
-<body>
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="header fixed-top">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center">
-        <img src="{{site.logo}}" alt="Bright Softwares logo">
-        <span>{{site.title}}</span>
-      </a>
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <!-- <li><a class="nav-link scrollto active" href="#hero">Home</a></li> -->
-          <li class="dropdown"><a class="nav-link scrollto" href="#services"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
-			      <ul>
-              <li><a href="#">Web solutions</a></li>
-              <li><a href="#">e-commerce</a></li>
-              <li><a href="#">AI powered apps</a></li>
-              <li><a href="#">AI Models</a></li>
-              <li><a href="#">Automated revenue</a></li>
-              <li><a href="#">Cloud infrastructure</a></li>
-            </ul>
-		      </li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><a class="getstarted scrollto" href="/order-service">Order now</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-    </div>
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="hero d-flex align-items-center">
-
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 d-flex flex-column justify-content-center">
-          <h1 data-aos="fade-up">We offer modern solutions for growing your business</h1>
-          <h2 data-aos="fade-up" data-aos-delay="400">We are team of talented designers making websites with Bootstrap</h2>
-          <div data-aos="fade-up" data-aos-delay="600">
-            <div class="text-center text-lg-start">
-              <a href="#about" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
-                <span>Get Started</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-          <img src="assets/flexstart-img/hero-img.png" class="img-fluid" alt="">
-        </div>
-      </div>
-    </div>
-
-  </section><!-- End Hero -->
-
-  <main id="main">
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-
-      <div class="container" data-aos="fade-up">
-        <div class="row gx-0">
-
-          <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
-            <div class="content">
-              <h3>Who We Are</h3>
-              <h2>Our playground is the web</h2>
-              <p>
-                We help our customers thrive in e-commerce, articifial intelligence and cloud solutions.
-              </p>
-              <div class="text-center text-lg-start">
-                <a href="#" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
-                  <span>Read More</span>
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-            <img src="assets/flexstart-img/about.jpg" class="img-fluid" alt="">
-          </div>
-
-        </div>
-      </div>
-
-    </section><!-- End About Section -->
-
-    <!-- ======= Values Section ======= -->
-    <section id="values" class="values">
-
-      <div class="container" data-aos="fade-up">
-
-        <header class="section-header">
-          <h2>Our Values</h2>
-          <p>Uprightness and Trust</p>
-        </header>
-
-        <div class="row">
-
-          <div class="col-lg-4">
-            <div class="box" data-aos="fade-up" data-aos-delay="200">
-              <img src="assets/flexstart-img/values-1.png" class="img-fluid" alt="">
-              <h3>Give you the right solutions</h3>
-              <p>Help you thrive with the rigth solution. We push you up.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mt-4 mt-lg-0">
-            <div class="box" data-aos="fade-up" data-aos-delay="400">
-              <img src="assets/flexstart-img/values-2.png" class="img-fluid" alt="">
-              <h3>Be there to help</h3>
-              <p>We hear, not only listen.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mt-4 mt-lg-0">
-            <div class="box" data-aos="fade-up" data-aos-delay="600">
-              <img src="assets/flexstart-img/values-3.png" class="img-fluid" alt="">
-              <h3></h3>Build trust.</h3>
-              <p>Tell you the truth even if it is not easy.</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- End Values Section -->
-
-    <!-- ======= Counts Section ======= -->
-    <section id="counts" class="counts">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="count-box">
-              <i class="bi bi-emoji-smile"></i>
-              <div>
-                <span data-purecounter-start="0" data-purecounter-end="22" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Happy Clients</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="count-box">
-              <i class="bi bi-journal-richtext" style="color: #ee6c20;"></i>
-              <div>
-                <span data-purecounter-start="0" data-purecounter-end="121" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Projects (with returning customers)</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="count-box">
-              <i class="bi bi-headset" style="color: #15be56;"></i>
-              <div>
-                <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Hours Of Support</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="count-box">
-              <i class="bi bi-people" style="color: #bb0852;"></i>
-              <div>
-                <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Hard Workers</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Counts Section -->
-
-    <!-- ======= Features Section ======= -->
-    <section id="features" class="features">
-
-      <div class="container" data-aos="fade-up">
-
-        <header class="section-header">
-          <h2>Features</h2>
-          <p>Help you thrive with the rigth solution. We push you up.</p>
-        </header>
-
-        <!-- Feature Icons -->
-        <div class="row feature-icons" data-aos="fade-up">
-          <!-- <h3>Ratione mollitia eos ab laudantium rerum beatae quo</h3> -->
-
-          <div class="row">
-
-            <div class="col-xl-6 text-center" data-aos="fade-right" data-aos-delay="100">
-              <img src="assets/flexstart-img/features.png" class="img-fluid p-4" alt="">
-            </div>
-
-            <div class="col-xl-6 d-flex content">
-              <div class="row align-self-center gy-4">
-
-                <div class="col-md-6 icon-box" data-aos="fade-up">
-                  <i class="ri-line-chart-line"></i>
-                  <div>
-                    <h4>e-Commerce</h4>
-                    <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+              <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+                <div class="content">
+                  <h3>Who We Are</h3>
+                  <h2>Our playground is the web</h2>
+                  <p>
+                    We help our customers thrive in e-commerce, articifial intelligence and cloud solutions.
+                  </p>
+                  <div class="text-center text-lg-start">
+                    <a href="#" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
+                      <span>Read More</span>
+                      <i class="bi bi-arrow-right"></i>
+                    </a>
                   </div>
                 </div>
-
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-                  <i class="ri-stack-line"></i>
-                  <div>
-                    <h4>AI Models</h4>
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
-                  </div>
-                </div>
-
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-                  <i class="ri-brush-4-line"></i>
-                  <div>
-                    <h4>Event platforms (for virtual events)</h4>
-                    <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
-                  </div>
-                </div>
-
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-                  <i class="ri-magic-line"></i>
-                  <div>
-                    <h4>AI powered apps</h4>
-                    <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
-                  </div>
-                </div>
-
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-                  <i class="ri-command-line"></i>
-                  <div>
-                    <h4>Automate your process</h4>
-                    <p>Et fuga et deserunt et enim. Dolorem architecto ratione tensa raptor marte</p>
-                  </div>
-                </div>
-
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-                  <i class="ri-radar-line"></i>
-                  <div>
-                    <h4>Web solutions</h4>
-                    <p>Est autem dicta beatae suscipit. Sint veritatis et sit quasi ab aut inventore</p>
-                  </div>
-                </div>
-
               </div>
+
+              <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+                <img src="/assets/flexstart-img/about.jpg" class="img-fluid" alt="">
+              </div>
+
+            </div>
+          </div>
+
+        </section><!-- End About Section -->
+
+        <!-- ======= Values Section ======= -->
+        <section id="values" class="values">
+
+          <div class="container" data-aos="fade-up">
+
+            <header class="section-header">
+              <h2>Our Values</h2>
+              <p>Uprightness and Trust</p>
+            </header>
+
+            <div class="row">
+
+              <div class="col-lg-4">
+                <div class="box" data-aos="fade-up" data-aos-delay="200">
+                  <img src="/assets/flexstart-img/values-1.png" class="img-fluid" alt="">
+                  <h3>Give you the right solutions</h3>
+                  <p>Help you thrive with the rigth solution. We push you up.</p>
+                </div>
+              </div>
+
+              <div class="col-lg-4 mt-4 mt-lg-0">
+                <div class="box" data-aos="fade-up" data-aos-delay="400">
+                  <img src="/assets/flexstart-img/values-2.png" class="img-fluid" alt="">
+                  <h3>Be there to help</h3>
+                  <p>We hear, not only listen.</p>
+                </div>
+              </div>
+
+              <div class="col-lg-4 mt-4 mt-lg-0">
+                <div class="box" data-aos="fade-up" data-aos-delay="600">
+                  <img src="/assets/flexstart-img/values-3.png" class="img-fluid" alt="">
+                  <h3></h3>Build trust.</h3>
+                  <p>Tell you the truth even if it is not easy.</p>
+                </div>
+              </div>
+
             </div>
 
           </div>
 
-        </div><!-- End Feature Icons -->
+        </section><!-- End Values Section -->
 
-      </div>
-
-    </section><!-- End Features Section -->
-
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
-
-      <div class="container" data-aos="fade-up">
-
-        <header class="section-header">
-          <h2>Portfolio</h2>
-          <p>Check our latest work</p>
-        </header>
-
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-ai">AI</li>
-              <li data-filter=".filter-web">Web</li>
-              <li data-filter=".filter-cloud">Cloud</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-          {% for post in site.services %}
-          <div class="col-lg-4 col-md-6 portfolio-item filter-{{ post.type }}">
-            <div class="portfolio-wrap">
-              <img src="img/portfolio/thumbnail/{{ post.thumbnail }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>{{ post.title }}</h4>
-                <p>{{ post.subtitle }}</p>
-                <div class="portfolio-links">
-                  <a href="img/portfolio/thumbnail/{{ post.thumbnail }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 1"><i class="bi bi-plus"></i></a>
-                  <a href="#portfolioModal{{ post.modal-id }}" title="More Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          {% endfor %}
-
-        </div>
-
-      </div>
-
-    </section><!-- End Portfolio Section -->
-
-    <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials">
-
-      <div class="container" data-aos="fade-up">
-
-        <header class="section-header">
-          <h2>Testimonials</h2>
-          <p>What they are saying about us</p>
-        </header>
-
-        <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="200">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  Amazing service, consultation and delivery! Top seller here on Fiverr and will be using his services many times again.. highly recommended!
-                </p>
-                <div class="profile mt-auto">
-                  <img src="assets/flexstart-img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                  <h3>Bundi123</h3>
-                  <h4>Ceo &amp; Founder</h4>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
-                </div>
-                <p>
-                  Very close to the project, he tried to do the best and spend many time developing my idea. thanks!
-                </p>
-                <div class="profile mt-auto">
-                  <img src="assets/flexstart-img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                  <h3>Jordilinares</h3>
-                  <h4>Designer</h4>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
-                </div>
-                <p>
-                  Very good communication, performed good configuration. Will use again!
-                </p>
-                <div class="profile mt-auto">
-                  <img src="assets/flexstart-img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                  <h3>Sonnydriscoll</h3>
-                  <h4>Entrepreneur</h4>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  He is a perfect bot developer, please patronise this talented seller Thanks for the awesome work, I will come back again.
-                </p>
-                <div class="profile mt-auto">
-                  <img src="assets/flexstart-img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                  <h3>Marketing_ass</h3>
-                  <h4>Freelancer</h4>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-
-    </section><!-- End Testimonials Section -->
-
-    <!-- ======= Team Section ======= -->
-    <section id="team" class="team">
-
-      <div class="container" data-aos="fade-up">
-
-        <header class="section-header">
-          <h2>Team</h2>
-          <p>Our hard working team</p>
-        </header>
-
-        <div class="row gy-4">
-
-          {% for member in site.people %}
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-            <div class="member">
-              <div class="member-img">
-                <img src="img/team/flexstart/{{ member.pic }}.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>{{ member.name }}</h4>
-                <span>{{ member.position }}</span>
-                <p>{{ member.description }}</p>
-              </div>
-            </div>
-          </div>
-          {% endfor %}
-
-        </div>
-
-      </div>
-
-    </section><!-- End Team Section -->
-
-    <!-- ======= Clients Section ======= -->
-    <section id="clients" class="clients">
-
-      <div class="container" data-aos="fade-up">
-
-        <header class="section-header">
-          <h2>Our Clients</h2>
-          <p>We value these connections.</p>
-        </header>
-
-        <div class="clients-slider swiper-container">
-          <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="assets/flexstart-img/clients/client-1.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/flexstart-img/clients/client-2.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/flexstart-img/clients/client-3.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/flexstart-img/clients/client-4.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/flexstart-img/clients/client-5.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/flexstart-img/clients/client-6.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/flexstart-img/clients/client-7.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/flexstart-img/clients/client-8.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/flexstart-img/clients/client-9.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/flexstart-img/clients/client-10.png" class="img-fluid" alt="" style="background-color: #cecece;"></div>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
-
-    </section><!-- End Clients Section -->
-
-    <!-- ======= Recent Blog Posts Section ======= -->
-    <section id="recent-blog-posts" class="recent-blog-posts">
-
-      <div class="container" data-aos="fade-up">
-
-        <header class="section-header">
-          <h2>Blog</h2>
-          <p>Recent posts form our Blog</p>
-        </header>
-
-        <div class="row">
-
-          {% for post in site.posts limit:3 %}
-          <div class="col-lg-4">
-            <div class="post-box">
-              <div class="post-img">
-                {% if post.image %}
-
-                    {% if site.lazyimages == "enabled" %}
-                        <img class="img-fluid" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ site.baseurl }}/{{ post.image }}{% endif %}" alt="{{ post.title }}">
-                    {% else %}
-                        <img class="img-fluid" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ site.baseurl }}/img/portfolio/{{ post.image }}{% endif %}" alt="{{ post.title }}"> 
-                    {% endif %}
-
-                {% endif %}
-                <!-- <img src="assets/flexstart-img/blog/blog-1.jpg" class="img-fluid" alt=""> -->
-              </div>
-              <span class="post-date">{{ post.date | date: '%A %d %B, %Y' }}</span>
-              <h3 class="post-title">{{ post.title }}</h3>
-              <a href="{{ site.baseurl }}{{ post.url }}" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-          {% endfor %}
-
-        </div>
-
-      </div>
-
-    </section><!-- End Recent Blog Posts Section -->
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-
-      <div class="container" data-aos="fade-up">
-
-        <header class="section-header">
-          <h2>Contact</h2>
-          <p>Contact Us</p>
-          <h3 class="mt-3">To order one of our services, navigate to the <a href="/order-service">order service</a> page</h3>
-        </header>
-
-        <div class="row gy-4">
-
-          <div class="col-lg-6">
+        <!-- ======= Counts Section ======= -->
+        <section id="counts" class="counts">
+          <div class="container" data-aos="fade-up">
 
             <div class="row gy-4">
-              <div class="col-md-6">
-                <div class="info-box">
-                  <i class="bi bi-geo-alt"></i>
-                  <h3>Address</h3>
-                  <p>10 rue de Penthièvre,<br>75008 Paris</p>
+
+              <div class="col-lg-3 col-md-6">
+                <div class="count-box">
+                  <i class="bi bi-emoji-smile"></i>
+                  <div>
+                    <span data-purecounter-start="0" data-purecounter-end="22" data-purecounter-duration="1" class="purecounter"></span>
+                    <p>Happy Clients</p>
+                  </div>
                 </div>
               </div>
-              <div class="col-md-6">
-                <div class="info-box">
-                  <i class="bi bi-envelope"></i>
-                  <h3>Email Us</h3>
-                  <p>hello at bright-softwares dot com</p>
+
+              <div class="col-lg-3 col-md-6">
+                <div class="count-box">
+                  <i class="bi bi-journal-richtext" style="color: #ee6c20;"></i>
+                  <div>
+                    <span data-purecounter-start="0" data-purecounter-end="121" data-purecounter-duration="1" class="purecounter"></span>
+                    <p>Projects (with returning customers)</p>
+                  </div>
                 </div>
               </div>
-              <div class="col-md-6">
-                <div class="info-box">
-                  <i class="bi bi-clock"></i>
-                  <h3>Open Hours</h3>
-                  <p>Monday - Friday<br>9:00AM - 05:00PM</p>
+
+              <div class="col-lg-3 col-md-6">
+                <div class="count-box">
+                  <i class="bi bi-headset" style="color: #15be56;"></i>
+                  <div>
+                    <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+                    <p>Hours Of Support</p>
+                  </div>
                 </div>
               </div>
-              <!-- <div class="col-md-6">
-                <div class="info-box">
-                  <i class="bi bi-telephone"></i>
-                  <h3></h3>
-                  <p><br></p>
+
+              <div class="col-lg-3 col-md-6">
+                <div class="count-box">
+                  <i class="bi bi-people" style="color: #bb0852;"></i>
+                  <div>
+                    <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1" class="purecounter"></span>
+                    <p>Hard Workers</p>
+                  </div>
                 </div>
-              </div> -->
+              </div>
+
             </div>
 
           </div>
+        </section><!-- End Counts Section -->
 
-          <div id="mauticform_wrapper_brightsoftwarescontact" class="mauticform_wrapper col-lg-6">
-            <form class="php-email-form" autocomplete="false" role="form" method="post" action="https://marketing.bright-softwares.com/form/submit?formId=5" id="mauticform_brightsoftwarescontact" data-mautic-form="brightsoftwarescontact" enctype="multipart/form-data">
-                <div class="mauticform-innerform">
+        <!-- ======= Features Section ======= -->
+        <section id="features" class="features">
 
-                    
-                  <div class="mauticform-page-wrapper mauticform-page-1 row gy-4">
+          <div class="container" data-aos="fade-up">
 
-                    <div id="mauticform_brightsoftwarescontact_first_name" class="mauticform-row mauticform-text mauticform-field-1 mauticform-required col-md-6 " data-validate="first_name" data-validation-type="text">
-                        <input id="mauticform_input_brightsoftwarescontact_first_name" name="mauticform[first_name]" value="" placeholder="Your first name" class="mauticform-input form-control" type="text">
-                        <span class="mauticform-errormsg" style="display: none;">Please enter your first name</span>
+            <header class="section-header">
+              <h2>Features</h2>
+              <p>Help you thrive with the rigth solution. We push you up.</p>
+            </header>
+
+            <!-- Feature Icons -->
+            <div class="row feature-icons" data-aos="fade-up">
+              <!-- <h3>Ratione mollitia eos ab laudantium rerum beatae quo</h3> -->
+
+              <div class="row">
+
+                <div class="col-xl-6 text-center" data-aos="fade-right" data-aos-delay="100">
+                  <img src="/assets/flexstart-img/features.png" class="img-fluid p-4" alt="">
+                </div>
+
+                <div class="col-xl-6 d-flex content">
+                  <div class="row align-self-center gy-4">
+
+                    <div class="col-md-6 icon-box" data-aos="fade-up">
+                      <i class="ri-line-chart-line"></i>
+                      <div>
+                        <h4>e-Commerce</h4>
+                        <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                      </div>
                     </div>
 
-                    <div id="mauticform_brightsoftwarescontact_your_last_name" class="mauticform-row mauticform-text mauticform-field-2 mauticform-required col-md-6 " data-validate="your_last_name" data-validation-type="text">
-                        <!-- <span class="mauticform-helpmessage">Please enter your last name.</span> -->
-                        <input id="mauticform_input_brightsoftwarescontact_your_last_name" name="mauticform[your_last_name]" value="" placeholder="Your last name" class="mauticform-input form-control" type="text">
-                        <span class="mauticform-errormsg" style="display: none;">Please enter your last name.</span>
+                    <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+                      <i class="ri-stack-line"></i>
+                      <div>
+                        <h4>AI Models</h4>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                      </div>
                     </div>
 
-                    <div id="mauticform_brightsoftwarescontact_email" class="mauticform-row mauticform-email mauticform-field-3 mauticform-required col-md-6 " data-validate="email" data-validation-type="email">
-                        <!-- <span class="mauticform-helpmessage">Please enter your e-mail address.</span> -->
-                        <input id="mauticform_input_brightsoftwarescontact_email" name="mauticform[email]" value="" placeholder="Your e-mail address" class="mauticform-input form-control" type="email">
-                        <span class="mauticform-errormsg" style="display: none;">Please enter your e-mail address.</span>
+                    <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+                      <i class="ri-brush-4-line"></i>
+                      <div>
+                        <h4>Event platforms (for virtual events)</h4>
+                        <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                      </div>
                     </div>
 
-                    <div id="mauticform_brightsoftwarescontact_phone" class="mauticform-row mauticform-tel mauticform-field-4 col-md-6 ">
-                        <!-- <span class="mauticform-helpmessage">Please enter your phone number.</span> -->
-                        <input id="mauticform_input_brightsoftwarescontact_phone" name="mauticform[phone]" value="" placeholder="Your phone number" class="mauticform-input form-control" type="tel">
-                        <span class="mauticform-errormsg" style="display: none;"></span>
+                    <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+                      <i class="ri-magic-line"></i>
+                      <div>
+                        <h4>AI powered apps</h4>
+                        <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
+                      </div>
                     </div>
 
-                    <div id="mauticform_brightsoftwarescontact_subject" class="mauticform-row mauticform-text mauticform-field-5 mauticform-required col-md-12" data-validate="subject" data-validation-type="text">
-                        <!-- <span class="mauticform-helpmessage">Please enter your contact message.</span> -->
-                        <input id="mauticform_input_brightsoftwarescontact_subject" name="mauticform[subject]" value="" placeholder="Your contact message" class="mauticform-input form-control" type="text">
-                        <span class="mauticform-errormsg" style="display: none;">Please enter the contact subject.</span>
+                    <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+                      <i class="ri-command-line"></i>
+                      <div>
+                        <h4>Automate your process</h4>
+                        <p>Et fuga et deserunt et enim. Dolorem architecto ratione tensa raptor marte</p>
+                      </div>
                     </div>
 
-                    <div id="mauticform_brightsoftwarescontact_f_message" class="mauticform-row mauticform-text mauticform-field-6 mauticform-required col-md-12 text-center" data-validate="f_message" data-validation-type="textarea">
-                        <!-- <span class="mauticform-helpmessage">Please enter your message.</span> -->
-                        <textarea class="form-control" rows=6 placeholder="Message" id="mauticform_input_brightsoftwarescontact_f_message" name="mauticform[f_message]" class="mauticform-textarea"></textarea>
-                        <span class="mauticform-errormsg" style="display: none;">Please enter your message.</span>
+                    <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+                      <i class="ri-radar-line"></i>
+                      <div>
+                        <h4>Web solutions</h4>
+                        <p>Est autem dicta beatae suscipit. Sint veritatis et sit quasi ab aut inventore</p>
+                      </div>
                     </div>
 
-                    <div id="mauticform_brightsoftwarescontact_submit" class="mauticform-row mauticform-button-wrapper mauticform-field-7 col-md-12 text-center">
-                        <div class="mauticform-error" id="mauticform_brightsoftwarescontact_error"></div>
-                        <div class="mauticform-message" id="mauticform_brightsoftwarescontact_message"></div>
-                        
-                        <button type="submit" name="mauticform[submit]" id="mauticform_input_brightsoftwarescontact_submit" value="" class="mauticform-button btn btn-default">Send message</button>
-                    </div>
                   </div>
                 </div>
 
-                <input type="hidden" name="mauticform[formId]" id="mauticform_brightsoftwarescontact_id" value="5">
-                <input type="hidden" name="mauticform[return]" id="mauticform_brightsoftwarescontact_return" value="">
-                <input type="hidden" name="mauticform[formName]" id="mauticform_brightsoftwarescontact_name" value="brightsoftwarescontact">
-
-                </form>
-          </div>
-
-
-        </div>
-
-      </div>
-
-    </section><!-- End Contact Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
-
-    <div class="footer-newsletter">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-12 text-center">
-            <h4>Our Newsletter</h4>
-            <p>We won't spam you, we promise. 😇</p>
-          </div>
-          <div id="mauticform_wrapper_brightsoftwaresnewsletter" class="mauticform_wrapper col-lg-6">
-            <form autocomplete="false" role="form" method="post" action="https://marketing.bright-softwares.com/form/submit?formId=4" id="mauticform_brightsoftwaresnewsletter" data-mautic-form="brightsoftwaresnewsletter" enctype="multipart/form-data">
-              <div class="mauticform-error" id="mauticform_brightsoftwaresnewsletter_error"></div>
-              <div class="mauticform-message" id="mauticform_brightsoftwaresnewsletter_message"></div>
-              <div class="mauticform-innerform">
-
-                  
-                <div class="mauticform-page-wrapper mauticform-page-1" data-mautic-form-page="1">
-
-                  <div id="mauticform_brightsoftwaresnewsletter_email" data-validate="email" data-validation-type="email" class="mauticform-row mauticform-email mauticform-field-1 mauticform-required">
-                      <input id="mauticform_input_brightsoftwaresnewsletter_email" name="mauticform[email]" value="" placeholder="E-mail address" class="mauticform-input" type="email">
-                      <span class="mauticform-errormsg" style="display: none;">Please enter your e-mail address</span>
-                  </div>
-
-                  <div id="mauticform_brightsoftwaresnewsletter_submit" class="mauticform-row mauticform-button-wrapper mauticform-field-2">
-                      <input type="submit" name="mauticform[submit]" id="mauticform_input_brightsoftwaresnewsletter_submit" value="Subscribe" class="mauticform-button btn btn-default">
-                  </div>
-                  </div>
               </div>
 
-              <input type="hidden" name="mauticform[formId]" id="mauticform_brightsoftwaresnewsletter_id" value="4">
-              <input type="hidden" name="mauticform[return]" id="mauticform_brightsoftwaresnewsletter_return" value="">
-              <input type="hidden" name="mauticform[formName]" id="mauticform_brightsoftwaresnewsletter_name" value="brightsoftwaresnewsletter">
+            </div><!-- End Feature Icons -->
 
-              </form>
           </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="footer-top">
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-5 col-md-12 footer-info">
-            <a href="index.html" class="logo d-flex align-items-center">
-              <img src="assets/flexstart-img/logo.png" alt="">
-              <span>Bright Softwares</span>
-            </a>
-            <p>We provide solutions to our customers challenges. Our teams based in Paris and Lomé provide high value expertise to engineer the best solutions.</p>
-            <div class="social-links mt-3">
-              {% for network in site.social %}
-              <a href="{{ network.url }}" class="{{ network.title }}"><i class="bi bi-{{ network.title }}"></i></a>
+        </section><!-- End Features Section -->
+
+        <!-- ======= Portfolio Section ======= -->
+        <section id="portfolio" class="portfolio">
+
+          <div class="container" data-aos="fade-up">
+
+            <header class="section-header">
+              <h2>Portfolio</h2>
+              <p>Check our latest work</p>
+            </header>
+
+            <div class="row" data-aos="fade-up" data-aos-delay="100">
+              <div class="col-lg-12 d-flex justify-content-center">
+                <ul id="portfolio-flters">
+                  <li data-filter="*" class="filter-active">All</li>
+                  <li data-filter=".filter-app">App</li>
+                  <li data-filter=".filter-ai">AI</li>
+                  <li data-filter=".filter-web">Web</li>
+                  <li data-filter=".filter-cloud">Cloud</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+              {% for post in site.services %}
+              <div class="col-lg-4 col-md-6 portfolio-item filter-{{ post.type }}">
+                <div class="portfolio-wrap">
+                  <img src="/img/portfolio/thumbnail/{{ post.thumbnail }}" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h4>{{ post.title }}</h4>
+                    <p>{{ post.subtitle }}</p>
+                    <div class="portfolio-links">
+                      <a href="/img/portfolio/thumbnail/{{ post.thumbnail }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 1"><i class="bi bi-plus"></i></a>
+                      <a href="{{ post.url }}" title="More Details"><i class="bi bi-link"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
               {% endfor %}
-              <!-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bi bi-instagram bx bxl-instagram"></i></a>
-              <a href="#" class="linkedin"><i class="bi bi-linkedin bx bxl-linkedin"></i></a> -->
+
+            </div>
+
+          </div>
+
+        </section><!-- End Portfolio Section -->
+
+        <!-- ======= Testimonials Section ======= -->
+        <section id="testimonials" class="testimonials">
+
+          <div class="container" data-aos="fade-up">
+
+            <header class="section-header">
+              <h2>Testimonials</h2>
+              <p>What they are saying about us</p>
+            </header>
+
+            <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="200">
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <div class="stars">
+                      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                    </div>
+                    <p>
+                      Amazing service, consultation and delivery! Top seller here on Fiverr and will be using his services many times again.. highly recommended!
+                    </p>
+                    <div class="profile mt-auto">
+                      <img src="/assets/flexstart-img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                      <h3>Bundi123</h3>
+                      <h4>Ceo &amp; Founder</h4>
+                    </div>
+                  </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <div class="stars">
+                      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+                    </div>
+                    <p>
+                      Very close to the project, he tried to do the best and spend many time developing my idea. thanks!
+                    </p>
+                    <div class="profile mt-auto">
+                      <img src="/assets/flexstart-img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                      <h3>Jordilinares</h3>
+                      <h4>Designer</h4>
+                    </div>
+                  </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <div class="stars">
+                      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+                    </div>
+                    <p>
+                      Very good communication, performed good configuration. Will use again!
+                    </p>
+                    <div class="profile mt-auto">
+                      <img src="/assets/flexstart-img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                      <h3>Sonnydriscoll</h3>
+                      <h4>Entrepreneur</h4>
+                    </div>
+                  </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <div class="stars">
+                      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                    </div>
+                    <p>
+                      He is a perfect bot developer, please patronise this talented seller Thanks for the awesome work, I will come back again.
+                    </p>
+                    <div class="profile mt-auto">
+                      <img src="/assets/flexstart-img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                      <h3>Marketing_ass</h3>
+                      <h4>Freelancer</h4>
+                    </div>
+                  </div>
+                </div><!-- End testimonial item -->
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+          </div>
+
+        </section><!-- End Testimonials Section -->
+
+        <!-- ======= Team Section ======= -->
+        <section id="team" class="team">
+
+          <div class="container" data-aos="fade-up">
+
+            <header class="section-header">
+              <h2>Team</h2>
+              <p>Our hard working team</p>
+            </header>
+
+            <div class="row gy-4">
+
+              {% for member in site.people %}
+              <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                <div class="member">
+                  <div class="member-img">
+                    <img src="/img/team/flexstart/{{ member.pic }}.jpg" class="img-fluid" alt="">
+                    <div class="social">
+                      <a href=""><i class="bi bi-twitter"></i></a>
+                      <a href=""><i class="bi bi-facebook"></i></a>
+                      <a href=""><i class="bi bi-instagram"></i></a>
+                      <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+                  </div>
+                  <div class="member-info">
+                    <h4>{{ member.name }}</h4>
+                    <span>{{ member.position }}</span>
+                    <p>{{ member.description }}</p>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+
+            </div>
+
+          </div>
+
+        </section><!-- End Team Section -->
+
+        <!-- ======= Clients Section ======= -->
+        <section id="clients" class="clients">
+
+          <div class="container" data-aos="fade-up">
+
+            <header class="section-header">
+              <h2>Our Clients</h2>
+              <p>We value these connections.</p>
+            </header>
+
+            <div class="clients-slider swiper-container">
+              <div class="swiper-wrapper align-items-center">
+                <div class="swiper-slide"><img src="/assets/flexstart-img/clients/client-1.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="/assets/flexstart-img/clients/client-2.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="/assets/flexstart-img/clients/client-3.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="/assets/flexstart-img/clients/client-4.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="/assets/flexstart-img/clients/client-5.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="/assets/flexstart-img/clients/client-6.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="/assets/flexstart-img/clients/client-7.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="/assets/flexstart-img/clients/client-8.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="/assets/flexstart-img/clients/client-9.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="/assets/flexstart-img/clients/client-10.png" class="img-fluid" alt="" style="background-color: #cecece;"></div>
+              </div>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
 
-          <div class="col-lg-2 col-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="/conditions">Terms of service</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="/privacy">Privacy policy</a></li>
-            </ul>
-          </div>
+        </section><!-- End Clients Section -->
 
-          <div class="col-lg-2 col-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Web solutions</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">e-commerce</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">AI powered apps</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">AI Models</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Automated revenue</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Cloud infrastructure</a></li>
-            </ul>
-          </div>
+        {% include flexstart-blogposts.html %}
 
-          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-            <h4>Contact Us</h4>
-            <p>
-              10 rue de Penthièvre <br>
-              75008, Paris<br>
-              France <br><br>
-              <!--<strong>Phone:</strong> +1 5589 55488 55<br>-->
-              <strong>Email:</strong> hello at bright-softwares dot com<br>
-            </p>
+        {% include flexstart-contact.html %}
 
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>{{ site.title }} {{ 'now' | date: "%Y" }}</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexstart-bootstrap-startup-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/flexstart-vendor/bootstrap/js/bootstrap.bundle.js"></script>
-  <script src="assets/flexstart-vendor/aos/aos.js"></script>
-  <script src="assets/flexstart-vendor/php-email-form/validate.js"></script>
-  <script src="assets/flexstart-vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/flexstart-vendor/purecounter/purecounter.js"></script>
-  <script src="assets/flexstart-vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/flexstart-vendor/glightbox/js/glightbox.min.js"></script>
+      </main><!-- End #main -->
   
-
-
-  <!-- Template Main JS File -->
-  <script src="assets/flexstart-js/main.js"></script>
-  <script src="assets/flexstart-js/flexstart_contact.js"></script>
-
-</body>
-
+    {% include flexstart-footer.html %}
+  </body>
 </html>

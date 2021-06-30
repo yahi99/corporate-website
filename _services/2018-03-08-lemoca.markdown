@@ -1,7 +1,10 @@
 ---
 title: Le MOCA
 subtitle: Art
-layout: default
+layout: flexstart-portfolio-details
+images:
+  - path: /img/portfolio/flexstart/lemocca-2.png
+    alt-text: Le Moca landing page
 modal-id: 1
 date: 2018-03-08
 img: lemocca-2.png
@@ -12,7 +15,6 @@ client: Le MOCA
 category: Web Development
 type: web
 description: A beautiful project, baked in Art.
-
 ---
 
-Visit the site live at <http://le-moca.com/>{: target="_blank"}
+Visit the site live at <http://le-moca.com/>{: target="\_blank"}

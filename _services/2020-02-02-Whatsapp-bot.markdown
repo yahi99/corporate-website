@@ -1,7 +1,10 @@
 ---
 title: WhatsApp bot
 subtitle: WhatsApp permit management bot
-layout: default
+layout: flexstart-portfolio-details
+images:
+  - path: /img/portfolio/flexstart/whatsappbot_permitmanagement.png
+    alt-text: A presentation of the whatsapp permit management bot
 modal-id: 8
 date: 2020-02-02
 img: whatsappbot_permitmanagement.png
@@ -13,7 +16,6 @@ client: A whatsapp customer
 category: Bot Development
 type: ai
 description: A bot that can help sellers manage their permit and help the government control sellers that have a valid permit.
-
 ---
 
 ### Demo video

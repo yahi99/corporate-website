@@ -21,6 +21,7 @@ PORTFOLIO_SRC=$(wildcard img/portfolio/original/*.png img/portfolio/original/*.g
 PORTFOLIO_THUMBNAIL_SRC=$(subst img/portfolio/original, img/portfolio/thumbnail, $(PORTFOLIO_SRC))
 PORTFOLIO_LARGE_SRC=$(subst img/portfolio/original, img/portfolio/large, $(PORTFOLIO_SRC))
 PORTFOLIO_FLEXSTART_SRC=$(subst img/portfolio/original, img/portfolio/flexstart, $(PORTFOLIO_SRC))
+PORTFOLIO_FLEXSTARTPORTRAIT_SRC=$(subst img/portfolio/original, img/portfolio/flexstart-portrait, $(PORTFOLIO_SRC))
 
 LOGO_SRC=$(wildcard img/logos/original/*.png img/logos/original/*.gif img/logos/original/*.jpeg img/logos/original/*.jpg)
 LOGO_THUMBNAIL_SRC=$(subst img/logos/original, img/logos/thumbnail, $(LOGO_SRC))
@@ -57,6 +58,9 @@ img/portfolio/large/%: img/portfolio/original/%
 img/portfolio/flexstart/%: img/portfolio/original/%
 	mogrify -path $(dir $@) -resize 800 -extent 800x600^ -gravity center -quality $(IMAGE_QUALITY) $<
 
+img/portfolio/flexstart-portrait/%: img/portfolio/original/%
+	mogrify -path $(dir $@) -resize 900 -extent 900x1900^ -gravity center -quality $(IMAGE_QUALITY) $<
+
 img/logos/thumbnail/%: img/logos/original/%
 	mogrify -path $(dir $@) -resize 32 -extent 32x32 -gravity center -quality $(IMAGE_QUALITY) $<
 
@@ -74,7 +78,7 @@ img/team/flexstart/%: img/team/original/%
 
 
 
-portfolio: $(PORTFOLIO_THUMBNAIL_SRC) $(PORTFOLIO_LARGE_SRC) $(PORTFOLIO_FLEXSTART_SRC) ## Generate portfolio thumbnail and large images
+portfolio: $(PORTFOLIO_THUMBNAIL_SRC) $(PORTFOLIO_LARGE_SRC) $(PORTFOLIO_FLEXSTART_SRC) $(PORTFOLIO_FLEXSTARTPORTRAIT_SRC) ## Generate portfolio thumbnail and large images
 	@echo Portfolio done.
 
 logo: $(LOGO_THUMBNAIL_SRC) $(LOGO_LARGE_SRC) ## Generate logo thumbnail

@@ -1,7 +1,10 @@
 ---
 title: Dagan Magazine, femme togolaise
 subtitle: Online magazine intended to women
-layout: default
+layout: flexstart-portfolio-details
+images:
+  - path: /img/portfolio/flexstart/dagan.png
+    alt-text: Dagan magazine website homepage
 modal-id: 11
 date: 2020-05-02
 img: dagan.png
@@ -12,8 +15,6 @@ client: Dagan Magazine
 category: Web Development
 type: web
 description: Dagan magazine's new issue is in the kiosks. 🥰 Go get it quickly in booths. and don't hesitate to tag us (in the comments or in story) with your favorite magazine, we're sharing everything again 📽 Enjoy your reading!
-
 ---
 
-
-Visit the site live at <https://daganmag.com/>{: target="_blank"}
+Visit the site live at <https://daganmag.com/>{: target="\_blank"}

@@ -3,8 +3,8 @@ url: https://bright-softwares.com
 #baseurl: /
 logo-light: img/logos/large/brightsoftwares-light.png
 logo-dark: img/logos/large/brightsoftwares-dark.png
-logo: 'img/logos/large/brightsoftwares-light.png'
-favicon: 'assets/favicon/favicon.ico'
+logo: "img/logos/large/brightsoftwares-light.png"
+favicon: "assets/favicon/favicon.ico"
 name: Bright Softwares
 short_name: "bs"
 
@@ -30,14 +30,13 @@ authors:
     description: "A professional and sympathic business man."
   john:
     name: John
-    display_name: John    
-    avatar: 'assets/images/avatar.png'
+    display_name: John
+    avatar: "assets/images/avatar.png"
     gravatar: b1cc14991db7a456fcd761680bbc8f81
     email: wowthemesnet@gmail.com
     web: https://www.wowthemes.net
     twitter: https://twitter.com/wowthemesnet
     description: "This is the author box. Write a short description of the author here. You are currently previewing Mediumish demo, a Jekyll template compatible with Github pages."
-
 
 # Plugins
 plugins:
@@ -47,16 +46,16 @@ plugins:
   - jekyll-seo-tag
   - jekyll-archives
   - jekyll-minimagick
-    
+
 # Archives
 jekyll-archives:
   enabled:
     - categories
   layout: archive
   permalinks:
-    category: '/category/:name/'
-    
-# Pagination 
+    category: "/category/:name/"
+
+# Pagination
 paginate: 6
 paginate_path: /page:num/
 
@@ -64,62 +63,63 @@ collections:
   articles:
     output: true
     permalink: /articles/:path
-  
+
   services:
     output: true
+    permalink: /:collection/:title
 
   posts:
     permalink: /blog/:categories/:slug
 
 # Team names, titles and social links
 people:
-- name: Full Bright
-  pic: 1
-  position: AI solutions designer
-  description: An Artificial Intelligence freak. He is always building new models. We expect his solutions will solve your issues.
-  social:
-    - title: twitter
-      url: #
-    - title: facebook
-      url: #
-    - title: stack-overflow
-      url: #
+  - name: Full Bright
+    pic: 1
+    position: AI solutions designer
+    description: An Artificial Intelligence freak. He is always building new models. We expect his solutions will solve your issues.
+    social:
+      - title: twitter
+        url: #
+      - title: facebook
+        url: #
+      - title: stack-overflow
+        url: #
 
-- name: Kekeli Afanou
-  pic: 2
-  position: Cloud Nerd
-  description: He is our automation nerd. He knows everything about connecting the dots to make automation your best ally.
-  social:
-    - title: twitter
-      url: #
-    - title: facebook
-      url: #
-    - title: linkedin
-      url: #
+  - name: Kekeli Afanou
+    pic: 2
+    position: Cloud Nerd
+    description: He is our automation nerd. He knows everything about connecting the dots to make automation your best ally.
+    social:
+      - title: twitter
+        url: #
+      - title: facebook
+        url: #
+      - title: linkedin
+        url: #
 
-- name: Christoli Wonegou
-  pic: 3
-  position: Lead Developer
-  description: Our development nerd. He is our keyboard guru.
-  social:
-    - title: twitter
-      url: #
-    - title: facebook
-      url: #
-    - title: google-plus
-      url: #
+  - name: Christoli Wonegou
+    pic: 3
+    position: Lead Developer
+    description: Our development nerd. He is our keyboard guru.
+    social:
+      - title: twitter
+        url: #
+      - title: facebook
+        url: #
+      - title: google-plus
+        url: #
 
-- name: Isa Bryant
-  pic: isa2
-  position: Marketing & Communication
-  description: She is our last recruit in the team. She scouts for marketing and com'.
-  social:
-    - title: twitter
-      url: #
-    - title: facebook
-      url: #
-    - title: google-plus
-      url: #
+  - name: Isa Bryant
+    pic: isa2
+    position: Marketing & Communication
+    description: She is our last recruit in the team. She scouts for marketing and com'.
+    social:
+      - title: twitter
+        url: #
+      - title: facebook
+        url: #
+      - title: google-plus
+        url: #
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
@@ -141,9 +141,8 @@ address:
   - line: Quartier Attiegou, Togo 200
   - line: Lomé, Togo
 
-
 # Google Analytics
-google_analytics: 'UA-134921119-1'
+google_analytics: "UA-134921119-1"
 
 # Build settings
 markdown: kramdown

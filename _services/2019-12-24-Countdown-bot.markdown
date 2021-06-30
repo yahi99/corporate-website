@@ -1,7 +1,10 @@
 ---
 title: Countdown bot
 subtitle: Telegram countdown bot
-layout: default
+layout: flexstart-portfolio-details
+images:
+  - path: /img/portfolio/flexstart/countdown_bot.png
+    alt-text: A screenshot of the countdown
 modal-id: 7
 date: 2019-12-24
 img: countdown_bot.png
@@ -13,5 +16,4 @@ client: A telegram customer
 category: Bot Development
 type: ai
 description: Very useful bot that can help your users know when a special event will start.
-
 ---

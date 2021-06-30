@@ -1,0 +1,147 @@
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <title>
+    {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
+  </title>
+  <meta content="{{ site.description }}" name="description" />
+
+  <meta
+    content="web e-commerce articifial intelligence ai automation"
+    name="keywords"
+  />
+  <link
+    rel="canonical"
+    href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
+  />
+  <link rel="manifest" href="manifest.json" />
+
+  <!-- Favicons -->
+  <!-- <link href="/assets/flexstart-img/favicon.png" rel="icon">
+  <link href="/assets/flexstart-img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+  <!-- The favicon items -->
+  <link
+    rel="apple-touch-icon"
+    sizes="57x57"
+    href="/assets/favicon.ico/apple-icon-57x57.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="60x60"
+    href="/assets/favicon.ico/apple-icon-60x60.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="72x72"
+    href="/assets/favicon.ico/apple-icon-72x72.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="76x76"
+    href="/assets/favicon.ico/apple-icon-76x76.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="114x114"
+    href="/assets/favicon.ico/apple-icon-114x114.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="120x120"
+    href="/assets/favicon.ico/apple-icon-120x120.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="144x144"
+    href="/assets/favicon.ico/apple-icon-144x144.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="152x152"
+    href="/assets/favicon.ico/apple-icon-152x152.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="/assets/favicon.ico/apple-icon-180x180.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="192x192"
+    href="/assets/favicon.ico/android-icon-192x192.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="/assets/favicon.ico/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="96x96"
+    href="/assets/favicon.ico/favicon-96x96.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="/assets/favicon.ico/favicon-16x16.png"
+  />
+  <!--<link rel="manifest" href="{{ "/assets/favicon.ico/manifest.json" | prepend: site.baseurl }}">-->
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta
+    name="msapplication-TileImage"
+    content="/assets/favicon.ico/ms-icon-144x144.png"
+  />
+  <meta name="theme-color" content="#ffffff" />
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet"
+  />
+
+  <!-- Vendor CSS Files -->
+  <link
+    href="{{ '/assets/flexstart-vendor/bootstrap/css/bootstrap.min.css' | prepend: site.baseurl }}"
+    rel="stylesheet"
+  />
+  <link
+    href="{{ '/assets/flexstart-vendor/bootstrap-icons/bootstrap-icons.css' | prepend: site.baseurl }}"
+    rel="stylesheet"
+  />
+  <link
+    href="{{ '/assets/flexstart-vendor/aos/aos.css' | prepend: site.baseurl }}"
+    rel="stylesheet"
+  />
+  <link
+    href="{{ '/assets/flexstart-vendor/remixicon/remixicon.css' | prepend: site.baseurl }}"
+    rel="stylesheet"
+  />
+  <link
+    href="{{ '/assets/flexstart-vendor/swiper/swiper-bundle.min.css' | prepend: site.baseurl }}"
+    rel="stylesheet"
+  />
+  <link
+    href="{{ '/assets/flexstart-vendor/glightbox/css/glightbox.min.css' | prepend: site.baseurl }}"
+    rel="stylesheet"
+  />
+
+  <!-- Template Main CSS File -->
+  <link
+    href="{{ '/assets/flexstart-css/style.css' | prepend: site.baseurl }}"
+    rel="stylesheet"
+  />
+
+  <!-- =======================================================
+  * Template Name: FlexStart - v1.1.1
+  * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  {% if jekyll.environment == 'production' %} {% include analytics.html %} {%
+  endif %}
+</head>

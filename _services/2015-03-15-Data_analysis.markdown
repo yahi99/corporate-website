@@ -1,7 +1,10 @@
 ---
 title: Data Analysis
 subtitle: Stripping, extracting, sorting, scripting
-layout: default
+layout: flexstart-portfolio-details
+images:
+  - path: data-analysis.jpeg
+    alt-text: A man editing complex data.
 modal-id: 4
 date: 2015-03-15
 img: data-analysis.jpeg
@@ -12,10 +15,10 @@ client: Various customers
 category: Data analysis
 type: app
 description: If you have data, it can be transformed, out of a mess, of meaningless information and into usable, tangible insights for your business.
-
 ---
 
 What started as a way of speeding up my business is now a service I offer to clients with complex needs for structuring data.
+
 - Stripping and filtering data (remove unwanted garbage, trailing text, spaces)
 - Extracting data (pull relevant strings from files or sites)
 - Sorting (sort by value, date, specific keyword)
