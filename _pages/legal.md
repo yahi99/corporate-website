@@ -2,10 +2,11 @@
 layout: post-default
 title: Mentions Légales
 permalink: /legal
+lang: en
+ref: legal_mentions
 ---
 
 # Mentions Légales
-
 
 ## 1 - Édition du site
 
@@ -23,7 +24,6 @@ Délégué à la protection des données : -
 
 Autres contributeurs : Les mentions légales sont proposées par le générateur de mentions légales de La Webeuse.
 
-
 ## 2 - Propriété intellectuelle et contrefaçons.
 
 Bright Softwares est propriétaire des droits de propriété intellectuelle et détient les droits d’usage sur tous les éléments accessibles sur le site internet, notamment les textes, images, graphismes, logos, vidéos, architecture, icônes et sons.
@@ -31,7 +31,6 @@ Bright Softwares est propriétaire des droits de propriété intellectuelle et d
 Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable de Bright Softwares.
 
 Toute exploitation non autorisée du site ou de l’un quelconque des éléments qu’il contient sera considérée comme constitutive d’une contrefaçon et poursuivie conformément aux dispositions des articles L.335-2 et suivants du Code de Propriété Intellectuelle.
-
 
 ## 3 - Limitations de responsabilité.
 
@@ -45,7 +44,6 @@ Des espaces interactifs (espace contact ou commentaires) sont à la disposition 
 
 Le cas échéant, Bright Softwares se réserve également la possibilité de mettre en cause la responsabilité civile et/ou pénale de l’utilisateur, notamment en cas de message à caractère raciste, injurieux, diffamant, ou pornographique, quel que soit le support utilisé (texte, photographie …).
 
-
 ## 4 - CNIL et gestion des données personnelles.
 
 Conformément aux dispositions de la loi 78-17 du 6 janvier 1978 modifiée, l’utilisateur du site bright-softwares.com dispose d’un droit d’accès, de modification et de suppression des informations collectées. Pour exercer ce droit, envoyez un message à notre Délégué à la Protection des Données : - .
@@ -53,7 +51,6 @@ Conformément aux dispositions de la loi 78-17 du 6 janvier 1978 modifiée, l’
 Pour plus d'informations sur la façon dont nous traitons vos données (type de données, finalité, destinataire...), lisez notre Politique de Confidentialité.
 
 Il est également possible de déposer une réclamation auprès de la CNIL.
-
 
 ## 5 - Liens hypertextes et cookies
 
@@ -69,8 +66,6 @@ Les cookies sont enregistrés pour une durée maximale de 2 mois.
 
 Pour plus d'informations sur la façon dont nous faisons usage des cookies, lisez notre Politique de Confidentialité.
 
-
 ## 6 - Droit applicable et attribution de juridiction.
 
 Tout litige en relation avec l’utilisation du site bright-softwares.com est soumis au droit français. En dehors des cas où la loi ne le permet pas, il est fait attribution exclusive de juridiction aux tribunaux compétents de Paris 13e.
-

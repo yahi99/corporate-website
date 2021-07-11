@@ -2,6 +2,8 @@
 layout: post-default
 title: Blog
 permalink: /blog
+lang: en
+ref: blog
 ---
 
 {% if page.url == "/blog/" %}
@@ -25,6 +27,7 @@ permalink: /blog
     {% endfor %}
 
     </div>
+
 </section>
 
 {% endif %}
@@ -59,4 +62,3 @@ permalink: /blog
     {% include pagination.html %}
 </span>
 </div>
-

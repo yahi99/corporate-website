@@ -2,12 +2,13 @@
 layout: post-default
 title: Declaration de confidentialité
 permalink: /privacy
+lang: en
+ref: privacy
 ---
-
 
 # DÉCLARATION DE CONFIDENTIALITÉ
 
-_____
+---
 
 ## ARTICLE 1 – RENSEIGNEMENTS PERSONNELS RECUEILLIS
 
@@ -17,7 +18,6 @@ Lorsque vous naviguez sur notre boutique, nous recevons également automatiqueme
 
 Marketing par e-mail (le cas échéant): Avec votre permission, nous pourrions vous envoyer des e-mails au sujet de notre boutique, de nouveaux produits et d’autres mises à jour.
 
-
 ## ARTICLE 2 - CONSENTEMENT
 
 Comment obtenez-vous mon consentement?
@@ -26,23 +26,19 @@ Lorsque vous nous fournissez vos renseignements personnels pour conclure une tra
 
 Si nous vous demandons de nous fournir vos renseignements personnels pour une autre raison, à des fins de marketing par exemple, nous vous demanderons directement votre consentement explicite, ou nous vous donnerons la possibilité de refuser.
 
-
 Comment puis-je retirer mon consentement?
 
 Si après nous avoir donné votre consentement, vous changez d’avis et ne consentez plus à ce que nous puissions vous contacter, recueillir vos renseignements ou les divulguer, vous pouvez nous en aviser en nous contactant à ofijojo@yopmail.com ou par courrier à: Bright Softwares 92 Rue Jeanne d'Arc, Paris, J, 75013, France
 
-
 ## ARTICLE 3 – DIVULGATION
 
 Nous pouvons divulguer vos renseignements personnels si la loi nous oblige à le faire ou si vous violez nos Conditions Générales de Vente et d’Utilisation.
-
 
 ## ARTICLE 4 – SHOPIFY
 
 Notre boutique est hébergée sur Shopify Inc. Ils nous fournissent la plate-forme e-commerce en ligne qui nous permet de vous vendre nos services et produits.
 
 Vos données sont stockées dans le système de stockage de données et les bases de données de Shopify, et dans l’application générale de Shopify. Vos données sont conservées sur un serveur sécurisé protégé par un pare-feu.
-
 
 Paiement:
 
@@ -54,9 +50,7 @@ Les exigences de la norme PCI-DSS permettent d’assurer le traitement sécuris�
 
 Pour plus d’informations, veuillez consulter les Conditions d’Utilisation de Shopify ici ou la Politique de Confidentialité ici.
 
-
 ## ARTICLE 5 – SERVICES FOURNIS PAR DES TIERS
-
 
 De manière générale, les fournisseurs tiers que nous utilisons vont uniquement recueillir, utiliser et divulguer vos renseignements dans la mesure du nécessaire pour pouvoir réaliser les services qu’ils nous fournissent.
 
@@ -70,11 +64,9 @@ Il ne faut pas oublier que certains fournisseurs peuvent être situés ou avoir 
 
 Une fois que vous quittez le site de notre boutique ou que vous êtes redirigé vers le site web ou l’application d’un tiers, vous n’êtes plus régi par la présente Politique de Confidentialité ni par les Conditions Générales de Vente et d’Utilisation de notre site web.
 
-
 Liens
 
 Vous pourriez être amené à quitter notre site web en cliquant sur certains liens présents sur notre site. Nous n’assumons aucune responsabilité quant aux pratiques de confidentialité exercées par ces autres sites et vous recommandons de lire attentivement leurs politiques de confidentialité.
-
 
 ## ARTICLE 6 – SÉCURITÉ
 
@@ -85,30 +77,27 @@ FICHIERS TÉMOINS (COOKIES)
 
 Voici une liste de fichiers témoins que nous utilisons. Nous les avons énumérés ici pour que vous ayez la possibilité de choisir si vous souhaitez les autoriser ou non.
 
-_session_id, identificateur unique de session, permet à Shopify de stocker les informations relatives à votre session (référent, page de renvoi, etc.).
+\_session_id, identificateur unique de session, permet à Shopify de stocker les informations relatives à votre session (référent, page de renvoi, etc.).
 
-_shopify_visit, aucune donnée retenue, persiste pendant 30 minutes depuis la dernière visite. Utilisé par le système interne de suivi des statistiques du fournisseur de notre site web pour enregistrer le nombre de visites.
+\_shopify_visit, aucune donnée retenue, persiste pendant 30 minutes depuis la dernière visite. Utilisé par le système interne de suivi des statistiques du fournisseur de notre site web pour enregistrer le nombre de visites.
 
-_shopify_uniq, aucune donnée retenue, expire à minuit (selon l’emplacement du visiteur) le jour suivant. Calcule le nombre de visites d’une boutique par client unique.
+\_shopify_uniq, aucune donnée retenue, expire à minuit (selon l’emplacement du visiteur) le jour suivant. Calcule le nombre de visites d’une boutique par client unique.
 
 cart, identificateur unique, persiste pendant 2 semaines, stocke l’information relative à votre panier d’achat.
 
-_secure_session_id, identificateur unique de session
+\_secure_session_id, identificateur unique de session
 
 storefront_digest, identificateur unique, indéfini si la boutique possède un mot de passe, il est utilisé pour savoir si le visiteur actuel a accès.
-
 
 ## ARTICLE 7 – ÂGE DE CONSENTEMENT
 
 En utilisant ce site, vous déclarez que vous avez au moins l’âge de la majorité dans votre État ou province de résidence, et que vous nous avez donné votre consentement pour permettre à toute personne d’âge mineur à votre charge d’utiliser ce site web.
-
 
 ## ARTICLE 8 – MODIFICATIONS APPORTÉES À LA PRÉSENTE POLITIQUE DE CONFIDENTIALITÉ
 
 Nous nous réservons le droit de modifier la présente politique de confidentialité à tout moment, donc veuillez s’il vous plait la consulter fréquemment. Les changements et les clarifications prendront effet immédiatement après leur publication sur le site web. Si nous apportons des changements au contenu de cette politique, nous vous aviserons ici qu’elle a été mise à jour, pour que vous sachiez quels renseignements nous recueillons, la manière dont nous les utilisons, et dans quelles circonstances nous les divulguons, s’il y a lieu de le faire.
 
 Si notre boutique fait l’objet d’une acquisition par ou d’une fusion avec une autre entreprise, vos renseignements pourraient être transférés aux nouveaux propriétaires pour que nous puissions continuer à vous vendre des produits.
-
 
 QUESTIONS ET COORDONNÉES
 
@@ -118,4 +107,4 @@ Si vous souhaitez: accéder à, corriger, modifier ou supprimer toute informatio
 
 [92 Rue Jeanne d'Arc, Paris, J, 75013, France]
 
-_____
+---

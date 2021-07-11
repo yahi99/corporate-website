@@ -3,6 +3,8 @@ layout: page
 title: Mediumish Template for Jekyll
 permalink: /about
 comments: true
+lang: en
+ref: about
 ---
 
 <div class="row justify-content-between">
