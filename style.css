@@ -2,7 +2,13 @@
 layout: style
 ---
 
-.portfolio-image{
+.portfolio-image {
   width: 360px;
   height: 261px;
+}
+
+.en:lang(en),
+.fr:lang(fr),
+.zh:lang(zh) {
+  font-weight: bold;
 }
