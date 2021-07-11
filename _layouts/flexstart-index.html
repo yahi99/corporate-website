@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ page.lang }}">
   {% include flexstart-head.html %}
   <body>
     {% include flexstart-header.html %} 
@@ -235,8 +235,11 @@
             </div>
 
             <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
+              <p>Current language : {{page.lang}}</p>
 
-              {% for post in site.services %}
+              {% assign services=site.services | where:"lang", page.lang %}
+
+              {% for post in services %}
               <div class="col-lg-4 col-md-6 portfolio-item filter-{{ post.type }}">
                 <div class="portfolio-wrap">
                   <img src="/img/portfolio/thumbnail/{{ post.thumbnail }}" class="img-fluid" alt="">

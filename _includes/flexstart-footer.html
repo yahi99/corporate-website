@@ -1,4 +1,6 @@
 
+    
+
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
 
@@ -240,6 +242,34 @@
               <a href="#" class="instagram"><i class="bi bi-instagram bx bxl-instagram"></i></a>
               <a href="#" class="linkedin"><i class="bi bi-linkedin bx bxl-linkedin"></i></a> -->
           </div>
+
+          <!-- ======= Read page in alternate language ======= -->
+          <div class="{{page.layout}} mt-3">
+            {% if page.layout != 'index' and page.layout != 'flexstart-index2' %}
+                {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
+                {% if posts.size == 0 %}
+                    {% assign posts=site.pages | where:"ref", page.ref | sort: 'lang' %}
+                {% endif %}
+                {% if posts.size > 1 %}
+                <footer class="lang-options">
+                    <p>{{ site.data.translations['differentLanguage'][page.lang] }}:</p>
+                    <ul class="nav flex-column">
+                    {% for post in posts %}
+                      {% if post.lang != page.lang %}
+                        <li class="nav-item">
+                          <a href="{{ site.base-url }}{{ post.url }}" class="nav-link {{ post.lang }}" title="View in {{post.lang}}">
+                            {{ site.data.languages[post.lang].icon }} {{ site.data.languages[post.lang].label }}
+                          </a>
+                        </li>
+                      {% endif %}
+                    {% endfor %}
+                    </ul>
+                </footer>
+                {% endif %}
+            {% endif %}
+          </div>
+    
+
         </div>
 
         <div class="col-lg-2 col-6 footer-links">
