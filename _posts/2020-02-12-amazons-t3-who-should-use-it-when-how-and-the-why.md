@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "Amazon’s T3 – Who should use it, when, how and the why?"
+title: "Amazon’s T3 – Who should use it, when, how and the why?"
 author: "Full"
-categories: [ aws ]
+lang: en
+ref: aws_t3_usage
+categories: [aws]
 description: "T2 standard got vastly misunderstood due to its CPU throttling over baseline, to which Amazon introduced T2 unlimited – with a way to overcome the CPU throttling with a pay for credit mechanism for the period the EC2 ran over the baseline."
 image: "https://sergio.afanou.com/assets/images/image-midres-6.jpg"
 ---
-
 
 <div class="content">
                                         <div class="entry-content single jpibfi_container" itemprop="text">
@@ -20,7 +21,6 @@ image: "https://sergio.afanou.com/assets/images/image-midres-6.jpg"
                                     <li class="twitter"><a href="https://twitter.com/home?status=https://www.cloudsqueeze.ai/amazons-t3-who-should-use-it-when-how-and-the-why" target="_blank"><i class="icon icon-twitter"></i></a></li>
                                     <li class="facebook"><a href="https://www.facebook.com/share.php?u=https://www.cloudsqueeze.ai/amazons-t3-who-should-use-it-when-how-and-the-why" target="_blank"><i class="icon icon-facebook"></i></a></li>
 
-
                                     <li class="linkedin"><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.cloudsqueeze.ai/amazons-t3-who-should-use-it-when-how-and-the-why" target="_blank"><i class="icon icon-linkedin"></i></a></li>
 
                                 </ul>
@@ -31,6 +31,7 @@ image: "https://sergio.afanou.com/assets/images/image-midres-6.jpg"
                             <input class="jpibfi" type="hidden"><img width="780" height="378" src="https://www.cloudsqueeze.ai/wp-content/uploads/2018/08/Amazon-T3-780.jpg" class="attachment-full size-full wp-post-image" alt="Amazons T3 instance type" srcset="https://www.cloudsqueeze.ai/wp-content/uploads/2018/08/Amazon-T3-780.jpg 780w, https://www.cloudsqueeze.ai/wp-content/uploads/2018/08/Amazon-T3-780-300x145.jpg 300w, https://www.cloudsqueeze.ai/wp-content/uploads/2018/08/Amazon-T3-780-768x372.jpg 768w" sizes="(max-width: 780px) 100vw, 780px" data-jpibfi-post-excerpt="" data-jpibfi-post-url="https://www.cloudsqueeze.ai/amazons-t3-who-should-use-it-when-how-and-the-why/" data-jpibfi-post-title="Amazon’s T3 – Who should use it, when, how and the why?" data-jpibfi-src="https://www.cloudsqueeze.ai/wp-content/uploads/2018/08/Amazon-T3-780.jpg" data-jpibfi-indexer="0">                            </div>
                         </div>
                         <input class="jpibfi" type="hidden"><p>Amazon just announced on August 21st <a title="" href="https://aws.amazon.com/blogs/aws/new-t3-instances-burstable-cost-effective-performance/" target="_blank" rel="noopener">a the third generation of the T series – T3</a>. This article will look at:</p>
+
 <ul>
 <li>How does the T3 class works?</li>
 <li>Is T3 class an instance type to use in your EC2 arsenal list?</li>
@@ -92,4 +93,3 @@ If you are changing a T2 instance to T3 ensure the ENA requirement is met on the
                     </script>
                     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
                  </div>
-

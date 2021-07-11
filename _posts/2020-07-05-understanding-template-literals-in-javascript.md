@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "Understanding Template Literals in JavaScript"
+title: "Understanding Template Literals in JavaScript"
 author: "Full"
-categories: [ javascript ]
+lang: en
+ref: javascripttemplate_1240
+categories: [javascript]
 description: "The 2015 edition of the ECMAScript specification (ES6) added template literals to the JavaScript language. Template literals are a new form of making strings in JavaScript that add a lot of powerful new capabilities, such as creating multi-line strings more easily and using placeholders to embed expressions in a string. In addition, an advanced feature called tagged template literals allows you to perform operations on the expressions within a string. All of these capabilities increase your options for string manipulation as a developer, letting you generate dynamic strings that could be used for URLs or functions that customize HTML elements."
 image: "https://sergio.afanou.com/assets/images/image-midres-36.jpg"
 ---
-
 
 <p><em>The author selected the <a href="https://www.brightfunds.org/funds/write-for-donations-covid-19-relief-fund">COVID-19 Relief Fund</a> to receive a donation as part of the <a href="https://do.co/w4do-cta">Write for DOnations</a> program.</em></p>
 
@@ -38,6 +39,7 @@ const double = "\"We don't make mistakes. We just have happy accidents.\" - Bob 
 console.log(single);
 console.log(double);
 </code></pre>
+
 <p>The result of the <code>log()</code> method here will print the same two strings to the <a href="https://www.digitalocean.com/community/tutorials/how-to-use-the-javascript-developer-console">console</a>:</p>
 <pre class="code-pre "><code><div class="secondary-code-label " title="Output">Output</div>"We don't make mistakes. We just have happy accidents." - Bob Ross
 "We don't make mistakes. We just have happy accidents." - Bob Ross
@@ -133,6 +135,7 @@ const dynamicString = `This string is using ${method}.`
 
 createOAuthString('https://github.com', 'abc123', 'repo,user')
 </code></pre>
+
 <p>Logging this function will yield the following URL to the console:</p>
 <pre class="code-pre "><code><div class="secondary-code-label " title="Output">Output</div>https://github.com/login/oauth/authorize?client_id=abc123&amp;scope=repo,user
 </code></pre>
@@ -143,6 +146,7 @@ createOAuthString('https://github.com', 'abc123', 'repo,user')
 
 createOAuthString('https://github.com', 'abc123', 'repo,user')
 </code></pre>
+
 <p>This will have the same output as the concatenation example:</p>
 <pre class="code-pre "><code><div class="secondary-code-label " title="Output">Output</div>https://github.com/login/oauth/authorize?client_id=abc123&amp;scope=repo,user
 </code></pre>
@@ -156,6 +160,7 @@ createOAuthString('https://github.com', 'abc123', 'repo,user')
 
 menuItem('https://google.com', 'Google')
 </code></pre>
+
 <p>The result will be trimmed of all the whitespace, ensuring that the element will be rendered correctly:</p>
 <pre class="code-pre "><code><div class="secondary-code-label " title="Output">Output</div>&lt;li&gt;
   &lt;a href="https://google.com"&gt;Google&lt;/a&gt;
@@ -169,6 +174,7 @@ const string = `The sum of ${x} and ${y} is ${sum(x, y)}.`
 
 console.log(string)
 </code></pre>
+
 <p>This code defines the <code>sum</code> function and the variables <code>x</code> and <code>y</code>, then uses both the function and the variables in a string. The logged result will show the following:</p>
 <pre class="code-pre "><code><div class="secondary-code-label " title="Output">Output</div>The sum of 5 and 100 is 105.
 </code></pre>
@@ -226,6 +232,7 @@ console.log(message)
 const string = returnsNull`Does this work?`
 console.log(string)
 </code></pre>
+
 <p>Logging the <code>string</code> variable will return:</p>
 <pre class="code-pre "><code><div class="secondary-code-label " title="Output">Output</div>null
 </code></pre>
@@ -233,21 +240,22 @@ console.log(string)
 <pre class="code-pre "><code class="code-highlight language-js">function bold(strings, ...expressions) {
   let finalString = ''
 
-  // Loop through all expressions
-  expressions.forEach((value, i) =&gt; {
-    finalString += `${strings[i]}&lt;strong&gt;${value}&lt;/strong&gt;`
-  })
+// Loop through all expressions
+expressions.forEach((value, i) =&gt; {
+finalString += `${strings[i]}&lt;strong&gt;${value}&lt;/strong&gt;`
+})
 
-  // Add the last string literal
-  finalString += strings[strings.length - 1]
+// Add the last string literal
+finalString += strings[strings.length - 1]
 
-  return finalString
+return finalString
 }
 
 const string = bold`This is a string with ${true} and ${false} and ${100} interpolated inside.`
 
 console.log(string)
 </code></pre>
+
 <p>This code uses the <a href="https://www.digitalocean.com/community/tutorials/how-to-use-array-methods-in-javascript-iteration-methods#foreach()"><code>forEach</code> method</a> to loop over the <code>expressions</code> array and add the bolding element:</p>
 <pre class="code-pre "><code><div class="secondary-code-label " title="Output">Output</div>This is a string with &lt;strong&gt;true&lt;/strong&gt; and &lt;strong&gt;false&lt;/strong&gt; and &lt;strong&gt;100&lt;/strong&gt; interpolated inside.
 </code></pre>
@@ -255,24 +263,17 @@ console.log(string)
 <pre class="code-pre "><code class="code-highlight language-js">import gql from 'graphql-tag'
 
 // A query to retrieve the first and last name from user 5
-const query = gql`
-  {
-    user(id: 5) {
-      firstName
-      lastName
-    }
-  }
-`
+const query = gql` { user(id: 5) { firstName lastName } }`
 </code></pre>
+
 <p>Another library that uses tagged template functions is <a href="https://github.com/styled-components/styled-components"><code>styled-components</code></a>, which allows you to create new <a href="https://www.digitalocean.com/community/tutorials/how-to-create-custom-components-in-react">React components</a> from regular <a href="https://www.digitalocean.com/community/tutorials/introduction-to-the-dom">DOM</a> elements and apply additional <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS styles</a> to them:</p>
 <pre class="code-pre "><code class="code-highlight language-js">import styled from 'styled-components'
 
-const Button = styled.button`
-  color: magenta;
-`
+const Button = styled.button` color: magenta;`
 
 // &lt;Button&gt; can now be used as a custom component
 </code></pre>
+
 <p>You can also use the built-in <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/raw"><code>String.raw</code></a> method on tagged template literals to prevent any escape sequences from being processed:</p>
 <pre class="code-pre "><code class="code-highlight language-js">const rawString = String.raw`I want to write /n without it being escaped.`
 console.log(rawString)

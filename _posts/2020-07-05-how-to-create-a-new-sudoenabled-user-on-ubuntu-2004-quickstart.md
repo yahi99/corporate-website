@@ -2,12 +2,13 @@
 layout: post
 title:  "How To Create a New Sudo-enabled User on Ubuntu 20.04 [Quickstart]"
 author: "Full"
+lang: en
+ref: sudoenabled_202007051236
 categories: [ ubuntu ]
 description: "When managing a server, you’ll sometimes want to allow users to execute commands as “root,” the administrator-level user. The sudo command provides system administrators with a way to grant administrator privileges — ordinarily only available to the root user — to normal users.
 In this tutorial, you’ll learn how to create a new user with sudo access on Ubuntu 20.04 without having to modify your server’s /etc/sudoers file."
 image: "https://sergio.afanou.com/assets/images/image-midres-47.jpg"
 ---
-
 
 <h3 id="introduction">Introduction</h3>
 

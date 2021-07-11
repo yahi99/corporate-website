@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "How To Set Up the code-server Cloud IDE Platform on DigitalOcean Kubernetes"
+title: "How To Set Up the code-server Cloud IDE Platform on DigitalOcean Kubernetes"
 author: "Full"
-categories: [ kubernetes ]
+lang: en
+ref: howtosetup_thecodeserver_cloudide
+categories: [kubernetes]
 description: "With developer tools moving to the cloud, creation and adoption of cloud IDE (Integrated Development Environment) platforms is growing. Cloud IDEs allow for real-time collaboration between developer teams to work in a unified development environment that minimizes incompatibilities and enhances productivity. Accessible through web browsers, cloud IDEs are available from every type of modern device. Another advantage of a cloud IDE is the possibility to leverage the power of a cluster, which can greatly exceed the processing power of a single development computer."
 image: "https://sergio.afanou.com/assets/images/image-midres-23.jpg"
 ---
-
-
 
 # Introduction
 
@@ -36,6 +36,7 @@ nano code-server.yaml
 Add the following lines to the file:
 
 code-server.yaml
+
 ```
 apiVersion: v1
 kind: Namespace
@@ -141,7 +142,6 @@ Enter the password you set in code-server.yaml and press Enter IDE. You’ll ent
 
 You’ve installed code-server to your Kubernetes cluster and made it available at your domain. You have also verified that it requires you to log in with a password. Now, you’ll move on to secure it with free Let’s Encrypt certificates using Cert-Manager.
 
-
 ## Step 2 — Securing the code-server Deployment
 
 In this section, you will secure your code-server installation by applying Let’s Encrypt certificates to your Ingress, which Cert-Manager will automatically create. After completing this step, your code-server installation will be accessible via HTTPS.
@@ -153,6 +153,7 @@ nano code-server.yaml
 
 Add the highlighted lines to your file, making sure to replace the example domain with your own:
 code-server.yaml
+
 ```
 apiVersion: v1
 kind: Namespace
@@ -209,7 +210,6 @@ Events:
 
 You can now refresh your domain in your browser. You’ll see the padlock to the left of the address bar in your browser signifying that the connection is secure.
 In this step, you have configured the Ingress to secure your code-server deployment. Now, you can review the code-server user interface.
-
 
 ## Step 3 — Exploring the code-server Interface
 

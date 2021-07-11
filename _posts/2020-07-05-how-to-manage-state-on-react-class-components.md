@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "How To Manage State on React Class Components"
+title: "How To Manage State on React Class Components"
 author: "Full"
-categories: [ javascript ]
+lang: en
+ref: reactclass_components_1238
+categories: [javascript]
 description: "In React, state refers to a structure that keeps track of how data changes over time in your application. Managing state is a crucial skill in React because it allows you to make interactive components and dynamic web applications. State is used for everything from tracking form inputs to capturing dynamic data from an API. In this tutorial, you’ll run through an example of managing state on class-based components."
 image: "https://sergio.afanou.com/assets/images/image-midres-43.jpg"
 ---
-
 
 <p><em>The author selected <a href="https://creativecommons.org/">Creative Commons</a> to receive a donation as part of the <a href="https://do.co/w4do-cta">Write for DOnations</a> program.</em></p>
 
@@ -58,39 +59,41 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  return (
-    &lt;div className="App"&gt;
-      &lt;header className="App-header"&gt;
-        &lt;img src={logo} className="App-logo" alt="logo" /&gt;
-        &lt;p&gt;
-          Edit &lt;code&gt;src/App.js&lt;/code&gt; and save to reload.
-        &lt;/p&gt;
-        &lt;a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        &gt;
-          Learn React
-        &lt;/a&gt;
-      &lt;/header&gt;
-    &lt;/div&gt;
-  );
+return (
+&lt;div className="App"&gt;
+&lt;header className="App-header"&gt;
+&lt;img src={logo} className="App-logo" alt="logo" /&gt;
+&lt;p&gt;
+Edit &lt;code&gt;src/App.js&lt;/code&gt; and save to reload.
+&lt;/p&gt;
+&lt;a
+className="App-link"
+href="https://reactjs.org"
+target="\_blank"
+rel="noopener noreferrer"
+&gt;
+Learn React
+&lt;/a&gt;
+&lt;/header&gt;
+&lt;/div&gt;
+);
 }
 
 export default App;
 </code></pre>
+
 <p>Delete the line <code>import logo from './logo.svg';</code>. Then replace everything in the <code>return</code> statement to return a set of empty tags: <code>&lt;&gt;&lt;/&gt;</code>. This will give you a valid page that returns nothing. The final code will look like this:</p>
 <div class="code-label " title="state-class-tutorial/src/App.js">state-class-tutorial/src/App.js</div><pre class="code-pre "><code class="code-highlight language-javascript">
 import React from 'react';
 import './App.css';
 
 function App() {
-  return <span class="highlight">&lt;&gt;&lt;/&gt;;</span>
+return <span class="highlight">&lt;&gt;&lt;/&gt;;</span>
 }
 
 export default App;
 </code></pre>
+
 <p>Save and exit the text editor.</p>
 
 <p>Finally, delete the logo. You won&rsquo;t be using it in your application and you should remove unused files as you work. It will save you from confusion in the long run.</p>
@@ -126,10 +129,10 @@ import App from '.<span class="highlight">/components/App</span>/App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  &lt;React.StrictMode&gt;
-    &lt;App /&gt;
-  &lt;/React.StrictMode&gt;,
-  document.getElementById('root')
+&lt;React.StrictMode&gt;
+&lt;App /&gt;
+&lt;/React.StrictMode&gt;,
+document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change
@@ -137,6 +140,7 @@ ReactDOM.render(
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
 </code></pre>
+
 <p>Save and exit the file.</p>
 
 <p>Now that the project is set up, you can create your first component.</p>
@@ -160,21 +164,23 @@ serviceWorker.unregister();
 import './Product.css';
 
 export default class Product extends Component {
-  render() {
-    return(
-      &lt;div className="wrapper"&gt;
-        &lt;div&gt;
-          Shopping Cart: 0 total items.
-        &lt;/div&gt;
-        &lt;div&gt;Total: 0&lt;/div&gt;
+render() {
+return(
+&lt;div className="wrapper"&gt;
+&lt;div&gt;
+Shopping Cart: 0 total items.
+&lt;/div&gt;
+&lt;div&gt;Total: 0&lt;/div&gt;
 
         &lt;div className="product"&gt;&lt;span role="img" aria-label="ice cream"&gt;🍦&lt;/span&gt;&lt;/div&gt;
         &lt;button&gt;Add&lt;/button&gt; &lt;button&gt;Remove&lt;/button&gt;
       &lt;/div&gt;
     )
-  }
+
+}
 }
 </code></pre>
+
 <p>You have also included a couple of <code>div</code> elements that have <a href="https://www.digitalocean.com/community/tutorials/how-to-create-react-elements-with-jsx">JSX</a> class names so you can add some basic styling.</p>
 
 <p>Save and close the file, then open <code>Product.css</code>:</p>
@@ -186,15 +192,16 @@ export default class Product extends Component {
 }
 
 .wrapper {
-    padding: 20px;
-    font-size: 20px;
+padding: 20px;
+font-size: 20px;
 }
 
 .wrapper button {
-    font-size: 20px;
-    background: none;
+font-size: 20px;
+background: none;
 }
 </code></pre>
+
 <p>The emoji will need a much larger font size than the text, since it&rsquo;s acting as the product image in this example. In addition, you are removing the default gradient background on buttons by setting the <code>background</code> to <code>none</code>. </p>
 
 <p>Save and close the file.</p>
@@ -207,11 +214,12 @@ export default class Product extends Component {
 <span class="highlight">import Product from '../Product/Product';</span>
 
 function App() {
-  return &lt;<span class="highlight">Product </span>/&gt;
+return &lt;<span class="highlight">Product </span>/&gt;
 }
 
 export default App;
 </code></pre>
+
 <p>Save and close the file. When you do, the browser will refresh and you&rsquo;ll see the <code>Product</code> component.</p>
 
 <p><img src="https://assets.digitalocean.com/articles/67228/product-page.png" alt="Product Page"></p>
@@ -232,26 +240,28 @@ import './Product.css';
 
 export default class Product extends Component {
 
-  <span class="highlight">state = {</span>
-    <span class="highlight">cart: [],</span>
-    <span class="highlight">total: 0</span>
-  <span class="highlight">}</span>
+<span class="highlight">state = {</span>
+<span class="highlight">cart: [],</span>
+<span class="highlight">total: 0</span>
+<span class="highlight">}</span>
 
-  render() {
-    return(
-      &lt;div className="wrapper"&gt;
-        &lt;div&gt;
-          Shopping Cart: <span class="highlight">{this.state.cart.length}</span> total items.
-        &lt;/div&gt;
-        &lt;div&gt;Total <span class="highlight">{this.state.total}</span>&lt;/div&gt;
+render() {
+return(
+&lt;div className="wrapper"&gt;
+&lt;div&gt;
+Shopping Cart: <span class="highlight">{this.state.cart.length}</span> total items.
+&lt;/div&gt;
+&lt;div&gt;Total <span class="highlight">{this.state.total}</span>&lt;/div&gt;
 
         &lt;div className="product"&gt;&lt;span role="img" aria-label="ice cream"&gt;🍦&lt;/span&gt;&lt;/div&gt;
         &lt;button&gt;Add&lt;/button&gt; &lt;button&gt;Remove&lt;/button&gt;
       &lt;/div&gt;
     )
-  }
+
+}
 }
 </code></pre>
+
 <p>Notice that in both cases, since you are referencing JavaScript inside of your JSX, you need to wrap the code in curly braces. You are also displaying the <code>length</code> of the <code>cart</code> array to get a count of the number of items in the array.</p>
 
 <p>Save the file. When you do, the browser will refresh and you&rsquo;ll see the same page as before.</p>
@@ -268,35 +278,37 @@ import './Product.css';
 
 export default class Product extends Component {
 
-  state = {
-    cart: [],
-    total: 0
-  }
+state = {
+cart: [],
+total: 0
+}
 
-  <span class="highlight">currencyOptions = {</span>
-    <span class="highlight">minimumFractionDigits: 2,</span>
-    <span class="highlight">maximumFractionDigits: 2,</span>
-  <span class="highlight">}</span>
+<span class="highlight">currencyOptions = {</span>
+<span class="highlight">minimumFractionDigits: 2,</span>
+<span class="highlight">maximumFractionDigits: 2,</span>
+<span class="highlight">}</span>
 
-  <span class="highlight">getTotal = () =&gt; {</span>
-    <span class="highlight">return this.state.total.toLocaleString(undefined, this.currencyOptions)</span>
-  <span class="highlight">}</span>
+<span class="highlight">getTotal = () =&gt; {</span>
+<span class="highlight">return this.state.total.toLocaleString(undefined, this.currencyOptions)</span>
+<span class="highlight">}</span>
 
-  render() {
-    return(
-      &lt;div className="wrapper"&gt;
-        &lt;div&gt;
-          Shopping Cart: {this.state.cart.length} total items.
-        &lt;/div&gt;
-        &lt;div&gt;Total {this.<span class="highlight">getTotal()</span>}&lt;/div&gt;
+render() {
+return(
+&lt;div className="wrapper"&gt;
+&lt;div&gt;
+Shopping Cart: {this.state.cart.length} total items.
+&lt;/div&gt;
+&lt;div&gt;Total {this.<span class="highlight">getTotal()</span>}&lt;/div&gt;
 
         &lt;div className="product"&gt;&lt;span role="img" aria-label="ice cream"&gt;🍦&lt;/span&gt;&lt;/div&gt;
         &lt;button&gt;Add&lt;/button&gt; &lt;button&gt;Remove&lt;/button&gt;
       &lt;/div&gt;
     )
-  }
+
+}
 }
 </code></pre>
+
 <p>Since <code>total</code> is a price for goods, you are passing <code>currencyOptions</code> that set the maximum and minimum decimal places for your <code>total</code> to two. Note that this is set as a separate property. Often, beginner React developers will put information like this in the <code>state</code> object, but it is best to only add information to <code>state</code> that you expect to change. This way, the information in <code>state</code> will be easier to keep strack of as your application scales.</p>
 
 <p>Another important change you made was to create the <code>getTotal()</code> method by assigning an <a href="https://www.digitalocean.com/community/tutorials/getting-started-with-es6-arrow-functions-in-javascript">arrow function</a> to a class property. Without using the arrow function, this method would create a new <a href="https://www.digitalocean.com/community/conceptual_articles/understanding-this-bind-call-and-apply-in-javascript"><code>this</code> binding</a>, which would interfere with the current <code>this</code> binding and introduce a bug into our code. You&rsquo;ll see more on this in the next step.</p>
@@ -324,43 +336,45 @@ import './Product.css';
 
 export default class Product extends Component {
 
-  state = {
-    cart: [],
-    total: 0
-  }
+state = {
+cart: [],
+total: 0
+}
 
-  <span class="highlight">add = () =&gt; {</span>
-    <span class="highlight">this.setState({</span>
-      <span class="highlight">cart: ['ice cream'],</span>
-      <span class="highlight">total: 5</span>
-    <span class="highlight">})</span>
-  <span class="highlight">}</span>
+<span class="highlight">add = () =&gt; {</span>
+<span class="highlight">this.setState({</span>
+<span class="highlight">cart: ['ice cream'],</span>
+<span class="highlight">total: 5</span>
+<span class="highlight">})</span>
+<span class="highlight">}</span>
 
-  currencyOptions = {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  }
+currencyOptions = {
+minimumFractionDigits: 2,
+maximumFractionDigits: 2,
+}
 
-  getTotal = () =&gt; {
-    return this.state.total.toLocaleString(undefined, this.currencyOptions)
-  }
+getTotal = () =&gt; {
+return this.state.total.toLocaleString(undefined, this.currencyOptions)
+}
 
-  render() {
-    return(
-      &lt;div className="wrapper"&gt;
-        &lt;div&gt;
-          Shopping Cart: {this.state.cart.length} total items.
-        &lt;/div&gt;
-        &lt;div&gt;Total {this.getTotal()}&lt;/div&gt;
+render() {
+return(
+&lt;div className="wrapper"&gt;
+&lt;div&gt;
+Shopping Cart: {this.state.cart.length} total items.
+&lt;/div&gt;
+&lt;div&gt;Total {this.getTotal()}&lt;/div&gt;
 
         &lt;div className="product"&gt;&lt;span role="img" aria-label="ice cream"&gt;🍦&lt;/span&gt;&lt;/div&gt;
         &lt;button onClick=<span class="highlight">{this.add}</span>&gt;Add&lt;/button&gt;
         &lt;button&gt;Remove&lt;/button&gt;
       &lt;/div&gt;
     )
-  }
+
+}
 }
 </code></pre>
+
 <p>Inside the <code>add</code> method, you call the <code>setState</code> method and pass an object containing the updated <code>cart</code> with a single item <code>ice cream</code> and the updated price of <code>5</code>. Notice that you again used an arrow function to create the <code>add</code> method. As mentioned before, this will ensure the function has the proper <code>this</code> context when running the update. If you add the function as a method without using the arrow function, the <code>setState</code> would not exist without <a href="https://www.digitalocean.com/community/conceptual_articles/understanding-this-bind-call-and-apply-in-javascript">binding</a> the function to the current context.</p>
 
 <p>For example, if you created the <code>add</code> function this way:</p>
@@ -393,29 +407,31 @@ import './Product.css';
 
 export default class Product extends Component {
 
-  ...
-  <span class="highlight">remove = () =&gt; {</span>
-    <span class="highlight">this.setState({</span>
-      <span class="highlight">cart: []</span>
-    <span class="highlight">})</span>
-  <span class="highlight">}</span>
+...
+<span class="highlight">remove = () =&gt; {</span>
+<span class="highlight">this.setState({</span>
+<span class="highlight">cart: []</span>
+<span class="highlight">})</span>
+<span class="highlight">}</span>
 
-  render() {
-    return(
-      &lt;div className="wrapper"&gt;
-        &lt;div&gt;
-          Shopping Cart: {this.state.cart.length} total items.
-        &lt;/div&gt;
-        &lt;div&gt;Total {this.getTotal()}&lt;/div&gt;
+render() {
+return(
+&lt;div className="wrapper"&gt;
+&lt;div&gt;
+Shopping Cart: {this.state.cart.length} total items.
+&lt;/div&gt;
+&lt;div&gt;Total {this.getTotal()}&lt;/div&gt;
 
         &lt;div className="product"&gt;&lt;span role="img" aria-label="ice cream"&gt;🍦&lt;/span&gt;&lt;/div&gt;
         &lt;button onClick={this.add}&gt;Add&lt;/button&gt;
         &lt;button <span class="highlight">onClick={this.remove}</span>&gt;Remove&lt;/button&gt;
       &lt;/div&gt;
     )
-  }
+
+}
 }
 </code></pre>
+
 <p>Save the file. When the browser refreshes, click on the <strong>Add</strong> and <strong>Remove</strong> buttons. You&rsquo;ll see the cart update, but not the price. The <code>total</code> state value is preserved during the update. This value is only preserved for example purposes; with this application, you would want to update both properties of the <code>state</code> object. But you will often have components with stateful properties that have different responsibilities, and you can make them persist by leaving them out of the updated object.</p>
 
 <p>The change in this step was static. You knew exactly what the values would be ahead of time, and they didn&rsquo;t need to be recalculated from <code>state</code>. But if the product page had many products and you wanted to be able to add them multiple times, passing a static object would provide no guarantee of referencing the most up-to-date <code>state</code>, even if your object used a <code>this.state</code> value. In this case, you could instead use a function.</p>
@@ -436,51 +452,51 @@ export default class Product extends Component {
 import './Product.css';
 
 <span class="highlight">const products = [</span>
-  <span class="highlight">{</span>
-    <span class="highlight">emoji: '🍦',</span>
-    <span class="highlight">name: 'ice cream',</span>
-    <span class="highlight">price: 5</span>
-  <span class="highlight">},</span>
-  <span class="highlight">{</span>
-    <span class="highlight">emoji: '🍩',</span>
-    <span class="highlight">name: 'donuts',</span>
-    <span class="highlight">price: 2.5,</span>
-  <span class="highlight">},</span>
-  <span class="highlight">{</span>
-    <span class="highlight">emoji: '🍉',</span>
-    <span class="highlight">name: 'watermelon',</span>
-    <span class="highlight">price: 4</span>
-  <span class="highlight">}</span>
+<span class="highlight">{</span>
+<span class="highlight">emoji: '🍦',</span>
+<span class="highlight">name: 'ice cream',</span>
+<span class="highlight">price: 5</span>
+<span class="highlight">},</span>
+<span class="highlight">{</span>
+<span class="highlight">emoji: '🍩',</span>
+<span class="highlight">name: 'donuts',</span>
+<span class="highlight">price: 2.5,</span>
+<span class="highlight">},</span>
+<span class="highlight">{</span>
+<span class="highlight">emoji: '🍉',</span>
+<span class="highlight">name: 'watermelon',</span>
+<span class="highlight">price: 4</span>
+<span class="highlight">}</span>
 <span class="highlight">];</span>
 
 export default class Product extends Component {
 
-  ...
+...
 
-
-  render() {
-    return(
-      &lt;div className="wrapper"&gt;
-        &lt;div&gt;
-          Shopping Cart: {this.state.cart.length} total items.
-        &lt;/div&gt;
-        &lt;div&gt;Total {this.getTotal()}&lt;/div&gt;
-        <span class="highlight">&lt;div&gt;</span>
-          <span class="highlight">{products.map(product =&gt; (</span>
-            <span class="highlight">&lt;div key={product.name}&gt;</span>
-              &lt;div className="product"&gt;
-                &lt;span role="img" aria-label=<span class="highlight">{product.name}</span>&gt;<span class="highlight">{product.emoji}</span>&lt;/span&gt;
-              &lt;/div&gt;
-              &lt;button onClick={this.add}&gt;Add&lt;/button&gt;
-              &lt;button onClick={this.remove}&gt;Remove&lt;/button&gt;
-            <span class="highlight">&lt;/div&gt;</span>
-          <span class="highlight">))}</span>
-        <span class="highlight">&lt;/div&gt;</span>
-      &lt;/div&gt;
-    )
-  }
+render() {
+return(
+&lt;div className="wrapper"&gt;
+&lt;div&gt;
+Shopping Cart: {this.state.cart.length} total items.
+&lt;/div&gt;
+&lt;div&gt;Total {this.getTotal()}&lt;/div&gt;
+<span class="highlight">&lt;div&gt;</span>
+<span class="highlight">{products.map(product =&gt; (</span>
+<span class="highlight">&lt;div key={product.name}&gt;</span>
+&lt;div className="product"&gt;
+&lt;span role="img" aria-label=<span class="highlight">{product.name}</span>&gt;<span class="highlight">{product.emoji}</span>&lt;/span&gt;
+&lt;/div&gt;
+&lt;button onClick={this.add}&gt;Add&lt;/button&gt;
+&lt;button onClick={this.remove}&gt;Remove&lt;/button&gt;
+<span class="highlight">&lt;/div&gt;</span>
+<span class="highlight">))}</span>
+<span class="highlight">&lt;/div&gt;</span>
+&lt;/div&gt;
+)
+}
 }
 </code></pre>
+
 <p>In this code, you are using the <a href="https://www.digitalocean.com/community/tutorials/how-to-use-array-methods-in-javascript-iteration-methods#map()"><code>map()</code> array method</a> to loop over the <code>products</code> array and return the JSX that will display each element in your browser.</p>
 
 <p>Save the file. When the browser reloads, you&rsquo;ll see an updated product list:</p>
@@ -495,40 +511,40 @@ import './Product.css';
 
 export default class Product extends Component {
 
-  state = {
-    cart: [],
-    total: 0
-  }
+state = {
+cart: [],
+total: 0
+}
 
-  add = (<span class="highlight">product</span>) =&gt; {
-    this.setState(<span class="highlight">state =&gt; (</span>{
-      cart: [<span class="highlight">...state.cart, product.name</span>],
-      total: <span class="highlight">state.total + product.price</span>
-    })<span class="highlight">)</span>
-  }
+add = (<span class="highlight">product</span>) =&gt; {
+this.setState(<span class="highlight">state =&gt; (</span>{
+cart: [<span class="highlight">...state.cart, product.name</span>],
+total: <span class="highlight">state.total + product.price</span>
+})<span class="highlight">)</span>
+}
 
-  currencyOptions = {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  }
+currencyOptions = {
+minimumFractionDigits: 2,
+maximumFractionDigits: 2,
+}
 
-  getTotal = () =&gt; {
-    return this.state.total.toLocaleString(undefined, this.currencyOptions)
-  }
+getTotal = () =&gt; {
+return this.state.total.toLocaleString(undefined, this.currencyOptions)
+}
 
-  remove = () =&gt; {
-    this.setState({
-      cart: []
-    })
-  }
+remove = () =&gt; {
+this.setState({
+cart: []
+})
+}
 
-  render() {
-    return(
-      &lt;div className="wrapper"&gt;
-        &lt;div&gt;
-          Shopping Cart: {this.state.cart.length} total items.
-        &lt;/div&gt;
-        &lt;div&gt;Total {this.getTotal()}&lt;/div&gt;
+render() {
+return(
+&lt;div className="wrapper"&gt;
+&lt;div&gt;
+Shopping Cart: {this.state.cart.length} total items.
+&lt;/div&gt;
+&lt;div&gt;Total {this.getTotal()}&lt;/div&gt;
 
         &lt;div&gt;
           {products.map(product =&gt; (
@@ -543,9 +559,11 @@ export default class Product extends Component {
         &lt;/div&gt;
       &lt;/div&gt;
     )
-  }
+
+}
 }
 </code></pre>
+
 <p>Inside the anonymous function that you pass to <code>setState()</code>, make sure you reference the argument—<code>state</code>—and not the component&rsquo;s state—<code>this.state</code>. Otherwise, you still run a risk of getting an out-of-date <code>state</code> object. The <code>state</code> in your function will be otherwise identical.</p>
 
 <p>Take care not to directly mutate state. Instead, when adding a new value to the <code>cart</code>, you can add the new <code>product</code> to the <code>state</code> by using the <a href="https://www.digitalocean.com/community/tutorials/understanding-destructuring-rest-parameters-and-spread-syntax-in-javascript#spread">spread syntax</a> on the current value and adding the new value onto the end.</p>
@@ -566,40 +584,41 @@ export default class Product extends Component {
 
 ...
 
-  remove = (<span class="highlight">product</span>) =&gt; {
-    this.setState(<span class="highlight">state =&gt; </span>{
-      <span class="highlight">const cart = [...state.cart];</span>
-      <span class="highlight">cart.splice(cart.indexOf(product.name))</span>
-      <span class="highlight">return ({</span>
-        <span class="highlight">cart,</span>
-        <span class="highlight">total: state.total - product.price</span>
-      <span class="highlight">})</span>
-    })
-  }
+remove = (<span class="highlight">product</span>) =&gt; {
+this.setState(<span class="highlight">state =&gt; </span>{
+<span class="highlight">const cart = [...state.cart];</span>
+<span class="highlight">cart.splice(cart.indexOf(product.name))</span>
+<span class="highlight">return ({</span>
+<span class="highlight">cart,</span>
+<span class="highlight">total: state.total - product.price</span>
+<span class="highlight">})</span>
+})
+}
 
-  render() {
-    return(
-      &lt;div className="wrapper"&gt;
-        &lt;div&gt;
-          Shopping Cart: {this.state.cart.length} total items.
-        &lt;/div&gt;
-        &lt;div&gt;Total {this.getTotal()}&lt;/div&gt;
-        &lt;div&gt;
-          {products.map(product =&gt; (
-            &lt;div key={product.name}&gt;
-              &lt;div className="product"&gt;
-                &lt;span role="img" aria-label={product.name}&gt;{product.emoji}&lt;/span&gt;
-              &lt;/div&gt;
-              &lt;button onClick={() =&gt; this.add(product)}&gt;Add&lt;/button&gt;
-              &lt;button onClick={<span class="highlight">() =&gt; this.remove(product)</span>}&gt;Remove&lt;/button&gt;
-            &lt;/div&gt;
-          ))}
-        &lt;/div&gt;
-      &lt;/div&gt;
-    )
-  }
+render() {
+return(
+&lt;div className="wrapper"&gt;
+&lt;div&gt;
+Shopping Cart: {this.state.cart.length} total items.
+&lt;/div&gt;
+&lt;div&gt;Total {this.getTotal()}&lt;/div&gt;
+&lt;div&gt;
+{products.map(product =&gt; (
+&lt;div key={product.name}&gt;
+&lt;div className="product"&gt;
+&lt;span role="img" aria-label={product.name}&gt;{product.emoji}&lt;/span&gt;
+&lt;/div&gt;
+&lt;button onClick={() =&gt; this.add(product)}&gt;Add&lt;/button&gt;
+&lt;button onClick={<span class="highlight">() =&gt; this.remove(product)</span>}&gt;Remove&lt;/button&gt;
+&lt;/div&gt;
+))}
+&lt;/div&gt;
+&lt;/div&gt;
+)
+}
 }
 </code></pre>
+
 <p>To avoid mutating the state object, you must first make a copy of it using the <code>spread</code> operator. Then you can <a href="https://www.digitalocean.com/community/tutorials/how-to-use-array-methods-in-javascript-mutator-methods#splice()">splice</a> out the item you want from the copy and return the copy in the new object. By copying <code>state</code> as the first step, you can be sure that you will not mutate the <code>state</code> object.</p>
 
 <p>Save the file. When you do, the browser will refresh and you&rsquo;ll be able to add and remove items:</p>
@@ -618,45 +637,46 @@ import './Product.css';
 
 export default class Product extends Component {
 
-  state = {
-    cart: [],
-  <span class="highlight">}</span>
+state = {
+cart: [],
+<span class="highlight">}</span>
 
-  add = (product) =&gt; {
-    this.setState(state =&gt; ({
-      cart: [...state.cart, <span class="highlight">product</span>],
-    <span class="highlight">}))</span>
-  }
+add = (product) =&gt; {
+this.setState(state =&gt; ({
+cart: [...state.cart, <span class="highlight">product</span>],
+<span class="highlight">}))</span>
+}
 
-  currencyOptions = {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  }
+currencyOptions = {
+minimumFractionDigits: 2,
+maximumFractionDigits: 2,
+}
 
-  getTotal = () =&gt; {
-    <span class="highlight">const total = this.state.cart.reduce((totalCost, item) =&gt; totalCost + item.price, 0);</span>
-    return <span class="highlight">total</span>.toLocaleString(undefined, this.currencyOptions)
-  }
+getTotal = () =&gt; {
+<span class="highlight">const total = this.state.cart.reduce((totalCost, item) =&gt; totalCost + item.price, 0);</span>
+return <span class="highlight">total</span>.toLocaleString(undefined, this.currencyOptions)
+}
 
-  remove = (product) =&gt; {
-    this.setState(state =&gt; {
-      const cart = [...state.cart];
-      <span class="highlight">const productIndex = cart.findIndex(p =&gt; p.name === product.name);</span>
-      <span class="highlight">if(productIndex &lt; 0) {</span>
-        <span class="highlight">return;</span>
-      <span class="highlight">}</span>
-      cart.splice(<span class="highlight">productIndex, 1</span>)
-      return ({
-        cart
-      <span class="highlight">})</span>
-    })
-  }
+remove = (product) =&gt; {
+this.setState(state =&gt; {
+const cart = [...state.cart];
+<span class="highlight">const productIndex = cart.findIndex(p =&gt; p.name === product.name);</span>
+<span class="highlight">if(productIndex &lt; 0) {</span>
+<span class="highlight">return;</span>
+<span class="highlight">}</span>
+cart.splice(<span class="highlight">productIndex, 1</span>)
+return ({
+cart
+<span class="highlight">})</span>
+})
+}
 
-  render() {
-    ...
-  }
+render() {
+...
+}
 }
 </code></pre>
+
 <p>The <code>add()</code> method is similar to what it was before, except that reference to the <code>total</code> property has been removed. In the <code>remove()</code> method, you find the index of the <code>product</code> with <code>findByIndex</code>. If the index doesn&rsquo;t exist, you&rsquo;ll get a <code>-1</code>. In that case, you use a <a href="https://www.digitalocean.com/community/tutorials/how-to-write-conditional-statements-in-javascript">conditional statement</a> toreturn nothing. By returning nothing, React will know the <code>state</code> didn&rsquo;t change and won&rsquo;t trigger a re-render. If you return <code>state</code> or an empty object, it will still trigger a re-render.</p>
 
 <p>When using the <code>splice()</code> method, you are now passing <code>1</code> as the second argument, which will remove one value and keep the rest.</p>

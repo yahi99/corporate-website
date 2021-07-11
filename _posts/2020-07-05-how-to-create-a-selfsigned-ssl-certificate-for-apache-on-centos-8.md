@@ -2,12 +2,13 @@
 layout: post
 title:  "How To Create a Self-Signed SSL Certificate for Apache on CentOS 8"
 author: "Full"
+lang: en
+ref: selfsigned_ssl_1237
 categories: [ ubuntu ]
 description: "TLS, or “transport layer security” — and its predecessor SSL — are protocols used to wrap normal traffic in a protected, encrypted wrapper. Using this technology, servers can safely send information to their clients without their messages being intercepted or read by an outside party.
 In this guide, we will show you how to create and use a self-signed SSL certificate with the Apache web server on a CentOS 8 machine."
 image: "https://sergio.afanou.com/assets/images/image-midres-46.jpg"
 ---
-
 
 <h3 id="introduction">Introduction</h3>
 
@@ -139,6 +140,7 @@ Email Address []:<span class="highlight">webmaster@example.com</span>
 
 <span class='note'><p>
 <strong>Note:</strong> if your browser doesn&rsquo;t connect at all to the server, make sure your connection isn&rsquo;t being blocked by a firewall. If you are using <code>firewalld</code>, the following commands will open ports <code>80</code> and <code>443</code>:</p>
+
 <pre class="code-pre command prefixed"><code><ul class="prefixed"><li class="line" prefix="$">sudo firewall-cmd --permanent --add-service=http
 </li><li class="line" prefix="$">sudo firewall-cmd --permanent --add-service=https
 </li><li class="line" prefix="$">sudo firewall-cmd --reload

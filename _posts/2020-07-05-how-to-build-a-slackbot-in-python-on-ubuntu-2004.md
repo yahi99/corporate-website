@@ -1,13 +1,14 @@
 ---
 layout: post
-title:  "How To Build a Slackbot in Python on Ubuntu 20.04"
+title: "How To Build a Slackbot in Python on Ubuntu 20.04"
 author: "Full"
-categories: [ slack ]
+lang: en
+ref: slackbot_202007051234
+categories: [slack]
 description: "Slack is a communication platform designed for workplace productivity. It includes features such as direct messaging, public and private channels, voice and video calls, and bot integrations. A Slackbot is an automated program that can perform a variety of functions in Slack, from sending messages to triggering tasks to alerting on certain events."
 featured: true
 image: "https://sergio.afanou.com/assets/images/image-midres-31.jpg"
 ---
-
 
 <p><em>The author selected the <a href="https://www.brightfunds.org/funds/tech-education">Tech Education Fund</a> to receive a donation as part of the <a href="https://do.co/w4do-cta">Write for DOnations</a> program.</em></p>
 
@@ -188,7 +189,9 @@ class CoinBot:
         text = f"The result is {results}"
 
         return {"type": "section", "text": {"type": "mrkdwn", "text": text}},
+
 </code></pre>
+
 <p>Finally, create a method that crafts and returns the entire message payload, including the data from your constructor, by calling your <code>_flip_coin</code> method.</p>
 
 <p>Append the following lines to <code>coinbot.py</code> to create the method that will generate the finished payload:</p>
@@ -208,6 +211,7 @@ class CoinBot:
 import random
 
 # Create the CoinBot Class
+
 class CoinBot:
 
     # Create a constant that contains the default text for the message
@@ -221,12 +225,12 @@ class CoinBot:
         },
     }
 
-    # The constructor for the class. It takes the channel name as the a 
+    # The constructor for the class. It takes the channel name as the a
     # parameter and then sets it as an instance variable
     def __init__(self, channel):
         self.channel = channel
 
-    # Generate a random number to simulate flipping a coin. Then return the 
+    # Generate a random number to simulate flipping a coin. Then return the
     # crafted slack payload with the coin flip message.
     def _flip_coin(self):
         rand_int =  random.randint(0,1)
@@ -248,7 +252,9 @@ class CoinBot:
                 *self._flip_coin(),
             ],
         }
+
 </code></pre>
+
 <p>Save and close the file.</p>
 
 <p>Now that you have a Python class ready to do the work for your Slackbot, let&rsquo;s ensure that this class produces a useful message payload and that you can send it to your workspace.</p>
@@ -265,17 +271,22 @@ from coinbot import CoinBot
 import os
 
 # Create a slack client
+
 slack_web_client = WebClient(token=os.environ.get("SLACK_TOKEN"))
 
 # Get a new CoinBot
+
 coin_bot = CoinBot("#<span class="highlight">YOUR_CHANNEL_HERE</span>")
 
 # Get the onboarding message payload
+
 message = coin_bot.get_message_payload()
 
 # Post the onboarding message in Slack
-slack_web_client.chat_postMessage(**message)
+
+slack_web_client.chat_postMessage(\*\*message)
 </code></pre>
+
 <p>Save and close the file.</p>
 
 <p>Before you can run this file you will need to export the Slack token that you saved in Step 1 as an environment variable:</p>
@@ -305,13 +316,16 @@ slack_web_client.chat_postMessage(**message)
 <p>You will see an output like this:</p>
 <pre class="code-pre "><code><div class="secondary-code-label " title="Output">Output</div>Status: active
 
-To                         Action      From
---                         ------      ----
-OpenSSH                    ALLOW       Anywhere
-3000                       ALLOW       Anywhere
-OpenSSH (v6)               ALLOW       Anywhere (v6)
-3000 (v6)                  ALLOW       Anywhere (v6)
+To Action From
+
+---
+
+OpenSSH ALLOW Anywhere
+3000 ALLOW Anywhere
+OpenSSH (v6) ALLOW Anywhere (v6)
+3000 (v6) ALLOW Anywhere (v6)
 </code></pre>
+
 <p>Now create the file for your Flask app. Name this file <code>app.py</code>:</p>
 <pre class="code-pre custom_prefix prefixed"><code><ul class="prefixed"><li class="line" prefix="(slackbot)sammy@slackbotserver:$">touch app.py
 </li></ul></code></pre>
@@ -345,8 +359,10 @@ from coinbot import CoinBot
 app = Flask(__name__)
 
 # Create an events adapter and register it to an endpoint in the slack app for event ingestion.
+
 slack_events_adapter = SlackEventAdapter(os.environ.get("SLACK_EVENTS_TOKEN"), "/slack/events", app)
 </code></pre>
+
 <p>Next create a web client object that will allow your app to perform actions in the workspace, specifically to send messages. This is similar to what you did when you tested your <code>coinbot.py</code> file previously.</p>
 
 <p>Append the following line to <code>app.py</code> to create this <code>slack_web_client</code>:</p>
@@ -369,7 +385,9 @@ def flip_coin(channel):
 
     # Post the onboarding message in Slack
     slack_web_client.chat_postMessage(**message)
+
 </code></pre>
+
 <p>Now that you have created a function to handle the messaging aspects of your app, create one that monitors Slack events for a certain action and then executes your bot. You&rsquo;re going to configure your app to respond with the results of a simulated coin flip when it sees the phrase &ldquo;Hey Sammy, Flip a coin&rdquo;. You&rsquo;re going to accept any version of this—case won&rsquo;t prevent the app from responding.</p>
 
 <p>First decorate your function with the <code>@slack_events_adapter.on</code> syntax that allows your function to receive events. Specify that you only want the <code>message</code> events and have your function accept a payload parameter containing all of the necessary Slack information. Once you have this payload you will parse out the text and analyze it. Then, if it receives the activation phrase, your app will send the results of a simulated coin flip.</p>
@@ -399,7 +417,9 @@ def message(payload):
         # Execute the flip_coin function and send the results of
         # flipping a coin to the channel
         return flip_coin(channel_id)
+
 </code></pre>
+
 <p>Finally, create a <code>main</code> section that will create a logger so you can see the internals of your application as well as launch the app on your external IP address on port <code>3000</code>. In order to ingest the events from Slack, such as when a new message is sent, you must test your application on a public-facing IP address.</p>
 
 <p>Append the following lines to <code>app.py</code> to set up your main section:</p>
@@ -416,7 +436,9 @@ def message(payload):
     # Run your app on your externally facing IP address on port 3000 instead of
     # running it on localhost, which is traditional for development.
     app.run(host='0.0.0.0', port=3000)
+
 </code></pre>
+
 <p>You are now finished with the Flask app and it is ready for testing. Before you move on verify that your finished file, <code>app.py</code> contains the following:</p>
 <div class="code-label " title="app.py">app.py</div><pre class="code-pre "><code class="code-highlight language-python">import os
 import logging
@@ -426,18 +448,21 @@ from slackeventsapi import SlackEventAdapter
 from coinbot import CoinBot
 
 # Initialize a Flask app to host the events adapter
-app = Flask(__name__)
+
+app = Flask(**name**)
+
 # Create an events adapter and register it to an endpoint in the slack app for event injestion.
+
 slack_events_adapter = SlackEventAdapter(os.environ.get("SLACK_EVENTS_TOKEN"), "/slack/events", app)
 
 # Initialize a Web API client
+
 slack_web_client = WebClient(token=os.environ.get("SLACK_TOKEN"))
 
 def flip_coin(channel):
-    """Craft the CoinBot, flip the coin and send the message to the channel
-    """
-    # Create a new CoinBot
-    coin_bot = CoinBot(channel)
+"""Craft the CoinBot, flip the coin and send the message to the channel
+""" # Create a new CoinBot
+coin_bot = CoinBot(channel)
 
     # Get the onboarding message payload
     message = coin_bot.get_message_payload()
@@ -445,14 +470,15 @@ def flip_coin(channel):
     # Post the onboarding message in Slack
     slack_web_client.chat_postMessage(**message)
 
-
 # When a 'message' event is detected by the events adapter, forward that payload
+
 # to this function.
+
 @slack_events_adapter.on("message")
 def message(payload):
-    """Parse the message event, and if the activation string is in the text, 
-    simulate a coin flip and send the result.
-    """
+"""Parse the message event, and if the activation string is in the text,
+simulate a coin flip and send the result.
+"""
 
     # Get the event data from the payload
     event = payload.get("event", {})
@@ -471,9 +497,8 @@ def message(payload):
         # flipping a coin to the channel
         return flip_coin(channel_id)
 
-if __name__ == "__main__":
-    # Create the logging object
-    logger = logging.getLogger()
+if **name** == "**main**": # Create the logging object
+logger = logging.getLogger()
 
     # Set the log level to DEBUG. This will increase verbosity of logging messages
     logger.setLevel(logging.DEBUG)
@@ -484,7 +509,9 @@ if __name__ == "__main__":
     # Run our app on our externally facing IP address on port 3000 instead of
     # running it on localhost, which is traditional for development.
     app.run(host='0.0.0.0', port=3000)
+
 </code></pre>
+
 <p>Save and close the file.</p>
 
 <p>Now that your Flask app is ready to serve your application let&rsquo;s test it out.</p>

@@ -1,14 +1,13 @@
 ---
 layout: post
-title:  "Docker tip : inspect and grep"
+title: "Docker tip : inspect and grep"
 author: "Full"
-categories: [ docker ]
+lang: en
+ref: inspectgrepdocker_1243
+categories: [docker]
 description: "This isn’t so much a docker tip, as it is a jq tip. If you haven’t heard of jq, it is a great tool for parsing JSON from the command line. This also makes it a great tool to see what is happening in a container instead of having to use the –format specifier which I can never remember how to use exactly:"
 image: "https://sergio.afanou.com/assets/images/image-midres-15.jpg"
 ---
-
-
-
 
 <h3>Docker inspect and grep</h3>
 
@@ -30,28 +29,29 @@ $ docker inspect 4c45aea49180 | jq '.[].NetworkSettings.Networks'
 }
 
 # Get the arguments with which the container was started
+
 $ docker inspect 4c45aea49180 | jq '.[].Args'
 [
-  "-server",
-  "-advertise",
-  "192.168.99.100",
-  "-bootstrap-expect",
-  "1"
+"-server",
+"-advertise",
+"192.168.99.100",
+"-bootstrap-expect",
+"1"
 ]
 
 # Get all the mounted volumes
+
 11:22 $ docker inspect 4c45aea49180 | jq '.[].Mounts'
 [
-  {
-    "Name": "a8125ffdf6c4be1db4464345ba36b0417a18aaa3a025267596e292249ca4391f",
-    "Source": "/mnt/sda1/var/lib/docker/volumes/a8125ffdf6c4be1db4464345ba36b0417a18aaa3a025267596e292249ca4391f/_data",
-    "Destination": "/data",
-    "Driver": "local",
-    "Mode": "",
-    "RW": true
-  }
+{
+"Name": "a8125ffdf6c4be1db4464345ba36b0417a18aaa3a025267596e292249ca4391f",
+"Source": "/mnt/sda1/var/lib/docker/volumes/a8125ffdf6c4be1db4464345ba36b0417a18aaa3a025267596e292249ca4391f/_data",
+"Destination": "/data",
+"Driver": "local",
+"Mode": "",
+"RW": true
+}
 ]
 </code></pre></div></div>
-
 
 <p>And of course also works great for querying other kinds of (docker-esque) APIs that produce JSON (e.g Marathon, Mesos, Consul etc.). JQ provides a very extensive API for accessing and processing JSON. More information can be found here: https://stedolan.github.io/jq/</p>

@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "How To Use One-to-Many Database Relationships with Flask and SQLite"
+title: "How To Use One-to-Many Database Relationships with Flask and SQLite"
 author: "Full"
-categories: [ database ]
+lang: en
+ref: flask_sqlite_1239
+categories: [database]
 description: "Flask is a framework for building web applications using the Python language, and SQLite is a database engine that can be used with Python to store application data. In this tutorial, you will use Flask with SQLite to create a to-do application where users can create lists of to-do items. You will learn how to use SQLite with Flask and how one-to-many database relationships work."
 image: "https://sergio.afanou.com/assets/images/image-midres-48.jpg"
 ---
-
 
 <p><em>The author selected the <a href="https://www.brightfunds.org/funds/write-for-donations-covid-19-relief-fund">COVID-19 Relief Fund</a> to receive a donation as part of the <a href="https://do.co/w4do-cta">Write for DOnations</a> program.</em></p>
 
@@ -47,19 +48,20 @@ image: "https://sergio.afanou.com/assets/images/image-midres-48.jpg"
 DROP TABLE IF EXISTS items;
 
 CREATE TABLE lists (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    title TEXT NOT NULL
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+title TEXT NOT NULL
 );
 
 CREATE TABLE items (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    list_id INTEGER NOT NULL,
-    created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    content TEXT NOT NULL,
-    FOREIGN KEY (list_id) REFERENCES lists (id)
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+list_id INTEGER NOT NULL,
+created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+content TEXT NOT NULL,
+FOREIGN KEY (list_id) REFERENCES lists (id)
 );
 </code></pre>
+
 <p>Save and close the file.</p>
 
 <p>The first two SQL command are <code>DROP TABLE IF EXISTS lists;</code> and <code>DROP TABLE IF EXISTS items;</code>, these delete any already existing tables named <code>lists</code> and <code>items</code> so you don&rsquo;t see confusing behavior. Note that this will delete all of the content you have in the database whenever you use these SQL commands, so ensure you don&rsquo;t write any important content in the web application until you finish this tutorial and experiment with the final result.</p>
@@ -84,9 +86,8 @@ CREATE TABLE items (
 
 connection = sqlite3.connect('database.db')
 
-
 with open('schema.sql') as f:
-    connection.executescript(f.read())
+connection.executescript(f.read())
 
 cur = connection.cursor()
 
@@ -95,28 +96,29 @@ cur.execute("INSERT INTO lists (title) VALUES (?)", ('Home',))
 cur.execute("INSERT INTO lists (title) VALUES (?)", ('Study',))
 
 cur.execute("INSERT INTO items (list_id, content) VALUES (?, ?)",
-            (1, 'Morning meeting')
-            )
+(1, 'Morning meeting')
+)
 
 cur.execute("INSERT INTO items (list_id, content) VALUES (?, ?)",
-            (2, 'Buy fruit')
-            )
+(2, 'Buy fruit')
+)
 
 cur.execute("INSERT INTO items (list_id, content) VALUES (?, ?)",
-            (2, 'Cook dinner')
-            )
+(2, 'Cook dinner')
+)
 
 cur.execute("INSERT INTO items (list_id, content) VALUES (?, ?)",
-            (3, 'Learn Flask')
-            )
+(3, 'Learn Flask')
+)
 
 cur.execute("INSERT INTO items (list_id, content) VALUES (?, ?)",
-            (3, 'Learn SQLite')
-            )
+(3, 'Learn SQLite')
+)
 
 connection.commit()
 connection.close()
 </code></pre>
+
 <p>Save and close the file.</p>
 
 <p>Here you connect to a file called <code>database.db</code> that will be created once you execute this program. You then open the <code>schema.sql</code> file and run it using the <a href="https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.executescript"><code>executescript()</code></a> method that executes multiple SQL statements at once.</p>
@@ -146,22 +148,19 @@ connection.close()
 import sqlite3
 from flask import Flask, render_template, request, flash, redirect, url_for
 
-
 def get_db_connection():
-    conn = sqlite3.connect('database.db')
-    conn.row_factory = sqlite3.Row
-    return conn
+conn = sqlite3.connect('database.db')
+conn.row_factory = sqlite3.Row
+return conn
 
-
-app = Flask(__name__)
+app = Flask(**name**)
 app.config['SECRET_KEY'] = 'this should be a secret random string'
-
 
 @app.route('/')
 def index():
-    conn = get_db_connection()
-    todos = conn.execute('SELECT i.content, l.title FROM items i JOIN lists l \
-                          ON i.list_id = l.id ORDER BY l.title;').fetchall()
+conn = get_db_connection()
+todos = conn.execute('SELECT i.content, l.title FROM items i JOIN lists l \
+ ON i.list_id = l.id ORDER BY l.title;').fetchall()
 
     lists = {}
 
@@ -170,7 +169,9 @@ def index():
 
     conn.close()
     return render_template('index.html', lists=lists)
+
 </code></pre>
+
 <p>Save and close the file.</p>
 
 <p>The <code>get_db_connection()</code> function opens a connection to the <code>database.db</code> database file and then sets the <a href="https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.row_factory"><code>row_factory</code></a> attribute to <code>sqlite3.Row</code>. In this way you can have name-based access to columns; this means that the database connection will return rows that behave like regular Python dictionaries. Lastly, the function returns the <code>conn</code> connection object you&rsquo;ll be using to access the database.</p>
@@ -208,8 +209,9 @@ Work : Morning meeting
 <pre class="code-pre "><code class="code-highlight language-python">lists = {}
 
 for k, g in groupby(todos, key=lambda t: t['title']):
-    lists[k] = list(g)
+lists[k] = list(g)
 </code></pre>
+
 <p>You first declare an empty dictionary called <code>lists</code>, then use a <code>for</code> loop to go through a grouping of the results in the <code>todos</code> variable by the list&rsquo;s title. You use the <a href="https://docs.python.org/3.5/library/itertools.html#itertools.groupby"><code>groupby()</code></a> function you imported from the <code>itertools</code> standard library. This function will go through each item in the <code>todos</code> variable and generate a group of results for each key in the <code>for</code> loop.</p>
 
 <p><code>k</code> represents list titles (that is, <code>Home</code>, <code>Study</code>, <code>Work</code>), which are extracted using the function you pass to the <code>key</code> parameter of the <code>groupby()</code> function. In this case the function is <code>lambda t: t['title']</code> that takes a to-do item and returns the title of the list (as you have done before with <code>todo['title']</code> in the previous for loop). <code>g</code> represents the group that contains the to-do items of each list title. For example, in the first iteration, <code>k</code> will be <code>'Home'</code>, while <code>g</code> is an <a href="https://docs.python.org/3/glossary.html#term-iterable">iterable</a> that will contain the items <code>'Buy fruit'</code> and <code>'Cook dinner'</code>.</p>
@@ -235,18 +237,19 @@ from app import get_db_connection
 
 conn = get_db_connection()
 todos = conn.execute('SELECT i.content, l.title FROM items i JOIN lists l \
-                        ON i.list_id = l.id ORDER BY l.title;').fetchall()
+ ON i.list_id = l.id ORDER BY l.title;').fetchall()
 
 lists = {}
 
 for k, g in groupby(todos, key=lambda t: t['title']):
-    lists[k] = list(g)
+lists[k] = list(g)
 
-for list_, items in lists.items():
-    print(list_)
-    for item in items:
-        print('    ', item['content'])
+for list*, items in lists.items():
+print(list*)
+for item in items:
+print(' ', item['content'])
 </code></pre>
+
 <p>Save and close the file.</p>
 
 <p>This is very similar to the content in your <code>index()</code> view function. The last <code>for</code> loop here illustrates how the <code>lists</code> dictionary is structured. You first go through the dictionary&rsquo;s items, print the list title (which is in the <code>list_</code> variable), then go through each group of to-do items that belong to the list and print the content value of the item.</p>
@@ -282,33 +285,36 @@ Work
     &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"&gt;
 
     &lt;title&gt;{ block title } { endblock }&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;nav class="navbar navbar-expand-md navbar-light bg-light"&gt;
-        &lt;a class="navbar-brand" href="{{ url_for('index')}}"&gt;FlaskTodo&lt;/a&gt;
-        &lt;button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"&gt;
-            &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
-        &lt;/button&gt;
-        &lt;div class="collapse navbar-collapse" id="navbarNav"&gt;
-            &lt;ul class="navbar-nav"&gt;
-            &lt;li class="nav-item active"&gt;
-                &lt;a class="nav-link" href="#"&gt;About&lt;/a&gt;
-            &lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/div&gt;
-    &lt;/nav&gt;
-    &lt;div class="container"&gt;
-        { block content } { endblock }
-    &lt;/div&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+&lt;nav class="navbar navbar-expand-md navbar-light bg-light"&gt;
+&lt;a class="navbar-brand" href="{{ url_for('index')}}"&gt;FlaskTodo&lt;/a&gt;
+&lt;button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"&gt;
+&lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;div class="collapse navbar-collapse" id="navbarNav"&gt;
+&lt;ul class="navbar-nav"&gt;
+&lt;li class="nav-item active"&gt;
+&lt;a class="nav-link" href="#"&gt;About&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/nav&gt;
+&lt;div class="container"&gt;
+{ block content } { endblock }
+&lt;/div&gt;
 
     &lt;!-- Optional JavaScript --&gt;
     &lt;!-- jQuery first, then Popper.js, then Bootstrap JS --&gt;
     &lt;script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"&gt;&lt;/script&gt;
     &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"&gt;&lt;/script&gt;
     &lt;script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"&gt;&lt;/script&gt;
-  &lt;/body&gt;
+
+&lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
+
 <p>Save and close the file.</p>
 
 <p>Most of the code in the preceding block is standard HTML and code required for Bootstrap. The <code>&lt;meta&gt;</code> tags provide information for the web browser, the <code>&lt;link&gt;</code> tag links the Bootstrap CSS files, and the <code>&lt;script&gt;</code> tags are links to JavaScript code that allows some additional Bootstrap features. Check out the <a href="https://getbootstrap.com/">Bootstrap documentation</a> for more information.</p>
@@ -320,21 +326,22 @@ Work
 <div class="code-label " title="flask_todo/templates/index.html">flask_todo/templates/index.html</div><pre class="code-pre "><code class="code-highlight language-html">{ extends 'base.html' }
 
 { block content }
-    &lt;h1&gt;{ block title } Welcome to FlaskTodo { endblock }&lt;/h1&gt;
-    { for list, items in lists.items() }
-        &lt;div class="card" style="width: 18rem; margin-bottom: 50px;"&gt;
-            &lt;div class="card-header"&gt;
-                &lt;h3&gt;{{ list }}&lt;/h3&gt;
-            &lt;/div&gt;
-            &lt;ul class="list-group list-group-flush"&gt;
-                { for item in items }
-                    &lt;li class="list-group-item"&gt;{{ item['content'] }}&lt;/li&gt;
-                { endfor }
-            &lt;/ul&gt;
-        &lt;/div&gt;
-    { endfor }
+&lt;h1&gt;{ block title } Welcome to FlaskTodo { endblock }&lt;/h1&gt;
+{ for list, items in lists.items() }
+&lt;div class="card" style="width: 18rem; margin-bottom: 50px;"&gt;
+&lt;div class="card-header"&gt;
+&lt;h3&gt;{{ list }}&lt;/h3&gt;
+&lt;/div&gt;
+&lt;ul class="list-group list-group-flush"&gt;
+{ for item in items }
+&lt;li class="list-group-item"&gt;{{ item['content'] }}&lt;/li&gt;
+{ endfor }
+&lt;/ul&gt;
+&lt;/div&gt;
+{ endfor }
 { endblock }
 </code></pre>
+
 <p>Here you use a <code>for</code> loop to go through each item of the <code>lists</code> dictionary, you display the list title as a card header inside an <code>&lt;h3&gt;</code> tag, and then use a list group to display each to-do item that belongs to the list in an <code>&lt;li&gt;</code> tag. This follows the same rules explained in the <code>list_example.py</code> program.</p>
 
 <p>You will now set the environment variables Flask needs and run the application using the following commands:</p>
@@ -381,12 +388,12 @@ Work
 &lt;h1&gt;{ block title } Create a New Item { endblock }&lt;/h1&gt;
 
 &lt;form method="post"&gt;
-    &lt;div class="form-group"&gt;
-        &lt;label for="content"&gt;Content&lt;/label&gt;
-        &lt;input type="text" name="content"
-               placeholder="Todo content" class="form-control"
-               value="{{ request.form['content'] }}"&gt;&lt;/input&gt;
-    &lt;/div&gt;
+&lt;div class="form-group"&gt;
+&lt;label for="content"&gt;Content&lt;/label&gt;
+&lt;input type="text" name="content"
+placeholder="Todo content" class="form-control"
+value="{{ request.form['content'] }}"&gt;&lt;/input&gt;
+&lt;/div&gt;
 
     &lt;div class="form-group"&gt;
         &lt;label for="list"&gt;List&lt;/label&gt;
@@ -407,9 +414,11 @@ Work
     &lt;div class="form-group"&gt;
         &lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
     &lt;/div&gt;
+
 &lt;/form&gt;
 { endblock }
 </code></pre>
+
 <p>Save and close the file.</p>
 
 <p>You use <code>request.form</code> to access the form data that is stored in case something goes wrong with your form submission (for example, if no to-do content was provided). In the <code>&lt;select&gt;</code> element, you loop through the lists you retrieved from the database in the <code>create()</code> function. If the list title is equal to what is stored in <code>request.form</code> then the selected option is that list title, otherwise, you display the list title in a normal non-selected <code>&lt;option&gt;</code> tag.</p>
@@ -450,7 +459,9 @@ def create():
 
     conn.close()
     return render_template('create.html', lists=lists)
+
 </code></pre>
+
 <p>Save and close the file.</p>
 
 <p>Inside the <code>request.method == 'POST'</code> condition you get the to-do item&rsquo;s content and the list&rsquo;s title from the form data. If no content was submitted, you send the user a message using the <code>flash()</code> function and redirect to the index page. If this condition was not triggered, then you execute a <code>SELECT</code> statement to get the list ID from the provided list title and save it in a variable called <code>list_id</code>. You then execute an <code>INSERT INTO</code> statement to insert the new to-do item into the <code>items</code> table. You use the <code>list_id</code> variable to link the item to the list it belongs to. Finally, you commit the transaction, close the connection, and redirect to the index page.</p>
@@ -475,14 +486,16 @@ def create():
         &lt;/li&gt;
         &lt;/ul&gt;
     &lt;/div&gt;
+
 &lt;/nav&gt;
 &lt;div class="container"&gt;
-    <span class="highlight">{ for message in get_flashed_messages() }</span>
-    <span class="highlight">    &lt;div class="alert alert-danger"&gt;{{ message }}&lt;/div&gt;</span>
-    <span class="highlight">{ endfor }</span>
-    {block content } { endblock }
+<span class="highlight">{ for message in get_flashed_messages() }</span>
+<span class="highlight"> &lt;div class="alert alert-danger"&gt;{{ message }}&lt;/div&gt;</span>
+<span class="highlight">{ endfor }</span>
+{block content } { endblock }
 &lt;/div&gt;
 </code></pre>
+
 <p>Save and close the file.</p>
 
 <p>Now, in the terminal, run your Flask application:</p>

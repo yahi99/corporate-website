@@ -2,12 +2,13 @@
 layout: post
 title:  "Migrate Your Current VPS (Linode, Rackspace, AWS EC2) to DigitalOcean"
 author: "Full"
+lang: en
+ref: migrate_yourcurrent_vps
 categories: [ aws ]
 description: "Migrating between VPS providers can seem like a daunting task. Like DigitalOcean, other VPS providers, such as Linode and Rackspace, provide root access. This allows you to transfer all of the necessary files to your new DigitalOcean VPS.
 For this guide, we will demonstrate how to transfer a simple WordPress blog from Linode to a DigitalOcean cloud server."
 image: "https://sergio.afanou.com/assets/images/image-midres-22.jpg"
 ---
-
 
 Introduction
 Migrating between VPS providers can seem like a daunting task. Like DigitalOcean, other VPS providers, such as Linode and Rackspace, provide root access. This allows you to transfer all of the necessary files to your new DigitalOcean VPS.
@@ -53,7 +54,7 @@ Close the file and cd into that directory:
 cd /srv/www/li606-185.members.linode.com/public_html/
 ls -F
 Output
-latest.tar.gz  wordpress/
+latest.tar.gz wordpress/
 As you can see, we have a directory for our WordPress site. This contains all of the web content for our site.
 We will transfer this entire directory, along with its permissions and sub-directories, from this location into the web root of our DigitalOcean cloud server. By default, apache2 on Ubuntu 14.04 serves its content out of "/var/www/html", so that is where we will place this content.
 We will add some options to rsync in order for it to transfer properly. The "-a" option stands for archive, which allows us to transfer recursively while preserving many of the underlying file properties like permissions and ownership.
@@ -73,11 +74,11 @@ mysql -u root -p
 Enter the database administrator's password to continue. List the MySQL databases with the following command:
 show databases;
 +--------------------+
-| Database           |
+| Database |
 +--------------------+
 | information_schema |
-| mysql              |
-| wordpress          |
+| mysql |
+| wordpress |
 +--------------------+
 3 rows in set (0.00 sec)
 We would like to transfer our "wordpress" database, which contains our site information, and also our "mysql" database, which will transfer all of our user info, etc. The "information_schema" is just data structure information, and we don't need to hold onto that.
@@ -100,13 +101,13 @@ Let's check to see that MySQL has imported correctly:
 mysql -u root -p
 show databases;
 +--------------------+
-| Database           |
+| Database |
 +--------------------+
 | information_schema |
-| mysql              |
+| mysql |
 | performance_schema |
-| test               |
-| wordpress          |
+| test |
+| wordpress |
 +--------------------+
 5 rows in set (0.00 sec)
 As you can see, our "wordpress" database is present. The previous "mysql" database has been replaced with the one from our old VPS.
@@ -123,13 +124,13 @@ Before changing over your domain name to point to your new site location, it is 
 It is a good idea to reference the services that were running on your old VPS, and then check their configuration files. You can see the services that were running on your old VPS by logging in and typing:
 netstat -plunt
 Active Internet connections (only servers)
-Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
-tcp        0      0 127.0.0.1:3306          0.0.0.0:*               LISTEN      13791/mysqld    
-tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      10538/sshd      
-tcp        0      0 127.0.0.1:25            0.0.0.0:*               LISTEN      13963/master    
-tcp6       0      0 :::80                   :::*                    LISTEN      13771/apache2   
-tcp6       0      0 :::22                   :::*                    LISTEN      10538/sshd      
-udp        0      0 0.0.0.0:68              0.0.0.0:*                           2287/dhclient3 
+Proto Recv-Q Send-Q Local Address Foreign Address State PID/Program name
+tcp 0 0 127.0.0.1:3306 0.0.0.0:_ LISTEN 13791/mysqld  
+tcp 0 0 0.0.0.0:22 0.0.0.0:_ LISTEN 10538/sshd  
+tcp 0 0 127.0.0.1:25 0.0.0.0:_ LISTEN 13963/master  
+tcp6 0 0 :::80 :::_ LISTEN 13771/apache2  
+tcp6 0 0 :::22 :::_ LISTEN 10538/sshd  
+udp 0 0 0.0.0.0:68 0.0.0.0:_ 2287/dhclient3
 Here, we can see the services in the last column that we will want to configure on our new server. Your list will probably be different.
 Each service has its own configuration syntax and configuration location, so you will need to check the documentation on a case-by-case basis.
 As an example, if we wanted to replicate the configuration of our SSH daemon on our new VPS we could transfer the configuration file to the home directory of our new VPS using rsync:
