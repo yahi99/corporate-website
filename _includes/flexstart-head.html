@@ -98,6 +98,20 @@
   />
   <meta name="theme-color" content="#ffffff" />
 
+  
+  <!-- Language handling -->
+  {% if page.layout != 'index' %}
+    {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
+    {% if posts.size == 0 %}
+      {% assign posts=site.pages | where:"ref", page.ref | sort: 'lang' %}
+    {% endif %}
+    {% if posts.size > 1 %}
+      {% for post in posts %}
+    <link rel="alternate" hreflang="{{post.lang}}" href="{{ site.base-url }}{{ post.url }}" />
+      {% endfor %}
+    {% endif %}
+  {% endif %}
+
   <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"

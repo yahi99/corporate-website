@@ -29,11 +29,22 @@
             <li><a href="#">Cloud infrastructure</a></li>
           </ul>
         </li>
-        <li><a href="/blog.html">Blog</a></li>
-        <li><a class="nav-link scrollto" href="/index.html#team">Team</a></li>
-        <li><a class="nav-link scrollto" href="/index.html#about">About</a></li>
+        {% for menu in site.t[page.lang] %}
         <li>
-          <a class="nav-link scrollto" href="/index.html#contact">Contact</a>
+          <a class="nav-link scrollto" href="{{ menu[1].url }}"
+            >{{ menu[1].name }}</a
+          >
+        </li>
+        {% endfor %}
+        <li class="dropdown">
+          <a class="nav-link scrollto" href="#"
+            ><span>Langue</span> <i class="bi bi-chevron-down"></i
+          ></a>
+          <ul>
+            {% for menu in site.t %}
+            <li><a href="/{{ menu.label }}">{{ menu.label }}</a></li>
+            {% endfor %}
+          </ul>
         </li>
         <li>
           <a class="getstarted scrollto" href="/order-service">Order now</a>
