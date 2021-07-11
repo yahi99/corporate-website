@@ -14,6 +14,8 @@ project-date: June 2019
 client: Dagan Magazine
 category: Web Development
 type: web
+lang: en
+ref: dagan
 description: Dagan magazine's new issue is in the kiosks. 🥰 Go get it quickly in booths. and don't hesitate to tag us (in the comments or in story) with your favorite magazine, we're sharing everything again 📽 Enjoy your reading!
 ---
 

@@ -14,6 +14,8 @@ project-date: September 2016
 client: Various customers
 category: Data and application development.
 type: app
+lang: en
+ref: google_data
 description: We are experts in Google Apps platform and in G Suite Apps. You are on the right place.
 
 ? I'll write a professional GAS to help you automate all your tasks using technologies like

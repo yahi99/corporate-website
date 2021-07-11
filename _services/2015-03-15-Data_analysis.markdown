@@ -3,7 +3,7 @@ title: Data Analysis
 subtitle: Stripping, extracting, sorting, scripting
 layout: flexstart-portfolio-details
 images:
-  - path: data-analysis.jpeg
+  - path: /img/portfolio/flexstart/data-analysis.jpeg
     alt-text: A man editing complex data.
 modal-id: 4
 date: 2015-03-15
@@ -14,6 +14,8 @@ project-date: March 2015
 client: Various customers
 category: Data analysis
 type: app
+lang: en
+ref: data_analysis
 description: If you have data, it can be transformed, out of a mess, of meaningless information and into usable, tangible insights for your business.
 ---
 

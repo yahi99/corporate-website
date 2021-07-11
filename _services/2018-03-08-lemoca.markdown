@@ -14,6 +14,8 @@ project-date: March 2018
 client: Le MOCA
 category: Web Development
 type: web
+lang: en
+ref: lemocca
 description: A beautiful project, baked in Art.
 ---
 

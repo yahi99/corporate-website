@@ -20,6 +20,8 @@ project-date: August 2019
 client: Various customers
 category: Mobile App
 type: app
+lang: en
+ref: video_mobile_app
 description: Building mobile apps is one of our core services. We help customers streamline their user experience with stunning mobile apps. You're at the perfect place. :)
 ---
 
