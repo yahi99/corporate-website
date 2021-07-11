@@ -36,7 +36,7 @@ TEAM_FLEXSTART_SRC=$(subst img/team/original, img/team/flexstart, $(TEAM_SRC))
 help:
 	@awk 'BEGIN {FS = ":.*##"; } /^[a-zA-Z_-]+:.*?##/ { printf "$(PRIMARY_COLOR)%-20s$(NO_COLOR) %s\n", $$1, $$2 }' $(MAKEFILE_LIST) | sort
 
-builddev:
+builddev: Dockerfile
 	docker build . -t "fullbright/jekyll:0.1"
 
 startdev-win: builddev
