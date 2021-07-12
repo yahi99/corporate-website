@@ -31,21 +31,14 @@
         </li>
         {% for menu in site.t[page.lang] %}
         <li>
-          <a class="nav-link scrollto" href="{{ menu[1].url }}"
-            >{{ menu[1].name }}</a
-          >
+          <a class="nav-link scrollto" href="{{ menu[1].url }}">{{ menu[1].name }}</a>
         </li>
         {% endfor %}
-        <li class="dropdown">
-          <a class="nav-link scrollto" href="#"
-            ><span>Langue</span> <i class="bi bi-chevron-down"></i
-          ></a>
-          <ul>
-            {% for menu in site.t %}
-            <li><a href="/{{ menu.label }}">{{ menu.label }}</a></li>
-            {% endfor %}
-          </ul>
+        {% for menu in site.data.languages[page.lang].links %}
+        <li>
+          <a class="nav-link scrollto" href="{{ menu.url }}">{{ menu.name }}</a>
         </li>
+        {% endfor %}
         <li>
           <a class="getstarted scrollto" href="/order-service">Order now</a>
         </li>

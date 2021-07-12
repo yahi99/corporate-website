@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: flexstart-blog-single
 title: "Amazon’s T3 – Qui peut l'utiliser, quand, comment et pourquoi?"
 author: "Full"
 lang: fr

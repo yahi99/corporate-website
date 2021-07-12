@@ -1,30 +1,35 @@
 en:
   label: "English"
   icon: 🇺🇸
-  blog:
-    name: "Blog"
-    url: "/index.html#blog"
-  team:
-    name: "Team"
-    url: "/index.html#team"
-  about:
-    name: "About"
-    url: "/index.html#about"
-  contact:
-    name: "Contact"
-    url: "/index.html#contact"
+  links:
+    - blog:
+      name: "Blog"
+      url: "/index.html#blog"
+    - team:
+      name: "Team"
+      url: "/index.html#team"
+    - about:
+      name: "About"
+      url: "/index.html#about"
+    - contact:
+      name: "Contact"
+      url: "/index.html#contact"
 fr:
   label: "Français"
   icon: 🇫🇷
-  blog:
-    name: "Blog"
-    url: "/index.html#blog"
-  team:
-    name: "Equipe"
-    url: "/index.html#team"
-  about:
-    name: "A propos"
-    url: "/index.html#about"
-  contact:
-    name: "Contactez-nous"
-    url: "/index.html#contact"
+  links:
+    - blog:
+      name: "Blog"
+      url: "/index.html#blog"
+    - team:
+      name: "Equipe"
+      url: "/index.html#team"
+    - about:
+      name: "A propos"
+      url: "/index.html#about"
+    - contact:
+      name: "Contactez-nous"
+      url: "/index.html#contact"
+    - order:
+      name: "Commandez maintenant"
+      url: "/index.html#order-service"

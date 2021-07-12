@@ -1,10 +1,11 @@
 ---
-layout: post
+layout: flexstart-blog-single
 title:  "Comment prendre une capture d'écran dans windows"
-author: "Full"
+author: full
 lang: fr
 ref: screenshot_1257
 categories: [ screenshot ]
+tags: [ screenshot, windows, image ]
 description: "Windows
 =======
 
