@@ -4,32 +4,29 @@ en:
   links:
     - blog:
       name: "Blog"
-      url: "/index.html#blog"
+      url: "/en/blog.html"
     - team:
       name: "Team"
-      url: "/index.html#team"
+      url: "/en/index.html"
     - about:
       name: "About"
-      url: "/index.html#about"
+      url: "/en/index.html#about"
     - contact:
       name: "Contact"
-      url: "/index.html#contact"
+      url: "/en/index.html#contact"
 fr:
   label: "Français"
   icon: 🇫🇷
   links:
     - blog:
       name: "Blog"
-      url: "/index.html#blog"
+      url: "/fr/blog.html"
     - team:
       name: "Equipe"
-      url: "/index.html#team"
+      url: "/fr/index.html#team"
     - about:
       name: "A propos"
-      url: "/index.html#about"
+      url: "/fr/index.html#about"
     - contact:
       name: "Contactez-nous"
-      url: "/index.html#contact"
-    - order:
-      name: "Commandez maintenant"
-      url: "/index.html#order-service"
+      url: "/fr/index.html#contact"
