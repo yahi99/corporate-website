@@ -22,4 +22,4 @@ jobs:
       - uses: helaili/jekyll-action@v2
         with:
             token: ${{ secrets.GITHB_TOKEN }}
-            pre_build_commands: apk add ruby-dev
+            pre_build_commands: apk --update add ruby-dev ruby-all-dev
