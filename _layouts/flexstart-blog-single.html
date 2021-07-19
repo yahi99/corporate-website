@@ -33,7 +33,7 @@ layout: flexstart-default
               </div>
 
               <h2 class="entry-title">
-                <a href="blog-single.html">{{ page.title }}</a>
+                <a href="{{ site.baseurl }}{{ post.url }}">{{ page.title }}</a>
               </h2>
 
               <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
@@ -47,7 +47,7 @@ layout: flexstart-default
                 <ul>
                   <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="{{ author.web }}">{{ author.display_name }}</a></li>
                   <li class="d-flex align-items-center"><i class="bi bi-clock"></i> 
-                    <a href="blog-single.html">
+                    <a href="{{ author.web }}">
                       <time datetime="{{ page.date | date: '%Y-%m-%d %H:%M' }}">{{ page.date | date: '%b %-d, %Y' }} ({{ page.date | timeago }})</time>
                       <small>
                         {% if page.last_modified_at %}
@@ -56,7 +56,7 @@ layout: flexstart-default
                       </small>
                     </a>
                   </li>
-                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">12 Comments</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="{{ site.baseurl }}{{ post.url }}">12 Comments</a></li>
                 </ul>
               </div>
 
@@ -273,7 +273,7 @@ layout: flexstart-default
                     {% if site.lazyimages == "enabled" %} 
                     <img class="img-fluid"
                           src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
-                          data-src="{% if post.image contains "://" %}{{ post.image }}{% else
+                          data-src="{% if post.image contains '://' %}{{ post.image }}{% else
                     %}{{ site.baseurl }}/{{ post.image }}{% endif %}" alt="{{ post.title
                     }}"> 
                     
