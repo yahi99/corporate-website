@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: flexstart-blog-single
 title: "How To Setup Your Local Node.js Development Environment Using Docker"
 author: "Full"
 lang: fr

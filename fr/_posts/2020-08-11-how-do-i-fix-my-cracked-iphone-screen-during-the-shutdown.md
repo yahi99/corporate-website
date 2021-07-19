@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: flexstart-blog-single
 title:  "How Do I Fix My Cracked iPhone Screen During the Shutdown?"
 author: "Full"
 lang: fr

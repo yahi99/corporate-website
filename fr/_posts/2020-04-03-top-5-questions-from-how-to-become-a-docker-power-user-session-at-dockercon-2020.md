@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: flexstart-blog-single
 title: "Top 5 Questions from “How to become a Docker Power User” session at DockerCon 2020"
 author: "Full"
 lang: fr

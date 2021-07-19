@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: flexstart-blog-single
 title:  "How To Create a New Sudo-enabled User on Ubuntu 20.04 [Quickstart]"
 author: "Full"
 lang: fr

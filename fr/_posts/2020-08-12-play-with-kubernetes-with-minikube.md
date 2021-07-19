@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: flexstart-blog-single
 title:  "Play with Kubernetes with Minikube"
 author: "Full"
 lang: fr
@@ -298,6 +298,3 @@ Was this page helpful?
 
 Yes NoThanks for the feedback. If you have a specific, answerable question about how to use Kubernetes, ask it on [Stack Overflow](https://stackoverflow.com/questions/tagged/kubernetes). Open an issue in the GitHub repo if you want to [report a problem](https://github.com/kubernetes/website/issues/new?title=Issue%20with%20k8s.io/docs/setup/learning-environment/minikube/) or [suggest an improvement](https://github.com/kubernetes/website/issues/new?title=Improvement%20for%20k8s.io/docs/setup/learning-environment/minikube/).
 
-const yes=document.querySelector('.feedback--yes');const no=document.querySelector('.feedback--no');document.querySelectorAll('.feedback--link').forEach(link=>{link.href=link.href+window.location.pathname;});const sendFeedback=(value)=>{if(!gtag){console.log('!gtag');} gtag('event','click',{'event_category':'Helpful','event_label':window.location.pathname,value});};const disableButtons=()=>{yes.disabled=true;yes.classList.add('feedback--button\_\_disabled');no.disabled=true;no.classList.add('feedback--button\_\_disabled');};yes.addEventListener('click',()=>{sendFeedback(1);disableButtons();document.querySelector('.feedback--response').classList.remove('feedback--response\_\_hidden');});no.addEventListener('click',()=>{sendFeedback(0);disableButtons();document.querySelector('.feedback--response').classList.remove('feedback--response\_\_hidden');});![Analytics](https://kubernetes-site.appspot.com/UA-36037335-10/GitHub/docs/setup/learning-environment/minikube.md?pixel)
-
-PDRTJS_settings_8345992={"id":"8345992","unique_id":"\/docs\/setup\/learning-environment\/minikube\/","title":"Installing Kubernetes with Minikube","permalink":"https:\/\/kubernetes.io\/docs\/setup\/learning-environment\/minikube\/"};(function(d,c,j){if(!document.getElementById(j)){var pd=d.createElement(c),s;pd.id=j;pd.src=("https:"==document.location.protocol)?"https://polldaddy.com/js/rating/rating.js":"http://i0.poll.fm/js/rating/rating.js";s=document.getElementsByTagName(c)[0];s.parentNode.insertBefore(pd,s);}}(document,"script","pd-rating-js"));Create an Issue [Edit This Page](https://github.com/kubernetes/website/edit/master/content/en/docs/setup/learning-environment/minikube.md)Page last modified on July 20, 2020 at 4:17 PM PST by [Replace redirected links with the real targets](https://github.com/kubernetes/website/commit/c4add100ffd74508886312f7170c1c2f0cba9845/) ([Page History](https://github.com/kubernetes/website/commits/master/content/en/docs/setup/learning-environment/minikube.md))

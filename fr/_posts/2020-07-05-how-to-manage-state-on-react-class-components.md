@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: flexstart-blog-single
 title: "How To Manage State on React Class Components"
 author: "Full"
 lang: fr

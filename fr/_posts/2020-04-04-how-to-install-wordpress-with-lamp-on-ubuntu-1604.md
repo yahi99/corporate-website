@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: flexstart-blog-single
 title: "How To Install WordPress with LAMP on Ubuntu 16.04"
 author: "Full"
 lang: fr

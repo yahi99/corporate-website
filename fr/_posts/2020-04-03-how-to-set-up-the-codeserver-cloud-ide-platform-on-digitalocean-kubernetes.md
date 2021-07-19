@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: flexstart-blog-single
 title: "How To Set Up the code-server Cloud IDE Platform on DigitalOcean Kubernetes"
 author: "Full"
 lang: fr

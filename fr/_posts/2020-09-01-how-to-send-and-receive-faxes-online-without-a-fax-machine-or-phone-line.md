@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: flexstart-blog-single
 title: "How to Send and Receive Faxes Online Without a Fax Machine or Phone Line"
 author: "Full"
 lang: fr

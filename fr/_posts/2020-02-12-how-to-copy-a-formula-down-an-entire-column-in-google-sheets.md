@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: flexstart-blog-single
 title: "How to Copy a Formula Down an Entire Column in Google Sheets"
 author: "Full"
 lang: fr

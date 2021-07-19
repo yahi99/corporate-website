@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: flexstart-blog-single
 title: "How To Build a Slackbot in Python on Ubuntu 20.04"
 author: "Full"
 lang: fr

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: flexstart-blog-single
 title: "Why Do My Download Speeds Differ So Drastically Between Computers?"
 author: "Full"
 lang: fr
