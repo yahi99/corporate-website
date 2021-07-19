@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: flexstart-blog-single
 title:  "How Do I Get My Data Off an Old Computer?"
 author: "Full"
 lang: en

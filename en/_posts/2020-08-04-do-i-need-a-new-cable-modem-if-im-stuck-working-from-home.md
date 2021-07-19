@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: flexstart-blog-single
 title: "Do I Need a New Cable Modem If I'm Stuck Working From Home?"
 author: "Full"
 lang: en

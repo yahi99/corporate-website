@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: flexstart-blog-single
 title:  "How To Create a Self-Signed SSL Certificate for Apache on CentOS 8"
 author: "Full"
 lang: en

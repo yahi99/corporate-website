@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: flexstart-blog-single
 title:  "Migrate Your Current VPS (Linode, Rackspace, AWS EC2) to DigitalOcean"
 author: "Full"
 lang: en

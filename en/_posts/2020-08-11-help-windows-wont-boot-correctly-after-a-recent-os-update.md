@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: flexstart-blog-single
 title:  "Help! Windows Won't Boot Correctly After a Recent OS Update"
 author: "Full"
 lang: en

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: flexstart-blog-single
 title: "How To Use One-to-Many Database Relationships with Flask and SQLite"
 author: "Full"
 lang: en
@@ -289,7 +289,7 @@ Work
 &lt;/head&gt;
 &lt;body&gt;
 &lt;nav class="navbar navbar-expand-md navbar-light bg-light"&gt;
-&lt;a class="navbar-brand" href="{{ url_for('index')}}"&gt;FlaskTodo&lt;/a&gt;
+&lt;a class="navbar-brand" href=""&gt;FlaskTodo&lt;/a&gt;
 &lt;button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"&gt;
 &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
 &lt;/button&gt;
@@ -431,54 +431,23 @@ value="{{ request.form['content'] }}"&gt;&lt;/input&gt;
 <p>Type <code>CTRL + C</code> to stop your development server.</p>
 
 <p>Next, let&rsquo;s add the code for handling POST requests to the <code>create()</code> function and make the form function properly, open <code>app.py</code>:</p>
-<pre class="code-pre custom_prefix prefixed"><code><ul class="prefixed"><li class="line" prefix="(env)sammy@localhost:$">nano app.py
-</li></ul></code></pre>
-<p>Then edit the <code>create()</code> function to look like so:</p>
-<div class="code-label " title="flask_todo/app.py">flask_todo/app.py</div><pre class="code-pre "><code class="code-highlight language-python">...
-<a href="https://www.digitalocean.com/community/users/app-route" class="username-tag">@app.route</a>('/create/', methods=('GET', 'POST'))
-def create():
-    conn = get_db_connection()
-
-    <span class="highlight">if request.method == 'POST':</span>
-    <span class="highlight">    content = request.form['content']</span>
-    <span class="highlight">    list_title = request.form['list']</span>
-
-    <span class="highlight">    if not content:</span>
-    <span class="highlight">        flash('Content is required!')</span>
-    <span class="highlight">        return redirect(url_for('index'))</span>
-
-    <span class="highlight">    list_id = conn.execute('SELECT id FROM lists WHERE title = (?);',</span>
-    <span class="highlight">                             (list_title,)).fetchone()['id']</span>
-    <span class="highlight">    conn.execute('INSERT INTO items (content, list_id) VALUES (?, ?)',</span>
-    <span class="highlight">                 (content, list_id))</span>
-    <span class="highlight">    conn.commit()</span>
-    <span class="highlight">    conn.close()</span>
-    <span class="highlight">    return redirect(url_for('index'))</span>
-
-    lists = conn.execute('SELECT title FROM lists;').fetchall()
-
-    conn.close()
-    return render_template('create.html', lists=lists)
-
-</code></pre>
 
 <p>Save and close the file.</p>
 
 <p>Inside the <code>request.method == 'POST'</code> condition you get the to-do item&rsquo;s content and the list&rsquo;s title from the form data. If no content was submitted, you send the user a message using the <code>flash()</code> function and redirect to the index page. If this condition was not triggered, then you execute a <code>SELECT</code> statement to get the list ID from the provided list title and save it in a variable called <code>list_id</code>. You then execute an <code>INSERT INTO</code> statement to insert the new to-do item into the <code>items</code> table. You use the <code>list_id</code> variable to link the item to the list it belongs to. Finally, you commit the transaction, close the connection, and redirect to the index page.</p>
 
 <p>As a last step, you will add a link to <code>/create</code> in the navigation bar and display flashed messages below it, to do this, open <code>base.html</code>:</p>
-<pre class="code-pre custom_prefix prefixed"><code><ul class="prefixed"><li class="line" prefix="(env)sammy@localhost:$">nano templates/base.html
-</li></ul></code></pre>
+
 <p>Edit the file by adding a new <code>&lt;li&gt;</code> navigation item that links to the <code>create()</code> view function. Then display the flashed messages using a <code>for</code> loop above the <code>content</code> block. These are available in the <a href="https://flask.palletsprojects.com/en/1.1.x/patterns/flashing/"><code>get_flashed_messages()</code> Flask function</a>:</p>
 <div class="code-label " title="flask_todo/templates/base.html">flask_todo/templates/base.html</div><pre class="code-pre "><code class="code-highlight language-html">&lt;nav class="navbar navbar-expand-md navbar-light bg-light"&gt;
-    &lt;a class="navbar-brand" href="{{ url_for('index')}}"&gt;FlaskTodo&lt;/a&gt;
+    &lt;a class="navbar-brand" href=""&gt;FlaskTodo&lt;/a&gt;
     &lt;button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"&gt;
         &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
     &lt;/button&gt;
     &lt;div class="collapse navbar-collapse" id="navbarNav"&gt;
         &lt;ul class="navbar-nav"&gt;
         <span class="highlight">&lt;li class="nav-item active"&gt;</span>
-        <span class="highlight">    &lt;a class="nav-link" href="{{ url_for('create') }}"&gt;New&lt;/a&gt;</span>
+        <span class="highlight">    &lt;a class="nav-link" href=""&gt;New&lt;/a&gt;</span>
         <span class="highlight">&lt;/li&gt;</span>
 
         &lt;li class="nav-item active"&gt;

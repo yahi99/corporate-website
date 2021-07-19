@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: flexstart-blog-single
 title:  "How To Configure Jenkins with SSL Using an Nginx Reverse Proxy on Ubuntu 20.04"
 author: "Full"
 lang: en

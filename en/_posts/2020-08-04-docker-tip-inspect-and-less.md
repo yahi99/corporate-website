@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: flexstart-blog-single
 title: "Docker tip : inspect and less"
 author: "Full"
 lang: en

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: flexstart-blog-single
 title: "How To Set Up a Remote Database to Optimize Site Performance with MySQL on Ubuntu 16.04"
 author: "Full"
 lang: en

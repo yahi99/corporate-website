@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: flexstart-blog-single
 title:  "How to take a screenshot in Windows"
 author: "Full"
 lang: en

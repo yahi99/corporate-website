@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: flexstart-blog-single
 title: "How to Send and Receive Faxes Online Without a Fax Machine or Phone Line"
 author: "Full"
 lang: en
@@ -27,7 +27,7 @@ Ideally, you’d be able to submit a document via email or a more secure online 
 
 There’s no way to connect to a fax machine directly over the Internet, as the fax machine is only connected to telephone lines. To perform a fax online, we’ll need some sort of gateway that accepts documents via the Internet and transmits the document to a fax machine. That’s where the below services come in. Give them a document and they’ll do the annoying work of dialing up the fax machine and sending your document over the telephone line.
 
-![junk-scanner-and-fax-machine](https://www.howtogeek.com/wp-content/uploads/2013/07/xjunk-scanner-and-fax-machine.jpg.pagespeed.gp+jp+jw+pj+ws+js+rj+rp+rw+ri+cp+md.ic.5fEKaNBYh0.jpg "junk-scanner-and-fax-machine")
+![junk-scanner-and-fax-machine](/img/image-midres-26.jpg "junk-scanner-and-fax-machine")
 
 ## You Could Fax With Just Your Computer, But…
 
@@ -41,7 +41,7 @@ The basic process is simple. First, you’ll need to scan the document you want 
 
 With the document now in digital form, you can send it along to a service that will do the annoying fax work for you.
 
-![scanner](https://www.howtogeek.com/wp-content/uploads/2013/07/xscanner.jpg.pagespeed.gp+jp+jw+pj+ws+js+rj+rp+rw+ri+cp+md.ic.PZ9bsvEbfp.jpg "scanner")
+![scanner](/img/image-midres-26.jpg "scanner")
 
 ## Send Faxes Online, Free
 
@@ -57,7 +57,7 @@ Of course, if you just want to send a few faxes, you can sign up for one of thei
 
 If you do need to send the occasional fax, we recommend signing up for a free trial of [MyFax](http://www.kqzyfj.com/click-3607085-12001188?sid=ct168841), which will let you send up to 100 pages, which is more pages per month than most people have to fax per year. If you do need to fax frequently, you can [upgrade to a regular plan](http://www.tkqlhce.com/click-3607085-10423449?sid=ct168841).
 
-![](https://www.howtogeek.com/wp-content/uploads/2019/09/ximg_5d702ddff3e50.png.pagespeed.gp+jp+jw+pj+ws+js+rj+rp+rw+ri+cp+md.ic.u-c7GF0Eek.png)
+![](/img/image-midres-26.jpg)
 
 ## Receiving Faxes
 
