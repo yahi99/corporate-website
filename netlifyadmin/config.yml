@@ -19,13 +19,12 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "flexstart-blog-single"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Author", name: "author", widget: "select", options: ["full", "john"]}
       - {label: "Language", name: "lang", widget: "select", options: ["fr", "en"]}
       - {label: "Language Post Ref", name: "ref", widget: "string"}
-      - {label: "Categories", name: "categories", widget: "string", default: "[]" }
+      - {label: "Categories", name: "categories", widget: "List", default: "" }
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
+      - {label: "Featured Image", name: "image", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
       
   - name: "blog-fr" # Used in routes, e.g., /admin/collections/blog
@@ -36,11 +35,10 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "flexstart-blog-single"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Author", name: "author", widget: "select", options: ["full", "john"]}
       - {label: "Language", name: "lang", widget: "select", options: ["fr", "en"]}
       - {label: "Language Post Ref", name: "ref", widget: "string"}
-      - {label: "Categories", name: "categories", widget: "string", default: "[]" }
+      - {label: "Categories", name: "categories", widget: "List", default: "" }
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
+      - {label: "Featured Image", name: "image", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"} 
