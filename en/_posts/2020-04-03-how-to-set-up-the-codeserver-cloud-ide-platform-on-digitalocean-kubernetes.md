@@ -7,7 +7,7 @@ ref: howtosetup_thecodeserver_cloudide
 categories:
   - kubernetes
 date: 2021-11-03T18:00:07.376Z
-image: https://sergio.afanou.com/assets/images/image-midres-23.jpg
+image: /assets/images/uploads/boitumelo-phetla.jpeg
 description: With developer tools moving to the cloud, creation and adoption of
   cloud IDE (Integrated Development Environment) platforms is growing. Cloud
   IDEs allow for real-time collaboration between developer teams to work in a
