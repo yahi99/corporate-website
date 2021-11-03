@@ -75,6 +75,7 @@ collections:
 
   posts:
     permalink: /blog/:categories/:slug
+    sidebar_label: Blog posts
 
 # Team names, titles and social links
 people:
@@ -204,6 +205,11 @@ responsive_image:
   # images. This is useful for resizing images which will be referenced from stylesheets.
   extra_images:
     - assets/*/*/*/*.{jpeg,jpg}
+
+jekyll_admin:
+  hidden_links:
+  homepage: "pages"
+
 
 # Build settings
 markdown: kramdown
