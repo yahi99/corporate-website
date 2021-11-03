@@ -1,12 +1,21 @@
 ---
 layout: flexstart-blog-single
-title: "How To Set Up the code-server Cloud IDE Platform on DigitalOcean Kubernetes"
-author: "Full"
+title: How To Set Up the code-server Cloud IDE Platform on DigitalOcean Kubernetes
+author: Full
 lang: en
 ref: howtosetup_thecodeserver_cloudide
-categories: [kubernetes]
-description: "With developer tools moving to the cloud, creation and adoption of cloud IDE (Integrated Development Environment) platforms is growing. Cloud IDEs allow for real-time collaboration between developer teams to work in a unified development environment that minimizes incompatibilities and enhances productivity. Accessible through web browsers, cloud IDEs are available from every type of modern device. Another advantage of a cloud IDE is the possibility to leverage the power of a cluster, which can greatly exceed the processing power of a single development computer."
-image: "https://sergio.afanou.com/assets/images/image-midres-23.jpg"
+categories:
+  - kubernetes
+date: 2021-11-03T18:00:07.376Z
+image: https://sergio.afanou.com/assets/images/image-midres-23.jpg
+description: With developer tools moving to the cloud, creation and adoption of
+  cloud IDE (Integrated Development Environment) platforms is growing. Cloud
+  IDEs allow for real-time collaboration between developer teams to work in a
+  unified development environment that minimizes incompatibilities and enhances
+  productivity. Accessible through web browsers, cloud IDEs are available from
+  every type of modern device. Another advantage of a cloud IDE is the
+  possibility to leverage the power of a cluster, which can greatly exceed the
+  processing power of a single development computer.
 ---
 
 # Introduction
