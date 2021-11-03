@@ -1,10 +1,11 @@
 backend:
   name: github
   repo: BrightSoftwares/corporate-website
-  api_root: https://api.github.com
-  site_domain: cms.netlify.com
-  auth_endpoint: auth
+  base_url: https://netlify-github-oauth-provider.glitch.me
   branch: master # Branch to update (optional; defaults to master)
+  #api_root: https://api.github.com
+  #site_domain: cms.netlify.com
+  #auth_endpoint: auth
   
 publish_mode: editorial_workflow
 media_folder: "assets/images/uploads" # Media files will be stored in the repo under images/uploads
