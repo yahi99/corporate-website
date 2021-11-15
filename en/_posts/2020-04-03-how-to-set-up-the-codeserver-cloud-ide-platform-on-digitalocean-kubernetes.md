@@ -17,14 +17,13 @@ description: With developer tools moving to the cloud, creation and adoption of
   possibility to leverage the power of a cluster, which can greatly exceed the
   processing power of a single development computer.
 ---
-
 # Introduction
 
 With developer tools moving to the cloud, creation and adoption of cloud IDE (Integrated Development Environment) platforms is growing. Cloud IDEs allow for real-time collaboration between developer teams to work in a unified development environment that minimizes incompatibilities and enhances productivity. Accessible through web browsers, cloud IDEs are available from every type of modern device. Another advantage of a cloud IDE is the possibility to leverage the power of a cluster, which can greatly exceed the processing power of a single development computer.
 
 code-server is Microsoft Visual Studio Code running on a remote server and accessible directly from your browser. Visual Studio Code is a modern code editor with integrated Git support, a code debugger, smart autocompletion, and customizable and extensible features. This means that you can use various devices, running different operating systems, and always have a consistent development environment on hand.
 
-In this tutorial, you will set up the code-server cloud IDE platform on your DigitalOcean Kubernetes cluster and expose it at your domain, secured with Let’s Encrypt certificates. In the end, you’ll have Microsoft Visual Studio Code running on your Kubernetes cluster, available via HTTPS and protected by a password.
+In this tutorial, you will set up the code-server cloud IDE platform on your DigitalOcean [Kubernetes cluster](/blog/en/kubernetes/work-with-kubernetes-with-minikube) and expose it at your domain, secured with Let’s Encrypt certificates. In the end, you’ll have Microsoft Visual Studio Code running on your Kubernetes cluster, available via HTTPS and protected by a password.
 
 # Prerequisites
 
@@ -38,9 +37,14 @@ A fully registered domain name to host code-server, pointed at the Load Balancer
 
 ## Step 1 — Installing And Exposing code-server
 
-In this section, you’ll install code-server to your DigitalOcean Kubernetes cluster and expose it at your domain, using the Nginx Ingress controller. You will also set up a password for admittance.
-You’ll store the deployment configuration on your local machine, in a file named code-server.yaml. Create it using the following command:
+In this section, you’ll install code-server to your DigitalOcean [Kubernetes cluster](/blog/en/kubernetes/installing-kubernetes-with-minikube) and expose it at your domain, using the Nginx Ingress controller. You will also set up a password for admittance.
+You’ll store the deployment configuration on your local machine, in a file named code-server.yaml. 
+
+Create it using the following command:
+
+```
 nano code-server.yaml
+```
 
 Add the following lines to the file:
 
@@ -238,7 +242,7 @@ The central part of the GUI is your editor, which you can separate by tabs for y
 
 After creating a new file through the File menu, an empty file will open in a new tab, and once saved, the file’s name will be viewable in the Explorer side panel. Creating folders can be done by right clicking on the Explorer sidebar and pressing on New Folder. You can expand a folder by clicking on its name as well as dragging and dropping files and folders to upper parts of the hierarchy to move them to a new location.
 
-You can gain access to a terminal by pressing CTRL+SHIFT+\, or by pressing on Terminal in the upper menu, and selecting New Terminal. The terminal will open in a lower panel and its working directory will be set to the project’s workspace, which contains the files and folders shown in the Explorer side panel.
+You can gain access to a terminal by pressing CTRL+SHIFT+, or by pressing on Terminal in the upper menu, and selecting New Terminal. The terminal will open in a lower panel and its working directory will be set to the project’s workspace, which contains the files and folders shown in the Explorer side panel.
 You’ve explored a high-level overview of the code-server interface and reviewed some of the most commonly used features.
 
 # Conclusion
