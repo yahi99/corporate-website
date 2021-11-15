@@ -165,6 +165,7 @@ responsive_image:
     - width: 480  # [Required] How wide the resized image will be.
       quality: 80 # [Optional] Overrides default_quality for this size.
     - width: 800
+    - width: 856
     - width: 1400
       quality: 90
 # [Optional, Default: false]
@@ -205,6 +206,7 @@ responsive_image:
   # images. This is useful for resizing images which will be referenced from stylesheets.
   extra_images:
     - assets/*/*/*/*.{jpeg,jpg}
+    - assets/*/*/*.{jpeg,jpg,png}
 
 jekyll_admin:
   hidden_links:
