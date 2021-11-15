@@ -1,7 +1,7 @@
 ---
 layout: flexstart-blog-single
 title:  "Playing Kubernetes with Minikube"
-author: full
+author: "Full"
 lang: en
 ref: playingkubernetes_1246
 categories: ""
