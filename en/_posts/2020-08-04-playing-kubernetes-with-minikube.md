@@ -5,21 +5,7 @@ author: "Full"
 lang: en
 ref: playingkubernetes_1246
 categories: [ kubernetes ]
-description: "Installing Kubernetes with Minikube
-===================================
-
-Minikube is a tool that makes it easy to run Kubernetes locally. Minikube runs a singlenode Kubernetes cluster inside a Virtual Machine VM on your laptop for users looking to try out Kubernetes or develop with it daytoday.
-
-Minikube Features minikubefeatures
-
-
-Minikube supports the following Kubernetes features:
-
- DNS
- NodePorts
- ConfigMaps and Secrets
- Dashboards
- Container Runtime: Dockerhttps://www.docker.com/, CRIOhttps"
+description: "Minikube is a tool that makes it easy to run Kubernetes locally. Minikube runs a singlenode Kubernetes cluster inside a Virtual Machine VM on your laptop for users looking to try out Kubernetes or develop with it daytoday.
 image: "https://sergio.afanou.com/assets/images/image-midres-38.jpg"
 ---
 
@@ -50,37 +36,90 @@ This brief demo guides you on how to start, use, and delete Minikube locally. Fo
 
 1. Start Minikube and create a cluster:
 
-minikube start The output is similar to this:
+```
+minikube start 
+```
 
-Starting local Kubernetes cluster... Running pre-create checks... Creating machine... Starting local Kubernetes cluster... For more information on starting your cluster on a specific Kubernetes version, VM, or container runtime, see [Starting a Cluster](#starting-a-cluster).
+The output is similar to this:
+
+```
+Starting local Kubernetes cluster... 
+Running pre-create checks... 
+Creating machine... 
+Starting local Kubernetes cluster... 
+```
+
+For more information on starting your cluster on a specific Kubernetes version, VM, or container runtime, see [Starting a Cluster](#starting-a-cluster).
 
 2. Now, you can interact with your cluster using kubectl. For more information, see [Interacting with Your Cluster](#interacting-with-your-cluster).
 
 Let’s create a Kubernetes Deployment using an existing image named echoserver, which is a simple HTTP server and expose it on port 8080 using --port.
 
-kubectl create deployment hello-minikube --image=k8s.gcr.io/echoserver:1.10 The output is similar to this:
-
-deployment.apps/hello-minikube created 3. To access the hello-minikube Deployment, expose it as a Service:
-
-kubectl expose deployment hello-minikube --type=NodePort --port=8080 The option --type=NodePort specifies the type of the Service.
+```
+kubectl create deployment hello-minikube --image=k8s.gcr.io/echoserver:1.10
+```
 
 The output is similar to this:
 
-service/hello-minikube exposed 4. The hello-minikube Pod is now launched but you have to wait until the Pod is up before accessing it via the exposed Service.
+```
+deployment.apps/hello-minikube created 
+```
+
+3. To access the hello-minikube Deployment, expose it as a Service:
+
+```
+kubectl expose deployment hello-minikube --type=NodePort --port=8080
+```
+
+The option `--type=NodePort` specifies the type of the Service.
+
+The output is similar to this:
+
+```
+service/hello-minikube exposed
+```
+
+4. The hello-minikube Pod is now launched but you have to wait until the Pod is up before accessing it via the exposed Service.
 
 Check if the Pod is up and running:
 
-kubectl get pod If the output shows the STATUS as ContainerCreating, the Pod is still being created:
+```
+kubectl get pod 
+```
 
-NAME READY STATUS RESTARTS AGE hello-minikube-3383150820-vctvh 0/1 ContainerCreating 0 3s If the output shows the STATUS as Running, the Pod is now up and running:
+If the output shows the STATUS as ContainerCreating, the Pod is still being created:
 
-NAME READY STATUS RESTARTS AGE hello-minikube-3383150820-vctvh 1/1 Running 0 13s 5. Get the URL of the exposed Service to view the Service details:
+```
+NAME READY STATUS RESTARTS AGE hello-minikube-3383150820-vctvh 0/1 ContainerCreating 0 3s
+```
 
-minikube service hello-minikube --url 6. To view the details of your local cluster, copy and paste the URL you got as the output, on your browser.
+If the output shows the STATUS as Running, the Pod is now up and running:
+
+```
+NAME READY STATUS RESTARTS AGE hello-minikube-3383150820-vctvh 1/1 Running 0 13s 5.
+```
+
+Get the URL of the exposed Service to view the Service details:
+
+```
+minikube service hello-minikube --url 6. 
+```
+
+To view the details of your local cluster, copy and paste the URL you got as the output, on your browser.
 
 The output is similar to this:
 
-Hostname: hello-minikube-7c77b68cff-8wdzq Pod Information: -no pod information available- Server values: server_version=nginx: 1.13.3 - lua: 10008 Request Information: client_address=172.17.0.1 method=GET real path=/ query= request_version=1.1 request_scheme=http request_uri=http://192.168.99.100:8080/ Request Headers: accept=_/_ host=192.168.99.100:30674 user-agent=curl/7.47.0 Request Body: -no body in request- If you no longer want the Service and cluster to run, you can delete them.
+```
+Hostname: hello-minikube-7c77b68cff-8wdzq 
+Pod Information: -no pod information available
+- Server values: server_version=nginx: 1.13.3 
+- lua: 10008 Request Information: client_address=172.17.0.1 method=GET real path=/ query= request_version=1.1 request_scheme=http request_uri=http://192.168.99.100:8080/ 
+Request Headers: accept=_/_ 
+host=192.168.99.100:30674 user-agent=curl/7.47.0 
+Request Body: -no body in request- 
+```
+
+If you no longer want the Service and cluster to run, you can delete them.
 
 7. Delete the hello-minikube Service:
 
