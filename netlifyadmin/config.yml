@@ -38,7 +38,7 @@ collections:
       - {label: "Author", name: "author", widget: "select", options: ["full", "john"]}
       - {label: "Language", name: "lang", widget: "select", options: ["fr", "en"]}
       - {label: "Language Post Ref", name: "ref", widget: "string"}
-      - {label: "Categories", name: "categories", widget: "List", default: "" }
+      - {label: "Categories", name: "categories", widget: "list", allow_add: true, default: "" }
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "image", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"} 
@@ -61,7 +61,7 @@ collections:
       - {label: "Author", name: "author", widget: "select", options: ["full", "john"]}
       - {label: "Language", name: "lang", widget: "select", options: ["fr", "en"]}
       - {label: "Language Post Ref", name: "ref", widget: "string"}
-      - {label: "Categories", name: "category", widget: "List", default: "" }
+      - {label: "Categories", name: "category", widget: "list", allow_add: true, default: "" }
       - {label: "Type", name: "type", widget: "string", default: "cloud"}
       - {label: "Publish Date", name: "date", widget: "date", format: 'YYYY-MM-dd'}
       - {label: "Featured Image File", name: "image-file", widget: "image"}
