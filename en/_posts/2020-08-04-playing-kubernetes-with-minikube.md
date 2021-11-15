@@ -1,11 +1,10 @@
 ---
 layout: flexstart-blog-single
 title:  "Playing Kubernetes with Minikube"
-author: "Full"
+author: full
 lang: en
 ref: playingkubernetes_1246
-categories: [ kubernetes ]
-description: "Minikube is a tool that makes it easy to run Kubernetes locally. Minikube runs a singlenode Kubernetes cluster inside a Virtual Machine VM on your laptop for users looking to try out Kubernetes or develop with it daytoday.
+categories: ""
 image: "https://sergio.afanou.com/assets/images/image-midres-38.jpg"
 ---
 
