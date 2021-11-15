@@ -5,21 +5,7 @@ author: "Full"
 lang: en
 ref: dataoldcomputer_1250
 categories: [ backup-restore ]
-description: " I want to delete everything on my old computer, but...
-
-
- “Hello,
- 
- I have and older gateway tower but sold the monitor that came with it.
- 
- I have a laptop and a TV and tried using an HDMI to VGA adapter thinking it would show on my TV or laptop but its not working. I would like to go through my old computer and wipe it clean before just recycling it. 
- 
- Any suggestions on how I can view the content on my old computer?”
- 
-
- Why you can’t get a signal from your old computer
-
-Good news: You h"
+description: "I have and older gateway tower but sold the monitor that came with it. I have a laptop and a TV and tried using an HDMI to VGA adapter thinking it would show on my TV or laptop but its not working. I would like to go through my old computer and wipe it clean before just recycling it. Any suggestions on how I can view the content on my old computer?"
 image: "https://sergio.afanou.com/assets/images/image-midres-54.jpg"
 ---
 
