@@ -7,7 +7,7 @@ ref: dataoldcomputer_1250
 categories:
   - backup-restore
 date: 2021-11-15T16:42:24.813Z
-image: /assets/images/uploads/glenn-carstens-peters-1f4muko0ung-unsplash.jpg
+image: https://bright-softwares.com/assets/images/uploads/glenn-carstens-peters-1f4muko0ung-unsplash.jpg
 description: I have and older gateway tower but sold the monitor that came with
   it. I have a laptop and a TV and tried using an HDMI to VGA adapter thinking
   it would show on my TV or laptop but its not working. I would like to go
