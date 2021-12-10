@@ -18,6 +18,7 @@ In Helm's v3 documentation, in the section **Accessing Files Inside Templates**,
 The configmap.yaml looks like this. It contains one config.toml for simplicity.
 
 
+{% raw %}
 ```
 apiVersion: v1
 kind: ConfigMap
@@ -30,6 +31,8 @@ data:
     {{ $files.Get . }}
   {{- end }}
 ```
+{% endraw %}
+
 
 I was happy with it. Then I add a second line to the config.toml file.
 
@@ -60,11 +63,15 @@ As a consquence, it was not helping me in the error.
 
 That's actually why you will see so many, many templates in the wild with 
 
+{% raw %}
 ```{{ .thing | indent 8 }}``` 
+{% endraw %}
 
 or 
 
+{% raw %}
 ```{{ .otherThing | toYaml }}``` 
+{% endraw %}
 
 -- because you need to help Helm know in what context it is emitting the text.
 
@@ -73,6 +80,7 @@ or
 So, in my specific case, I needed to indent the filter with a value of 4 because mycurrent template has two spaces for the key indent level, and two more spaces for the value block scalar
 
 
+{% raw %}
 ```
 data:
 
@@ -84,6 +92,7 @@ data:
 because the 'indent' is handling whitespace, not the golang template itself */}}
   {{- end }}
 ```
+{% endraw %}
 
 
 I hope this quick post will help someone in his research.
