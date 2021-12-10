@@ -6,10 +6,6 @@ lang: en
 ref: KubernetesHelmhowtoshowMultilineProperties
 categories:
   - kubernetes
-  - helm
-  - automation
-  - docker
-  - container
 date: 2021-12-10T13:28:16.611Z
 image: https://sergio.afanou.com/assets/images/image-midres-25.jpg
 ---
@@ -62,7 +58,15 @@ Helm will read in that file, but as it is a text __templating engine__,  It does
 
 As a consquence, it was not helping me in the error. 
 
-That's actually why you will see so many, many templates in the wild with ```{{ .thing | indent 8 }}``` or ```{{ .otherThing | toYaml }}``` -- because you need to help Helm know in what context it is emitting the text.
+That's actually why you will see so many, many templates in the wild with 
+
+```{{ .thing | indent 8 }}``` 
+
+or 
+
+```{{ .otherThing | toYaml }}``` 
+
+-- because you need to help Helm know in what context it is emitting the text.
 
 
 
@@ -85,3 +89,5 @@ because the 'indent' is handling whitespace, not the golang template itself */}}
 I hope this quick post will help someone in his research.
 
 Inpiration from [this post](https://stackoverflow.com/questions/70297885/helms-v3-example-doesnt-show-multi-line-properties-get-yaml-to-json-parse-err).
+
+#helm #automation #docker #container
