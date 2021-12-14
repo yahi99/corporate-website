@@ -9,7 +9,7 @@ categories:
 date: 2021-12-14T13:42:20.890Z
 image: https://sergio.afanou.com/assets/images/image-midres-5.jpg
 ---
-I have previously shared a short [tutorial on Minikube]({% post_url 2020-08-13-work-with-kubernetes-with-minikube.md %}), and while I was using it, I thought I would reuse my local images directly, without uploading and then downloading them again.
+I have previously shared a short [tutorial on Minikube]({% post_url en/kubernetes/work-with-kubernetes-with-minikube %}), and while I was using it, I thought I would reuse my local images directly, without uploading and then downloading them again.
 
 ## Two things I have tried (and didn't work)
 
