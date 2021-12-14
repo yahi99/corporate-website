@@ -18,6 +18,7 @@ I have previously shared a short [tutorial on Minikube]({% post_url /en/2020-08-
 I first cleaned the instances of minikube and start fresh to make sure that the is no collision.
 
 
+{% include codeHeader.html %}
 {% raw %}
 ```
 kubectl run hdfs --image=fluxcapacitor/hdfs:latest --port=8989
@@ -27,6 +28,7 @@ kubectl run hdfs --image=fluxcapacitor/hdfs:latest --port=8989 imagePullPolicy=N
 
 And the output was :
 
+{% include codeHeader.html %}
 {% raw %}
 ```
 NAME                    READY     STATUS              RESTARTS   AGE
@@ -53,6 +55,7 @@ The steps are:
 
 To set your environment variables, use the command :
 
+{% include codeHeader.html %}
 {% raw %}
 ```
 eval $(minikube docker-env)
@@ -64,6 +67,7 @@ eval $(minikube docker-env)
 
 To build the image use this command :
 
+{% include codeHeader.html %}
 {% raw %}
 ```
 docker build -t my-image
