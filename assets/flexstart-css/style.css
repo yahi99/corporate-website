@@ -2406,3 +2406,13 @@ section {
   content: "✔️";
 }
 
+.language-plaintext {
+  background-color: #444444;
+  padding: 10px;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem; 
+}
+
