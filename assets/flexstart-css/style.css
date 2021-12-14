@@ -2386,25 +2386,23 @@ section {
   cursor: pointer;
   font-size: 1rem;
   padding: 4px 8px;
+}
 
-  &::before {
+.copy-code-button::before {
     content: "Copy";
-  }
+}
 
-  &::after {
+.copy-code-button::after {
     content: "📋";
     display: block;
-  }
+}
 
-  // This class will be toggled via JavaScript
-  &.copied {
-    &::before {
-      content: "Copied!";
-    }
+/* This class will be toggled via JavaScript */
+.copy-code-button.copied::before {
+  content: "Copied!";
+}
 
-    &::after {
-      content: "✔️";
-    }
-  }
+.copy-code-button.copied::after {
+  content: "✔️";
 }
 
