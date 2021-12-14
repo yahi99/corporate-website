@@ -17,6 +17,7 @@ I have previously shared a short [tutorial on Minikube]({% post_url /en/2020-08-
 
 I first cleaned the instances of minikube and start fresh to make sure that the is no collision.
 
+
 {% raw %}
 ```
 kubectl run hdfs --image=fluxcapacitor/hdfs:latest --port=8989
@@ -102,6 +103,7 @@ If you then build your images, they won't update in minikube. You will think tha
 
 If you want to exit from minikube, run this command :
 
+{% include codeHeader.html %}
 {% raw %}
 ```
 eval $(minikube docker-env -u)
