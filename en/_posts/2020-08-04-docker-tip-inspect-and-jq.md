@@ -21,6 +21,7 @@ This isn’t so much a docker tip, as it is a jq tip. If you haven’t heard of 
 
 ## Get network information:
 
+{% include codeHeader.html %}
 {% raw %}
 ```
     $ docker inspect 4c45aea49180 | jq '.[].NetworkSettings.Networks'
@@ -51,6 +52,7 @@ The output is:
  
 ## Get the arguments with which the container was started
 
+{% include codeHeader.html %}
 {% raw %}
 ```
     $ docker inspect 4c45aea49180 | jq '.[].Args'
@@ -74,7 +76,7 @@ The output is:
     
 ## Get all the mounted volumes
     
-
+{% include codeHeader.html %}
 {% raw %}
 ```
 $ docker inspect 4c45aea49180 | jq '.[].Mounts'
