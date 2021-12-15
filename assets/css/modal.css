@@ -1,0 +1,11 @@
+.item-content{
+    text-align: left;
+}
+
+.item-content h1, .item-content h2, .item-content h3, .item-content h4, .item-content h5, .item-content h6{
+    font-weight: 100;
+}
+
+.portfolio-modal .modal-content .modal-body .item-content h2{
+    font-size: 32px;
+}

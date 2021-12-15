@@ -1,0 +1,1710 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bright Softwares</title>
+    <description>We provide solutions to our customers challenges. Our teams based in Paris and Lomé provide high value expertise to engineer the best solutions.</description>
+    <link>https://bright-softwares.com/</link>
+    <atom:link href="https://bright-softwares.com/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Wed, 15 Dec 2021 15:18:27 +0000</pubDate>
+    <lastBuildDate>Wed, 15 Dec 2021 15:18:27 +0000</lastBuildDate>
+    <generator>Jekyll v4.2.1</generator>
+    
+      <item>
+        <title>Log4j flaw: Am I impacted and how can I protect myself</title>        
+        
+        <description>
+        <![CDATA[
+            <img src="https://res.cloudinary.com/brightsoftwares/image/upload/v1639575508/photo-1639140651961-41392a332bfc_njfgu8.jpg" alt="Log4j flaw: Am I impacted and how can I protect myself">
+            <p>A flaw in Log4j, a Java library developed by the open-source Apache Software Foundation for logging error messages in applications, is the most high-profile security vulnerability on the internet right now and comes with a severity score of 10 out of 10. </p>
+
+<p>The library is developed by the open-source Apache Software Foundation and is a key Java-logging framework. The <a href="https://www.zdnet.com/article/security-warning-new-zero-day-in-the-log4j-java-library-is-already-being-exploited/">CERT New Zealand triggered an alert last week </a> that <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228">CVE-2021-44228</a>, a remote code execution flaw in Log4j, was already being exploited by attackers. Several national cybersecurity agencies also issed the alert, including the Cybersecurity and Infrastructure Security Agency (CISA) and the UK’s National Cyber Security Centre (NCSC). </p>
+
+<p>Read more at <a href="https://www.zdnet.com/article/log4j-rce-activity-began-on-december-1-as-botnets-start-using-vulnerability/">Internet infrastructure provider Cloudflare said Log4j exploits started on December 1</a>.  </p>
+
+<h1 id="what-devices-and-applications-are-at-risk">What devices and applications are at risk? </h1>
+
+<p><img src="https://res.cloudinary.com/brightsoftwares/image/upload/v1639579714/log4j_detection_nkqvl4.png" alt="Are my devices impacted by the Log4j flaw" /></p>
+
+<p>Here are the criteria:</p>
+
+<ol>
+  <li>Your device must be exposed to the internet.</li>
+  <li>Your device must be running Apache Log4j</li>
+  <li>Apache Log4j version must be between 2.0 and 2.14.1</li>
+</ol>
+
+<p>If you have <strong>IOT devices</strong> connected to the internet, with the conditions above, you are at risk. Probably, Mirai, a botnet that targets all manner of internet-connected (IoT) devices, might be trying to locate your device.</p>
+
+<h1 id="where-is-log4j-most-used">Where is Log4j most used?</h1>
+
+<p>NCSC <a href="https://www.ncsc.gov.uk/news/apache-log4j-vulnerability">notes</a> that Log4j version 2 (Log4j2), the affected version, is included in :</p>
+
+<ul>
+  <li>Apache Struts2 framework</li>
+  <li>Solr framework</li>
+  <li>Druid framework</li>
+  <li>Flink framework</li>
+  <li>Swift framework.</li>
+</ul>
+
+<p>For IBM products, there is  Websphere 8.5 and 9.0.</p>
+
+<h1 id="big-players-response">Big players response</h1>
+
+<h2 id="aws">AWS</h2>
+
+<p>AWS is <a href="https://aws.amazon.com/security/security-bulletins/AWS-2021-005/">working on patching its services</a> that use Log4j and has released mitigations for services like CloudFront. It has also detailed how the flaw impacts its services.</p>
+
+<p>AWS has updated its <strong>WAF rule set</strong> – AWSManagedRulesKnownBadInputsRuleSet AMR – to detect and mitigate Log4j attack attempts and scanning. It also has mitigation options that can be enabled for <strong>CloudFront</strong>, <strong>Application Load Balancer (ALB)</strong>, <strong>API Gateway</strong>, and <strong>AppSync</strong>. It’s also currently updating all <strong>Amazon OpenSearch Service</strong> to the patched version of Log4j. </p>
+
+<h2 id="ibm">IBM</h2>
+
+<p>Same for IBM <a href="https://www.ibm.com/blogs/psirt/an-update-on-the-apache-log4j-cve-2021-44228-vulnerability/">shared</a> that it is <strong>**“actively responding”</strong>** to the Log4j vulnerability across IBM’s own infrastructure and its products. IBM has confirmed <strong>Websphere <a href="https://www.ibm.com/support/pages/node/6525706/">8.5 and 9.0 are vulnerable</a></strong>. </p>
+
+<p>Oracle has <a href="https://www.oracle.com/security-alerts/alert-cve-2021-44228.html">issued a patch for the flaw, too</a>. </p>
+
+<blockquote>
+  <p>“Due to the severity of this vulnerability and the publication of exploit code on various  sites, Oracle strongly recommends that customers apply the updates provided by this  Security Alert as soon as possible,” it said. </p>
+</blockquote>
+
+<h1 id="other-players">Other players</h1>
+
+<p>Vendors with popular products known to be still vulnerable include</p>
+
+<ul>
+  <li>Atlassian,</li>
+  <li>Amazon,</li>
+  <li>Microsoft Azure,</li>
+  <li>Cisco,</li>
+  <li>Commvault,</li>
+  <li>ESRI,</li>
+  <li>Exact,</li>
+  <li>Fortinet,</li>
+  <li>JetBrains,</li>
+  <li>Nelson,</li>
+  <li>Nutanix,</li>
+  <li>OpenMRS,</li>
+  <li>Oracle,</li>
+  <li>Red Hat,</li>
+  <li>Splunk, 
+-Soft, and</li>
+  <li>VMware.</li>
+</ul>
+
+<p>The list is even longer when adding products where a patch has been released.  </p>
+
+<h1 id="what-you-should-do-discover-your-devices-and-patch-them">What you should do: Discover your devices and patch them</h1>
+
+<p><img src="https://res.cloudinary.com/brightsoftwares/image/upload/v1639579711/log4j_solution_zbuf59.png" alt="Steps to the solution" /></p>
+
+<p>Part of the challenge will be <strong>identifying software harboring the Log4j vulnerability</strong>.</p>
+
+<p>The Netherland’s Nationaal Cyber Security Centrum (NCSC) has posted a <a href="https://github.com/NCSC-NL/log4shell/tree/main/software">comprehensive and sourced A-Z list on GitHub</a> of all affected products it is aware are either vulnerable, not vulnerable, are under investigation, or where a fix is available.</p>
+
+<p>The list of products illustrates how widespread the vulnerability is, spanning cloud services, developer services, security devices, mapping services, and more.    </p>
+
+<p>CISA’s main advice is to identify internet-facing devices running Log4j and upgrade them to version 2.15.0, or to apply the mitigations provided by vendors “immediately”. But it also recommends setting up alerts for probes or attacks on devices running Log4j.  </p>
+
+<blockquote>
+  <p>“To be clear, this vulnerability poses a severe risk,” <a href="https://www.cisa.gov/news/2021/12/11/statement-cisa-director-easterly-log4j-vulnerability">CISA director Jen Easterly said Sunday</a>. 
+“We will only minimize potential impacts through collaborative efforts between government and the private sector. 
+We urge all organizations to join us in this essential effort and take action.”  </p>
+</blockquote>
+
+<p>Additional steps recommended by CISA include: <strong>enumerating any external facing devices with Log4j installed</strong>; ensuring the <strong>security operations center actions</strong> every alert with Log4j installed; and <strong>installing a web application firewall (WAF)</strong> with rules to focus on Log4j. </p>
+
+<h1 id="what-if-i-cannot-patch-or-upgrade">What if I cannot patch or upgrade?</h1>
+
+<p>It is recommended to upgrade to version 2.15.0 of Log4j. There might be situations where upgrading is not immediately possible.</p>
+
+<h2 id="update-log4js-configuration">Update Log4j’s configuration</h2>
+
+<p>NCSC <a href="https://www.ncsc.gov.uk/news/apache-log4j-vulnerability">recommends</a> updating to version 2.15.0 or later, and – where not possible – mitigating the flaw in Log4j 2.10 and later by setting system property <strong><code class="language-plaintext highlighter-rouge">"log4j2.formatMsgNoLookups"</code> to <code class="language-plaintext highlighter-rouge">"true"</code></strong> or removing the <strong><code class="language-plaintext highlighter-rouge">JndiLookup</code></strong> class from the classpath. 
+  </p>
+
+<h2 id="setup-network-rules-to-detect-exploit-attempts">Setup network rules to detect exploit attempts</h2>
+
+<p>NCCGroup has posted <a href="https://research.nccgroup.com/2021/12/12/log4shell-reconnaissance-and-post-exploitation-network-detection/">several network-detection rules</a> to detect exploitation attempts and indicators of successful exploitation.</p>
+
+<h1 id="is-my-system-compromised">Is my system compromised?</h1>
+
+<p>Finally, Microsoft has released its set of indicators of compromise and <a href="https://www.microsoft.com/security/blog/2021/12/11/guidance-for-preventing-detecting-and-hunting-for-cve-2021-44228-log4j-2-exploitation/">guidance for preventing attacks on Log4j vulnerability</a>. Examples of the post-exploitation of the flaw that Microsoft has seen include installing <strong>coin miners</strong>, <strong>Cobalt Strike</strong> to enable credential theft and lateral movement, and exfiltrating data from compromised systems.  </p>
+
+<h2 id="what-is-log4j">What is Log4j?</h2>
+
+<p>Log4J is a widely used Java library for logging error messages in applications. It is used in enterprise software applications, including those custom applications developed in-house by businesses, and forms part of many cloud computing services.</p>
+
+<h2 id="where-is-log4j-used">Where is Log4j used?</h2>
+
+<p>The Log4j 2 library is used in enterprise Java software and according to the UK’s NCSC is included in Apache frameworks such as Apache Struts2, Apache Solr, Apache Druid, Apache Flink, and Apache Swift.</p>
+
+<h2 id="which-applications-are-affected-by-the-log4j-flaw">Which applications are affected by the Log4j flaw?</h2>
+
+<p>Because Log4j is so widely used, the vulnerability may impact a very wide range of software and services from many major vendors. According to NCSC an application is vulnerable “if it consumes untrusted user input and passes this to a vulnerable version of the Log4j logging library.”</p>
+
+<h2 id="how-widely-is-the-log4j-flaw-being-exploited">How widely is the Log4j flaw being exploited?</h2>
+
+<p>Security experts have warned that there are hundreds of thousands of attempts by hackers to find vulnerable devices; over 40 percent of corporate networks have been targeted according to one security company.</p>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>The primary objective you need to have is first the assesment of your devices.
+Split your team in 3 groups:</p>
+
+<ol>
+  <li><strong>Assesment group</strong> : will list all the devices of your infrastructure and check if they are impacted. If they found corrupted devices, take them offline. For the other ones, route them to the tow remaining teams.</li>
+  <li><strong>Upgrade group</strong> : They perform the upgrade of the devices.</li>
+  <li><strong>Reconfigure group</strong>: they process the devices that are not immediately upgradable.</li>
+</ol>
+
+        ]]>
+        </description>
+        <pubDate>Wed, 15 Dec 2021 13:36:11 +0000</pubDate>
+        <link>https://bright-softwares.com/blog/en/security/log4j-flaw-am-i-impacted-and-how-can-i-protect-myself</link>
+        <guid isPermaLink="true">https://bright-softwares.com/blog/en/security/log4j-flaw-am-i-impacted-and-how-can-i-protect-myself</guid>
+        
+        
+        <category>en</category>
+        
+        <category>security</category>
+        
+      </item>
+    
+      <item>
+        <title>Docker tip : inspect and jq</title>        
+        
+        <description>
+        <![CDATA[
+            <img src="https://res.cloudinary.com/brightsoftwares/image/upload/v1639560797/photo-1578403881636-6f4a77a6f9cc_ddsft1.jpg" alt="Docker tip : inspect and jq">
+            <h1 id="docker-inspect-and-jq">Docker inspect and jq</h1>
+
+<p>This isn’t so much a docker tip, as it is a jq tip. If you haven’t heard of jq, it is a great tool for parsing JSON from the command line. This also makes it a great tool to see what is happening in a container instead of having to use the <code class="language-plaintext highlighter-rouge">–format</code> specifier which I can never remember how to use exactly:</p>
+
+<h2 id="get-network-information">Get network information:</h2>
+
+<div class="code-header">
+    <button class="copy-code-button" aria-label="Copy code to clipboard"></button>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ docker inspect 4c45aea49180 | jq '.[].NetworkSettings.Networks'
+</code></pre></div></div>
+
+<p>The output is:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    {
+      "bridge": {
+        "EndpointID": "ba1b6efba16de99f260e0fa8892fd4685dbe2f79cba37ac0114195e9fad66075",
+        "Gateway": "172.17.0.1",
+        "IPAddress": "172.17.0.2",
+        "IPPrefixLen": 16,
+        "IPv6Gateway": "",
+        "GlobalIPv6Address": "",
+        "GlobalIPv6PrefixLen": 0,
+        "MacAddress": "02:42:ac:11:00:02"
+      }
+    }
+    
+</code></pre></div></div>
+
+<h2 id="get-the-arguments-with-which-the-container-was-started">Get the arguments with which the container was started</h2>
+
+<div class="code-header">
+    <button class="copy-code-button" aria-label="Copy code to clipboard"></button>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ docker inspect 4c45aea49180 | jq '.[].Args'
+</code></pre></div></div>
+
+<p>The output is:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    [
+    "-server",
+    "-advertise",
+    "192.168.99.100",
+    "-bootstrap-expect",
+    "1"
+    ]
+</code></pre></div></div>
+
+<h2 id="get-all-the-mounted-volumes">Get all the mounted volumes</h2>
+
+<div class="code-header">
+    <button class="copy-code-button" aria-label="Copy code to clipboard"></button>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker inspect 4c45aea49180 | jq '.[].Mounts'
+</code></pre></div></div>
+
+<p>Output</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+    [
+    {
+    "Name": "a8125ffdf6c4be1db4464345ba36b0417a18aaa3a025267596e292249ca4391f",
+    "Source": "/mnt/sda1/var/lib/docker/volumes/a8125ffdf6c4be1db4464345ba36b0417a18aaa3a025267596e292249ca4391f/_data",
+    "Destination": "/data",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true
+    }
+    ]
+</code></pre></div></div>
+
+<p>And of course also works great for querying other kinds of (docker-esque) APIs that produce JSON (e.g Marathon, Mesos, Consul etc.). JQ provides a very extensive API for accessing and processing JSON. More information can be found here: https://stedolan.github.io/jq/</p>
+
+        ]]>
+        </description>
+        <pubDate>Wed, 15 Dec 2021 09:32:28 +0000</pubDate>
+        <link>https://bright-softwares.com/blog/en/docker/docker-tip-inspect-and-jq</link>
+        <guid isPermaLink="true">https://bright-softwares.com/blog/en/docker/docker-tip-inspect-and-jq</guid>
+        
+        
+        <category>en</category>
+        
+        <category>docker</category>
+        
+      </item>
+    
+      <item>
+        <title>How to use local docker images with Minikube?</title>        
+        
+        <description>
+        <![CDATA[
+            <img src="https://sergio.afanou.com/assets/images/image-midres-5.jpg" alt="How to use local docker images with Minikube?">
+            <p>I have previously shared a short <a href="/blog/en/kubernetes/work-with-kubernetes-with-minikube">tutorial on Minikube</a>, and while I was using it, I thought I would reuse my local images directly, without uploading and then downloading them again.</p>
+
+<h2 id="two-things-i-have-tried-and-didnt-work">Two things I have tried (and didn’t work)</h2>
+
+<h3 id="import-the-images-using-kubectl">Import the images using <code class="language-plaintext highlighter-rouge">kubectl</code></h3>
+
+<p>I first cleaned the instances of minikube and start fresh to make sure that the is no collision.</p>
+
+<div class="code-header">
+    <button class="copy-code-button" aria-label="Copy code to clipboard"></button>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl run hdfs --image=fluxcapacitor/hdfs:latest --port=8989
+kubectl run hdfs --image=fluxcapacitor/hdfs:latest --port=8989 imagePullPolicy=Never
+</code></pre></div></div>
+
+<p>And the output was :</p>
+
+<div class="code-header">
+    <button class="copy-code-button" aria-label="Copy code to clipboard"></button>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>NAME                    READY     STATUS              RESTARTS   AGE
+hdfs-2425930030-q0sdl   0/1       ContainerCreating   0          10m
+</code></pre></div></div>
+
+<p>As you see, it get stuck on some status but it never reach the ready state.</p>
+
+<h3 id="create-a-local-registery">Create a local registery</h3>
+
+<p>The idea here is to create a local registry and put my images into it. With that, I don’t need to upload then download my images.</p>
+
+<p>That didn’t work either.</p>
+
+<h2 id="the-solution">The solution</h2>
+
+<p>The solution was to use the <code class="language-plaintext highlighter-rouge">eval $(minikube docker-env)</code>.</p>
+
+<p>The steps are:</p>
+
+<h3 id="step-1--set-the-environment-variables">Step 1 : Set the environment variables</h3>
+
+<p>To set your environment variables, use the command :</p>
+
+<div class="code-header">
+    <button class="copy-code-button" aria-label="Copy code to clipboard"></button>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>eval $(minikube docker-env)
+</code></pre></div></div>
+
+<h3 id="step-2-build-the-image-with-the-daemon-of-minikube">Step 2: Build the image with the daemon of minikube</h3>
+
+<p>To build the image use this command :</p>
+
+<div class="code-header">
+    <button class="copy-code-button" aria-label="Copy code to clipboard"></button>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker build -t my-image
+</code></pre></div></div>
+
+<p>Of source, replace <code class="language-plaintext highlighter-rouge">my-image</code> with your image name.</p>
+
+<h3 id="step-3-set-the-image-in-the-kubernetes-pod">Step 3: Set the image in the kubernetes pod</h3>
+
+<p>Use the tag in the kubernetes pod.
+Eg: <code class="language-plaintext highlighter-rouge">my-image</code></p>
+
+<h3 id="step-4-tell-kubernetes-not-to-download-the-image-anymore">Step 4: Tell kubernetes not to download the image anymore</h3>
+
+<p>To achieve that, you need to use the <code class="language-plaintext highlighter-rouge">imagePullPolicy</code> to <code class="language-plaintext highlighter-rouge">Never</code>.</p>
+
+<p>More information here: <a href="https://kubernetes.io/docs/concepts/containers/images/#updating-images">How to set imagePullPolicy to never</a>.</p>
+
+<h2 id="tips-and-pilfalls">Tips and pilfalls</h2>
+
+<h3 id="run-the-env-command-in-all-your-terminals">Run the env command in all your terminals</h3>
+
+<p>Make sure you run the <code class="language-plaintext highlighter-rouge">eval $(minikube docker-env)</code> in all your terminal. You will have the environment variables in all of them.</p>
+
+<p>If not, some of the commands my fail because of the lack of these variables.</p>
+
+<h3 id="if-you-close-your-terminal-rerun-eval-minikube-docker-env">If you close your terminal, rerun eval $(minikube docker-env)</h3>
+
+<p>Once you close your terminal, the environment variables are cleared.</p>
+
+<p>If you then build your images, they won’t update in minikube. You will think that it is not working, but it is because the environment variables are not there.</p>
+
+<h3 id="exit-from-minikube">Exit from minikube?</h3>
+
+<p>If you want to exit from minikube, run this command :</p>
+
+<div class="code-header">
+    <button class="copy-code-button" aria-label="Copy code to clipboard"></button>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>eval $(minikube docker-env -u)
+</code></pre></div></div>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>This tutorial shows you how you can use your local image with minikube without uploading then downloading them.</p>
+
+<p>Watchout for the pitfalls.</p>
+
+<h2 id="references">References</h2>
+
+<p><a href="https://github.com/kubernetes/minikube/blob/0c616a6b42b28a1aab8397f5a9061f8ebbd9f3d9/README.md#reusing-the-docker-daemon">This readme</a></p>
+
+<p><a href="https://stackoverflow.com/questions/42564058/how-to-use-local-docker-images-with-minikube">This stackoverflow post</a></p>
+
+        ]]>
+        </description>
+        <pubDate>Tue, 14 Dec 2021 13:42:20 +0000</pubDate>
+        <link>https://bright-softwares.com/blog/en/kubernetes/how-to-use-local-docker-images-with-minikube</link>
+        <guid isPermaLink="true">https://bright-softwares.com/blog/en/kubernetes/how-to-use-local-docker-images-with-minikube</guid>
+        
+        
+        <category>en</category>
+        
+        <category>kubernetes</category>
+        
+      </item>
+    
+      <item>
+        <title>Kubernetes Helm : how to show Multi-line Properties</title>        
+        
+        <description>
+        <![CDATA[
+            <img src="https://sergio.afanou.com/assets/images/image-midres-25.jpg" alt="Kubernetes Helm : how to show Multi-line Properties">
+            <p>Working with Kubernetes Helm, I went to the documentation. The link to the documentation is <a href="https://helm.sh/docs/chart_template_guide/accessing_files/">here</a>.</p>
+
+<p>In Helm’s v3 documentation, in the section <strong>Accessing Files Inside Templates</strong>, you have an example of 3 properties (toml) files; where each file has only one key/value pair.</p>
+
+<p>The configmap.yaml looks like this. It contains one config.toml for simplicity.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-config
+data:
+  {{- $files := .Files }}
+  {{- range tuple "config.toml" }}
+  {{ . }}: |-
+    {{ $files.Get . }}
+  {{- end }}
+</code></pre></div></div>
+
+<p>I was happy with it. Then I add a second line to the config.toml file.</p>
+
+<p>config.toml</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+
+replicaCount=1
+foo=bar
+</code></pre></div></div>
+
+<p>Then boom, I get an Error:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>INSTALLATION FAILED: YAML parse error on deploy/templates/configmap.yaml: error converting YAML to JSON: yaml: line 9: could not find expected ':'
+</code></pre></div></div>
+
+<p>Digging in this error, I found a solution.</p>
+
+<h2 id="the-solution">The solution</h2>
+
+<p>Helm will read in that file, but as it is a text <strong>templating engine</strong>,  It does not understand that I was trying to compose a YAML file.</p>
+
+<p>As a consquence, it was not helping me in the error.</p>
+
+<p>That’s actually why you will see so many, many templates in the wild with</p>
+
+<p><code class="language-plaintext highlighter-rouge">{{ .thing | indent 8 }}</code></p>
+
+<p>or</p>
+
+<p><code class="language-plaintext highlighter-rouge">{{ .otherThing | toYaml }}</code></p>
+
+<p>– because you need to help Helm know in what context it is emitting the text.</p>
+
+<p>So, in my specific case, I needed to indent the filter with a value of 4 because mycurrent template has two spaces for the key indent level, and two more spaces for the value block scalar</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>data:
+
+  {{- $files := .Files }}
+  {{- range tuple "config.toml" }}
+  {{ . }}: |-
+{{ $files.Get . | indent 4 }}
+{{/* notice this ^^^ template expression is flush left,
+because the 'indent' is handling whitespace, not the golang template itself */}}
+  {{- end }}
+</code></pre></div></div>
+
+<p>I hope this quick post will help someone in his research.</p>
+
+<p>Inpiration from <a href="https://stackoverflow.com/questions/70297885/helms-v3-example-doesnt-show-multi-line-properties-get-yaml-to-json-parse-err">this post</a>.</p>
+
+<p>#helm #automation #docker #container</p>
+
+        ]]>
+        </description>
+        <pubDate>Fri, 10 Dec 2021 13:28:16 +0000</pubDate>
+        <link>https://bright-softwares.com/blog/en/kubernetes/kubernetes-helm-how-to-show-multi-line-properties</link>
+        <guid isPermaLink="true">https://bright-softwares.com/blog/en/kubernetes/kubernetes-helm-how-to-show-multi-line-properties</guid>
+        
+        
+        <category>en</category>
+        
+        <category>kubernetes</category>
+        
+      </item>
+    
+      <item>
+        <title>How To Build a Slackbot in Python on Ubuntu 20.04</title>        
+        
+        <description>
+        <![CDATA[
+            <img src="https://sergio.afanou.com/assets/images/image-midres-31.jpg" alt="How To Build a Slackbot in Python on Ubuntu 20.04">
+            <h3 id="introduction">Introduction</h3>
+
+<p><a href="https://slack.com/">Slack</a> is a communication platform designed for workplace productivity. It includes features such as direct messaging, public and private channels, voice and video calls, and bot integrations. A Slackbot is an automated program that can perform a variety of functions in Slack, from sending messages to triggering tasks to alerting on certain events.</p>
+
+<p>In this tutorial you will build a Slackbot in the <a href="https://www.python.org/">Python</a> programming language. Python is a popular language that prides itself on simplicity and readability. Slack provides a rich <a href="https://github.com/slackapi/python-slackclient">Python Slack API</a> for integrating with Slack to perform common tasks such as sending messages, adding emojis to messages, and much more. Slack also provides a <a href="https://github.com/slackapi/python-slack-events-api">Python Slack Events API</a> for integrating with events in Slack, allowing you to perform actions on events such as messages and mentions.</p>
+
+<p>As a fun proof-of-concept that will demonstrate the power of Python and its Slack APIs, you will build a <code class="language-plaintext highlighter-rouge">CoinBot</code>—a Slackbot that monitors a channel and, when triggered, will flip a coin for you. You can then modify your <code class="language-plaintext highlighter-rouge">CoinBot</code> to fulfill any number of <em>slightly</em> more practical applications.</p>
+
+<p>Note that this tutorial uses Python 3 and is not compatible with Python 2.</p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<p>In order to follow this guide, you’ll need:</p>
+
+<ul>
+  <li>
+    <p>A Slack Workspace that you have the ability to install applications into. If you created the workspace you have this ability. If you don’t already have one, you can create one on the <code class="language-plaintext highlighter-rouge">[Slack website](https://slack.com/create).</code></p>
+  </li>
+  <li>
+    <p>(Optional) A server or computer with a public IP address for development. We recommend a fresh installation of Ubuntu 20.04, a non-root user with <code class="language-plaintext highlighter-rouge">sudo</code> privileges, and SSH enabled. <a href="https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-20-04">You can follow this guide to initialize your server and complete these steps</a>.</p>
+  </li>
+</ul>
+
+<p><span class="note">You may want to test this tutorial on a server that has a public IP address. Slack will need to be able to send events such as messages to your bot. If you are testing on a local machine you will need to port forward traffic through your firewall to your local system. If you are looking for a way to develop on a cloud server, check out this tutorial on <a href="https://www.digitalocean.com/community/tutorials/how-to-use-visual-studio-code-for-remote-development-via-the-remote-ssh-plugin">How To Use Visual Studio Code for Remote Development via the Remote-SSH Plugin</a>.<br />
+</span></p>
+
+<h2 id="step-1--creating-the-slackbot-in-the-slack-ui">Step 1 — Creating the Slackbot in the Slack UI</h2>
+
+<p>First create your Slack app in the Slack API Control Panel. Log in to your workspace in Slack via a web browser and navigate to the <a href="https://api.slack.com/apps">API Control Panel</a>. Now click on the <strong>Create an App</strong> button.</p>
+
+<p><img src="https://assets.digitalocean.com/articles/coinbot/h7VWJOX.png" alt="Create Your Slack App" /></p>
+
+<p>Next you’ll be prompted for the name of your app and to select a development Slack workspace. For this tutorial, name your app <code class="language-plaintext highlighter-rouge">&lt;span class="highlight"&gt;CoinBot&lt;/span&gt;</code> and select a workspace you have admin access to. Once you have done this click on the <strong>Create App</strong> button.</p>
+
+<p><img src="https://imgur.com/E4hnhMU.png" alt="Name Your Slack App and Select a Workspace" /></p>
+
+<p>Once your app is created you’ll be presented with the following default app dashboard. This dashboard is where you manage your app by setting permissions, subscribing to events, installing the app into workspaces, and more.</p>
+
+<p><img src="https://assets.digitalocean.com/articles/coinbot/ZjFaS1i.png" alt="Default Slack App Panel" /></p>
+
+<p>In order for your app to be able to post messages to a channel you need to grant the app permissions to send messages. To do this, click the <strong>Permissions</strong> button in the control panel.</p>
+
+<p><img src="https://assets.digitalocean.com/articles/coinbot/IVcN8qg.png" alt="Select the Permissions Button in the Control Panel" /></p>
+
+<p>When you arrive at the <strong>OAuth &amp; Permissions</strong> page, scroll down until you find the <strong>Scopes</strong> section of the page. Then find the <strong>Bot Token Scopes</strong> subsection in the scope and click on <strong>Add an OAuth Scope</strong> button.</p>
+
+<p><img src="https://assets.digitalocean.com/articles/coinbot/wQnTSQr.png" alt="Select the Add an OAuth Scope Button" /></p>
+
+<p>Click on that button and then type <code class="language-plaintext highlighter-rouge">chat:write</code>. Select that permission to add it to your bot. This will allow the app to post messages to channels that it can access. For more information on the available permissions refer to <a href="https://api.slack.com/scopes">Slack’s Documentation</a>.</p>
+
+<p><img src="https://assets.digitalocean.com/articles/coinbot/unQYPeL.png" alt="Add the chat:write Permission" /></p>
+
+<p>Now that you’ve added the appropriate permission it is time to install your app into your Slack workspace. Scroll back up on the <strong>OAuth &amp; Permissions</strong> page and click the <strong>Install App to Workspace</strong> button at the top.</p>
+
+<p><img src="https://assets.digitalocean.com/articles/coinbot/SiSxQB1.png" alt="Install App to Workspace" /></p>
+
+<p>Click this button and review the actions that the app can perform in the channel. Once you are satisfied, click the <strong>Allow</strong> button to finish the installation.</p>
+
+<p><img src="https://assets.digitalocean.com/articles/coinbot/lWUBsYR.png" alt="Install App to Workspace" /></p>
+
+<p>Once the bot is installed you’ll be presented with a <strong>Bot User OAuth Access Token</strong> for your app to use when attempting to perform actions in the workspace. Go ahead and copy this token; you’ll need it later.</p>
+
+<p><img src="https://assets.digitalocean.com/articles/coinbot/m1M9Ilt.png" alt="Save the Access Token" /></p>
+
+<p>Finally, add your newly installed bot into a channel within your workspace. If you haven’t created a channel yet you can use the <em>#general</em> channel that is created by default in your Slack workspace. Locate the app in the <strong>Apps</strong> section of the navigation bar in your Slack client and click on it. Once you’ve done that open the <strong>Details</strong> menu in the top right hand side. If your Slack client isn’t full-screened it will look like an <code class="language-plaintext highlighter-rouge">i</code> in a circle.</p>
+
+<p><img src="https://assets.digitalocean.com/articles/coinbot/OJ5yTXP.png" alt="Click on the App Details Icon" /></p>
+
+<p>To finish adding your app to a channel, click on the <strong>More</strong> button represented by three dots in the details page and select <strong>Add this app to a channel…</strong>. Type your channel into the modal that appears and click <strong>Add</strong>.</p>
+
+<p><img src="https://assets.digitalocean.com/articles/coinbot/ojUMqeI.png" alt="Add App to a Channel" /></p>
+
+<p>You’ve now successfully created your app and added it to a channel within your Slack workspace. After you write the code for your app it will be able to post messages in that channel. In the next section you’ll start writing the Python code that will power <code class="language-plaintext highlighter-rouge">CoinBot</code>.</p>
+
+<h2 id="step-2--setting-up-your-python-developer-environment">Step 2 — Setting Up Your Python Developer Environment</h2>
+
+<p>First let’s set up your Python environment so you can develop the Slackbot.</p>
+
+<p>Open a terminal and install <code class="language-plaintext highlighter-rouge">python3</code> and the relevant tools onto your system:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    sudo apt install python3 python3-venv
+``
+
+Next you will create a virtual environment to isolate your Python packages from the system installation of Python. To do this, first create a directory into which you will create your virtual environment. Make a new directory at ``~/.venvs``:
+
+``
+    mkdir ~/.venvs
+``
+
+Now create your Python virtual environment:
+
+``
+    python3 -m venv ~/.venvs/slackbot
+</code></pre></div></div>
+
+<p>Next, activate your virtual environment so you can use its Python installation and install packages:</p>
+
+<p>``
+    source ~/.venvs/slackbot/bin/activate</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+Your shell prompt will now show the virtual environment in parenthesis. It will look something like this:
+
+Now use `pip` to install the necessary Python packages into your virtual environment:
+
+``
+    pip install slackclient slackeventsapi Flask
+``
+
+`slackclient` and `slackeventsapi` facilitate Python’s interaction with Slack’s APIs. `Flask` is a popular micro web framework that you will use to deploy your app:
+
+Now that you have your developer environment set up, you can start writing your Python Slackbot:
+
+## Step 3 — Creating the Slackbot Message Class in Python
+
+Messages in Slack are sent via a [specifically formatted JSON payload](https://api.slack.com/reference/surfaces/formatting). This is an example of the JSON that your Slackbot will craft and send as a message:
+
+``
+    {
+       "channel":"channel",
+       "blocks":[
+          {
+             "type":"section",
+             "text":{
+                "type":"mrkdwn",
+                "text":"Sure! Flipping a coin....\n\n"
+             }
+          },
+          {
+             "type":"section",
+             "text":{
+                "type":"mrkdwn",
+                "text":"*flips coin* The result is Tails."
+             }
+          }
+       ]
+    }
+</code></pre></div></div>
+
+<p>You could manually craft this JSON and send it, but instead let’s build a Python class that not only crafts this payload, but also simulates a coin flip.</p>
+
+<p>First use the <code class="language-plaintext highlighter-rouge">touch</code> command to create a file named <code class="language-plaintext highlighter-rouge">coinbot.py</code>:</p>
+
+<p><code class="language-plaintext highlighter-rouge">
+    touch coinbot.py
+</code></p>
+
+<p>Next, open this file with <code class="language-plaintext highlighter-rouge">nano</code> or your favorite text editor:</p>
+
+<p><code class="language-plaintext highlighter-rouge">
+    nano coinbot.py
+</code></p>
+
+<p>Now add the following lines of code to import the relevant libraries for your app. The only library you need for this class is the <code class="language-plaintext highlighter-rouge">random</code> library from the Python Standard Library. This library will allow us to simulate a coin flip.</p>
+
+<p>Add the following lines to <code class="language-plaintext highlighter-rouge">coinbot.py</code> to import all of the necessary libraries:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="code-label " title="coinbot.py"&gt;coinbot.py&lt;/div&gt;
+
+    # import the random library to help us generate the random numbers
+    import random
+</code></pre></div></div>
+
+<p>Next, create your <code class="language-plaintext highlighter-rouge">CoinBot</code> class and an instance of this class<br />
+to craft the message payload. Add the following lines to <code class="language-plaintext highlighter-rouge">coinbot.py</code> to create the <code class="language-plaintext highlighter-rouge">CoinBot</code> class:</p>
+
+<p>``</p>
+<div class="code-label " title="coinbot.py">coinbot.py</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
+class CoinBot: ```
+</code></pre></div></div>
+
+<p>Now indent by one and create the constants, constructors, and methods necessary for your class. First let’s create the constant that will hold the base of your message payload. This section specifies that this constant is of the section type and that the text is formatted via markdown. It also specifies what text you wish to display. You can read more about the different payload options in the <a href="https://api.slack.com/reference/messaging/payload">official Slack message payload documentation</a>.</p>
+
+<p>Append the following lines to <code class="language-plaintext highlighter-rouge">coinbot.py</code> to create the base template for the payload:</p>
+
+<p>``</p>
+<div class="code-label " title="coinbot.py">coinbot.py</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
+    # Create a constant that contains the default text for the message
+    COIN_BLOCK = {
+        "type": "section",
+        "text": {
+            "type": "mrkdwn",
+            "text": (
+                "Sure! Flipping a coin....\n\n"
+            ),
+        },
+    } ```
+</code></pre></div></div>
+
+<p>Next create a constructor for your class so that you can create a separate instance of your bot for every request. Don’t worry about memory overhead here; the Python garbage collector will clean up these instances once they are no longer needed. This code sets the recipient channel based on a parameter passed to the constructor.</p>
+
+<p>Append the following lines to <code class="language-plaintext highlighter-rouge">coinbot.py</code> to create the constructor:</p>
+
+<p>``</p>
+<div class="code-label " title="coinbot.py">coinbot.py</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
+    # The constructor for the class. It takes the channel name as the a
+    # parameter and sets it as an instance variable.
+    def __init__(self, channel):
+        self.channel = channel ```
+</code></pre></div></div>
+
+<p>Now write the code that simulates to flip a coin. We’ll randomly generate a one or zero, representing heads or tails respectively.</p>
+
+<p>Append the following lines to <code class="language-plaintext highlighter-rouge">coinbot.py</code> to simulate the coin flip and return the crafted payload:</p>
+
+<p>``</p>
+<div class="code-label " title="coinbot.py">coinbot.py</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
+    # Generate a random number to simulate flipping a coin. Then return the 
+    # crafted slack payload with the coin flip message.
+    def _flip_coin(self):
+        rand_int =  random.randint(0,1)
+        if rand_int == 0:
+            results = "Heads"
+        else:
+            results = "Tails"
+
+        text = f"The result is {results}"
+
+        return {"type": "section", "text": {"type": "mrkdwn", "text": text}}, ``
+</code></pre></div></div>
+
+<p>Finally, create a method that crafts and returns the entire message payload, including the data from your constructor, by calling your <code class="language-plaintext highlighter-rouge">_flip_coin</code> method.</p>
+
+<p>Append the following lines to <code class="language-plaintext highlighter-rouge">coinbot.py</code> to create the method that will generate the finished payload:</p>
+
+<p>``</p>
+<div class="code-label " title="coinbot.py">coinbot.py</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
+    # Craft and return the entire message payload as a dictionary.
+    def get_message_payload(self):
+        return {
+            "channel": self.channel,
+            "blocks": [
+                self.COIN_BLOCK,
+                *self._flip_coin(),
+            ],
+        } ``
+</code></pre></div></div>
+
+<p>You are now finished with the <code class="language-plaintext highlighter-rouge">CoinBot</code> class and it is ready for testing. Before continuing, verify that your finished file, <code class="language-plaintext highlighter-rouge">coinbot.py</code>, contains the following:</p>
+
+<p>``</p>
+<div class="code-label " title="coinbot.py">coinbot.py</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># import the random library to help us generate the random numbers
+import random
+
+# Create the CoinBot Class
+
+class CoinBot:
+
+    # Create a constant that contains the default text for the message
+    COIN_BLOCK = {
+        "type": "section",
+        "text": {
+            "type": "mrkdwn",
+            "text": (
+                "Sure! Flipping a coin....\n\n"
+            ),
+        },
+    }
+
+    # The constructor for the class. It takes the channel name as the a
+    # parameter and then sets it as an instance variable
+    def __init__(self, channel):
+        self.channel = channel
+
+    # Generate a random number to simulate flipping a coin. Then return the
+    # crafted slack payload with the coin flip message.
+    def _flip_coin(self):
+        rand_int =  random.randint(0,1)
+        if rand_int == 0:
+            results = "Heads"
+        else:
+            results = "Tails"
+
+        text = f"The result is {results}"
+
+        return {"type": "section", "text": {"type": "mrkdwn", "text": text}},
+
+    # Craft and return the entire message payload as a dictionary.
+    def get_message_payload(self):
+        return {
+            "channel": self.channel,
+            "blocks": [
+                self.COIN_BLOCK,
+                *self._flip_coin(),
+            ],
+        } ``
+</code></pre></div></div>
+
+<p>Save and close the file.</p>
+
+<p>Now that you have a Python class ready to do the work for your Slackbot, let’s ensure that this class produces a useful message payload and that you can send it to your workspace.</p>
+
+<h2 id="step-4--testing-your-message">Step 4 — Testing Your Message</h2>
+
+<p>Now let’s test that this class produces a proper payload. Create a file named<br />
+<code class="language-plaintext highlighter-rouge">coinbot_test.py</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    nano coinbot_test.py
+``
+
+Now add the following code. **Be sure to change the channel name in the instantiation of the coinbot class `coin_bot = coinbot("#&lt;span class="highlight"&gt;YOUR_CHANNEL_HERE&lt;/span&gt;")`**. This code will create a Slack client in Python that will send a message to the channel you specify that you have already installed the app into:
+
+``
+&lt;div class="code-label " title="coinbot_test.py"&gt;coinbot_test.py&lt;/div&gt;
+
+    from slack import WebClient
+    from coinbot import CoinBot
+    import os
+
+    # Create a slack client
+
+    slack_web_client = WebClient(token=os.environ.get("SLACK_TOKEN"))
+
+    # Get a new CoinBot
+
+    coin_bot = CoinBot("#YOUR_CHANNEL_HERE")
+
+    # Get the onboarding message payload
+
+    message = coin_bot.get_message_payload()
+
+    # Post the onboarding message in Slack
+
+    slack_web_client.chat_postMessage(\*\*message)
+
+Save and close the file.
+
+Before you can run this file you will need to export the Slack token that you saved in Step 1 as an environment variable:
+
+    export SLACK_TOKEN="your_bot_user_token"
+
+Now test this file and verify that the payload is produced and sent by running the following script in your terminal. Make sure that your virtual environment is activated. You can verify this by seeing the `(slackbot)` text at the front of your bash prompt. Run this command you will receive a message from your Slackbot with the results of a coin flip:
+
+    python coinbot_test.py
+
+Check the channel that you installed your app into and verify that your bot did indeed send the coin flip message. Your result will be heads or tails.
+
+![Coin Flip Test](https://assets.digitalocean.com/articles/coinbot/NPfnw0k.png)
+
+Now that you’ve verified that your Slackbot can flip a coin, create a message, and deliver the message, let’s create a [Flask](https://flask.palletsprojects.com/en/1.1.x/) to perpetually run this app and make it simulate a coin flip and share the results whenever it sees certain text in messages sent in the channel.
+
+## Step 5 — Creating a Flask Application to Run Your Slackbot
+
+Now that you have a functioning application that can send messages to your Slack workspace, you need to create a long running process so your bot can listen to messages sent in the channel and reply to them if the text meets certain criteria. You’re going to use the Python web framework [Flask](https://flask.palletsprojects.com/en/1.1.x/) to run this process and listen for events in your channel.
+
+&lt;span class="note"&gt;In this section you will be running your Flask application from a server with a public IP address so that the Slack API can send you events. If you are running this locally on your personal workstation you will need to forward the port from your personal firewall to the port that will be running on your workstation. These ports can be the same, and this tutorial will be set up to use port `3000`.  
+&lt;/span&gt;
+
+First adjust your firewall settings to allow traffic through port `3000`:
+
+``
+    sudo ufw allow 3000
+``
+
+Now check the status of `ufw`:
+
+``
+    sudo ufw status
+``
+
+You will see an output like this:
+
+``
+    OutputStatus: active
+
+    To Action From
+
+    ---
+
+    OpenSSH ALLOW Anywhere
+    3000 ALLOW Anywhere
+    OpenSSH (v6) ALLOW Anywhere (v6)
+    3000 (v6) ALLOW Anywhere (v6)
+``
+
+Now create the file for your Flask app. Name this file `app.py`:
+
+``
+    touch app.py
+``
+
+Next, open this file in your favorite text editor:
+
+``
+    nano app.py
+``
+
+Now add the following import `statements`. You’ll import the following libraries for the following reasons:
+
+</code></pre></div></div>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">import os</code> - To access environment variables</li>
+  <li><code class="language-plaintext highlighter-rouge">import logging</code> - To log the events of the app</li>
+  <li><code class="language-plaintext highlighter-rouge">from flask import Flask</code> - To create a Flask app</li>
+  <li><code class="language-plaintext highlighter-rouge">from slack import WebClient</code> - To send messages via Slack</li>
+  <li><code class="language-plaintext highlighter-rouge">from slackeventsapi import SlackEventAdapter</code> - To receive events from Slack and process them</li>
+  <li><code class="language-plaintext highlighter-rouge">from coinbot import CoinBot</code> - To create an instance of your CoinBot and generate the message payload.
+```</li>
+</ul>
+
+<p>Append the following lines to <code class="language-plaintext highlighter-rouge">app.py</code> to import all of the necessary libraries:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="code-label " title="app.py"&gt;app.py&lt;/div&gt;
+
+    import os
+    import logging
+    from flask import Flask
+    from slack import WebClient
+    from slackeventsapi import SlackEventAdapter
+    from coinbot import CoinBot
+</code></pre></div></div>
+
+<p>Now create your Flask app and register a Slack Event Adapter to your Slack app at the <code class="language-plaintext highlighter-rouge">/slack/events</code> endpoint. This will create a route in your Slack app where Slack events will be sent and ingested. To do this you will need to get another token from your Slack app, which you will do later in the tutorial. Once you get this variable you will export it as an environment variable named <code class="language-plaintext highlighter-rouge">SLACK_EVENTS_TOKEN</code>. Go ahead and write your code to read it in when creating the <code class="language-plaintext highlighter-rouge">SlackEventAdapter</code>, even though you haven’t set the token yet.</p>
+
+<p>Append the following lines to <code class="language-plaintext highlighter-rouge">app.py</code> to create the Flask app and register the events adapter into this app:</p>
+
+<p>``</p>
+<div class="code-label " title="app.py">app.py</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
+# Initialize a Flask app to host the events adapter
+app = Flask(__name__)
+
+# Create an events adapter and register it to an endpoint in the slack app for event ingestion.
+
+slack_events_adapter = SlackEventAdapter(os.environ.get("SLACK_EVENTS_TOKEN"), "/slack/events", app) ```
+</code></pre></div></div>
+
+<p>Next create a web client object that will allow your app to perform actions in the workspace, specifically to send messages. This is similar to what you did when you tested your <code class="language-plaintext highlighter-rouge">coinbot.py</code> file previously.</p>
+
+<p>Append the following line to <code class="language-plaintext highlighter-rouge">app.py</code> to create this <code class="language-plaintext highlighter-rouge">slack_web_client</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="code-label " title="app.py"&gt;app.py&lt;/div&gt;
+
+    ...
+    # Initialize a Web API client
+    slack_web_client = WebClient(token=os.environ.get("SLACK_TOKEN"))
+</code></pre></div></div>
+
+<p>Now create a function that can be called that will create an instance of <code class="language-plaintext highlighter-rouge">CoinBot</code>, and then use this instance to create a message payload and pass the message payload to the Slack web client for delivery. This function will take in a single parameter, <code class="language-plaintext highlighter-rouge">channel</code>, which will specify what channel receives the message.</p>
+
+<p>Append the following lines to <code class="language-plaintext highlighter-rouge">app.py</code> to create this function:</p>
+
+<p>``</p>
+<div class="code-label " title="app.py">app.py</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
+def flip_coin(channel):
+    """Craft the CoinBot, flip the coin and send the message to the channel
+    """
+    # Create a new CoinBot
+    coin_bot = CoinBot(channel)
+
+    # Get the onboarding message payload
+    message = coin_bot.get_message_payload()
+
+    # Post the onboarding message in Slack
+    slack_web_client.chat_postMessage(**message) ```
+</code></pre></div></div>
+
+<p>Now that you have created a function to handle the messaging aspects of your app, create one that monitors Slack events for a certain action and then executes your bot. You’re going to configure your app to respond with the results of a simulated coin flip when it sees the phrase “Hey Sammy, Flip a coin”. You’re going to accept any version of this—case won’t prevent the app from responding.</p>
+
+<p>First decorate your function with the <code class="language-plaintext highlighter-rouge">@slack_events_adapter.on</code> syntax that allows your function to receive events. Specify that you only want the <code class="language-plaintext highlighter-rouge">message</code> events and have your function accept a payload parameter containing all of the necessary Slack information. Once you have this payload you will parse out the text and analyze it. Then, if it receives the activation phrase, your app will send the results of a simulated coin flip.</p>
+
+<p>Append the following code to <code class="language-plaintext highlighter-rouge">app.py</code> to receive, analyze, and act on incoming messages:</p>
+
+<p>``</p>
+<div class="code-label " title="app.py">app.py</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># When a 'message' event is detected by the events adapter, forward that payload
+# to this function.
+@slack_events_adapter.on("message")
+def message(payload):
+    """Parse the message event, and if the activation string is in the text,
+    simulate a coin flip and send the result.
+    """
+
+    # Get the event data from the payload
+    event = payload.get("event", {})
+
+    # Get the text from the event that came through
+    text = event.get("text")
+
+    # Check and see if the activation phrase was in the text of the message.
+    # If so, execute the code to flip a coin.
+    if "hey sammy, flip a coin" in text.lower():
+        # Since the activation phrase was met, get the channel ID that the event
+        # was executed on
+        channel_id = event.get("channel")
+
+        # Execute the flip_coin function and send the results of
+        # flipping a coin to the channel
+        return flip_coin(channel_id) ``
+</code></pre></div></div>
+
+<p>Finally, create a <code class="language-plaintext highlighter-rouge">main</code> section that will create a logger so you can see the internals of your application as well as launch the app on your external IP address on port <code class="language-plaintext highlighter-rouge">3000</code>. In order to ingest the events from Slack, such as when a new message is sent, you must test your application on a public-facing IP address.</p>
+
+<p>Append the following lines to <code class="language-plaintext highlighter-rouge">app.py</code> to set up your main section:</p>
+
+<p>``</p>
+<div class="code-label " title="app.py">app.py</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if __name__ == "__main__":
+    # Create the logging object
+    logger = logging.getLogger()
+
+    # Set the log level to DEBUG. This will increase verbosity of logging messages
+    logger.setLevel(logging.DEBUG)
+
+    # Add the StreamHandler as a logging handler
+    logger.addHandler(logging.StreamHandler())
+
+    # Run your app on your externally facing IP address on port 3000 instead of
+    # running it on localhost, which is traditional for development.
+    app.run(host='0.0.0.0', port=3000) ```
+</code></pre></div></div>
+
+<p>You are now finished with the Flask app and it is ready for testing. Before you move on verify that your finished file, <code class="language-plaintext highlighter-rouge">app.py</code> contains the following:</p>
+
+<p>``</p>
+<div class="code-label " title="app.py">app.py</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import os
+import logging
+from flask import Flask
+from slack import WebClient
+from slackeventsapi import SlackEventAdapter
+from coinbot import CoinBot
+
+# Initialize a Flask app to host the events adapter
+
+app = Flask(**name**)
+
+# Create an events adapter and register it to an endpoint in the slack app for event injestion.
+
+slack_events_adapter = SlackEventAdapter(os.environ.get("SLACK_EVENTS_TOKEN"), "/slack/events", app)
+
+# Initialize a Web API client
+
+slack_web_client = WebClient(token=os.environ.get("SLACK_TOKEN"))
+
+def flip_coin(channel):
+"""Craft the CoinBot, flip the coin and send the message to the channel
+""" # Create a new CoinBot
+coin_bot = CoinBot(channel)
+
+    # Get the onboarding message payload
+    message = coin_bot.get_message_payload()
+
+    # Post the onboarding message in Slack
+    slack_web_client.chat_postMessage(**message)
+
+# When a 'message' event is detected by the events adapter, forward that payload
+
+# to this function.
+
+@slack_events_adapter.on("message")
+def message(payload):
+"""Parse the message event, and if the activation string is in the text,
+simulate a coin flip and send the result.
+"""
+
+    # Get the event data from the payload
+    event = payload.get("event", {})
+
+    # Get the text from the event that came through
+    text = event.get("text")
+
+    # Check and see if the activation phrase was in the text of the message.
+    # If so, execute the code to flip a coin.
+    if "hey sammy, flip a coin" in text.lower():
+        # Since the activation phrase was met, get the channel ID that the event
+        # was executed on
+        channel_id = event.get("channel")
+
+        # Execute the flip_coin function and send the results of
+        # flipping a coin to the channel
+        return flip_coin(channel_id)
+
+if **name** == "**main**": # Create the logging object
+logger = logging.getLogger()
+
+    # Set the log level to DEBUG. This will increase verbosity of logging messages
+    logger.setLevel(logging.DEBUG)
+
+    # Add the StreamHandler as a logging handler
+    logger.addHandler(logging.StreamHandler())
+
+    # Run our app on our externally facing IP address on port 3000 instead of
+    # running it on localhost, which is traditional for development.
+    app.run(host='0.0.0.0', port=3000) ``
+</code></pre></div></div>
+
+<p>Save and close the file.</p>
+
+<p>Now that your Flask app is ready to serve your application let’s test it out.</p>
+
+<h2 id="step-6--running-your-flask-app">Step 6 — Running Your Flask App</h2>
+
+<p>Finally, bring everything together and execute your app.</p>
+
+<p>First, add your running application as an authorized handler for your Slackbot.</p>
+
+<p>Navigate to the <strong>Basic Information</strong> section of your app in the <a href="https://api.slack.com">Slack UI</a>. Scroll down until you find the <strong>App Credentials</strong> section.</p>
+
+<p><img src="https://assets.digitalocean.com/articles/coinbot/lLB1jEB.png" alt="Slack Signing Secret" /></p>
+
+<p>Copy the <strong>Signing Secret</strong> and export it as the environment variable <code class="language-plaintext highlighter-rouge">SLACK_EVENTS_TOKEN</code>:</p>
+
+<p><code class="language-plaintext highlighter-rouge">
+    export SLACK_EVENTS_TOKEN="MY_SIGNING_SECRET_TOKEN"
+</code></p>
+
+<p>With this you have all the necessary API tokens to run your app. Refer to Step 1 if you need a refresher on how to export your <code class="language-plaintext highlighter-rouge">SLACK_TOKEN</code>. Now you can start your app and verify that it is indeed running. Ensure that your virtual environment is activated and run the following command to start your Flask app:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    python3 app.py
+</code></pre></div></div>
+
+<p>You will see an output like this:</p>
+
+<p>``
+    (slackbot) [20:04:03] sammy:coinbot$ python app.py
+     * Serving Flask app “app” (lazy loading)
+     * Environment: production
+       WARNING: This is a development server. Do not use it in a production deployment.
+       Use a production WSGI server instead.
+     * Debug mode: off
+     * Running on http://0.0.0.0:3000/ (Press CTRL+C to quit)</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+To verify that your app is up, open a new terminal window and `curl` the IP address of your server with the correct port at `/slack/events`:
+
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl http://YOUR_IP_ADDRESS:3000/slack/events ```
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">curl</code> will return the following:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>OutputThese are not the slackbots you're looking for.
+</code></pre></div></div>
+
+<p>Receiving the message <code class="language-plaintext highlighter-rouge">These are not the slackbots you're looking for.</code>, indicates that your app is up and running.</p>
+
+<p>Now leave this Flask application running while you finish configuring your app in the <a href="https://api.slack.com">Slack UI</a>.</p>
+
+<p>First grant your app the appropriate permissions so that it can listen to messages and respond accordingly. Click on <strong>Event Subscriptions</strong> in the UI sidebar and toggle the <strong>Enable Events</strong> radio button.</p>
+
+<p><img src="https://assets.digitalocean.com/articles/coinbot/lLB1jEB.png" alt="Enable Events Button" /></p>
+
+<p>Once you’ve done that, type in your IP address, port, and <code class="language-plaintext highlighter-rouge">/slack/events</code> endpoint into the <strong>Request URL</strong> field. Don’t forget the <code class="language-plaintext highlighter-rouge">HTTP</code> protocol prefix. Slack will make an attempt to connect to your endpoint. Once it has successfully done so you’ll see a green check mark with the word <strong>Verified</strong> next to it.</p>
+
+<p><img src="https://assets.digitalocean.com/articles/coinbot/9wqUJwd.png" alt="Event Subscriptions Request URL" /></p>
+
+<p>Next, expand the <strong>Subscribe to bot events</strong> and add the <code class="language-plaintext highlighter-rouge">message.channels</code> permission to your app. This will allow your app to receive messages from your channel and process them.</p>
+
+<p><img src="https://assets.digitalocean.com/articles/coinbot/sCYYhM8.png" alt="Subscribe to bot events permissions" /></p>
+
+<p>Once you’ve done this you will see the event listed in your <strong>Subscribe to bot events</strong> section. Next click the green <strong>Save Changes</strong> button in the bottom right hand corner.</p>
+
+<p><img src="https://assets.digitalocean.com/articles/coinbot/NLNbmB4.png" alt="Confirm and Save changes" /></p>
+
+<p>Once you do this you’ll see a yellow banner across the top of the screen informing you that you need to reinstall your app for the following changes to apply. Every time you change permissions you’ll need to reinstall your app. Click on the <strong>reinstall your app</strong> link in this banner to reinstall your app.</p>
+
+<p><img src="https://assets.digitalocean.com/articles/coinbot/s9WyZWs.png" alt="Reinstall your app banner" /></p>
+
+<p>You’ll be presented with a confirmation screen summarizing the permissions your bot will have and asking if you want to allow its installation. Click on the green <strong>Allow</strong> button to finish the installation process.</p>
+
+<p><img src="https://assets.digitalocean.com/articles/coinbot/KQrNqzK.png" alt="Reinstall confirmation" /></p>
+
+<p>Now that you’ve done this your app should be ready. Go back to the channel that you installed <code class="language-plaintext highlighter-rouge">CoinBot</code> into and send a message containing the phrase <em>Hey Sammy, Flip a coin</em> in it. Your bot will flip a coin and reply with the results. Congrats! You’ve created a Slackbot!</p>
+
+<p><img src="https://assets.digitalocean.com/articles/coinbot/8SoSu5A.png" alt="Hey Sammy, Flip a coin" /></p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Once you are done developing your application and you are ready to move it to production, you’ll need to deploy it to a server. This is necessary because the Flask development server is not a secure production environment. You’ll be better served if you deploy your app using a <a href="https://wsgi.readthedocs.io/en/latest/index.html">WSGI</a> and maybe even securing a domain name and giving your server a DNS record. There are many options for deploying Flask applications, some of which are listed below:</p>
+
+<ul>
+  <li><a href="https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-20-04">Deploy your Flask application to Ubuntu 20.04 using Gunicorn and Nginx</a></li>
+  <li><a href="https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-uwsgi-and-nginx-on-ubuntu-20-04">Deploy your Flask application to Ubuntu 20.04 using uWSGI and Nginx</a></li>
+  <li><a href="https://www.digitalocean.com/community/tutorials/how-to-build-and-deploy-a-flask-application-using-docker-on-ubuntu-18-04">Deploy your Flask Application Using Docker on Ubuntu 18.04</a></li>
+</ul>
+
+<p>There are many more ways to deploy your application than just these. As always, when it comes to deployments and infrastucture, do what works best for <em>you</em>.</p>
+
+<p>In any case, you now have a Slackbot that you can use to flip a coin to help you make decisions, like what to eat for lunch.</p>
+
+<p>You can also take this base code and modify it to fit your needs, whether it be automated support, resource management, pictures of cats, or whatever you can think of. You can view the complete Python Slack API docs <a href="https://slack.dev/python-slackclient/">here</a>.</p>
+
+        ]]>
+        </description>
+        <pubDate>Tue, 16 Nov 2021 23:17:26 +0000</pubDate>
+        <link>https://bright-softwares.com/blog/en/slack/how-to-build-a-slackbot-in-python-on-ubuntu-2004</link>
+        <guid isPermaLink="true">https://bright-softwares.com/blog/en/slack/how-to-build-a-slackbot-in-python-on-ubuntu-2004</guid>
+        
+        
+        <category>en</category>
+        
+        <category>slack</category>
+        
+      </item>
+    
+      <item>
+        <title>How Do I Get My Data Off an Old Computer?</title>        
+        
+        <description>
+        <![CDATA[
+            <img src="https://bright-softwares.com/assets/images/uploads/glenn-carstens-peters-1f4muko0ung-unsplash.jpg" alt="How Do I Get My Data Off an Old Computer?">
+            <h3 id="i-want-to-delete-everything-on-my-old-computer-but">I want to delete everything on my old computer, but…</h3>
+
+<blockquote>
+  <p><em>“Hello,</em></p>
+
+  <p><em>I have and older gateway tower but sold the monitor that came with it.</em></p>
+
+  <p>_I have a laptop and a TV and tried using an HDMI to VGA adapter thinking it would show on my TV or laptop but its not working. I would like to go through my old computer and wipe it clean before just recycling it. _</p>
+
+  <p><em>Any suggestions on how I can view the content on my old computer?”</em></p>
+</blockquote>
+
+<h3 id="why-you-cant-get-a-signal-from-your-old-computer">Why you can’t get a signal from your old computer</h3>
+
+<p><strong>Good news:</strong> You have a few solutions to address this.</p>
+
+<p>To start, let’s talk about what isn’t going to work. Connecting your desktop to a laptop isn’t going to do anything, as your laptop’s connections are outputs. No matter what connection you use, hooking up your desktop PC to your laptop’s anything isn’t going to display your desktop’s picture on your laptop’s display.</p>
+
+<p>It’s a great idea in theory, but one that isn’t going to work, technologically.</p>
+
+<p>I’ve never tried using a VGA-to-HDMI adapter—in fact this is the first I’ve ever heard of someone actually using one, given how old that connection type is. My suspicion is that this technique won’t work, or has a high likelihood of failure, because VGA is an analog signal and HDMI is digital. It’s possible to go between the two, but whatever adapter you’re using is going to have to take that VGA signal and convert it. If you just have a simple cable that has a VGA connection on one end and an HDMI connection on the other, that’s probably not going to work.</p>
+
+<p>It’s also possible that whatever adapter you’ve picked up sucks, for lack of a better way to phrase it. If you went bargain-bin on your adapter, or bought one that hasn’t already been tested out by plenty of other people, it might not be able to do what you want it to do because that’s how these things sometimes go.</p>
+
+<h3 id="an-adapter-can-help-but-theres-a-better-solution">An adapter can help, but there’s a better solution</h3>
+
+<p>This is a tricky situation, as what I’d typically recommend—a USB-to-DVI adapter, which you’d then connect to a DVI-to-HDMI cable, or a simpler USB-to-HDMI adapter—is probably going to cost more than what you’re willing to spend on a solution. At least, I’d probably ask around and see if any of my friends have an older monitor with a VGA input before I plunked down $30-50 on an adapter.</p>
+
+<p><a href="https://www.amazon.fr/Adaptateur-HDMI-vers-VGA-Benfei/dp/B075GZ8DX7/ref=as_li_ss_il?keywords=vga+adapter&amp;qid=1636995041&amp;sr=8-1-spons&amp;psc=1&amp;spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUExQUJZMkNWQjdCTFRBJmVuY3J5cHRlZElkPUEwNTQwMDM1MVJYRlVSN0ZDTDlSNyZlbmNyeXB0ZWRBZElkPUEwMTM3MzM3R0JaSFRSV1JMVjBaJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==&amp;linkCode=li2&amp;tag=brightsoftw0e-21&amp;linkId=c2e0421c06930e66a321014ec72b21fc&amp;language=fr_FR" target="_blank"><img border="0" src="//ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B075GZ8DX7&amp;Format=_SL160_&amp;ID=AsinImage&amp;MarketPlace=FR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=brightsoftw0e-21&amp;language=fr_FR" /></a><img src="https://ir-fr.amazon-adsystem.com/e/ir?t=brightsoftw0e-21&amp;language=fr_FR&amp;l=li2&amp;o=8&amp;a=B075GZ8DX7" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></p>
+
+<p>One thing worth checking is whether your old desktop has an S-Video port. It’s unlikely, but if it does, and your TV has one, you can connect them together that way. It’s a longshot, but it’s worth exploring.</p>
+
+<p>Otherwise, I think your best option is to hit up Craigslist for your area and buy someone’s cheap older display. Make sure they can confirm it works with a VGA signal before you pay for it, but this will be the best and surest way to get an image from your system. And, in doing so, you can then start poring over your data and wiping your system.</p>
+
+<p>Looking at Craigslist right now for my area, Amazon is selling VGA monitors for <a href="https://amzn.to/3FmDN7x">around $150-200</a>. You can probably find something as cheap as that where you live; remember, all that matters is that it works, not that it looks pretty, has a giant screen, or anything like that. Hook it up to your computer, save or delete whatever you want, and recycle that along with your old PC.</p>
+
+<h3 id="to-get-at-your-old-data-try-removing-your-hard-drive">To get at your old data, try removing your hard drive</h3>
+
+<p>Messing with displays and monitors is one approach. Since all you care about is the data on your drive, you could also open up your desktop PC, disconnect and remove its hard drive, and slap that hard drive in an external enclosure. I’d recommend one, but I’m not sure if your drive uses an ancient IDE connection or SATA. (You can find <a href="https://amzn.to/3ozk1Pa">enclosures and docking stations</a> that handle both, so it’s almost a moot point.)</p>
+
+<p><a href="https://www.amazon.fr/Sabrent-Bo%C3%AEtier-Externe-optimis%C3%A9-EC-UASP/dp/B00OJ3UJ2S/ref=as_li_ss_il?keywords=boitier+disque+dur+externe&amp;qid=1636994723&amp;qsid=262-6265145-8032542&amp;sr=8-11&amp;sres=B07PMWJB8P,B075TXT3RZ,B077XVTTJC,B06XWRRMYX,B07Y33F615,B078P3DTX1,B00OJ3UJ2S,B0851B6TCC,B00RCJ54BC,B00MYN9V9W,B0833V8RQJ,B06XYJSR8B,B07DCRPKYD,B08FXDM3P3,B08B5W9HB6,B07Y825V4N,B08SBMDQL7,B00N1GL9Q4,B07429D73L,B00ORENYJE&amp;linkCode=li2&amp;tag=brightsoftw0e-21&amp;linkId=99bb4f3c1591caf7f1aa8217d5dde036&amp;language=fr_FR" target="_blank"><img border="0" src="//ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B00OJ3UJ2S&amp;Format=_SL160_&amp;ID=AsinImage&amp;MarketPlace=FR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=brightsoftw0e-21&amp;language=fr_FR" /></a><img src="https://ir-fr.amazon-adsystem.com/e/ir?t=brightsoftw0e-21&amp;language=fr_FR&amp;l=li2&amp;o=8&amp;a=B00OJ3UJ2S" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></p>
+
+<p>Install your old desktop’s hard drive into one of those, connect the enclosure to a new desktop or laptop via USB, and you should be able to access all of your files. Save whatever you want, wipe the drive, and send it—and your old system—off for recycling when you’re done.</p>
+
+<p>While this sounds like a process, removing a hard drive from your desktop PC is as easy as disconnecting a few cables and unscrewing four screws. Take care not to jostle the drive too much as you’re taking it out. Don’t turn it upside-down or anything crazy like that, and make sure you’ve touched the site of your (metal) case to discharge of any static electricity before you go fiddling with your system’s insides.</p>
+
+<p>Were I you, I’d go that route because it’s easy and it saves you money. Instead of spending $20-30 on a display you’ll never use again, you can pick up a docking station that you* *could definitely use at some future point, whether you’re pulling files off another drive, copying files over to a bare backup drive, et cetera. It’s infinitely more practical than a crappy old display, but it requires slightly more legwork for your situation. You can do it. I have faith.</p>
+
+        ]]>
+        </description>
+        <pubDate>Mon, 15 Nov 2021 16:42:24 +0000</pubDate>
+        <link>https://bright-softwares.com/blog/en/backup-restore/how-do-i-get-my-data-off-an-old-computer</link>
+        <guid isPermaLink="true">https://bright-softwares.com/blog/en/backup-restore/how-do-i-get-my-data-off-an-old-computer</guid>
+        
+        
+        <category>en</category>
+        
+        <category>backup-restore</category>
+        
+      </item>
+    
+      <item>
+        <title>How To Set Up the code-server Cloud IDE Platform on DigitalOcean Kubernetes</title>        
+        
+        <description>
+        <![CDATA[
+            <img src="https://bright-softwares.com/assets/resized/856/boitumelo-phetla.jpeg" alt="How To Set Up the code-server Cloud IDE Platform on DigitalOcean Kubernetes">
+            <h1 id="introduction">Introduction</h1>
+
+<p>With developer tools moving to the cloud, creation and adoption of cloud IDE (Integrated Development Environment) platforms is growing. Cloud IDEs allow for real-time collaboration between developer teams to work in a unified development environment that minimizes incompatibilities and enhances productivity. Accessible through web browsers, cloud IDEs are available from every type of modern device. Another advantage of a cloud IDE is the possibility to leverage the power of a cluster, which can greatly exceed the processing power of a single development computer.</p>
+
+<p>code-server is Microsoft Visual Studio Code running on a remote server and accessible directly from your browser. Visual Studio Code is a modern code editor with integrated Git support, a code debugger, smart autocompletion, and customizable and extensible features. This means that you can use various devices, running different operating systems, and always have a consistent development environment on hand.</p>
+
+<p>In this tutorial, you will set up the code-server cloud IDE platform on your DigitalOcean <a href="/blog/en/kubernetes/work-with-kubernetes-with-minikube">Kubernetes cluster</a> and expose it at your domain, secured with Let’s Encrypt certificates. In the end, you’ll have Microsoft Visual Studio Code running on your Kubernetes cluster, available via HTTPS and protected by a password.</p>
+
+<h1 id="prerequisites">Prerequisites</h1>
+
+<p>A DigitalOcean Kubernetes cluster with your connection configured as the kubectl default. Instructions on how to configure kubectl are shown under the Connect to your Cluster step when you create your cluster. To create a Kubernetes cluster on DigitalOcean, see Kubernetes Quickstart.</p>
+
+<p>The Helm package manager installed on your local machine, and Tiller installed on your cluster. To do this, complete Steps 1 and 2 of the How To Install Software on Kubernetes Clusters with the Helm Package Manager tutorial.</p>
+
+<p>The Nginx Ingress Controller and Cert-Manager installed on your cluster using Helm in order to expose code-server using Ingress Resources. To do this, follow How to Set Up an Nginx Ingress on DigitalOcean Kubernetes Using Helm.</p>
+
+<p>A fully registered domain name to host code-server, pointed at the Load Balancer used by the Nginx Ingress. This tutorial will use code-server.your_domain throughout. You can purchase a domain name on Namecheap, get one for free on Freenom, or use the domain registrar of your choice. This domain name must differ from the one used in the How To Set Up an Nginx Ingress on DigitalOcean Kubernetes prerequisite tutorial.</p>
+
+<h2 id="step-1--installing-and-exposing-code-server">Step 1 — Installing And Exposing code-server</h2>
+
+<p>In this section, you’ll install code-server to your DigitalOcean <a href="/blog/en/kubernetes/installing-kubernetes-with-minikube">Kubernetes cluster</a> and expose it at your domain, using the Nginx Ingress controller. You will also set up a password for admittance.
+You’ll store the deployment configuration on your local machine, in a file named code-server.yaml.</p>
+
+<p>Create it using the following command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nano code-server.yaml
+</code></pre></div></div>
+
+<p>Add the following lines to the file:</p>
+
+<p>code-server.yaml</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apiVersion: v1
+kind: Namespace
+metadata:
+  name: code-server
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: code-server
+  namespace: code-server
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+  - host: code-server.your_domain
+    http:
+      paths:
+      - backend:
+          serviceName: code-server
+          servicePort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+ name: code-server
+ namespace: code-server
+spec:
+ ports:
+ - port: 80
+   targetPort: 8443
+ selector:
+   app: code-server
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: code-server
+  name: code-server
+  namespace: code-server
+spec:
+  selector:
+    matchLabels:
+      app: code-server
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: code-server
+    spec:
+      containers:
+      - image: codercom/code-server
+        imagePullPolicy: Always
+        name: code-server
+        args: ["--allow-http"]
+        ports:
+        - containerPort: 8443
+        env:
+        - name: PASSWORD
+          value: "your_password"
+</code></pre></div></div>
+
+<p>This configuration defines a Namespace, a Deployment, a Service, and an Ingress. The Namespace is called code-server and separates the code-server installation from the rest of your cluster. The Deployment consists of one replica of the codercom/code-server Docker image, and an environment variable named PASSWORD that specifies the password for access.</p>
+
+<p>The code-server Service internally exposes the pod (created as a part of the Deployment) at port 80. The Ingress defined in the file specifies that the Ingress Controller is nginx, and that the code-server.your_domain domain will be served from the Service.</p>
+
+<p>Remember to replace your_password with your desired password, and code-server.your_domain with your desired domain, pointed to the Load Balancer of the Nginx Ingress Controller.
+Then, create the configuration in Kubernetes by running the following command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl create -f code-server.yaml
+</code></pre></div></div>
+
+<p>You’ll see the following output:
+Output</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>namespace/code-server created
+ingress.extensions/code-server created
+service/code-server created
+deployment.extensions/code-server created
+</code></pre></div></div>
+
+<p>You can watch the code-server pod become available by running:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl get pods -w -n code-server
+</code></pre></div></div>
+
+<p>The output will look like:
+Output</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>NAME                          READY   STATUS              RESTARTS   AGE
+code-server-f85d9bfc9-j7hq6   0/1     ContainerCreating   0          1m
+</code></pre></div></div>
+
+<p>As soon as the status becomes Running, code-server has finished installing to your cluster.
+Navigate to your domain in your browser. You’ll see the login prompt for code-server.</p>
+
+<p>Enter the password you set in code-server.yaml and press Enter IDE. You’ll enter code-server and immediately see its editor GUI.</p>
+
+<p>You’ve installed code-server to your Kubernetes cluster and made it available at your domain. You have also verified that it requires you to log in with a password. Now, you’ll move on to secure it with free Let’s Encrypt certificates using Cert-Manager.</p>
+
+<h2 id="step-2--securing-the-code-server-deployment">Step 2 — Securing the code-server Deployment</h2>
+
+<p>In this section, you will secure your code-server installation by applying Let’s Encrypt certificates to your Ingress, which Cert-Manager will automatically create. After completing this step, your code-server installation will be accessible via HTTPS.
+Open code-server.yaml for editing:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nano code-server.yaml
+</code></pre></div></div>
+
+<p>Add the highlighted lines to your file, making sure to replace the example domain with your own:
+code-server.yaml</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apiVersion: v1
+kind: Namespace
+metadata:
+  name: code-server
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: code-server
+  namespace: code-server
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    certmanager.k8s.io/cluster-issuer: letsencrypt-prod
+spec:
+  tls:
+  - hosts:
+    - code-server.your_domain
+    secretName: codeserver-prod
+  rules:
+  - host: code-server.your_domain
+    http:
+      paths:
+      - backend:
+          serviceName: code-server
+          servicePort: 80
+...
+</code></pre></div></div>
+
+<p>First, you specify that the cluster-issuer that this Ingress will use to provision certificates will be letsencrypt-prod, created as a part of the prerequisites. Then, you specify the domains that will be secured under the tls section, as well as your name for the Secret holding them.</p>
+
+<p>Apply the changes to your Kubernetes cluster by running the following command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl apply -f code-server.yaml
+</code></pre></div></div>
+
+<p>You’ll need to wait a few minutes for Let’s Encrypt to provision your certificate. In the meantime, you can track its progress by looking at the output of the following command:
+kubectl describe certificate codeserver-prod -n code-server</p>
+
+<p>When it finishes, the end of the output will look similar to this:
+Output</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Events:
+  Type    Reason              Age    From          Message
+  ----    ------              ----   ----          -------
+  Normal  Generated           2m49s  cert-manager  Generated new private key
+  Normal  GenerateSelfSigned  2m49s  cert-manager  Generated temporary self signed certificate
+  Normal  OrderCreated        2m49s  cert-manager  Created Order resource "codeserver-prod-4279678953"
+  Normal  OrderComplete       2m14s  cert-manager  Order "codeserver-prod-4279678953" completed successfully
+  Normal  CertIssued          2m14s  cert-manager  Certificate issued successfully
+</code></pre></div></div>
+
+<p>You can now refresh your domain in your browser. You’ll see the padlock to the left of the address bar in your browser signifying that the connection is secure.
+In this step, you have configured the Ingress to secure your code-server deployment. Now, you can review the code-server user interface.</p>
+
+<h2 id="step-3--exploring-the-code-server-interface">Step 3 — Exploring the code-server Interface</h2>
+
+<p>In this section, you’ll explore some of the features of the code-server interface. Since code-server is Visual Studio Code running in the cloud, it has the same interface as the standalone desktop edition.</p>
+
+<p>On the left-hand side of the IDE, there is a vertical row of six buttons opening the most commonly used features in a side panel known as the Activity Bar.</p>
+
+<p>This bar is customizable so you can move these views to a different order or remove them from the bar. By default, the first view opens the Explorer panel that provides tree-like navigation of the project’s structure. You can manage your folders and files here—creating, deleting, moving, and renaming them as necessary. The next view provides access to a search and replace functionality.</p>
+
+<p>Following this, in the default order, is your view of the source control systems, like Git. Visual Studio code also supports other source control providers and you can find further instructions for source control workflows with the editor in this documentation.</p>
+
+<p>The debugger option on the Activity Bar provides all the common actions for debugging in the panel. Visual Studio Code comes with built-in support for the Node.js runtime debugger and any language that transpiles to Javascript. For other languages you can install extensions for the required debugger. You can save debugging configurations in the launch.json file.</p>
+
+<p>The final view in the Activity Bar provides a menu to access available extensions on the Marketplace.</p>
+
+<p>The central part of the GUI is your editor, which you can separate by tabs for your code editing. You can change your editing view to a grid system or to side-by-side files.</p>
+
+<p>After creating a new file through the File menu, an empty file will open in a new tab, and once saved, the file’s name will be viewable in the Explorer side panel. Creating folders can be done by right clicking on the Explorer sidebar and pressing on New Folder. You can expand a folder by clicking on its name as well as dragging and dropping files and folders to upper parts of the hierarchy to move them to a new location.</p>
+
+<p>You can gain access to a terminal by pressing CTRL+SHIFT+, or by pressing on Terminal in the upper menu, and selecting New Terminal. The terminal will open in a lower panel and its working directory will be set to the project’s workspace, which contains the files and folders shown in the Explorer side panel.
+You’ve explored a high-level overview of the code-server interface and reviewed some of the most commonly used features.</p>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>You now have code-server, a versatile cloud IDE, installed on your DigitalOcean Kubernetes cluster. You can work on your source code and documents with it individually or collaborate with your team. Running a cloud IDE on your cluster provides more power for testing, downloading, and more thorough or rigorous computing. For further information see the Visual Studio Code documentation on additional features and detailed instructions on other components of code-server.</p>
+
+        ]]>
+        </description>
+        <pubDate>Wed, 03 Nov 2021 18:00:07 +0000</pubDate>
+        <link>https://bright-softwares.com/blog/en/kubernetes/how-to-set-up-the-codeserver-cloud-ide-platform-on-digitalocean-kubernetes</link>
+        <guid isPermaLink="true">https://bright-softwares.com/blog/en/kubernetes/how-to-set-up-the-codeserver-cloud-ide-platform-on-digitalocean-kubernetes</guid>
+        
+        
+        <category>en</category>
+        
+        <category>kubernetes</category>
+        
+      </item>
+    
+      <item>
+        <title>How to Send and Receive Faxes Online Without a Fax Machine or Phone Line</title>        
+        
+        <description>
+        <![CDATA[
+            <img src="https://sergio.afanou.com/assets/images/image-midres-26.jpg" alt="How to Send and Receive Faxes Online Without a Fax Machine or Phone Line">
+            <p>Some slow-moving businesses and government agencies may not accept documents over email, forcing you to fax them in. If you are forced to send a fax, you can do it from your computer for free.</p>
+
+<h2 id="how-fax-machines-work-and-why-theyre-so-inconvenient">How Fax Machines Work (and Why They’re So Inconvenient)</h2>
+
+<p>This isn’t as easy as it should be. Fax machines are all connected to the plain old telephone lines. When you use a standard fax machine, that fax machine places a phone call to the number you specify. The fax machine at the destination number answers and the document is transmitted over a telephone call.</p>
+
+<p>This process was invented before the Internet and seems laughably archaic at this point. To perform a fax, a person may type up a document, print it out, and scan it into the fax machine which sends it over the phone line. The person receiving the fax may then scan the faxed document and turn it back into a digital file. They’ve come full circle — the document was sent from one computer to another computer with much additional work and lost image quality.</p>
+
+<p>Ideally, you’d be able to submit a document via email or a more secure online method. Many businesses consider fax a secure method of transmitting documents, but it really isn’t — if someone was snooping on the phone line, they could easily intercept all the faxed documents.</p>
+
+<p>There’s no way to connect to a fax machine directly over the Internet, as the fax machine is only connected to telephone lines. To perform a fax online, we’ll need some sort of gateway that accepts documents via the Internet and transmits the document to a fax machine. That’s where the below services come in. Give them a document and they’ll do the annoying work of dialing up the fax machine and sending your document over the telephone line.</p>
+
+<p><img src="https://www.howtogeek.com/wp-content/uploads/2013/07/xjunk-scanner-and-fax-machine.jpg.pagespeed.gp+jp+jw+pj+ws+js+rj+rp+rw+ri+cp+md.ic.5fEKaNBYh0.jpg" alt="junk-scanner-and-fax-machine" title="junk-scanner-and-fax-machine" /></p>
+
+<h2 id="you-could-fax-with-just-your-computer-but">You Could Fax With Just Your Computer, But…</h2>
+
+<p>You could skip the below services, of course. Microsoft Windows even contains a Fax and Scan application that allows you to send faxes. The catch is that you’d need your computer connected to the phone line — yes, this means that you’d need a dial-up fax modem. You’d also need a landline telephone connection and you’d have to tell people to stay off the phone when you’re sending faxes, just like in the old dial-up Internet days. Of course, if you were faxing a lot, you could pay for a dedicated fax telephone line — this might even be necessary if you were receiving a lot of faxes.</p>
+
+<p>This obviously isn’t ideal. Sure, if you need to send quite a few faxes, go ahead and buy a fax machine or modem and hook it up to your landline. But you probably don’t need to send and receive faxes this often — you hopefully just need to send the occasional fax whenever you bump into an organization that’s stuck in the past.</p>
+
+<h2 id="scan-the-document-or-use-an-existing-digital-file">Scan the Document or Use an Existing Digital File</h2>
+
+<p>The basic process is simple. First, you’ll need to scan the document you want to fax, just as if you were going to send that document over email. if you don’t have a scanner lying around, you may want to try <a href="/">scanning it with your smartphone</a>. If the document is already a file on your computer, congratulations — you don’t have to scan anything.</p>
+
+<p>With the document now in digital form, you can send it along to a service that will do the annoying fax work for you.</p>
+
+<p><img src="https://www.howtogeek.com/wp-content/uploads/2013/07/xscanner.jpg.pagespeed.gp+jp+jw+pj+ws+js+rj+rp+rw+ri+cp+md.ic.PZ9bsvEbfp.jpg" alt="scanner" title="scanner" /></p>
+
+<h2 id="send-faxes-online-free">Send Faxes Online, Free</h2>
+
+<p>There are so many online fax services out there that it’s hard to make an informed decision about which one to choose. The first thing to consider is what kind of a user you are, how often you’ll be faxing, and what features you need.</p>
+
+<p>If you are going to be sending sensitive faxes all the time, or you work for a company and you’re trying to choose a service, <a href="https://prf.hn/click/camref:1101l3Rga/creativeref:1011l40328/pubref:ct168841">RingCentral Fax</a>, which is partially owned by Cisco and AT&amp;T, is probably the best choice for your needs, especially since they have a lot of great security features and support for multiple users with separate fax lines.</p>
+
+<p>It has all the features you can imagine, including integrations with Outlook, Google Drive, Dropbox, Box, and you can even get a toll-free number. It also has a lot of security features that would be useful for businesses or people that are transmitting secure information.</p>
+
+<p>Of course, if you just want to send a few faxes, you can sign up for one of their cheap plans… and then just cancel after a month or two.</p>
+
+<p><strong>Occasional User</strong></p>
+
+<p>If you do need to send the occasional fax, we recommend signing up for a free trial of <a href="http://www.kqzyfj.com/click-3607085-12001188?sid=ct168841">MyFax</a>, which will let you send up to 100 pages, which is more pages per month than most people have to fax per year. If you do need to fax frequently, you can <a href="http://www.tkqlhce.com/click-3607085-10423449?sid=ct168841">upgrade to a regular plan</a>.</p>
+
+<p><img src="https://www.howtogeek.com/wp-content/uploads/2019/09/ximg_5d702ddff3e50.png.pagespeed.gp+jp+jw+pj+ws+js+rj+rp+rw+ri+cp+md.ic.u-c7GF0Eek.png" alt="" /></p>
+
+<h2 id="receiving-faxes">Receiving Faxes</h2>
+
+<p>If you do need to receive faxes, you’ll have to sign up for a paid service. The service will need to establish a dedicated phone number for your fax line, and that costs money.</p>
+
+<p><a href="https://prf.hn/click/camref:1101l3Rga/creativeref:1011l40328/pubref:ct168841">RingCentral</a>, <a href="http://www.tkqlhce.com/click-3607085-10423449?sid=ct168841">MyFax</a>, and many other services will do this if you pay.</p>
+
+<p>Luckily, you should at least be able to get a free trial —</p>
+
+<p><a href="https://prf.hn/click/camref:1101l3Rga/creativeref:1011l40328/pubref:ct168841">RingCentral</a> offers 30 days of free fax receiving, for example.</p>
+
+<p>There are many fax services to use, and if you just need to send the occasional fax, you can manage to do that for free, but if you want to receive a fax, you’ll end up needing to sign up for a trial account. You can always cancel if you want.</p>
+
+<p>Image Credit: <a href="http://www.flickr.com/photos/mattjiggins/4009310821/">Matt Jiggins on Flickr</a>, <a href="http://www.flickr.com/photos/spiffie/2665155921/">David Voegtle on Flickr</a></p>
+
+        ]]>
+        </description>
+        <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
+        <link>https://bright-softwares.com/blog/fr/fax/how-to-send-and-receive-faxes-online-without-a-fax-machine-or-phone-line</link>
+        <guid isPermaLink="true">https://bright-softwares.com/blog/fr/fax/how-to-send-and-receive-faxes-online-without-a-fax-machine-or-phone-line</guid>
+        
+        
+        <category>fr</category>
+        
+        <category>fax</category>
+        
+      </item>
+    
+      <item>
+        <title>Comment prendre une capture d'écran dans windows</title>        
+        
+        <description>
+        <![CDATA[
+            <img src="https://sergio.afanou.com/assets/images/image-midres-52.jpg" alt="Comment prendre une capture d'écran dans windows">
+            <h1 id="windows">Windows</h1>
+
+<h2 id="how-do-i-take-a-screenshot">How do I take a screenshot?</h2>
+
+<p>press PrtScn = Windows captures the entire <strong>screen</strong> and copies it to the (invisible) <strong>clipboard</strong>. Note: On some notebooks you have to hold Fn and then press PrtScn instead. ### Where can I find that key?</p>
+
+<p>PrtScn ScrLk Pause Look for this group of keys at the <strong>upper right</strong> of your keyboard. Note: <strong>Print Screen</strong> (PrtScn) might have been abbreviated differently on your keyboard.</p>
+
+<h2 id="how-do-i-take-a-screenshot-of-a-single-window">How do I take a screenshot of a single window?</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> hold down   Alt   and press   PrtScn  =  Windows captures only the currently active **window** and copies it to the **clipboard**.
+</code></pre></div></div>
+
+<h2 id="how-do-i-take-a-screenshot-of-a-specific-area">How do I take a screenshot of a specific area?</h2>
+
+<p>hold down ⊞ and Shift and press S = Use your mouse to draw a <strong>rectangle</strong> in order to specify what to capture. Windows then copies it to the <strong>clipboard</strong>. Since: Windows 10 Creators Update. I guess it’s in the <a href="https://how-to-copy-and-paste.appspot.com/">clipboard</a> now.</p>
+
+<h2 id="how-can-i-paste-it-into-a-document-or-something">How can I paste it into a document or something?</h2>
+
+<p>hold down Ctrl and press V = Windows pastes the screenshot (that is in the <strong>clipboard</strong>) into a document or image you are currently editing.</p>
+
+<h3 id="where-should-i-paste-it">Where should I paste it?</h3>
+
+<p>I just need a (graphics) file.</p>
+
+<p>Start “Paint”
+Paste
+Save
+type “paint” into the search field</p>
+
+<h2 id="how-do-i-take-a-screenshot-and-have-it-directly-as-a-file">How do I take a screenshot and have it directly as a file?</h2>
+
+<p>Hold down ⊞ and press PrtScn = Windows (8 or 10) captures the entire <strong>screen</strong> and saves it as a file to your <strong>Pictures</strong> &gt; <strong>Screenshots</strong> folder.</p>
+
+<h2 id="is-there-a-dedicated-program-for-taking-screenshots-how-can-i-find-it">Is there a dedicated program for taking screenshots? How can I find it?</h2>
+
+<p>type “snip” into the search field</p>
+
+        ]]>
+        </description>
+        <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
+        <link>https://bright-softwares.com/blog/fr/screenshot/comment-prendre-une-capture-ecran-dans-windows</link>
+        <guid isPermaLink="true">https://bright-softwares.com/blog/fr/screenshot/comment-prendre-une-capture-ecran-dans-windows</guid>
+        
+        <category>screenshot</category>
+        
+        <category>windows</category>
+        
+        <category>image</category>
+        
+        
+        <category>fr</category>
+        
+        <category>screenshot</category>
+        
+      </item>
+    
+      <item>
+        <title>How to take a screenshot in Windows</title>        
+        
+        <description>
+        <![CDATA[
+            <img src="https://sergio.afanou.com/assets/images/image-midres-52.jpg" alt="How to take a screenshot in Windows">
+            <h1 id="windows">Windows</h1>
+
+<h2 id="how-do-i-take-a-screenshot">How do I take a screenshot?</h2>
+
+<p>press PrtScn = Windows captures the entire <strong>screen</strong> and copies it to the (invisible) <strong>clipboard</strong>. Note: On some notebooks you have to hold Fn and then press PrtScn instead. ### Where can I find that key?</p>
+
+<p>PrtScn ScrLk Pause Look for this group of keys at the <strong>upper right</strong> of your keyboard. Note: <strong>Print Screen</strong> (PrtScn) might have been abbreviated differently on your keyboard.</p>
+
+<h2 id="how-do-i-take-a-screenshot-of-a-single-window">How do I take a screenshot of a single window?</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> hold down   Alt   and press   PrtScn  =  Windows captures only the currently active **window** and copies it to the **clipboard**.
+</code></pre></div></div>
+
+<h2 id="how-do-i-take-a-screenshot-of-a-specific-area">How do I take a screenshot of a specific area?</h2>
+
+<p>hold down ⊞ and Shift and press S = Use your mouse to draw a <strong>rectangle</strong> in order to specify what to capture. Windows then copies it to the <strong>clipboard</strong>. Since: Windows 10 Creators Update. I guess it’s in the <a href="https://how-to-copy-and-paste.appspot.com/">clipboard</a> now.</p>
+
+<h2 id="how-can-i-paste-it-into-a-document-or-something">How can I paste it into a document or something?</h2>
+
+<p>hold down Ctrl and press V = Windows pastes the screenshot (that is in the <strong>clipboard</strong>) into a document or image you are currently editing.</p>
+
+<h3 id="where-should-i-paste-it">Where should I paste it?</h3>
+
+<p>I just need a (graphics) file.</p>
+
+<p>Start “Paint”
+Paste
+Save
+type “paint” into the search field</p>
+
+<h2 id="how-do-i-take-a-screenshot-and-have-it-directly-as-a-file">How do I take a screenshot and have it directly as a file?</h2>
+
+<p>Hold down ⊞ and press PrtScn = Windows (8 or 10) captures the entire <strong>screen</strong> and saves it as a file to your <strong>Pictures</strong> &gt; <strong>Screenshots</strong> folder.</p>
+
+<h2 id="is-there-a-dedicated-program-for-taking-screenshots-how-can-i-find-it">Is there a dedicated program for taking screenshots? How can I find it?</h2>
+
+<p>type “snip” into the search field</p>
+
+        ]]>
+        </description>
+        <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
+        <link>https://bright-softwares.com/blog/en/screenshot/how-to-take-a-screenshot-in-windows</link>
+        <guid isPermaLink="true">https://bright-softwares.com/blog/en/screenshot/how-to-take-a-screenshot-in-windows</guid>
+        
+        
+        <category>en</category>
+        
+        <category>screenshot</category>
+        
+      </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,1691 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <title>
+    How To Build a Slackbot in Python on Ubuntu 20.04
+  </title>
+  <meta content="We provide solutions to our customers challenges. Our teams based in Paris and Lomé provide high value expertise to engineer the best solutions." name="description" />
+
+  <meta
+    content="web e-commerce articifial intelligence ai automation"
+    name="keywords"
+  />
+  <link
+    rel="canonical"
+    href="https://bright-softwares.com/blog/en/slack/how-to-build-a-slackbot-in-python-on-ubuntu-2004"
+  />
+  <link rel="manifest" href="manifest.json" />
+
+  <!-- Favicons -->
+  <!-- <link href="/assets/flexstart-img/favicon.png" rel="icon">
+  <link href="/assets/flexstart-img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+  <!-- The favicon items -->
+  <link
+    rel="apple-touch-icon"
+    sizes="57x57"
+    href="/assets/favicon.ico/apple-icon-57x57.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="60x60"
+    href="/assets/favicon.ico/apple-icon-60x60.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="72x72"
+    href="/assets/favicon.ico/apple-icon-72x72.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="76x76"
+    href="/assets/favicon.ico/apple-icon-76x76.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="114x114"
+    href="/assets/favicon.ico/apple-icon-114x114.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="120x120"
+    href="/assets/favicon.ico/apple-icon-120x120.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="144x144"
+    href="/assets/favicon.ico/apple-icon-144x144.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="152x152"
+    href="/assets/favicon.ico/apple-icon-152x152.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="/assets/favicon.ico/apple-icon-180x180.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="192x192"
+    href="/assets/favicon.ico/android-icon-192x192.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="/assets/favicon.ico/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="96x96"
+    href="/assets/favicon.ico/favicon-96x96.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="/assets/favicon.ico/favicon-16x16.png"
+  />
+  <!--<link rel="manifest" href="/assets/favicon.ico/manifest.json">-->
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta
+    name="msapplication-TileImage"
+    content="/assets/favicon.ico/ms-icon-144x144.png"
+  />
+  <meta name="theme-color" content="#ffffff" />
+
+  
+  <!-- Language handling -->
+  
+    
+    
+    
+      
+    <link rel="alternate" hreflang="en" href="/blog/en/slack/how-to-build-a-slackbot-in-python-on-ubuntu-2004" />
+      
+    <link rel="alternate" hreflang="fr" href="/blog/fr/slack/how-to-build-a-slackbot-in-python-on-ubuntu-2004" />
+      
+    
+  
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet"
+  />
+
+  <!-- Vendor CSS Files -->
+  <link
+    href="/assets/flexstart-vendor/bootstrap/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="/assets/flexstart-vendor/bootstrap-icons/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+  <link
+    href="/assets/flexstart-vendor/aos/aos.css"
+    rel="stylesheet"
+  />
+  <link
+    href="/assets/flexstart-vendor/remixicon/remixicon.css"
+    rel="stylesheet"
+  />
+  <link
+    href="/assets/flexstart-vendor/swiper/swiper-bundle.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="/assets/flexstart-vendor/glightbox/css/glightbox.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Template Main CSS File -->
+  <link
+    href="/assets/flexstart-css/style.css"
+    rel="stylesheet"
+  />
+
+  <!-- =======================================================
+  * Template Name: FlexStart - v1.1.1
+  * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134921119-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-134921119-1');
+</script> 
+</head>
+
+  <body>
+    <!-- ======= Header ======= -->
+<header id="header" class="header fixed-top">
+  <div
+    class="
+      container-fluid container-xl
+      d-flex
+      align-items-center
+      justify-content-between
+    "
+  >
+    <a href="/index.html" class="logo d-flex align-items-center">
+      <img src="/img/logos/large/brightsoftwares-light.png" alt="Bright Softwares logo" />
+      <span>Bright Softwares</span>
+    </a>
+
+    <nav id="navbar" class="navbar">
+      <ul>
+        <!-- <li><a class="nav-link scrollto active" href="#hero">Home</a></li> -->
+        <li class="dropdown">
+          <a class="nav-link scrollto" href="#services"
+            ><span>Services</span> <i class="bi bi-chevron-down"></i
+          ></a>
+          <ul>
+            <li><a href="#">Web solutions</a></li>
+            <li><a href="#">e-commerce</a></li>
+            <li><a href="#">AI powered apps</a></li>
+            <li><a href="#">AI Models</a></li>
+            <li><a href="#">Automated revenue</a></li>
+            <li><a href="#">Cloud infrastructure</a></li>
+          </ul>
+        </li>
+        
+        
+        <li>
+          <a class="nav-link scrollto" href="/en/blog.html">Blog</a>
+        </li>
+        
+        <li>
+          <a class="nav-link scrollto" href="/en/index.html">Team</a>
+        </li>
+        
+        <li>
+          <a class="nav-link scrollto" href="/en/index.html#about">About</a>
+        </li>
+        
+        <li>
+          <a class="nav-link scrollto" href="/en/index.html#contact">Contact</a>
+        </li>
+        
+        <li>
+          <a class="getstarted scrollto" href="/order-service">Order now</a>
+        </li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav>
+    <!-- .navbar -->
+  </div>
+</header>
+<!-- End Header -->
+   <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <ol>
+          <li><a href="/en/index.html">Home</a></li>
+          <li><a href="/en/blog.html">Blog</a></li>
+          <li>How To Build a Slackbot in Python on Ubuntu 20.04</li>
+        </ol>
+        <h2>How To Build a Slackbot in Python on Ubuntu 20.04</h2>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Single Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-8 entries">
+
+            <article class="entry entry-single">
+
+              <div class="entry-img">
+                <img src="/assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="entry-title">
+                <a href="">How To Build a Slackbot in Python on Ubuntu 20.04</a>
+              </h2>
+
+              <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+              
+              <!-- End Adsense -->
+
+              <div class="entry-meta">
+                
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="https://www.bright-softwares.com">Full Bright</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> 
+                    <a href="https://www.bright-softwares.com">
+                      <time datetime="2021-11-16 23:17">Nov 16, 2021 (4 weeks and 1 day ago)</time>
+                      <small>
+                        
+                      </small>
+                    </a>
+                  </li>
+                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="">12 Comments</a></li>
+                </ul>
+              </div>
+
+              <div class="entry-content">
+
+                <h3 id="introduction">Introduction</h3>
+
+<p><a href="https://slack.com/">Slack</a> is a communication platform designed for workplace productivity. It includes features such as direct messaging, public and private channels, voice and video calls, and bot integrations. A Slackbot is an automated program that can perform a variety of functions in Slack, from sending messages to triggering tasks to alerting on certain events.</p>
+
+<p>In this tutorial you will build a Slackbot in the <a href="https://www.python.org/">Python</a> programming language. Python is a popular language that prides itself on simplicity and readability. Slack provides a rich <a href="https://github.com/slackapi/python-slackclient">Python Slack API</a> for integrating with Slack to perform common tasks such as sending messages, adding emojis to messages, and much more. Slack also provides a <a href="https://github.com/slackapi/python-slack-events-api">Python Slack Events API</a> for integrating with events in Slack, allowing you to perform actions on events such as messages and mentions.</p>
+
+<p>As a fun proof-of-concept that will demonstrate the power of Python and its Slack APIs, you will build a <code class="language-plaintext highlighter-rouge">CoinBot</code>—a Slackbot that monitors a channel and, when triggered, will flip a coin for you. You can then modify your <code class="language-plaintext highlighter-rouge">CoinBot</code> to fulfill any number of <em>slightly</em> more practical applications.</p>
+
+<p>Note that this tutorial uses Python 3 and is not compatible with Python 2.</p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<p>In order to follow this guide, you’ll need:</p>
+
+<ul>
+  <li>
+    <p>A Slack Workspace that you have the ability to install applications into. If you created the workspace you have this ability. If you don’t already have one, you can create one on the <code class="language-plaintext highlighter-rouge">[Slack website](https://slack.com/create).</code></p>
+  </li>
+  <li>
+    <p>(Optional) A server or computer with a public IP address for development. We recommend a fresh installation of Ubuntu 20.04, a non-root user with <code class="language-plaintext highlighter-rouge">sudo</code> privileges, and SSH enabled. <a href="https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-20-04">You can follow this guide to initialize your server and complete these steps</a>.</p>
+  </li>
+</ul>
+
+<p><span class="note">You may want to test this tutorial on a server that has a public IP address. Slack will need to be able to send events such as messages to your bot. If you are testing on a local machine you will need to port forward traffic through your firewall to your local system. If you are looking for a way to develop on a cloud server, check out this tutorial on <a href="https://www.digitalocean.com/community/tutorials/how-to-use-visual-studio-code-for-remote-development-via-the-remote-ssh-plugin">How To Use Visual Studio Code for Remote Development via the Remote-SSH Plugin</a>.<br />
+</span></p>
+
+<h2 id="step-1--creating-the-slackbot-in-the-slack-ui">Step 1 — Creating the Slackbot in the Slack UI</h2>
+
+<p>First create your Slack app in the Slack API Control Panel. Log in to your workspace in Slack via a web browser and navigate to the <a href="https://api.slack.com/apps">API Control Panel</a>. Now click on the <strong>Create an App</strong> button.</p>
+
+<p><img src="https://assets.digitalocean.com/articles/coinbot/h7VWJOX.png" alt="Create Your Slack App" /></p>
+
+<p>Next you’ll be prompted for the name of your app and to select a development Slack workspace. For this tutorial, name your app <code class="language-plaintext highlighter-rouge">&lt;span class="highlight"&gt;CoinBot&lt;/span&gt;</code> and select a workspace you have admin access to. Once you have done this click on the <strong>Create App</strong> button.</p>
+
+<p><img src="https://imgur.com/E4hnhMU.png" alt="Name Your Slack App and Select a Workspace" /></p>
+
+<p>Once your app is created you’ll be presented with the following default app dashboard. This dashboard is where you manage your app by setting permissions, subscribing to events, installing the app into workspaces, and more.</p>
+
+<p><img src="https://assets.digitalocean.com/articles/coinbot/ZjFaS1i.png" alt="Default Slack App Panel" /></p>
+
+<p>In order for your app to be able to post messages to a channel you need to grant the app permissions to send messages. To do this, click the <strong>Permissions</strong> button in the control panel.</p>
+
+<p><img src="https://assets.digitalocean.com/articles/coinbot/IVcN8qg.png" alt="Select the Permissions Button in the Control Panel" /></p>
+
+<p>When you arrive at the <strong>OAuth &amp; Permissions</strong> page, scroll down until you find the <strong>Scopes</strong> section of the page. Then find the <strong>Bot Token Scopes</strong> subsection in the scope and click on <strong>Add an OAuth Scope</strong> button.</p>
+
+<p><img src="https://assets.digitalocean.com/articles/coinbot/wQnTSQr.png" alt="Select the Add an OAuth Scope Button" /></p>
+
+<p>Click on that button and then type <code class="language-plaintext highlighter-rouge">chat:write</code>. Select that permission to add it to your bot. This will allow the app to post messages to channels that it can access. For more information on the available permissions refer to <a href="https://api.slack.com/scopes">Slack’s Documentation</a>.</p>
+
+<p><img src="https://assets.digitalocean.com/articles/coinbot/unQYPeL.png" alt="Add the chat:write Permission" /></p>
+
+<p>Now that you’ve added the appropriate permission it is time to install your app into your Slack workspace. Scroll back up on the <strong>OAuth &amp; Permissions</strong> page and click the <strong>Install App to Workspace</strong> button at the top.</p>
+
+<p><img src="https://assets.digitalocean.com/articles/coinbot/SiSxQB1.png" alt="Install App to Workspace" /></p>
+
+<p>Click this button and review the actions that the app can perform in the channel. Once you are satisfied, click the <strong>Allow</strong> button to finish the installation.</p>
+
+<p><img src="https://assets.digitalocean.com/articles/coinbot/lWUBsYR.png" alt="Install App to Workspace" /></p>
+
+<p>Once the bot is installed you’ll be presented with a <strong>Bot User OAuth Access Token</strong> for your app to use when attempting to perform actions in the workspace. Go ahead and copy this token; you’ll need it later.</p>
+
+<p><img src="https://assets.digitalocean.com/articles/coinbot/m1M9Ilt.png" alt="Save the Access Token" /></p>
+
+<p>Finally, add your newly installed bot into a channel within your workspace. If you haven’t created a channel yet you can use the <em>#general</em> channel that is created by default in your Slack workspace. Locate the app in the <strong>Apps</strong> section of the navigation bar in your Slack client and click on it. Once you’ve done that open the <strong>Details</strong> menu in the top right hand side. If your Slack client isn’t full-screened it will look like an <code class="language-plaintext highlighter-rouge">i</code> in a circle.</p>
+
+<p><img src="https://assets.digitalocean.com/articles/coinbot/OJ5yTXP.png" alt="Click on the App Details Icon" /></p>
+
+<p>To finish adding your app to a channel, click on the <strong>More</strong> button represented by three dots in the details page and select <strong>Add this app to a channel…</strong>. Type your channel into the modal that appears and click <strong>Add</strong>.</p>
+
+<p><img src="https://assets.digitalocean.com/articles/coinbot/ojUMqeI.png" alt="Add App to a Channel" /></p>
+
+<p>You’ve now successfully created your app and added it to a channel within your Slack workspace. After you write the code for your app it will be able to post messages in that channel. In the next section you’ll start writing the Python code that will power <code class="language-plaintext highlighter-rouge">CoinBot</code>.</p>
+
+<h2 id="step-2--setting-up-your-python-developer-environment">Step 2 — Setting Up Your Python Developer Environment</h2>
+
+<p>First let’s set up your Python environment so you can develop the Slackbot.</p>
+
+<p>Open a terminal and install <code class="language-plaintext highlighter-rouge">python3</code> and the relevant tools onto your system:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    sudo apt install python3 python3-venv
+``
+
+Next you will create a virtual environment to isolate your Python packages from the system installation of Python. To do this, first create a directory into which you will create your virtual environment. Make a new directory at ``~/.venvs``:
+
+``
+    mkdir ~/.venvs
+``
+
+Now create your Python virtual environment:
+
+``
+    python3 -m venv ~/.venvs/slackbot
+</code></pre></div></div>
+
+<p>Next, activate your virtual environment so you can use its Python installation and install packages:</p>
+
+<p>``
+    source ~/.venvs/slackbot/bin/activate</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+Your shell prompt will now show the virtual environment in parenthesis. It will look something like this:
+
+Now use `pip` to install the necessary Python packages into your virtual environment:
+
+``
+    pip install slackclient slackeventsapi Flask
+``
+
+`slackclient` and `slackeventsapi` facilitate Python’s interaction with Slack’s APIs. `Flask` is a popular micro web framework that you will use to deploy your app:
+
+Now that you have your developer environment set up, you can start writing your Python Slackbot:
+
+## Step 3 — Creating the Slackbot Message Class in Python
+
+Messages in Slack are sent via a [specifically formatted JSON payload](https://api.slack.com/reference/surfaces/formatting). This is an example of the JSON that your Slackbot will craft and send as a message:
+
+``
+    {
+       "channel":"channel",
+       "blocks":[
+          {
+             "type":"section",
+             "text":{
+                "type":"mrkdwn",
+                "text":"Sure! Flipping a coin....\n\n"
+             }
+          },
+          {
+             "type":"section",
+             "text":{
+                "type":"mrkdwn",
+                "text":"*flips coin* The result is Tails."
+             }
+          }
+       ]
+    }
+</code></pre></div></div>
+
+<p>You could manually craft this JSON and send it, but instead let’s build a Python class that not only crafts this payload, but also simulates a coin flip.</p>
+
+<p>First use the <code class="language-plaintext highlighter-rouge">touch</code> command to create a file named <code class="language-plaintext highlighter-rouge">coinbot.py</code>:</p>
+
+<p><code class="language-plaintext highlighter-rouge">
+    touch coinbot.py
+</code></p>
+
+<p>Next, open this file with <code class="language-plaintext highlighter-rouge">nano</code> or your favorite text editor:</p>
+
+<p><code class="language-plaintext highlighter-rouge">
+    nano coinbot.py
+</code></p>
+
+<p>Now add the following lines of code to import the relevant libraries for your app. The only library you need for this class is the <code class="language-plaintext highlighter-rouge">random</code> library from the Python Standard Library. This library will allow us to simulate a coin flip.</p>
+
+<p>Add the following lines to <code class="language-plaintext highlighter-rouge">coinbot.py</code> to import all of the necessary libraries:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="code-label " title="coinbot.py"&gt;coinbot.py&lt;/div&gt;
+
+    # import the random library to help us generate the random numbers
+    import random
+</code></pre></div></div>
+
+<p>Next, create your <code class="language-plaintext highlighter-rouge">CoinBot</code> class and an instance of this class<br />
+to craft the message payload. Add the following lines to <code class="language-plaintext highlighter-rouge">coinbot.py</code> to create the <code class="language-plaintext highlighter-rouge">CoinBot</code> class:</p>
+
+<p>``</p>
+<div class="code-label " title="coinbot.py">coinbot.py</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
+class CoinBot: ```
+</code></pre></div></div>
+
+<p>Now indent by one and create the constants, constructors, and methods necessary for your class. First let’s create the constant that will hold the base of your message payload. This section specifies that this constant is of the section type and that the text is formatted via markdown. It also specifies what text you wish to display. You can read more about the different payload options in the <a href="https://api.slack.com/reference/messaging/payload">official Slack message payload documentation</a>.</p>
+
+<p>Append the following lines to <code class="language-plaintext highlighter-rouge">coinbot.py</code> to create the base template for the payload:</p>
+
+<p>``</p>
+<div class="code-label " title="coinbot.py">coinbot.py</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
+    # Create a constant that contains the default text for the message
+    COIN_BLOCK = {
+        "type": "section",
+        "text": {
+            "type": "mrkdwn",
+            "text": (
+                "Sure! Flipping a coin....\n\n"
+            ),
+        },
+    } ```
+</code></pre></div></div>
+
+<p>Next create a constructor for your class so that you can create a separate instance of your bot for every request. Don’t worry about memory overhead here; the Python garbage collector will clean up these instances once they are no longer needed. This code sets the recipient channel based on a parameter passed to the constructor.</p>
+
+<p>Append the following lines to <code class="language-plaintext highlighter-rouge">coinbot.py</code> to create the constructor:</p>
+
+<p>``</p>
+<div class="code-label " title="coinbot.py">coinbot.py</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
+    # The constructor for the class. It takes the channel name as the a
+    # parameter and sets it as an instance variable.
+    def __init__(self, channel):
+        self.channel = channel ```
+</code></pre></div></div>
+
+<p>Now write the code that simulates to flip a coin. We’ll randomly generate a one or zero, representing heads or tails respectively.</p>
+
+<p>Append the following lines to <code class="language-plaintext highlighter-rouge">coinbot.py</code> to simulate the coin flip and return the crafted payload:</p>
+
+<p>``</p>
+<div class="code-label " title="coinbot.py">coinbot.py</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
+    # Generate a random number to simulate flipping a coin. Then return the 
+    # crafted slack payload with the coin flip message.
+    def _flip_coin(self):
+        rand_int =  random.randint(0,1)
+        if rand_int == 0:
+            results = "Heads"
+        else:
+            results = "Tails"
+
+        text = f"The result is {results}"
+
+        return {"type": "section", "text": {"type": "mrkdwn", "text": text}}, ``
+</code></pre></div></div>
+
+<p>Finally, create a method that crafts and returns the entire message payload, including the data from your constructor, by calling your <code class="language-plaintext highlighter-rouge">_flip_coin</code> method.</p>
+
+<p>Append the following lines to <code class="language-plaintext highlighter-rouge">coinbot.py</code> to create the method that will generate the finished payload:</p>
+
+<p>``</p>
+<div class="code-label " title="coinbot.py">coinbot.py</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
+    # Craft and return the entire message payload as a dictionary.
+    def get_message_payload(self):
+        return {
+            "channel": self.channel,
+            "blocks": [
+                self.COIN_BLOCK,
+                *self._flip_coin(),
+            ],
+        } ``
+</code></pre></div></div>
+
+<p>You are now finished with the <code class="language-plaintext highlighter-rouge">CoinBot</code> class and it is ready for testing. Before continuing, verify that your finished file, <code class="language-plaintext highlighter-rouge">coinbot.py</code>, contains the following:</p>
+
+<p>``</p>
+<div class="code-label " title="coinbot.py">coinbot.py</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># import the random library to help us generate the random numbers
+import random
+
+# Create the CoinBot Class
+
+class CoinBot:
+
+    # Create a constant that contains the default text for the message
+    COIN_BLOCK = {
+        "type": "section",
+        "text": {
+            "type": "mrkdwn",
+            "text": (
+                "Sure! Flipping a coin....\n\n"
+            ),
+        },
+    }
+
+    # The constructor for the class. It takes the channel name as the a
+    # parameter and then sets it as an instance variable
+    def __init__(self, channel):
+        self.channel = channel
+
+    # Generate a random number to simulate flipping a coin. Then return the
+    # crafted slack payload with the coin flip message.
+    def _flip_coin(self):
+        rand_int =  random.randint(0,1)
+        if rand_int == 0:
+            results = "Heads"
+        else:
+            results = "Tails"
+
+        text = f"The result is {results}"
+
+        return {"type": "section", "text": {"type": "mrkdwn", "text": text}},
+
+    # Craft and return the entire message payload as a dictionary.
+    def get_message_payload(self):
+        return {
+            "channel": self.channel,
+            "blocks": [
+                self.COIN_BLOCK,
+                *self._flip_coin(),
+            ],
+        } ``
+</code></pre></div></div>
+
+<p>Save and close the file.</p>
+
+<p>Now that you have a Python class ready to do the work for your Slackbot, let’s ensure that this class produces a useful message payload and that you can send it to your workspace.</p>
+
+<h2 id="step-4--testing-your-message">Step 4 — Testing Your Message</h2>
+
+<p>Now let’s test that this class produces a proper payload. Create a file named<br />
+<code class="language-plaintext highlighter-rouge">coinbot_test.py</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    nano coinbot_test.py
+``
+
+Now add the following code. **Be sure to change the channel name in the instantiation of the coinbot class `coin_bot = coinbot("#&lt;span class="highlight"&gt;YOUR_CHANNEL_HERE&lt;/span&gt;")`**. This code will create a Slack client in Python that will send a message to the channel you specify that you have already installed the app into:
+
+``
+&lt;div class="code-label " title="coinbot_test.py"&gt;coinbot_test.py&lt;/div&gt;
+
+    from slack import WebClient
+    from coinbot import CoinBot
+    import os
+
+    # Create a slack client
+
+    slack_web_client = WebClient(token=os.environ.get("SLACK_TOKEN"))
+
+    # Get a new CoinBot
+
+    coin_bot = CoinBot("#YOUR_CHANNEL_HERE")
+
+    # Get the onboarding message payload
+
+    message = coin_bot.get_message_payload()
+
+    # Post the onboarding message in Slack
+
+    slack_web_client.chat_postMessage(\*\*message)
+
+Save and close the file.
+
+Before you can run this file you will need to export the Slack token that you saved in Step 1 as an environment variable:
+
+    export SLACK_TOKEN="your_bot_user_token"
+
+Now test this file and verify that the payload is produced and sent by running the following script in your terminal. Make sure that your virtual environment is activated. You can verify this by seeing the `(slackbot)` text at the front of your bash prompt. Run this command you will receive a message from your Slackbot with the results of a coin flip:
+
+    python coinbot_test.py
+
+Check the channel that you installed your app into and verify that your bot did indeed send the coin flip message. Your result will be heads or tails.
+
+![Coin Flip Test](https://assets.digitalocean.com/articles/coinbot/NPfnw0k.png)
+
+Now that you’ve verified that your Slackbot can flip a coin, create a message, and deliver the message, let’s create a [Flask](https://flask.palletsprojects.com/en/1.1.x/) to perpetually run this app and make it simulate a coin flip and share the results whenever it sees certain text in messages sent in the channel.
+
+## Step 5 — Creating a Flask Application to Run Your Slackbot
+
+Now that you have a functioning application that can send messages to your Slack workspace, you need to create a long running process so your bot can listen to messages sent in the channel and reply to them if the text meets certain criteria. You’re going to use the Python web framework [Flask](https://flask.palletsprojects.com/en/1.1.x/) to run this process and listen for events in your channel.
+
+&lt;span class="note"&gt;In this section you will be running your Flask application from a server with a public IP address so that the Slack API can send you events. If you are running this locally on your personal workstation you will need to forward the port from your personal firewall to the port that will be running on your workstation. These ports can be the same, and this tutorial will be set up to use port `3000`.  
+&lt;/span&gt;
+
+First adjust your firewall settings to allow traffic through port `3000`:
+
+``
+    sudo ufw allow 3000
+``
+
+Now check the status of `ufw`:
+
+``
+    sudo ufw status
+``
+
+You will see an output like this:
+
+``
+    OutputStatus: active
+
+    To Action From
+
+    ---
+
+    OpenSSH ALLOW Anywhere
+    3000 ALLOW Anywhere
+    OpenSSH (v6) ALLOW Anywhere (v6)
+    3000 (v6) ALLOW Anywhere (v6)
+``
+
+Now create the file for your Flask app. Name this file `app.py`:
+
+``
+    touch app.py
+``
+
+Next, open this file in your favorite text editor:
+
+``
+    nano app.py
+``
+
+Now add the following import `statements`. You’ll import the following libraries for the following reasons:
+
+</code></pre></div></div>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">import os</code> - To access environment variables</li>
+  <li><code class="language-plaintext highlighter-rouge">import logging</code> - To log the events of the app</li>
+  <li><code class="language-plaintext highlighter-rouge">from flask import Flask</code> - To create a Flask app</li>
+  <li><code class="language-plaintext highlighter-rouge">from slack import WebClient</code> - To send messages via Slack</li>
+  <li><code class="language-plaintext highlighter-rouge">from slackeventsapi import SlackEventAdapter</code> - To receive events from Slack and process them</li>
+  <li><code class="language-plaintext highlighter-rouge">from coinbot import CoinBot</code> - To create an instance of your CoinBot and generate the message payload.
+```</li>
+</ul>
+
+<p>Append the following lines to <code class="language-plaintext highlighter-rouge">app.py</code> to import all of the necessary libraries:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="code-label " title="app.py"&gt;app.py&lt;/div&gt;
+
+    import os
+    import logging
+    from flask import Flask
+    from slack import WebClient
+    from slackeventsapi import SlackEventAdapter
+    from coinbot import CoinBot
+</code></pre></div></div>
+
+<p>Now create your Flask app and register a Slack Event Adapter to your Slack app at the <code class="language-plaintext highlighter-rouge">/slack/events</code> endpoint. This will create a route in your Slack app where Slack events will be sent and ingested. To do this you will need to get another token from your Slack app, which you will do later in the tutorial. Once you get this variable you will export it as an environment variable named <code class="language-plaintext highlighter-rouge">SLACK_EVENTS_TOKEN</code>. Go ahead and write your code to read it in when creating the <code class="language-plaintext highlighter-rouge">SlackEventAdapter</code>, even though you haven’t set the token yet.</p>
+
+<p>Append the following lines to <code class="language-plaintext highlighter-rouge">app.py</code> to create the Flask app and register the events adapter into this app:</p>
+
+<p>``</p>
+<div class="code-label " title="app.py">app.py</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
+# Initialize a Flask app to host the events adapter
+app = Flask(__name__)
+
+# Create an events adapter and register it to an endpoint in the slack app for event ingestion.
+
+slack_events_adapter = SlackEventAdapter(os.environ.get("SLACK_EVENTS_TOKEN"), "/slack/events", app) ```
+</code></pre></div></div>
+
+<p>Next create a web client object that will allow your app to perform actions in the workspace, specifically to send messages. This is similar to what you did when you tested your <code class="language-plaintext highlighter-rouge">coinbot.py</code> file previously.</p>
+
+<p>Append the following line to <code class="language-plaintext highlighter-rouge">app.py</code> to create this <code class="language-plaintext highlighter-rouge">slack_web_client</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="code-label " title="app.py"&gt;app.py&lt;/div&gt;
+
+    ...
+    # Initialize a Web API client
+    slack_web_client = WebClient(token=os.environ.get("SLACK_TOKEN"))
+</code></pre></div></div>
+
+<p>Now create a function that can be called that will create an instance of <code class="language-plaintext highlighter-rouge">CoinBot</code>, and then use this instance to create a message payload and pass the message payload to the Slack web client for delivery. This function will take in a single parameter, <code class="language-plaintext highlighter-rouge">channel</code>, which will specify what channel receives the message.</p>
+
+<p>Append the following lines to <code class="language-plaintext highlighter-rouge">app.py</code> to create this function:</p>
+
+<p>``</p>
+<div class="code-label " title="app.py">app.py</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
+def flip_coin(channel):
+    """Craft the CoinBot, flip the coin and send the message to the channel
+    """
+    # Create a new CoinBot
+    coin_bot = CoinBot(channel)
+
+    # Get the onboarding message payload
+    message = coin_bot.get_message_payload()
+
+    # Post the onboarding message in Slack
+    slack_web_client.chat_postMessage(**message) ```
+</code></pre></div></div>
+
+<p>Now that you have created a function to handle the messaging aspects of your app, create one that monitors Slack events for a certain action and then executes your bot. You’re going to configure your app to respond with the results of a simulated coin flip when it sees the phrase “Hey Sammy, Flip a coin”. You’re going to accept any version of this—case won’t prevent the app from responding.</p>
+
+<p>First decorate your function with the <code class="language-plaintext highlighter-rouge">@slack_events_adapter.on</code> syntax that allows your function to receive events. Specify that you only want the <code class="language-plaintext highlighter-rouge">message</code> events and have your function accept a payload parameter containing all of the necessary Slack information. Once you have this payload you will parse out the text and analyze it. Then, if it receives the activation phrase, your app will send the results of a simulated coin flip.</p>
+
+<p>Append the following code to <code class="language-plaintext highlighter-rouge">app.py</code> to receive, analyze, and act on incoming messages:</p>
+
+<p>``</p>
+<div class="code-label " title="app.py">app.py</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># When a 'message' event is detected by the events adapter, forward that payload
+# to this function.
+@slack_events_adapter.on("message")
+def message(payload):
+    """Parse the message event, and if the activation string is in the text,
+    simulate a coin flip and send the result.
+    """
+
+    # Get the event data from the payload
+    event = payload.get("event", {})
+
+    # Get the text from the event that came through
+    text = event.get("text")
+
+    # Check and see if the activation phrase was in the text of the message.
+    # If so, execute the code to flip a coin.
+    if "hey sammy, flip a coin" in text.lower():
+        # Since the activation phrase was met, get the channel ID that the event
+        # was executed on
+        channel_id = event.get("channel")
+
+        # Execute the flip_coin function and send the results of
+        # flipping a coin to the channel
+        return flip_coin(channel_id) ``
+</code></pre></div></div>
+
+<p>Finally, create a <code class="language-plaintext highlighter-rouge">main</code> section that will create a logger so you can see the internals of your application as well as launch the app on your external IP address on port <code class="language-plaintext highlighter-rouge">3000</code>. In order to ingest the events from Slack, such as when a new message is sent, you must test your application on a public-facing IP address.</p>
+
+<p>Append the following lines to <code class="language-plaintext highlighter-rouge">app.py</code> to set up your main section:</p>
+
+<p>``</p>
+<div class="code-label " title="app.py">app.py</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if __name__ == "__main__":
+    # Create the logging object
+    logger = logging.getLogger()
+
+    # Set the log level to DEBUG. This will increase verbosity of logging messages
+    logger.setLevel(logging.DEBUG)
+
+    # Add the StreamHandler as a logging handler
+    logger.addHandler(logging.StreamHandler())
+
+    # Run your app on your externally facing IP address on port 3000 instead of
+    # running it on localhost, which is traditional for development.
+    app.run(host='0.0.0.0', port=3000) ```
+</code></pre></div></div>
+
+<p>You are now finished with the Flask app and it is ready for testing. Before you move on verify that your finished file, <code class="language-plaintext highlighter-rouge">app.py</code> contains the following:</p>
+
+<p>``</p>
+<div class="code-label " title="app.py">app.py</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import os
+import logging
+from flask import Flask
+from slack import WebClient
+from slackeventsapi import SlackEventAdapter
+from coinbot import CoinBot
+
+# Initialize a Flask app to host the events adapter
+
+app = Flask(**name**)
+
+# Create an events adapter and register it to an endpoint in the slack app for event injestion.
+
+slack_events_adapter = SlackEventAdapter(os.environ.get("SLACK_EVENTS_TOKEN"), "/slack/events", app)
+
+# Initialize a Web API client
+
+slack_web_client = WebClient(token=os.environ.get("SLACK_TOKEN"))
+
+def flip_coin(channel):
+"""Craft the CoinBot, flip the coin and send the message to the channel
+""" # Create a new CoinBot
+coin_bot = CoinBot(channel)
+
+    # Get the onboarding message payload
+    message = coin_bot.get_message_payload()
+
+    # Post the onboarding message in Slack
+    slack_web_client.chat_postMessage(**message)
+
+# When a 'message' event is detected by the events adapter, forward that payload
+
+# to this function.
+
+@slack_events_adapter.on("message")
+def message(payload):
+"""Parse the message event, and if the activation string is in the text,
+simulate a coin flip and send the result.
+"""
+
+    # Get the event data from the payload
+    event = payload.get("event", {})
+
+    # Get the text from the event that came through
+    text = event.get("text")
+
+    # Check and see if the activation phrase was in the text of the message.
+    # If so, execute the code to flip a coin.
+    if "hey sammy, flip a coin" in text.lower():
+        # Since the activation phrase was met, get the channel ID that the event
+        # was executed on
+        channel_id = event.get("channel")
+
+        # Execute the flip_coin function and send the results of
+        # flipping a coin to the channel
+        return flip_coin(channel_id)
+
+if **name** == "**main**": # Create the logging object
+logger = logging.getLogger()
+
+    # Set the log level to DEBUG. This will increase verbosity of logging messages
+    logger.setLevel(logging.DEBUG)
+
+    # Add the StreamHandler as a logging handler
+    logger.addHandler(logging.StreamHandler())
+
+    # Run our app on our externally facing IP address on port 3000 instead of
+    # running it on localhost, which is traditional for development.
+    app.run(host='0.0.0.0', port=3000) ``
+</code></pre></div></div>
+
+<p>Save and close the file.</p>
+
+<p>Now that your Flask app is ready to serve your application let’s test it out.</p>
+
+<h2 id="step-6--running-your-flask-app">Step 6 — Running Your Flask App</h2>
+
+<p>Finally, bring everything together and execute your app.</p>
+
+<p>First, add your running application as an authorized handler for your Slackbot.</p>
+
+<p>Navigate to the <strong>Basic Information</strong> section of your app in the <a href="https://api.slack.com">Slack UI</a>. Scroll down until you find the <strong>App Credentials</strong> section.</p>
+
+<p><img src="https://assets.digitalocean.com/articles/coinbot/lLB1jEB.png" alt="Slack Signing Secret" /></p>
+
+<p>Copy the <strong>Signing Secret</strong> and export it as the environment variable <code class="language-plaintext highlighter-rouge">SLACK_EVENTS_TOKEN</code>:</p>
+
+<p><code class="language-plaintext highlighter-rouge">
+    export SLACK_EVENTS_TOKEN="MY_SIGNING_SECRET_TOKEN"
+</code></p>
+
+<p>With this you have all the necessary API tokens to run your app. Refer to Step 1 if you need a refresher on how to export your <code class="language-plaintext highlighter-rouge">SLACK_TOKEN</code>. Now you can start your app and verify that it is indeed running. Ensure that your virtual environment is activated and run the following command to start your Flask app:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    python3 app.py
+</code></pre></div></div>
+
+<p>You will see an output like this:</p>
+
+<p>``
+    (slackbot) [20:04:03] sammy:coinbot$ python app.py
+     * Serving Flask app “app” (lazy loading)
+     * Environment: production
+       WARNING: This is a development server. Do not use it in a production deployment.
+       Use a production WSGI server instead.
+     * Debug mode: off
+     * Running on http://0.0.0.0:3000/ (Press CTRL+C to quit)</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+To verify that your app is up, open a new terminal window and `curl` the IP address of your server with the correct port at `/slack/events`:
+
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl http://YOUR_IP_ADDRESS:3000/slack/events ```
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">curl</code> will return the following:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>OutputThese are not the slackbots you're looking for.
+</code></pre></div></div>
+
+<p>Receiving the message <code class="language-plaintext highlighter-rouge">These are not the slackbots you're looking for.</code>, indicates that your app is up and running.</p>
+
+<p>Now leave this Flask application running while you finish configuring your app in the <a href="https://api.slack.com">Slack UI</a>.</p>
+
+<p>First grant your app the appropriate permissions so that it can listen to messages and respond accordingly. Click on <strong>Event Subscriptions</strong> in the UI sidebar and toggle the <strong>Enable Events</strong> radio button.</p>
+
+<p><img src="https://assets.digitalocean.com/articles/coinbot/lLB1jEB.png" alt="Enable Events Button" /></p>
+
+<p>Once you’ve done that, type in your IP address, port, and <code class="language-plaintext highlighter-rouge">/slack/events</code> endpoint into the <strong>Request URL</strong> field. Don’t forget the <code class="language-plaintext highlighter-rouge">HTTP</code> protocol prefix. Slack will make an attempt to connect to your endpoint. Once it has successfully done so you’ll see a green check mark with the word <strong>Verified</strong> next to it.</p>
+
+<p><img src="https://assets.digitalocean.com/articles/coinbot/9wqUJwd.png" alt="Event Subscriptions Request URL" /></p>
+
+<p>Next, expand the <strong>Subscribe to bot events</strong> and add the <code class="language-plaintext highlighter-rouge">message.channels</code> permission to your app. This will allow your app to receive messages from your channel and process them.</p>
+
+<p><img src="https://assets.digitalocean.com/articles/coinbot/sCYYhM8.png" alt="Subscribe to bot events permissions" /></p>
+
+<p>Once you’ve done this you will see the event listed in your <strong>Subscribe to bot events</strong> section. Next click the green <strong>Save Changes</strong> button in the bottom right hand corner.</p>
+
+<p><img src="https://assets.digitalocean.com/articles/coinbot/NLNbmB4.png" alt="Confirm and Save changes" /></p>
+
+<p>Once you do this you’ll see a yellow banner across the top of the screen informing you that you need to reinstall your app for the following changes to apply. Every time you change permissions you’ll need to reinstall your app. Click on the <strong>reinstall your app</strong> link in this banner to reinstall your app.</p>
+
+<p><img src="https://assets.digitalocean.com/articles/coinbot/s9WyZWs.png" alt="Reinstall your app banner" /></p>
+
+<p>You’ll be presented with a confirmation screen summarizing the permissions your bot will have and asking if you want to allow its installation. Click on the green <strong>Allow</strong> button to finish the installation process.</p>
+
+<p><img src="https://assets.digitalocean.com/articles/coinbot/KQrNqzK.png" alt="Reinstall confirmation" /></p>
+
+<p>Now that you’ve done this your app should be ready. Go back to the channel that you installed <code class="language-plaintext highlighter-rouge">CoinBot</code> into and send a message containing the phrase <em>Hey Sammy, Flip a coin</em> in it. Your bot will flip a coin and reply with the results. Congrats! You’ve created a Slackbot!</p>
+
+<p><img src="https://assets.digitalocean.com/articles/coinbot/8SoSu5A.png" alt="Hey Sammy, Flip a coin" /></p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Once you are done developing your application and you are ready to move it to production, you’ll need to deploy it to a server. This is necessary because the Flask development server is not a secure production environment. You’ll be better served if you deploy your app using a <a href="https://wsgi.readthedocs.io/en/latest/index.html">WSGI</a> and maybe even securing a domain name and giving your server a DNS record. There are many options for deploying Flask applications, some of which are listed below:</p>
+
+<ul>
+  <li><a href="https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-20-04">Deploy your Flask application to Ubuntu 20.04 using Gunicorn and Nginx</a></li>
+  <li><a href="https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-uwsgi-and-nginx-on-ubuntu-20-04">Deploy your Flask application to Ubuntu 20.04 using uWSGI and Nginx</a></li>
+  <li><a href="https://www.digitalocean.com/community/tutorials/how-to-build-and-deploy-a-flask-application-using-docker-on-ubuntu-18-04">Deploy your Flask Application Using Docker on Ubuntu 18.04</a></li>
+</ul>
+
+<p>There are many more ways to deploy your application than just these. As always, when it comes to deployments and infrastucture, do what works best for <em>you</em>.</p>
+
+<p>In any case, you now have a Slackbot that you can use to flip a coin to help you make decisions, like what to eat for lunch.</p>
+
+<p>You can also take this base code and modify it to fit your needs, whether it be automated support, resource management, pictures of cats, or whatever you can think of. You can view the complete Python Slack API docs <a href="https://slack.dev/python-slackclient/">here</a>.</p>
+
+
+              </div>
+
+              <div class="entry-footer">
+                <i class="bi bi-folder"></i>
+                <ul class="cats">
+                  
+                  
+                  <li><a href="/categories#en">
+                    en
+                  </a></li>
+                  
+                  <li><a href="/categories#slack">
+                    slack
+                  </a></li>
+                  
+                </ul>
+
+                <i class="bi bi-tags"></i>
+                <ul class="tags">
+                  
+                  
+                </ul>
+              </div>
+
+            </article><!-- End blog entry -->
+
+            <div class="blog-author d-flex align-items-center">
+              
+              <img src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&d=mm&r=x" class="rounded-circle float-left" alt="Full Bright">
+              
+              
+              <div>
+                <h4>Full Bright</h4>
+                <div class="social-links">
+                  <a href="https://twitter.com/brightsoftwares"><i class="bi bi-twitter"></i></a>
+                  <a href="https://facebook.com/#"><i class="bi bi-facebook"></i></a>
+                  <a href="https://instagram.com/#"><i class="biu bi-instagram"></i></a>
+                </div>
+                <p>
+                  A professional and sympathic business man.
+                </p>
+              </div>
+            </div><!-- End blog author bio -->
+
+            <div class="blog-comments">
+
+              <h4 class="comments-count">8 Comments</h4>
+
+              <div id="comment-1" class="comment">
+                <div class="d-flex">
+                  <div class="comment-img"><img src="/assets/img/blog/comments-1.jpg" alt=""></div>
+                  <div>
+                    <h5><a href="">Georgia Reader</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                    <time datetime="2020-01-01">01 Jan, 2020</time>
+                    <p>
+                      Et rerum totam nisi. Molestiae vel quam dolorum vel voluptatem et et. Est ad aut sapiente quis molestiae est qui cum soluta.
+                      Vero aut rerum vel. Rerum quos laboriosam placeat ex qui. Sint qui facilis et.
+                    </p>
+                  </div>
+                </div>
+              </div><!-- End comment #1 -->
+
+              <div id="comment-2" class="comment">
+                <div class="d-flex">
+                  <div class="comment-img"><img src="/assets/img/blog/comments-2.jpg" alt=""></div>
+                  <div>
+                    <h5><a href="">Aron Alvarado</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                    <time datetime="2020-01-01">01 Jan, 2020</time>
+                    <p>
+                      Ipsam tempora sequi voluptatem quis sapiente non. Autem itaque eveniet saepe. Officiis illo ut beatae.
+                    </p>
+                  </div>
+                </div>
+
+                <div id="comment-reply-1" class="comment comment-reply">
+                  <div class="d-flex">
+                    <div class="comment-img"><img src="/assets/img/blog/comments-3.jpg" alt=""></div>
+                    <div>
+                      <h5><a href="">Lynda Small</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                      <time datetime="2020-01-01">01 Jan, 2020</time>
+                      <p>
+                        Enim ipsa eum fugiat fuga repellat. Commodi quo quo dicta. Est ullam aspernatur ut vitae quia mollitia id non. Qui ad quas nostrum rerum sed necessitatibus aut est. Eum officiis sed repellat maxime vero nisi natus. Amet nesciunt nesciunt qui illum omnis est et dolor recusandae.
+
+                        Recusandae sit ad aut impedit et. Ipsa labore dolor impedit et natus in porro aut. Magnam qui cum. Illo similique occaecati nihil modi eligendi. Pariatur distinctio labore omnis incidunt et illum. Expedita et dignissimos distinctio laborum minima fugiat.
+
+                        Libero corporis qui. Nam illo odio beatae enim ducimus. Harum reiciendis error dolorum non autem quisquam vero rerum neque.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div id="comment-reply-2" class="comment comment-reply">
+                    <div class="d-flex">
+                      <div class="comment-img"><img src="/assets/img/blog/comments-4.jpg" alt=""></div>
+                      <div>
+                        <h5><a href="">Sianna Ramsay</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                        <time datetime="2020-01-01">01 Jan, 2020</time>
+                        <p>
+                          Et dignissimos impedit nulla et quo distinctio ex nemo. Omnis quia dolores cupiditate et. Ut unde qui eligendi sapiente omnis ullam. Placeat porro est commodi est officiis voluptas repellat quisquam possimus. Perferendis id consectetur necessitatibus.
+                        </p>
+                      </div>
+                    </div>
+
+                  </div><!-- End comment reply #2-->
+
+                </div><!-- End comment reply #1-->
+
+              </div><!-- End comment #2-->
+
+              <div id="comment-3" class="comment">
+                <div class="d-flex">
+                  <div class="comment-img"><img src="/assets/img/blog/comments-5.jpg" alt=""></div>
+                  <div>
+                    <h5><a href="">Nolan Davidson</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                    <time datetime="2020-01-01">01 Jan, 2020</time>
+                    <p>
+                      Distinctio nesciunt rerum reprehenderit sed. Iste omnis eius repellendus quia nihil ut accusantium tempore. Nesciunt expedita id dolor exercitationem aspernatur aut quam ut. Voluptatem est accusamus iste at.
+                      Non aut et et esse qui sit modi neque. Exercitationem et eos aspernatur. Ea est consequuntur officia beatae ea aut eos soluta. Non qui dolorum voluptatibus et optio veniam. Quam officia sit nostrum dolorem.
+                    </p>
+                  </div>
+                </div>
+
+              </div><!-- End comment #3 -->
+
+              <div id="comment-4" class="comment">
+                <div class="d-flex">
+                  <div class="comment-img"><img src="/assets/img/blog/comments-6.jpg" alt=""></div>
+                  <div>
+                    <h5><a href="">Kay Duggan</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                    <time datetime="2020-01-01">01 Jan, 2020</time>
+                    <p>
+                      Dolorem atque aut. Omnis doloremque blanditiis quia eum porro quis ut velit tempore. Cumque sed quia ut maxime. Est ad aut cum. Ut exercitationem non in fugiat.
+                    </p>
+                  </div>
+                </div>
+
+              </div><!-- End comment #4 -->
+
+              <div class="reply-form">
+                <h4>Leave a Reply</h4>
+                <p>Your email address will not be published. Required fields are marked * </p>
+                <form action="">
+                  <div class="row">
+                    <div class="col-md-6 form-group">
+                      <input name="name" type="text" class="form-control" placeholder="Your Name*">
+                    </div>
+                    <div class="col-md-6 form-group">
+                      <input name="email" type="text" class="form-control" placeholder="Your Email*">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col form-group">
+                      <input name="website" type="text" class="form-control" placeholder="Your Website">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col form-group">
+                      <textarea name="comment" class="form-control" placeholder="Your Comment*"></textarea>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Post Comment</button>
+
+                </form>
+
+              </div>
+
+            </div><!-- End blog comments -->
+
+          </div><!-- End blog entries list -->
+
+          <div class="col-lg-4">
+
+            <div class="sidebar">
+              
+
+              <h3 class="sidebar-title">Search</h3>
+              <div class="sidebar-item search-form">
+                <form onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+                  <input type="text" class="launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter...">
+                  <button type="submit"><i class="bi bi-search"></i></button>
+                </form>
+              </div><div id="lunrsearchresults">
+                  <ul></ul>
+              </div>
+
+              
+              <!-- End sidebar search formn-->
+
+              <h3 class="sidebar-title">Categories</h3>
+              <div class="sidebar-item categories">
+                <ul>
+                  
+                  
+                  
+                  <li><a href="/category/en">en <span>(33)</span></a></li>
+                  
+                  <li><a href="/category/aws">aws <span>(3)</span></a></li>
+                  
+                  <li><a href="/category/data-analysis">data-analysis <span>(2)</span></a></li>
+                  
+                  <li><a href="/category/fr">fr <span>(29)</span></a></li>
+                  
+                  <li><a href="/category/docker">docker <span>(12)</span></a></li>
+                  
+                  <li><a href="/category/kubernetes">kubernetes <span>(11)</span></a></li>
+                  
+                  <li><a href="/category/web development">web development <span>(2)</span></a></li>
+                  
+                  <li><a href="/category/wordpress">wordpress <span>(4)</span></a></li>
+                  
+                  <li><a href="/category/ubuntu">ubuntu <span>(4)</span></a></li>
+                  
+                  <li><a href="/category/javascript">javascript <span>(4)</span></a></li>
+                  
+                  <li><a href="/category/database">database <span>(2)</span></a></li>
+                  
+                  <li><a href="/category/slack">slack <span>(2)</span></a></li>
+                  
+                  <li><a href="/category/productivity">productivity <span>(8)</span></a></li>
+                  
+                  <li><a href="/category/backup-restore">backup-restore <span>(2)</span></a></li>
+                  
+                  <li><a href="/category/fax">fax <span>(2)</span></a></li>
+                  
+                  <li><a href="/category/screenshot">screenshot <span>(2)</span></a></li>
+                  
+                  <li><a href="/category/security">security <span>(1)</span></a></li>
+                  
+                </ul>
+              </div><!-- End sidebar categories-->
+
+              <h3 class="sidebar-title">Recent Posts</h3>
+              <div class="sidebar-item recent-posts">
+                
+
+                
+                <div class="post-item clearfix">
+                  <!-- <img src="/assets/img/blog/blog-recent-1.jpg" alt="Log4j flaw: Am I impacted and how can I protect myself"> -->
+                   
+                     
+                    
+                    <img class="img-fluid" src="https://res.cloudinary.com/brightsoftwares/image/upload/v1639575508/photo-1639140651961-41392a332bfc_njfgu8.jpg" alt="Log4j flaw: Am I impacted and how can I protect myself"> 
+                     
+                  
+                  <h4><a href="/blog/en/security/log4j-flaw-am-i-impacted-and-how-can-i-protect-myself">Log4j flaw: Am I impacted and how can I protect myself</a></h4>
+                  <time datetime="2021-12-15 13:36">Wednesday 15 December, 2021</time>
+                </div>
+                
+                <div class="post-item clearfix">
+                  <!-- <img src="/assets/img/blog/blog-recent-1.jpg" alt="Docker tip : inspect and jq"> -->
+                   
+                     
+                    
+                    <img class="img-fluid" src="https://res.cloudinary.com/brightsoftwares/image/upload/v1639560797/photo-1578403881636-6f4a77a6f9cc_ddsft1.jpg" alt="Docker tip : inspect and jq"> 
+                     
+                  
+                  <h4><a href="/blog/en/docker/docker-tip-inspect-and-jq">Docker tip : inspect and jq</a></h4>
+                  <time datetime="2021-12-15 09:32">Wednesday 15 December, 2021</time>
+                </div>
+                
+                <div class="post-item clearfix">
+                  <!-- <img src="/assets/img/blog/blog-recent-1.jpg" alt="How to use local docker images with Minikube?"> -->
+                   
+                     
+                    
+                    <img class="img-fluid" src="https://sergio.afanou.com/assets/images/image-midres-5.jpg" alt="How to use local docker images with Minikube?"> 
+                     
+                  
+                  <h4><a href="/blog/en/kubernetes/how-to-use-local-docker-images-with-minikube">How to use local docker images with Minikube?</a></h4>
+                  <time datetime="2021-12-14 13:42">Tuesday 14 December, 2021</time>
+                </div>
+                
+                <div class="post-item clearfix">
+                  <!-- <img src="/assets/img/blog/blog-recent-1.jpg" alt="Kubernetes Helm : how to show Multi-line Properties"> -->
+                   
+                     
+                    
+                    <img class="img-fluid" src="https://sergio.afanou.com/assets/images/image-midres-25.jpg" alt="Kubernetes Helm : how to show Multi-line Properties"> 
+                     
+                  
+                  <h4><a href="/blog/en/kubernetes/kubernetes-helm-how-to-show-multi-line-properties">Kubernetes Helm : how to show Multi-line Properties</a></h4>
+                  <time datetime="2021-12-10 13:28">Friday 10 December, 2021</time>
+                </div>
+                
+
+              </div><!-- End sidebar recent posts-->
+
+              <h3 class="sidebar-title">Tags</h3>
+              <div class="sidebar-item tags">
+                <ul>
+                  
+                  
+                </ul>
+              </div><!-- End sidebar tags-->
+
+            </div><!-- End sidebar -->
+
+          </div><!-- End blog sidebar -->
+
+        </div>
+
+      </div>
+    </section><!-- End Blog Single Section -->
+
+  </main><!-- End #main -->
+ 
+    
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h2>Contact</h2>
+          <p>Contact Us</p>
+          <h3 class="mt-3">To order one of our services, navigate to the <a href="/order-service">order service</a> page</h3>
+        </header>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6">
+
+            <div class="row gy-4">
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-geo-alt"></i>
+                  <h3>Address</h3>
+                  <p>10 rue de Penthièvre,<br>75008 Paris</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-envelope"></i>
+                  <h3>Email Us</h3>
+                  <p>hello at bright-softwares dot com</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-clock"></i>
+                  <h3>Open Hours</h3>
+                  <p>Monday - Friday<br>9:00AM - 05:00PM</p>
+                </div>
+              </div>
+              <!-- <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-telephone"></i>
+                  <h3></h3>
+                  <p><br></p>
+                </div>
+              </div> -->
+            </div>
+
+          </div>
+
+          <div id="mauticform_wrapper_brightsoftwarescontact" class="mauticform_wrapper col-lg-6">
+            <form class="php-email-form" autocomplete="false" role="form" method="post" action="https://marketing.bright-softwares.com/form/submit?formId=5" id="mauticform_brightsoftwarescontact" data-mautic-form="brightsoftwarescontact" enctype="multipart/form-data">
+                <div class="mauticform-innerform">
+
+                    
+                  <div class="mauticform-page-wrapper mauticform-page-1 row gy-4">
+
+                    <div id="mauticform_brightsoftwarescontact_first_name" class="mauticform-row mauticform-text mauticform-field-1 mauticform-required col-md-6 " data-validate="first_name" data-validation-type="text">
+                        <input id="mauticform_input_brightsoftwarescontact_first_name" name="mauticform[first_name]" value="" placeholder="Your first name" class="mauticform-input form-control" type="text">
+                        <span class="mauticform-errormsg" style="display: none;">Please enter your first name</span>
+                    </div>
+
+                    <div id="mauticform_brightsoftwarescontact_your_last_name" class="mauticform-row mauticform-text mauticform-field-2 mauticform-required col-md-6 " data-validate="your_last_name" data-validation-type="text">
+                        <!-- <span class="mauticform-helpmessage">Please enter your last name.</span> -->
+                        <input id="mauticform_input_brightsoftwarescontact_your_last_name" name="mauticform[your_last_name]" value="" placeholder="Your last name" class="mauticform-input form-control" type="text">
+                        <span class="mauticform-errormsg" style="display: none;">Please enter your last name.</span>
+                    </div>
+
+                    <div id="mauticform_brightsoftwarescontact_email" class="mauticform-row mauticform-email mauticform-field-3 mauticform-required col-md-6 " data-validate="email" data-validation-type="email">
+                        <!-- <span class="mauticform-helpmessage">Please enter your e-mail address.</span> -->
+                        <input id="mauticform_input_brightsoftwarescontact_email" name="mauticform[email]" value="" placeholder="Your e-mail address" class="mauticform-input form-control" type="email">
+                        <span class="mauticform-errormsg" style="display: none;">Please enter your e-mail address.</span>
+                    </div>
+
+                    <div id="mauticform_brightsoftwarescontact_phone" class="mauticform-row mauticform-tel mauticform-field-4 col-md-6 ">
+                        <!-- <span class="mauticform-helpmessage">Please enter your phone number.</span> -->
+                        <input id="mauticform_input_brightsoftwarescontact_phone" name="mauticform[phone]" value="" placeholder="Your phone number" class="mauticform-input form-control" type="tel">
+                        <span class="mauticform-errormsg" style="display: none;"></span>
+                    </div>
+
+                    <div id="mauticform_brightsoftwarescontact_subject" class="mauticform-row mauticform-text mauticform-field-5 mauticform-required col-md-12" data-validate="subject" data-validation-type="text">
+                        <!-- <span class="mauticform-helpmessage">Please enter your contact message.</span> -->
+                        <input id="mauticform_input_brightsoftwarescontact_subject" name="mauticform[subject]" value="" placeholder="Your contact message" class="mauticform-input form-control" type="text">
+                        <span class="mauticform-errormsg" style="display: none;">Please enter the contact subject.</span>
+                    </div>
+
+                    <div id="mauticform_brightsoftwarescontact_f_message" class="mauticform-row mauticform-text mauticform-field-6 mauticform-required col-md-12 text-center" data-validate="f_message" data-validation-type="textarea">
+                        <!-- <span class="mauticform-helpmessage">Please enter your message.</span> -->
+                        <textarea class="form-control" rows=6 placeholder="Message" id="mauticform_input_brightsoftwarescontact_f_message" name="mauticform[f_message]" class="mauticform-textarea"></textarea>
+                        <span class="mauticform-errormsg" style="display: none;">Please enter your message.</span>
+                    </div>
+
+                    <div id="mauticform_brightsoftwarescontact_submit" class="mauticform-row mauticform-button-wrapper mauticform-field-7 col-md-12 text-center">
+                        <div class="mauticform-error" id="mauticform_brightsoftwarescontact_error"></div>
+                        <div class="mauticform-message" id="mauticform_brightsoftwarescontact_message"></div>
+                        
+                        <button type="submit" name="mauticform[submit]" id="mauticform_input_brightsoftwarescontact_submit" value="" class="mauticform-button btn btn-default">Send message</button>
+                    </div>
+                  </div>
+                </div>
+
+                <input type="hidden" name="mauticform[formId]" id="mauticform_brightsoftwarescontact_id" value="5">
+                <input type="hidden" name="mauticform[return]" id="mauticform_brightsoftwarescontact_return" value="">
+                <input type="hidden" name="mauticform[formName]" id="mauticform_brightsoftwarescontact_name" value="brightsoftwarescontact">
+
+                </form>
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+
+
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+  <div class="footer-newsletter">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-12 text-center">
+          <h4>Our Newsletter</h4>
+          <p>We won't spam you, we promise. 😇</p>
+        </div>
+        <div
+          id="mauticform_wrapper_brightsoftwaresnewsletter"
+          class="mauticform_wrapper col-lg-6"
+        >
+          <form
+            autocomplete="false"
+            role="form"
+            method="post"
+            action="https://marketing.bright-softwares.com/form/submit?formId=4"
+            id="mauticform_brightsoftwaresnewsletter"
+            data-mautic-form="brightsoftwaresnewsletter"
+            enctype="multipart/form-data"
+          >
+            <div
+              class="mauticform-error"
+              id="mauticform_brightsoftwaresnewsletter_error"
+            ></div>
+            <div
+              class="mauticform-message"
+              id="mauticform_brightsoftwaresnewsletter_message"
+            ></div>
+            <div class="mauticform-innerform">
+              <div
+                class="mauticform-page-wrapper mauticform-page-1"
+                data-mautic-form-page="1"
+              >
+                <div
+                  id="mauticform_brightsoftwaresnewsletter_email"
+                  data-validate="email"
+                  data-validation-type="email"
+                  class="
+                    mauticform-row
+                    mauticform-email
+                    mauticform-field-1
+                    mauticform-required
+                  "
+                >
+                  <input
+                    id="mauticform_input_brightsoftwaresnewsletter_email"
+                    name="mauticform[email]"
+                    value=""
+                    placeholder="E-mail address"
+                    class="mauticform-input"
+                    type="email"
+                  />
+                  <span class="mauticform-errormsg" style="display: none"
+                    >Please enter your e-mail address</span
+                  >
+                </div>
+
+                <div
+                  id="mauticform_brightsoftwaresnewsletter_submit"
+                  class="
+                    mauticform-row mauticform-button-wrapper mauticform-field-2
+                  "
+                >
+                  <input
+                    type="submit"
+                    name="mauticform[submit]"
+                    id="mauticform_input_brightsoftwaresnewsletter_submit"
+                    value="Subscribe"
+                    class="mauticform-button btn btn-default"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <input
+              type="hidden"
+              name="mauticform[formId]"
+              id="mauticform_brightsoftwaresnewsletter_id"
+              value="4"
+            />
+            <input
+              type="hidden"
+              name="mauticform[return]"
+              id="mauticform_brightsoftwaresnewsletter_return"
+              value=""
+            />
+            <input
+              type="hidden"
+              name="mauticform[formName]"
+              id="mauticform_brightsoftwaresnewsletter_name"
+              value="brightsoftwaresnewsletter"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-top">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-info">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <img src="/assets/flexstart-img/logo.png" alt="" />
+            <span>Bright Softwares</span>
+          </a>
+          <p>
+            We provide solutions to our customers challenges. Our teams based in
+            Paris and Lomé provide high value expertise to engineer the best
+            solutions.
+          </p>
+          <div class="social-links mt-3">
+            
+            <a href="http://twitter.com/brightsoftwares" class="twitter"
+              ><i class="bi bi-twitter"></i
+            ></a>
+            
+            <a href="http://fb.me/bright-softwares" class="facebook"
+              ><i class="bi bi-facebook"></i
+            ></a>
+            
+            <a href="" class="stack-overflow"
+              ><i class="bi bi-stack-overflow"></i
+            ></a>
+            
+            <a href="http://github.com/brightsoftwares" class="github"
+              ><i class="bi bi-github"></i
+            ></a>
+            
+            <a href="" class="instagram"
+              ><i class="bi bi-instagram"></i
+            ></a>
+            
+            <a href="" class="linkedin"
+              ><i class="bi bi-linkedin"></i
+            ></a>
+            
+            <!-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bi bi-instagram bx bxl-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bi bi-linkedin bx bxl-linkedin"></i></a> -->
+          </div>
+
+          <!-- ======= Read page in alternate language ======= -->
+          <div class="flexstart-blog-single mt-3">
+            
+                
+                
+                
+                <footer class="lang-options">
+                    <p>Read this page in a different language:</p>
+                    <ul class="nav flex-column">
+                    
+                      
+                    
+                      
+                        <li class="nav-item">
+                          <a href="/blog/fr/slack/how-to-build-a-slackbot-in-python-on-ubuntu-2004" class="nav-link fr" title="View in fr">
+                            🇫🇷 Français
+                          </a>
+                        </li>
+                      
+                    
+                    </ul>
+                </footer>
+                
+            
+          </div>
+    
+
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li>
+              <i class="bi bi-chevron-right"></i> <a href="index.html">Home</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i> <a href="#">About us</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i> <a href="#">Services</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i>
+              <a href="/conditions">Terms of service</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i>
+              <a href="/privacy">Privacy policy</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li>
+              <i class="bi bi-chevron-right"></i> <a href="#">Web solutions</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i> <a href="#">e-commerce</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i>
+              <a href="#">AI powered apps</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i> <a href="#">AI Models</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i>
+              <a href="#">Automated revenue</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i>
+              <a href="#">Cloud infrastructure</a>
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="col-lg-3 col-md-12 footer-contact text-center text-md-start"
+        >
+          <h4>Contact Us</h4>
+          <p>
+            10 rue de Penthièvre <br />
+            75008, Paris<br />
+            France <br /><br />
+            <!--<strong>Phone:</strong> +1 5589 55488 55<br>-->
+            <strong>Email:</strong> hello at bright-softwares dot com<br />
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="copyright">
+      &copy; Copyright
+      <strong><span>Bright Softwares 2021</span></strong
+      >. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexstart-bootstrap-startup-template/ -->
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+  </div>
+</footer>
+<!-- End Footer -->
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"
+  ><i class="bi bi-arrow-up-short"></i
+></a>
+
+<!-- Vendor JS Files -->
+<script src="/assets/flexstart-vendor/bootstrap/js/bootstrap.bundle.js"></script>
+<script src="/assets/flexstart-vendor/aos/aos.js"></script>
+<script src="/assets/flexstart-vendor/php-email-form/validate.js"></script>
+<script src="/assets/flexstart-vendor/swiper/swiper-bundle.min.js"></script>
+<script src="/assets/flexstart-vendor/purecounter/purecounter.js"></script>
+<script src="/assets/flexstart-vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="/assets/flexstart-vendor/glightbox/js/glightbox.min.js"></script>
+
+<!-- Template Main JS File -->
+<script src="/assets/flexstart-js/main.js"></script>
+<script src="/assets/flexstart-js/flexstart_contact.js"></script>
+
+<!-- Search engine -->
+<script src="/assets/js/lunr.js"></script>
+<script src="/assets/js/lunrsearchengine.js"></script>
+<script src="/assets/js/copycode.js"></script>
+
+  </body>
+</html>

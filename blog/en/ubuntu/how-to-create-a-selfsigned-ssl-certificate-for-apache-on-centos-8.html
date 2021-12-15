@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <title>
+    How To Create a Self-Signed SSL Certificate for Apache on CentOS 8
+  </title>
+  <meta content="We provide solutions to our customers challenges. Our teams based in Paris and Lomé provide high value expertise to engineer the best solutions." name="description" />
+
+  <meta
+    content="web e-commerce articifial intelligence ai automation"
+    name="keywords"
+  />
+  <link
+    rel="canonical"
+    href="https://bright-softwares.com/blog/en/ubuntu/how-to-create-a-selfsigned-ssl-certificate-for-apache-on-centos-8"
+  />
+  <link rel="manifest" href="manifest.json" />
+
+  <!-- Favicons -->
+  <!-- <link href="/assets/flexstart-img/favicon.png" rel="icon">
+  <link href="/assets/flexstart-img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+  <!-- The favicon items -->
+  <link
+    rel="apple-touch-icon"
+    sizes="57x57"
+    href="/assets/favicon.ico/apple-icon-57x57.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="60x60"
+    href="/assets/favicon.ico/apple-icon-60x60.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="72x72"
+    href="/assets/favicon.ico/apple-icon-72x72.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="76x76"
+    href="/assets/favicon.ico/apple-icon-76x76.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="114x114"
+    href="/assets/favicon.ico/apple-icon-114x114.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="120x120"
+    href="/assets/favicon.ico/apple-icon-120x120.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="144x144"
+    href="/assets/favicon.ico/apple-icon-144x144.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="152x152"
+    href="/assets/favicon.ico/apple-icon-152x152.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="/assets/favicon.ico/apple-icon-180x180.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="192x192"
+    href="/assets/favicon.ico/android-icon-192x192.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="/assets/favicon.ico/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="96x96"
+    href="/assets/favicon.ico/favicon-96x96.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="/assets/favicon.ico/favicon-16x16.png"
+  />
+  <!--<link rel="manifest" href="/assets/favicon.ico/manifest.json">-->
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta
+    name="msapplication-TileImage"
+    content="/assets/favicon.ico/ms-icon-144x144.png"
+  />
+  <meta name="theme-color" content="#ffffff" />
+
+  
+  <!-- Language handling -->
+  
+    
+    
+    
+      
+    <link rel="alternate" hreflang="en" href="/blog/en/ubuntu/how-to-create-a-selfsigned-ssl-certificate-for-apache-on-centos-8" />
+      
+    <link rel="alternate" hreflang="fr" href="/blog/fr/ubuntu/how-to-create-a-selfsigned-ssl-certificate-for-apache-on-centos-8" />
+      
+    
+  
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet"
+  />
+
+  <!-- Vendor CSS Files -->
+  <link
+    href="/assets/flexstart-vendor/bootstrap/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="/assets/flexstart-vendor/bootstrap-icons/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+  <link
+    href="/assets/flexstart-vendor/aos/aos.css"
+    rel="stylesheet"
+  />
+  <link
+    href="/assets/flexstart-vendor/remixicon/remixicon.css"
+    rel="stylesheet"
+  />
+  <link
+    href="/assets/flexstart-vendor/swiper/swiper-bundle.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="/assets/flexstart-vendor/glightbox/css/glightbox.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Template Main CSS File -->
+  <link
+    href="/assets/flexstart-css/style.css"
+    rel="stylesheet"
+  />
+
+  <!-- =======================================================
+  * Template Name: FlexStart - v1.1.1
+  * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134921119-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-134921119-1');
+</script> 
+</head>
+
+  <body>
+    <!-- ======= Header ======= -->
+<header id="header" class="header fixed-top">
+  <div
+    class="
+      container-fluid container-xl
+      d-flex
+      align-items-center
+      justify-content-between
+    "
+  >
+    <a href="/index.html" class="logo d-flex align-items-center">
+      <img src="/img/logos/large/brightsoftwares-light.png" alt="Bright Softwares logo" />
+      <span>Bright Softwares</span>
+    </a>
+
+    <nav id="navbar" class="navbar">
+      <ul>
+        <!-- <li><a class="nav-link scrollto active" href="#hero">Home</a></li> -->
+        <li class="dropdown">
+          <a class="nav-link scrollto" href="#services"
+            ><span>Services</span> <i class="bi bi-chevron-down"></i
+          ></a>
+          <ul>
+            <li><a href="#">Web solutions</a></li>
+            <li><a href="#">e-commerce</a></li>
+            <li><a href="#">AI powered apps</a></li>
+            <li><a href="#">AI Models</a></li>
+            <li><a href="#">Automated revenue</a></li>
+            <li><a href="#">Cloud infrastructure</a></li>
+          </ul>
+        </li>
+        
+        
+        <li>
+          <a class="nav-link scrollto" href="/en/blog.html">Blog</a>
+        </li>
+        
+        <li>
+          <a class="nav-link scrollto" href="/en/index.html">Team</a>
+        </li>
+        
+        <li>
+          <a class="nav-link scrollto" href="/en/index.html#about">About</a>
+        </li>
+        
+        <li>
+          <a class="nav-link scrollto" href="/en/index.html#contact">Contact</a>
+        </li>
+        
+        <li>
+          <a class="getstarted scrollto" href="/order-service">Order now</a>
+        </li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav>
+    <!-- .navbar -->
+  </div>
+</header>
+<!-- End Header -->
+   <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <ol>
+          <li><a href="/en/index.html">Home</a></li>
+          <li><a href="/en/blog.html">Blog</a></li>
+          <li>How To Create a Self-Signed SSL Certificate for Apache on CentOS 8</li>
+        </ol>
+        <h2>How To Create a Self-Signed SSL Certificate for Apache on CentOS 8</h2>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Single Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-8 entries">
+
+            <article class="entry entry-single">
+
+              <div class="entry-img">
+                <img src="/assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="entry-title">
+                <a href="">How To Create a Self-Signed SSL Certificate for Apache on CentOS 8</a>
+              </h2>
+
+              <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+              
+              <!-- End Adsense -->
+
+              <div class="entry-meta">
+                
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href=""></a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> 
+                    <a href="">
+                      <time datetime="2020-07-05 00:00">Jul 5, 2020 (1 year and 5 months ago)</time>
+                      <small>
+                        
+                      </small>
+                    </a>
+                  </li>
+                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="">12 Comments</a></li>
+                </ul>
+              </div>
+
+              <div class="entry-content">
+
+                <h3 id="introduction">Introduction</h3>
+
+<p><strong>TLS</strong>, or &ldquo;transport layer security&rdquo; — and its predecessor <strong>SSL</strong> — are protocols used to wrap normal traffic in a protected, encrypted wrapper. Using this technology, servers can safely send information to their clients without their messages being intercepted or read by an outside party.</p>
+
+<p>In this guide, we will show you how to create and use a self-signed SSL certificate with the Apache web server on a CentOS 8 machine.</p>
+
+<p><span class="note">&lt;p&gt;
+<strong>Note:</strong> A self-signed certificate will encrypt communication between your server and its clients. However, because it is not signed by any of the trusted certificate authorities included with web browsers and operating systems, users cannot use the certificate to automatically validate the identity of your server. As a result, your users will see a security error when visiting your site.&lt;/p&gt;</span></p>
+
+<p>Because of this limitation, self-signed certificates are not appropriate for a production environment serving the public. They are typically used for testing, or for securing non-critical services used by a single user or a small group of users that can establish trust in the certificate&rsquo;s validity through alternate communication channels.</p>
+
+<p>For a more production-ready certificate solution, check out <a href="https://letsencrypt.org/">Let&rsquo;s Encrypt</a>, a free certificate authority. You can learn how to download and configure a Let&rsquo;s Encrypt certificate in our <a href="https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-centos-8">How To Secure Apache with Let&rsquo;s Encrypt on CentOS 8</a> tutorial.<br /></p>
+<p>&lt;/span&gt;</p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<p>Before starting this tutorial, you&rsquo;ll need the following: </p>
+
+<ul>
+<li>Access to a CentOS 8 server with a non-<strong>root</strong>, sudo-enabled user. Our <a href="https://www.digitalocean.com/community/tutorials/initial-server-setup-with-centos-8">Initial Server Setup with CentOS 8</a> guide can show you how to create this account.</li>
+<li><p>You will also need to have Apache installed. You can install Apache using <code>dnf</code>:</p>
+<pre class="code-pre command prefixed"><code><ul class="prefixed"><li class="line" prefix="$">sudo dnf install httpd
+</li></ul></code></pre>
+<p>Enable Apache and start it using <code>systemctl</code>:</p>
+<pre class="code-pre command prefixed"><code><ul class="prefixed"><li class="line" prefix="$">sudo systemctl enable httpd
+</li><li class="line" prefix="$">sudo systemctl start httpd
+</li></ul></code></pre>
+<p>And finally, if you have a <code>firewalld</code> firewall set up, open up the <code>http</code> and <code>https</code> ports:</p>
+<pre class="code-pre command prefixed"><code><ul class="prefixed"><li class="line" prefix="$">sudo firewall-cmd --permanent --add-service=http
+</li><li class="line" prefix="$">sudo firewall-cmd --permanent --add-service=https
+</li><li class="line" prefix="$">sudo firewall-cmd --reload
+</li></ul></code></pre></li>
+</ul>
+
+<p>After these steps are complete, be sure you are logged in as your non-<strong>root</strong> user and continue with the tutorial.</p>
+
+<h2 id="step-1-—-installing-mod_ssl">Step 1 — Installing <code>mod_ssl</code></h2>
+
+<p>We first need to install <code>mod_ssl</code>, an Apache module that provides support for SSL encryption.</p>
+
+<p>Install <code>mod_ssl</code> with the <code>dnf</code> command:</p>
+<pre class="code-pre command prefixed"><code><ul class="prefixed"><li class="line" prefix="$">sudo dnf install mod_ssl
+</li></ul></code></pre>
+<p>Because of a packaging bug, we need to restart Apache once to properly generate the default SSL certificate and key, otherwise we&rsquo;ll get an error reading <code>'/etc/pki/tls/certs/localhost.crt' does not exist or is empty</code>.</p>
+<pre class="code-pre command prefixed"><code><ul class="prefixed"><li class="line" prefix="$">sudo systemctl restart httpd
+</li></ul></code></pre>
+<p>The <code>mod_ssl</code> module is now enabled and ready for use.</p>
+
+<h2 id="step-2-—-creating-the-ssl-certificate">Step 2 — Creating the SSL Certificate</h2>
+
+<p>Now that Apache is ready to use encryption, we can move on to generating a new SSL certificate. The certificate will store some basic information about your site, and will be accompanied by a key file that allows the server to securely handle encrypted data.</p>
+
+<p>We can create the SSL key and certificate files with the <code>openssl</code> command:</p>
+<pre class="code-pre command prefixed"><code><ul class="prefixed"><li class="line" prefix="$">sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/pki/tls/private/apache-selfsigned.key -out /etc/pki/tls/certs/apache-selfsigned.crt
+</li></ul></code></pre>
+<p>After you enter the command, you will be taken to a prompt where you can enter information about your website. Before we go over that, let&rsquo;s take a look at what is happening in the command we are issuing:</p>
+
+<ul>
+<li><code>openssl</code>: This is the command line tool for creating and managing OpenSSL certificates, keys, and other files.</li>
+<li><code>req -x509</code>: This specifies that we want to use X.509 certificate signing request (CSR) management. X.509 is a public key infrastructure standard that SSL and TLS adhere to for key and certificate management.</li>
+<li><code>-nodes</code>: This tells OpenSSL to skip the option to secure our certificate with a passphrase. We need Apache to be able to read the file, without user intervention, when the server starts up. A passphrase would prevent this from happening, since we would have to enter it after every restart.</li>
+<li><code>-days 365</code>: This option sets the length of time that the certificate will be considered valid. We set it for one year here. Many modern browsers will reject any certificates that are valid for longer than one year.</li>
+<li><code>-newkey rsa:2048</code>: This specifies that we want to generate a new certificate and a new key at the same time. We did not create the key that is required to sign the certificate in a previous step, so we need to create it along with the certificate. The <code>rsa:2048</code> portion tells it to make an RSA key that is 2048 bits long.</li>
+<li><code>-keyout</code>: This line tells OpenSSL where to place the generated private key file that we are creating.</li>
+<li><code>-out</code>: This tells OpenSSL where to place the certificate that we are creating.</li>
+</ul>
+
+<p>Fill out the prompts appropriately. The most important line is the one that requests the <code>Common Name</code>. You need to enter either the hostname you&rsquo;ll use to access the server by, or the public IP of the server. It&rsquo;s important that this field matches whatever you&rsquo;ll put into your browser&rsquo;s address bar to access the site, as a mismatch will cause more security errors.</p>
+
+<p>The full list of prompts will look something like this:</p>
+<pre class="code-pre "><code>Country Name (2 letter code) [XX]:<span class="highlight">US</span>
+State or Province Name (full name) []:<span class="highlight">Example</span>
+Locality Name (eg, city) [Default City]:<span class="highlight">Example </span>
+Organization Name (eg, company) [Default Company Ltd]:<span class="highlight">Example Inc</span>
+Organizational Unit Name (eg, section) []:<span class="highlight">Example Dept</span>
+Common Name (eg, your name or your server's hostname) []:<span class="highlight">your_domain_or_ip</span>
+Email Address []:<span class="highlight">webmaster@example.com</span>
+</code></pre>
+<p>Both of the files you created will be placed in the appropriate subdirectories of the <code>/etc/pki/tls</code> directory. This is a standard directory provided by CentOS for this purpose.</p>
+
+<p>Next we will update our Apache configuration to use the new certificate and key.</p>
+
+<h2 id="step-3-—-configuring-apache-to-use-ssl">Step 3 — Configuring Apache to Use SSL</h2>
+
+<p>Now that we have our self-signed certificate and key available, we need to update our Apache configuration to use them. On CentOS, you can place new Apache configuration files (they must end in <code>.conf</code>) into <code>/etc/httpd/conf.d</code> and they will be loaded the next time the Apache process is reloaded or restarted.</p>
+
+<p>For this tutorial we will create a new minimal configuration file. If you already have an Apache <code>&lt;Virtualhost&gt;</code> set up and just need to add SSL to it, you will likely need to copy over the configuration lines that start with <code>SSL</code>, and switch the <code>VirtualHost</code> port from <code>80</code> to <code>443</code>. We will take care of port <code>80</code> in the next step.</p>
+
+<p>Open a new file in the <code>/etc/httpd/conf.d</code> directory:</p>
+<pre class="code-pre command prefixed"><code><ul class="prefixed"><li class="line" prefix="$">sudo vi /etc/httpd/conf.d/<span class="highlight">your_domain_or_ip</span>.conf
+</li></ul></code></pre>
+<p>Paste in the following minimal VirtualHost configuration:</p>
+<div class="code-label " title="/etc/httpd/conf.d/your_domain_or_ip.conf">/etc/httpd/conf.d/your_domain_or_ip.conf</div>
+<pre class="code-pre "><code>&lt;VirtualHost *:443&gt;
+    ServerName <span class="highlight">your_domain_or_ip</span>
+    DocumentRoot /var/www/ssl-test
+    SSLEngine on
+    SSLCertificateFile /etc/pki/tls/certs/apache-selfsigned.crt
+    SSLCertificateKeyFile /etc/pki/tls/private/apache-selfsigned.key
+&lt;/VirtualHost&gt;
+</code></pre>
+<p>Be sure to update the <code>ServerName</code> line to however you intend to address your server. This can be a hostname, full domain name, or an IP address. Make sure whatever you choose matches the <code>Common Name</code> you chose when making the certificate.</p>
+
+<p>The remaining lines specify a <code>DocumentRoot</code> directory to serve files from, and the SSL options needed to point Apache to our newly-created certificate and key.</p>
+
+<p>Now let&rsquo;s create our <code>DocumentRoot</code> and put an HTML file in it just for testing purposes:</p>
+<pre class="code-pre command prefixed"><code><ul class="prefixed"><li class="line" prefix="$">sudo mkdir /var/www/ssl-test
+</li></ul></code></pre>
+<p>Open a new <code>index.html</code> file with your text editor:</p>
+<pre class="code-pre command prefixed"><code><ul class="prefixed"><li class="line" prefix="$">sudo vi /var/www/ssl-test/index.html
+</li></ul></code></pre>
+<p>Paste the following into the blank file:</p>
+<div class="code-label " title="/var/www/ssl-test/index.html">/var/www/ssl-test/index.html</div>
+<pre class="code-pre "><code>&lt;h1&gt;it worked!&lt;/h1&gt;
+</code></pre>
+<p>This is not a full HTML file, of course, but browsers are lenient and it will be enough to verify our configuration.</p>
+
+<p>Save and close the file, then check your Apache configuration for syntax errors by typing:</p>
+<pre class="code-pre command prefixed"><code><ul class="prefixed"><li class="line" prefix="$">sudo apachectl configtest
+</li></ul></code></pre>
+<p>You may see some warnings, but as long as the output ends with <code>Syntax OK</code>, you are safe to continue. If this is not part of your output, check the syntax of your files and try again.</p>
+
+<p>When all is well, reload Apache to pick up the configuration changes:</p>
+<pre class="code-pre command prefixed"><code><ul class="prefixed"><li class="line" prefix="$">sudo systemctl reload httpd
+</li></ul></code></pre>
+<p>Now load your site in a browser, being sure to use <code>https://</code> at the beginning. </p>
+
+<p>You should see an error. This is normal for a self-signed certificate! The browser is warning you that it can&rsquo;t verify the identity of the server, because our certificate is not signed by any of the browser&rsquo;s known certificate authorities. For testing purposes and personal use this can be fine. You should be able to click through to <strong>advanced</strong> or <strong>more information</strong> and choose to proceed.</p>
+
+<p>After you do so, your browser will load the <code>it worked!</code> message.</p>
+
+<p><span class="note">&lt;p&gt;
+<strong>Note:</strong> if your browser doesn’t connect at all to the server, make sure your connection isn’t being blocked by a firewall. If you are using <code>firewalld</code>, the following commands will open ports <code>80</code> and <code>443</code>:&lt;/p&gt;</span></p>
+
+<pre class="code-pre command prefixed"><code><ul class="prefixed"><li class="line" prefix="$">sudo firewall-cmd --permanent --add-service=http
+</li><li class="line" prefix="$">sudo firewall-cmd --permanent --add-service=https
+</li><li class="line" prefix="$">sudo firewall-cmd --reload
+</li></ul></code></pre>
+<p></p>
+<p>&lt;/span&gt;</p>
+
+<p>Next we will add another <code>VirtualHost</code> section to our configuration to serve plain HTTP requests and redirect them to HTTPS.</p>
+
+<h2 id="step-4-—-redirecting-http-to-https">Step 4 — Redirecting HTTP to HTTPS</h2>
+
+<p>Currently, our configuration will only respond to HTTPS requests on port <code>443</code>. It is good practice to also respond on port <code>80</code>, even if you want to force all traffic to be encrypted. Let&rsquo;s set up a <code>VirtualHost</code> to respond to these unencrypted requests and redirect them to HTTPS.</p>
+
+<p>Open the same Apache configuration file we started in previous steps:</p>
+<pre class="code-pre command prefixed"><code><ul class="prefixed"><li class="line" prefix="$">sudo vi /etc/httpd/conf.d/<span class="highlight">your_domain_or_ip</span>.conf
+</li></ul></code></pre>
+<p>At the bottom, create another <code>VirtualHost</code> block to match requests on port <code>80</code>. Use the <code>ServerName</code> directive to again match your domain name or IP address. Then, use <code>Redirect</code> to match any requests and send them to the SSL <code>VirtualHost</code>. Make sure to include the trailing slash:</p>
+<div class="code-label " title="/etc/httpd/conf.d/your_domain_or_ip.conf">/etc/httpd/conf.d/your_domain_or_ip.conf</div>
+<pre class="code-pre "><code>&lt;VirtualHost *:80&gt;
+    ServerName <span class="highlight">your_domain_or_ip</span>
+    Redirect / https://<span class="highlight">your_domain_or_ip</span>/
+&lt;/VirtualHost&gt;
+</code></pre>
+<p>Save and close this file when you are finished, then test your configuration syntax again, and reload Apache:</p>
+<pre class="code-pre command prefixed"><code><ul class="prefixed"><li class="line" prefix="$">sudo apachectl configtest
+</li><li class="line" prefix="$">sudo systemctl reload httpd
+</li></ul></code></pre>
+<p>You can test the new redirect functionality by visiting your site with plain <code>http://</code> in front of the address. You should be redirected to <code>https://</code> automatically.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>You have now configured Apache to serve encrypted requests using a self-signed SSL certificate, and to redirect unecrypted HTTP requests to HTTPS.</p>
+
+<p>If you are planning on using SSL for a public website, you should look into purchasing a domain name and using a widely supported certificate authority such as <a href="https://letsencrypt.org/">Let&rsquo;s Encrypt</a>.</p>
+
+<p>For more information on using Let&rsquo;s Encrypt with Apache, please read our <a href="https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-centos-8">How To Secure Apache with Let&rsquo;s Encrypt on CentOS 8</a> tutorial.</p>
+
+
+              </div>
+
+              <div class="entry-footer">
+                <i class="bi bi-folder"></i>
+                <ul class="cats">
+                  
+                  
+                  <li><a href="/categories#en">
+                    en
+                  </a></li>
+                  
+                  <li><a href="/categories#ubuntu">
+                    ubuntu
+                  </a></li>
+                  
+                </ul>
+
+                <i class="bi bi-tags"></i>
+                <ul class="tags">
+                  
+                  
+                </ul>
+              </div>
+
+            </article><!-- End blog entry -->
+
+            <div class="blog-author d-flex align-items-center">
+              
+              <img src="https://www.gravatar.com/avatar/?s=250&d=mm&r=x" class="rounded-circle float-left" alt="">
+              
+              
+              <div>
+                <h4></h4>
+                <div class="social-links">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="biu bi-instagram"></i></a>
+                </div>
+                <p>
+                  
+                </p>
+              </div>
+            </div><!-- End blog author bio -->
+
+            <div class="blog-comments">
+
+              <h4 class="comments-count">8 Comments</h4>
+
+              <div id="comment-1" class="comment">
+                <div class="d-flex">
+                  <div class="comment-img"><img src="/assets/img/blog/comments-1.jpg" alt=""></div>
+                  <div>
+                    <h5><a href="">Georgia Reader</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                    <time datetime="2020-01-01">01 Jan, 2020</time>
+                    <p>
+                      Et rerum totam nisi. Molestiae vel quam dolorum vel voluptatem et et. Est ad aut sapiente quis molestiae est qui cum soluta.
+                      Vero aut rerum vel. Rerum quos laboriosam placeat ex qui. Sint qui facilis et.
+                    </p>
+                  </div>
+                </div>
+              </div><!-- End comment #1 -->
+
+              <div id="comment-2" class="comment">
+                <div class="d-flex">
+                  <div class="comment-img"><img src="/assets/img/blog/comments-2.jpg" alt=""></div>
+                  <div>
+                    <h5><a href="">Aron Alvarado</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                    <time datetime="2020-01-01">01 Jan, 2020</time>
+                    <p>
+                      Ipsam tempora sequi voluptatem quis sapiente non. Autem itaque eveniet saepe. Officiis illo ut beatae.
+                    </p>
+                  </div>
+                </div>
+
+                <div id="comment-reply-1" class="comment comment-reply">
+                  <div class="d-flex">
+                    <div class="comment-img"><img src="/assets/img/blog/comments-3.jpg" alt=""></div>
+                    <div>
+                      <h5><a href="">Lynda Small</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                      <time datetime="2020-01-01">01 Jan, 2020</time>
+                      <p>
+                        Enim ipsa eum fugiat fuga repellat. Commodi quo quo dicta. Est ullam aspernatur ut vitae quia mollitia id non. Qui ad quas nostrum rerum sed necessitatibus aut est. Eum officiis sed repellat maxime vero nisi natus. Amet nesciunt nesciunt qui illum omnis est et dolor recusandae.
+
+                        Recusandae sit ad aut impedit et. Ipsa labore dolor impedit et natus in porro aut. Magnam qui cum. Illo similique occaecati nihil modi eligendi. Pariatur distinctio labore omnis incidunt et illum. Expedita et dignissimos distinctio laborum minima fugiat.
+
+                        Libero corporis qui. Nam illo odio beatae enim ducimus. Harum reiciendis error dolorum non autem quisquam vero rerum neque.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div id="comment-reply-2" class="comment comment-reply">
+                    <div class="d-flex">
+                      <div class="comment-img"><img src="/assets/img/blog/comments-4.jpg" alt=""></div>
+                      <div>
+                        <h5><a href="">Sianna Ramsay</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                        <time datetime="2020-01-01">01 Jan, 2020</time>
+                        <p>
+                          Et dignissimos impedit nulla et quo distinctio ex nemo. Omnis quia dolores cupiditate et. Ut unde qui eligendi sapiente omnis ullam. Placeat porro est commodi est officiis voluptas repellat quisquam possimus. Perferendis id consectetur necessitatibus.
+                        </p>
+                      </div>
+                    </div>
+
+                  </div><!-- End comment reply #2-->
+
+                </div><!-- End comment reply #1-->
+
+              </div><!-- End comment #2-->
+
+              <div id="comment-3" class="comment">
+                <div class="d-flex">
+                  <div class="comment-img"><img src="/assets/img/blog/comments-5.jpg" alt=""></div>
+                  <div>
+                    <h5><a href="">Nolan Davidson</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                    <time datetime="2020-01-01">01 Jan, 2020</time>
+                    <p>
+                      Distinctio nesciunt rerum reprehenderit sed. Iste omnis eius repellendus quia nihil ut accusantium tempore. Nesciunt expedita id dolor exercitationem aspernatur aut quam ut. Voluptatem est accusamus iste at.
+                      Non aut et et esse qui sit modi neque. Exercitationem et eos aspernatur. Ea est consequuntur officia beatae ea aut eos soluta. Non qui dolorum voluptatibus et optio veniam. Quam officia sit nostrum dolorem.
+                    </p>
+                  </div>
+                </div>
+
+              </div><!-- End comment #3 -->
+
+              <div id="comment-4" class="comment">
+                <div class="d-flex">
+                  <div class="comment-img"><img src="/assets/img/blog/comments-6.jpg" alt=""></div>
+                  <div>
+                    <h5><a href="">Kay Duggan</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                    <time datetime="2020-01-01">01 Jan, 2020</time>
+                    <p>
+                      Dolorem atque aut. Omnis doloremque blanditiis quia eum porro quis ut velit tempore. Cumque sed quia ut maxime. Est ad aut cum. Ut exercitationem non in fugiat.
+                    </p>
+                  </div>
+                </div>
+
+              </div><!-- End comment #4 -->
+
+              <div class="reply-form">
+                <h4>Leave a Reply</h4>
+                <p>Your email address will not be published. Required fields are marked * </p>
+                <form action="">
+                  <div class="row">
+                    <div class="col-md-6 form-group">
+                      <input name="name" type="text" class="form-control" placeholder="Your Name*">
+                    </div>
+                    <div class="col-md-6 form-group">
+                      <input name="email" type="text" class="form-control" placeholder="Your Email*">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col form-group">
+                      <input name="website" type="text" class="form-control" placeholder="Your Website">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col form-group">
+                      <textarea name="comment" class="form-control" placeholder="Your Comment*"></textarea>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Post Comment</button>
+
+                </form>
+
+              </div>
+
+            </div><!-- End blog comments -->
+
+          </div><!-- End blog entries list -->
+
+          <div class="col-lg-4">
+
+            <div class="sidebar">
+              
+
+              <h3 class="sidebar-title">Search</h3>
+              <div class="sidebar-item search-form">
+                <form onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+                  <input type="text" class="launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter...">
+                  <button type="submit"><i class="bi bi-search"></i></button>
+                </form>
+              </div><div id="lunrsearchresults">
+                  <ul></ul>
+              </div>
+
+              
+              <!-- End sidebar search formn-->
+
+              <h3 class="sidebar-title">Categories</h3>
+              <div class="sidebar-item categories">
+                <ul>
+                  
+                  
+                  
+                  <li><a href="/category/en">en <span>(33)</span></a></li>
+                  
+                  <li><a href="/category/aws">aws <span>(3)</span></a></li>
+                  
+                  <li><a href="/category/data-analysis">data-analysis <span>(2)</span></a></li>
+                  
+                  <li><a href="/category/fr">fr <span>(29)</span></a></li>
+                  
+                  <li><a href="/category/docker">docker <span>(12)</span></a></li>
+                  
+                  <li><a href="/category/kubernetes">kubernetes <span>(11)</span></a></li>
+                  
+                  <li><a href="/category/web development">web development <span>(2)</span></a></li>
+                  
+                  <li><a href="/category/wordpress">wordpress <span>(4)</span></a></li>
+                  
+                  <li><a href="/category/ubuntu">ubuntu <span>(4)</span></a></li>
+                  
+                  <li><a href="/category/javascript">javascript <span>(4)</span></a></li>
+                  
+                  <li><a href="/category/database">database <span>(2)</span></a></li>
+                  
+                  <li><a href="/category/slack">slack <span>(2)</span></a></li>
+                  
+                  <li><a href="/category/productivity">productivity <span>(8)</span></a></li>
+                  
+                  <li><a href="/category/backup-restore">backup-restore <span>(2)</span></a></li>
+                  
+                  <li><a href="/category/fax">fax <span>(2)</span></a></li>
+                  
+                  <li><a href="/category/screenshot">screenshot <span>(2)</span></a></li>
+                  
+                  <li><a href="/category/security">security <span>(1)</span></a></li>
+                  
+                </ul>
+              </div><!-- End sidebar categories-->
+
+              <h3 class="sidebar-title">Recent Posts</h3>
+              <div class="sidebar-item recent-posts">
+                
+
+                
+                <div class="post-item clearfix">
+                  <!-- <img src="/assets/img/blog/blog-recent-1.jpg" alt="Log4j flaw: Am I impacted and how can I protect myself"> -->
+                   
+                     
+                    
+                    <img class="img-fluid" src="https://res.cloudinary.com/brightsoftwares/image/upload/v1639575508/photo-1639140651961-41392a332bfc_njfgu8.jpg" alt="Log4j flaw: Am I impacted and how can I protect myself"> 
+                     
+                  
+                  <h4><a href="/blog/en/security/log4j-flaw-am-i-impacted-and-how-can-i-protect-myself">Log4j flaw: Am I impacted and how can I protect myself</a></h4>
+                  <time datetime="2021-12-15 13:36">Wednesday 15 December, 2021</time>
+                </div>
+                
+                <div class="post-item clearfix">
+                  <!-- <img src="/assets/img/blog/blog-recent-1.jpg" alt="Docker tip : inspect and jq"> -->
+                   
+                     
+                    
+                    <img class="img-fluid" src="https://res.cloudinary.com/brightsoftwares/image/upload/v1639560797/photo-1578403881636-6f4a77a6f9cc_ddsft1.jpg" alt="Docker tip : inspect and jq"> 
+                     
+                  
+                  <h4><a href="/blog/en/docker/docker-tip-inspect-and-jq">Docker tip : inspect and jq</a></h4>
+                  <time datetime="2021-12-15 09:32">Wednesday 15 December, 2021</time>
+                </div>
+                
+                <div class="post-item clearfix">
+                  <!-- <img src="/assets/img/blog/blog-recent-1.jpg" alt="How to use local docker images with Minikube?"> -->
+                   
+                     
+                    
+                    <img class="img-fluid" src="https://sergio.afanou.com/assets/images/image-midres-5.jpg" alt="How to use local docker images with Minikube?"> 
+                     
+                  
+                  <h4><a href="/blog/en/kubernetes/how-to-use-local-docker-images-with-minikube">How to use local docker images with Minikube?</a></h4>
+                  <time datetime="2021-12-14 13:42">Tuesday 14 December, 2021</time>
+                </div>
+                
+                <div class="post-item clearfix">
+                  <!-- <img src="/assets/img/blog/blog-recent-1.jpg" alt="Kubernetes Helm : how to show Multi-line Properties"> -->
+                   
+                     
+                    
+                    <img class="img-fluid" src="https://sergio.afanou.com/assets/images/image-midres-25.jpg" alt="Kubernetes Helm : how to show Multi-line Properties"> 
+                     
+                  
+                  <h4><a href="/blog/en/kubernetes/kubernetes-helm-how-to-show-multi-line-properties">Kubernetes Helm : how to show Multi-line Properties</a></h4>
+                  <time datetime="2021-12-10 13:28">Friday 10 December, 2021</time>
+                </div>
+                
+
+              </div><!-- End sidebar recent posts-->
+
+              <h3 class="sidebar-title">Tags</h3>
+              <div class="sidebar-item tags">
+                <ul>
+                  
+                  
+                </ul>
+              </div><!-- End sidebar tags-->
+
+            </div><!-- End sidebar -->
+
+          </div><!-- End blog sidebar -->
+
+        </div>
+
+      </div>
+    </section><!-- End Blog Single Section -->
+
+  </main><!-- End #main -->
+ 
+    
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h2>Contact</h2>
+          <p>Contact Us</p>
+          <h3 class="mt-3">To order one of our services, navigate to the <a href="/order-service">order service</a> page</h3>
+        </header>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6">
+
+            <div class="row gy-4">
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-geo-alt"></i>
+                  <h3>Address</h3>
+                  <p>10 rue de Penthièvre,<br>75008 Paris</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-envelope"></i>
+                  <h3>Email Us</h3>
+                  <p>hello at bright-softwares dot com</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-clock"></i>
+                  <h3>Open Hours</h3>
+                  <p>Monday - Friday<br>9:00AM - 05:00PM</p>
+                </div>
+              </div>
+              <!-- <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-telephone"></i>
+                  <h3></h3>
+                  <p><br></p>
+                </div>
+              </div> -->
+            </div>
+
+          </div>
+
+          <div id="mauticform_wrapper_brightsoftwarescontact" class="mauticform_wrapper col-lg-6">
+            <form class="php-email-form" autocomplete="false" role="form" method="post" action="https://marketing.bright-softwares.com/form/submit?formId=5" id="mauticform_brightsoftwarescontact" data-mautic-form="brightsoftwarescontact" enctype="multipart/form-data">
+                <div class="mauticform-innerform">
+
+                    
+                  <div class="mauticform-page-wrapper mauticform-page-1 row gy-4">
+
+                    <div id="mauticform_brightsoftwarescontact_first_name" class="mauticform-row mauticform-text mauticform-field-1 mauticform-required col-md-6 " data-validate="first_name" data-validation-type="text">
+                        <input id="mauticform_input_brightsoftwarescontact_first_name" name="mauticform[first_name]" value="" placeholder="Your first name" class="mauticform-input form-control" type="text">
+                        <span class="mauticform-errormsg" style="display: none;">Please enter your first name</span>
+                    </div>
+
+                    <div id="mauticform_brightsoftwarescontact_your_last_name" class="mauticform-row mauticform-text mauticform-field-2 mauticform-required col-md-6 " data-validate="your_last_name" data-validation-type="text">
+                        <!-- <span class="mauticform-helpmessage">Please enter your last name.</span> -->
+                        <input id="mauticform_input_brightsoftwarescontact_your_last_name" name="mauticform[your_last_name]" value="" placeholder="Your last name" class="mauticform-input form-control" type="text">
+                        <span class="mauticform-errormsg" style="display: none;">Please enter your last name.</span>
+                    </div>
+
+                    <div id="mauticform_brightsoftwarescontact_email" class="mauticform-row mauticform-email mauticform-field-3 mauticform-required col-md-6 " data-validate="email" data-validation-type="email">
+                        <!-- <span class="mauticform-helpmessage">Please enter your e-mail address.</span> -->
+                        <input id="mauticform_input_brightsoftwarescontact_email" name="mauticform[email]" value="" placeholder="Your e-mail address" class="mauticform-input form-control" type="email">
+                        <span class="mauticform-errormsg" style="display: none;">Please enter your e-mail address.</span>
+                    </div>
+
+                    <div id="mauticform_brightsoftwarescontact_phone" class="mauticform-row mauticform-tel mauticform-field-4 col-md-6 ">
+                        <!-- <span class="mauticform-helpmessage">Please enter your phone number.</span> -->
+                        <input id="mauticform_input_brightsoftwarescontact_phone" name="mauticform[phone]" value="" placeholder="Your phone number" class="mauticform-input form-control" type="tel">
+                        <span class="mauticform-errormsg" style="display: none;"></span>
+                    </div>
+
+                    <div id="mauticform_brightsoftwarescontact_subject" class="mauticform-row mauticform-text mauticform-field-5 mauticform-required col-md-12" data-validate="subject" data-validation-type="text">
+                        <!-- <span class="mauticform-helpmessage">Please enter your contact message.</span> -->
+                        <input id="mauticform_input_brightsoftwarescontact_subject" name="mauticform[subject]" value="" placeholder="Your contact message" class="mauticform-input form-control" type="text">
+                        <span class="mauticform-errormsg" style="display: none;">Please enter the contact subject.</span>
+                    </div>
+
+                    <div id="mauticform_brightsoftwarescontact_f_message" class="mauticform-row mauticform-text mauticform-field-6 mauticform-required col-md-12 text-center" data-validate="f_message" data-validation-type="textarea">
+                        <!-- <span class="mauticform-helpmessage">Please enter your message.</span> -->
+                        <textarea class="form-control" rows=6 placeholder="Message" id="mauticform_input_brightsoftwarescontact_f_message" name="mauticform[f_message]" class="mauticform-textarea"></textarea>
+                        <span class="mauticform-errormsg" style="display: none;">Please enter your message.</span>
+                    </div>
+
+                    <div id="mauticform_brightsoftwarescontact_submit" class="mauticform-row mauticform-button-wrapper mauticform-field-7 col-md-12 text-center">
+                        <div class="mauticform-error" id="mauticform_brightsoftwarescontact_error"></div>
+                        <div class="mauticform-message" id="mauticform_brightsoftwarescontact_message"></div>
+                        
+                        <button type="submit" name="mauticform[submit]" id="mauticform_input_brightsoftwarescontact_submit" value="" class="mauticform-button btn btn-default">Send message</button>
+                    </div>
+                  </div>
+                </div>
+
+                <input type="hidden" name="mauticform[formId]" id="mauticform_brightsoftwarescontact_id" value="5">
+                <input type="hidden" name="mauticform[return]" id="mauticform_brightsoftwarescontact_return" value="">
+                <input type="hidden" name="mauticform[formName]" id="mauticform_brightsoftwarescontact_name" value="brightsoftwarescontact">
+
+                </form>
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+
+
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+  <div class="footer-newsletter">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-12 text-center">
+          <h4>Our Newsletter</h4>
+          <p>We won't spam you, we promise. 😇</p>
+        </div>
+        <div
+          id="mauticform_wrapper_brightsoftwaresnewsletter"
+          class="mauticform_wrapper col-lg-6"
+        >
+          <form
+            autocomplete="false"
+            role="form"
+            method="post"
+            action="https://marketing.bright-softwares.com/form/submit?formId=4"
+            id="mauticform_brightsoftwaresnewsletter"
+            data-mautic-form="brightsoftwaresnewsletter"
+            enctype="multipart/form-data"
+          >
+            <div
+              class="mauticform-error"
+              id="mauticform_brightsoftwaresnewsletter_error"
+            ></div>
+            <div
+              class="mauticform-message"
+              id="mauticform_brightsoftwaresnewsletter_message"
+            ></div>
+            <div class="mauticform-innerform">
+              <div
+                class="mauticform-page-wrapper mauticform-page-1"
+                data-mautic-form-page="1"
+              >
+                <div
+                  id="mauticform_brightsoftwaresnewsletter_email"
+                  data-validate="email"
+                  data-validation-type="email"
+                  class="
+                    mauticform-row
+                    mauticform-email
+                    mauticform-field-1
+                    mauticform-required
+                  "
+                >
+                  <input
+                    id="mauticform_input_brightsoftwaresnewsletter_email"
+                    name="mauticform[email]"
+                    value=""
+                    placeholder="E-mail address"
+                    class="mauticform-input"
+                    type="email"
+                  />
+                  <span class="mauticform-errormsg" style="display: none"
+                    >Please enter your e-mail address</span
+                  >
+                </div>
+
+                <div
+                  id="mauticform_brightsoftwaresnewsletter_submit"
+                  class="
+                    mauticform-row mauticform-button-wrapper mauticform-field-2
+                  "
+                >
+                  <input
+                    type="submit"
+                    name="mauticform[submit]"
+                    id="mauticform_input_brightsoftwaresnewsletter_submit"
+                    value="Subscribe"
+                    class="mauticform-button btn btn-default"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <input
+              type="hidden"
+              name="mauticform[formId]"
+              id="mauticform_brightsoftwaresnewsletter_id"
+              value="4"
+            />
+            <input
+              type="hidden"
+              name="mauticform[return]"
+              id="mauticform_brightsoftwaresnewsletter_return"
+              value=""
+            />
+            <input
+              type="hidden"
+              name="mauticform[formName]"
+              id="mauticform_brightsoftwaresnewsletter_name"
+              value="brightsoftwaresnewsletter"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-top">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-info">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <img src="/assets/flexstart-img/logo.png" alt="" />
+            <span>Bright Softwares</span>
+          </a>
+          <p>
+            We provide solutions to our customers challenges. Our teams based in
+            Paris and Lomé provide high value expertise to engineer the best
+            solutions.
+          </p>
+          <div class="social-links mt-3">
+            
+            <a href="http://twitter.com/brightsoftwares" class="twitter"
+              ><i class="bi bi-twitter"></i
+            ></a>
+            
+            <a href="http://fb.me/bright-softwares" class="facebook"
+              ><i class="bi bi-facebook"></i
+            ></a>
+            
+            <a href="" class="stack-overflow"
+              ><i class="bi bi-stack-overflow"></i
+            ></a>
+            
+            <a href="http://github.com/brightsoftwares" class="github"
+              ><i class="bi bi-github"></i
+            ></a>
+            
+            <a href="" class="instagram"
+              ><i class="bi bi-instagram"></i
+            ></a>
+            
+            <a href="" class="linkedin"
+              ><i class="bi bi-linkedin"></i
+            ></a>
+            
+            <!-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bi bi-instagram bx bxl-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bi bi-linkedin bx bxl-linkedin"></i></a> -->
+          </div>
+
+          <!-- ======= Read page in alternate language ======= -->
+          <div class="flexstart-blog-single mt-3">
+            
+                
+                
+                
+                <footer class="lang-options">
+                    <p>Read this page in a different language:</p>
+                    <ul class="nav flex-column">
+                    
+                      
+                    
+                      
+                        <li class="nav-item">
+                          <a href="/blog/fr/ubuntu/how-to-create-a-selfsigned-ssl-certificate-for-apache-on-centos-8" class="nav-link fr" title="View in fr">
+                            🇫🇷 Français
+                          </a>
+                        </li>
+                      
+                    
+                    </ul>
+                </footer>
+                
+            
+          </div>
+    
+
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li>
+              <i class="bi bi-chevron-right"></i> <a href="index.html">Home</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i> <a href="#">About us</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i> <a href="#">Services</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i>
+              <a href="/conditions">Terms of service</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i>
+              <a href="/privacy">Privacy policy</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li>
+              <i class="bi bi-chevron-right"></i> <a href="#">Web solutions</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i> <a href="#">e-commerce</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i>
+              <a href="#">AI powered apps</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i> <a href="#">AI Models</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i>
+              <a href="#">Automated revenue</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i>
+              <a href="#">Cloud infrastructure</a>
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="col-lg-3 col-md-12 footer-contact text-center text-md-start"
+        >
+          <h4>Contact Us</h4>
+          <p>
+            10 rue de Penthièvre <br />
+            75008, Paris<br />
+            France <br /><br />
+            <!--<strong>Phone:</strong> +1 5589 55488 55<br>-->
+            <strong>Email:</strong> hello at bright-softwares dot com<br />
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="copyright">
+      &copy; Copyright
+      <strong><span>Bright Softwares 2021</span></strong
+      >. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexstart-bootstrap-startup-template/ -->
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+  </div>
+</footer>
+<!-- End Footer -->
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"
+  ><i class="bi bi-arrow-up-short"></i
+></a>
+
+<!-- Vendor JS Files -->
+<script src="/assets/flexstart-vendor/bootstrap/js/bootstrap.bundle.js"></script>
+<script src="/assets/flexstart-vendor/aos/aos.js"></script>
+<script src="/assets/flexstart-vendor/php-email-form/validate.js"></script>
+<script src="/assets/flexstart-vendor/swiper/swiper-bundle.min.js"></script>
+<script src="/assets/flexstart-vendor/purecounter/purecounter.js"></script>
+<script src="/assets/flexstart-vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="/assets/flexstart-vendor/glightbox/js/glightbox.min.js"></script>
+
+<!-- Template Main JS File -->
+<script src="/assets/flexstart-js/main.js"></script>
+<script src="/assets/flexstart-js/flexstart_contact.js"></script>
+
+<!-- Search engine -->
+<script src="/assets/js/lunr.js"></script>
+<script src="/assets/js/lunrsearchengine.js"></script>
+<script src="/assets/js/copycode.js"></script>
+
+  </body>
+</html>

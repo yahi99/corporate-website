@@ -1,0 +1,75 @@
+backend:
+  name: github
+  repo: BrightSoftwares/corporate-website
+  base_url: https://netlify-github-oauth-provider.glitch.me
+  branch: master # Branch to update (optional; defaults to master)
+  #api_root: https://api.github.com
+  #site_domain: cms.netlify.com
+  #auth_endpoint: auth
+  
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: brightsoftwares
+    api_key: 758457635859946
+  
+publish_mode: editorial_workflow
+media_folder: "assets/images/uploads" # Media files will be stored in the repo under images/uploads
+
+collections:
+  - name: "blog-en" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog English" # Used in the UI
+    folder: "en/_posts" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "flexstart-blog-single"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Author", name: "author", widget: "select", options: ["full", "john"]}
+      - {label: "Language", name: "lang", widget: "select", options: ["fr", "en"]}
+      - {label: "Language Post Ref", name: "ref", widget: "string"}
+      - {label: "Categories", name: "categories", widget: "list", allow_add: true, default: "" }
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "image", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      
+  - name: "blog-fr" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog French" # Used in the UI
+    folder: "fr/_posts" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "flexstart-blog-single"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Author", name: "author", widget: "select", options: ["full", "john"]}
+      - {label: "Language", name: "lang", widget: "select", options: ["fr", "en"]}
+      - {label: "Language Post Ref", name: "ref", widget: "string"}
+      - {label: "Categories", name: "categories", widget: "list", allow_add: true, default: "" }
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "image", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"} 
+      
+  - name: "services" # Used in routes, e.g., /admin/collections/blog
+    label: "Services" # Used in the UI
+    folder: "_services" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "flexstart-portfolio-details"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Sub Title", name: "subtitle", widget: "string"}
+      - {label: "Post is featured?", name: "featured", widget: "boolean", default: false}
+      - {label: "Modal ID", name: "images", widget: "number", value_type: "int"}
+      - {label: "Image", name: "img", widget: "image"}
+      - {label: "Image thumbnail", name: "thumbnail", widget: "image"}
+      - {label: "Publish Date", name: "project-date", widget: "date", format: 'YYYY-MM-dd'}
+      - {label: "Customer name", name: "client", widget: "string"}
+      - {label: "Author", name: "author", widget: "select", options: ["full", "john"]}
+      - {label: "Language", name: "lang", widget: "select", options: ["fr", "en"]}
+      - {label: "Language Post Ref", name: "ref", widget: "string"}
+      - {label: "Categories", name: "category", widget: "list", allow_add: true, default: "" }
+      - {label: "Type", name: "type", widget: "string", default: "cloud"}
+      - {label: "Publish Date", name: "date", widget: "date", format: 'YYYY-MM-dd'}
+      - {label: "Featured Image File", name: "image-file", widget: "image"}
+      - {label: "Featured Image alt text", name: "alt", widget: "string"}
+      - {label: "Body", name: "description", widget: "markdown"} 

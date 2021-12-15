@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <title>
+    Understanding Template Literals in JavaScript
+  </title>
+  <meta content="We provide solutions to our customers challenges. Our teams based in Paris and Lomé provide high value expertise to engineer the best solutions." name="description" />
+
+  <meta
+    content="web e-commerce articifial intelligence ai automation"
+    name="keywords"
+  />
+  <link
+    rel="canonical"
+    href="https://bright-softwares.com/blog/fr/javascript/understanding-template-literals-in-javascript"
+  />
+  <link rel="manifest" href="manifest.json" />
+
+  <!-- Favicons -->
+  <!-- <link href="/assets/flexstart-img/favicon.png" rel="icon">
+  <link href="/assets/flexstart-img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+  <!-- The favicon items -->
+  <link
+    rel="apple-touch-icon"
+    sizes="57x57"
+    href="/assets/favicon.ico/apple-icon-57x57.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="60x60"
+    href="/assets/favicon.ico/apple-icon-60x60.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="72x72"
+    href="/assets/favicon.ico/apple-icon-72x72.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="76x76"
+    href="/assets/favicon.ico/apple-icon-76x76.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="114x114"
+    href="/assets/favicon.ico/apple-icon-114x114.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="120x120"
+    href="/assets/favicon.ico/apple-icon-120x120.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="144x144"
+    href="/assets/favicon.ico/apple-icon-144x144.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="152x152"
+    href="/assets/favicon.ico/apple-icon-152x152.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="/assets/favicon.ico/apple-icon-180x180.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="192x192"
+    href="/assets/favicon.ico/android-icon-192x192.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="/assets/favicon.ico/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="96x96"
+    href="/assets/favicon.ico/favicon-96x96.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="/assets/favicon.ico/favicon-16x16.png"
+  />
+  <!--<link rel="manifest" href="/assets/favicon.ico/manifest.json">-->
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta
+    name="msapplication-TileImage"
+    content="/assets/favicon.ico/ms-icon-144x144.png"
+  />
+  <meta name="theme-color" content="#ffffff" />
+
+  
+  <!-- Language handling -->
+  
+    
+    
+    
+      
+    <link rel="alternate" hreflang="en" href="/blog/en/javascript/understanding-template-literals-in-javascript" />
+      
+    <link rel="alternate" hreflang="fr" href="/blog/fr/javascript/understanding-template-literals-in-javascript" />
+      
+    
+  
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet"
+  />
+
+  <!-- Vendor CSS Files -->
+  <link
+    href="/assets/flexstart-vendor/bootstrap/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="/assets/flexstart-vendor/bootstrap-icons/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+  <link
+    href="/assets/flexstart-vendor/aos/aos.css"
+    rel="stylesheet"
+  />
+  <link
+    href="/assets/flexstart-vendor/remixicon/remixicon.css"
+    rel="stylesheet"
+  />
+  <link
+    href="/assets/flexstart-vendor/swiper/swiper-bundle.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="/assets/flexstart-vendor/glightbox/css/glightbox.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Template Main CSS File -->
+  <link
+    href="/assets/flexstart-css/style.css"
+    rel="stylesheet"
+  />
+
+  <!-- =======================================================
+  * Template Name: FlexStart - v1.1.1
+  * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134921119-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-134921119-1');
+</script> 
+</head>
+
+  <body>
+    <!-- ======= Header ======= -->
+<header id="header" class="header fixed-top">
+  <div
+    class="
+      container-fluid container-xl
+      d-flex
+      align-items-center
+      justify-content-between
+    "
+  >
+    <a href="/index.html" class="logo d-flex align-items-center">
+      <img src="/img/logos/large/brightsoftwares-light.png" alt="Bright Softwares logo" />
+      <span>Bright Softwares</span>
+    </a>
+
+    <nav id="navbar" class="navbar">
+      <ul>
+        <!-- <li><a class="nav-link scrollto active" href="#hero">Home</a></li> -->
+        <li class="dropdown">
+          <a class="nav-link scrollto" href="#services"
+            ><span>Services</span> <i class="bi bi-chevron-down"></i
+          ></a>
+          <ul>
+            <li><a href="#">Web solutions</a></li>
+            <li><a href="#">e-commerce</a></li>
+            <li><a href="#">AI powered apps</a></li>
+            <li><a href="#">AI Models</a></li>
+            <li><a href="#">Automated revenue</a></li>
+            <li><a href="#">Cloud infrastructure</a></li>
+          </ul>
+        </li>
+        
+        
+        <li>
+          <a class="nav-link scrollto" href="/fr/blog.html">Blog</a>
+        </li>
+        
+        <li>
+          <a class="nav-link scrollto" href="/fr/index.html#team">Equipe</a>
+        </li>
+        
+        <li>
+          <a class="nav-link scrollto" href="/fr/index.html#about">A propos</a>
+        </li>
+        
+        <li>
+          <a class="nav-link scrollto" href="/fr/index.html#contact">Contactez-nous</a>
+        </li>
+        
+        <li>
+          <a class="getstarted scrollto" href="/order-service">Order now</a>
+        </li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav>
+    <!-- .navbar -->
+  </div>
+</header>
+<!-- End Header -->
+   <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <ol>
+          <li><a href="/fr/index.html">Home</a></li>
+          <li><a href="/fr/blog.html">Blog</a></li>
+          <li>Understanding Template Literals in JavaScript</li>
+        </ol>
+        <h2>Understanding Template Literals in JavaScript</h2>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Single Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-8 entries">
+
+            <article class="entry entry-single">
+
+              <div class="entry-img">
+                <img src="/assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="entry-title">
+                <a href="">Understanding Template Literals in JavaScript</a>
+              </h2>
+
+              <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+              
+              <!-- End Adsense -->
+
+              <div class="entry-meta">
+                
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href=""></a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> 
+                    <a href="">
+                      <time datetime="2020-07-05 00:00">Jul 5, 2020 (1 year and 5 months ago)</time>
+                      <small>
+                        
+                      </small>
+                    </a>
+                  </li>
+                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="">12 Comments</a></li>
+                </ul>
+              </div>
+
+              <div class="entry-content">
+
+                <p><em>The author selected the <a href="https://www.brightfunds.org/funds/write-for-donations-covid-19-relief-fund">COVID-19 Relief Fund</a> to receive a donation as part of the <a href="https://do.co/w4do-cta">Write for DOnations</a> program.</em></p>
+
+<h3 id="introduction">Introduction</h3>
+
+<p>The <a href="http://www.ecma-international.org/ecma-262/6.0/">2015 edition of the ECMAScript specification (ES6)</a> added <em>template literals</em> to the JavaScript language. Template literals are a new form of making <a href="https://www.digitalocean.com/community/tutorials/how-to-work-with-strings-in-javascript">strings in JavaScript</a> that add a lot of powerful new capabilities, such as creating multi-line strings more easily and using placeholders to embed expressions in a string. In addition, an advanced feature called <em>tagged template literals</em> allows you to perform operations on the expressions within a string. All of these capabilities increase your options for string manipulation as a developer, letting you generate dynamic strings that could be used for <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL">URLs</a> or functions that customize <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML elements</a>.</p>
+
+<p>In this article, you will go over the differences between single/double-quoted strings and template literals, running through the various ways to declare strings of different shape, including multi-line strings and dynamic strings that change depending on the value of a variable or expression. You will then learn about tagged templates and see some real-world examples of projects using them.</p>
+
+<h2 id="declaring-strings">Declaring Strings</h2>
+
+<p>This section will review how to declare strings with single quotes and double quotes, and will then show you how to do the same with template literals.</p>
+
+<p>In JavaScript, a string can be written with single quotes (<code>' '</code>):</p>
+<pre class="code-pre "><code class="code-highlight language-js">const single = 'Every day is a good day when you paint.'
+</code></pre>
+<p>A string can also be written with double quotes (<code>" "</code>):</p>
+<pre class="code-pre "><code class="code-highlight language-js">const double = "Be so very light. Be a gentle whisper."
+</code></pre>
+<p>There is no major difference in JavaScript between single- or double-quoted strings, unlike other languages that might allow <em>interpolation</em> in one type of string but not the other. In this context, interpolation refers to the evaluation of a placeholder as a dynamic part of a string.</p>
+
+<p>The use of single- or double-quoted strings mostly comes down to personal preference and convention, but used in conjunction, each type of string only needs to <a href="https://www.digitalocean.com/community/tutorials/how-to-work-with-strings-in-javascript#escaping-quotes-and-apostrophes-in-strings">escape</a> its own type of quote:</p>
+<pre class="code-pre "><code class="code-highlight language-js">// Escaping a single quote in a single-quoted string
+const single = '"We don\'t make mistakes. We just have happy accidents." - Bob Ross'
+
+// Escaping a double quote in a double-quoted string
+const double = "\"We don't make mistakes. We just have happy accidents.\" - Bob Ross"
+
+console.log(single);
+console.log(double);
+</code></pre>
+
+<p>The result of the <code>log()</code> method here will print the same two strings to the <a href="https://www.digitalocean.com/community/tutorials/how-to-use-the-javascript-developer-console">console</a>:</p>
+<pre class="code-pre "><code><div class="secondary-code-label " title="Output">Output</div>"We don't make mistakes. We just have happy accidents." - Bob Ross
+"We don't make mistakes. We just have happy accidents." - Bob Ross
+</code></pre>
+<p>Template literals, on the other hand, are written by surrounding the string with the backtick character, or grave accent (<code>`</code>):</p>
+<pre class="code-pre "><code class="code-highlight language-js">const template = `Find freedom on this canvas.`
+</code></pre>
+<p>They do not need to escape single or double quotes:</p>
+<pre class="code-pre "><code class="code-highlight language-js">const template = `"We don't make mistakes. We just have happy accidents." - Bob Ross`
+</code></pre>
+<p>However, they do still need to escape backticks:</p>
+<pre class="code-pre "><code class="code-highlight language-js">const template = `Template literals use the \` character.`
+</code></pre>
+<p>Template literals can do everything that regular strings can, so you could possibly replace all strings in your project with them and have the same functionality. However, the most common convention in codebases is to only use template literals when using the additional capabilities of template literals, and consistently using the single or double quotes for all other simple strings. Following this standard will make your code easier to read if examined by another developer.</p>
+
+<p>Now that you&rsquo;ve seen how to declare strings with single quotes, double quotes, and backticks, you can move on to the first advantage of template literals: writing multi-line strings.</p>
+
+<h2 id="multi-line-strings">Multi-line Strings</h2>
+
+<p>In this section, you will first run through the way strings with multiple lines were declared before ES6, then see how template literals make this easier.</p>
+
+<p>Originally, if you wanted to write a string that spans multiple lines in your text editor, you would use the <a href="https://www.digitalocean.com/community/tutorials/how-to-work-with-strings-in-javascript#string-concatenation">concatenation operator</a>. However, this was not always a straight-forward process. The following string concatenation seemed to run over multiple lines:</p>
+<pre class="code-pre "><code class="code-highlight language-js">const address = 
+  'Homer J. Simpson' + 
+  '742 Evergreen Terrace' + 
+  'Springfield'
+</code></pre>
+<p>This might allow you to break up the string into smaller lines and include it over multiple lines in the text editor, but it has no effect on the output of the string. In this case, the strings will all be on one line and not separated by newlines or spaces. If you logged <code>address</code> to the console, you would get the following:</p>
+<pre class="code-pre "><code><div class="secondary-code-label " title="Output">Output</div>Homer J. Simpson742 Evergreen TerraceSpringfield
+</code></pre>
+<p>You can use the backslash character (<code>\</code>) to continue the string onto multiple lines:</p>
+<pre class="code-pre "><code class="code-highlight language-js">const address =
+  'Homer J. Simpson\
+  742 Evergreen Terrace\
+  Springfield'
+</code></pre>
+<p>This will retain any indentation as whitespace, but the string will still be on one line in the output:</p>
+<pre class="code-pre "><code><div class="secondary-code-label " title="Output">Output</div>Homer J. Simpson  742 Evergreen Terrace  Springfield
+</code></pre>
+<p>Using the newline character (<code>\n</code>), you can create a true multi-line string:</p>
+<pre class="code-pre "><code class="code-highlight language-js">const address = 
+  'Homer J. Simpson\n' + 
+  '742 Evergreen Terrace\n' + 
+  'Springfield'
+</code></pre>
+<p>When logged to the console, this will display the following:</p>
+<pre class="code-pre "><code><div class="secondary-code-label " title="Output">Output</div>Homer J. Simpson
+742 Evergreen Terrace
+Springfield
+</code></pre>
+<p>Using newline characters to designate multi-line strings can be counterintuitive, however. In contrast, creating a multi-line string with template literals can be much more straight-forward. There is no need to concatenate, use newline characters, or use backslashes. Just pressing <code>ENTER</code> and writing the string across multiple lines works by default:</p>
+<pre class="code-pre "><code class="code-highlight language-js">const address = `Homer J. Simpson
+742 Evergreen Terrace
+Springfield`
+</code></pre>
+<p>The output of logging this to the console is the same as the input:</p>
+<pre class="code-pre "><code><div class="secondary-code-label " title="Output">Output</div>Homer J. Simpson
+742 Evergreen Terrace
+Springfield
+</code></pre>
+<p>Any indentation will be preserved, so it&rsquo;s important not to indent any additional lines in the string if that is not desired. For example, consider the following:</p>
+<pre class="code-pre "><code class="code-highlight language-js">const address = `Homer J. Simpson
+                 742 Evergreen Terrace
+                 Springfield`
+</code></pre>
+<p>Although this style of writing the line might make the code more human readable, the output will not be:</p>
+<pre class="code-pre "><code><div class="secondary-code-label " title="Output">Output</div>Homer J. Simpson
+                 742 Evergreen Terrace
+                 Springfield
+</code></pre>
+<p>With multi-line strings now covered, the next section will deal with how expressions are interpolated into their values with the different string declarations.</p>
+
+<h2 id="expression-interpolation">Expression Interpolation</h2>
+
+<p>In strings before ES6, concatenation was used to create a dynamic string with variables or expressions:</p>
+<pre class="code-pre "><code class="code-highlight language-js">const method = 'concatenation'
+const dynamicString = 'This string is using ' + method + '.'
+</code></pre>
+<p>When logged to the console, this will yield the following:</p>
+<pre class="code-pre "><code><div class="secondary-code-label " title="Output">Output</div>This string is using concatenation.
+</code></pre>
+<p>With template literals, an expression can be embedded in a <em>placeholder</em>. A placeholder is represented by <code>${}</code>, with anything within the curly brackets treated as JavaScript and anything outside the brackets treated as a string:</p>
+<pre class="code-pre "><code class="code-highlight language-js">const method = 'interpolation'
+const dynamicString = `This string is using ${method}.`
+</code></pre>
+<p>When <code>dynamicString</code> is logged to the console, the console will show the following:</p>
+<pre class="code-pre "><code><div class="secondary-code-label " title="Output">Output</div>This string is using interpolation.
+</code></pre>
+<p>One common example of embedding values in a string might be for creating dynamic URLs. With concatenation, this can be cumbersome. For example, the following declares a <a href="https://www.digitalocean.com/community/tutorials/how-to-define-functions-in-javascript">function</a> to generate an <a href="https://tools.ietf.org/html/rfc6749">OAuth</a> access string:</p>
+<pre class="code-pre "><code class="code-highlight language-js">function createOAuthString(host, clientId, scope) {
+  return host + '/login/oauth/authorize?client_id=' + clientId + '&amp;scope=' + scope
+}
+
+createOAuthString('https://github.com', 'abc123', 'repo,user')
+</code></pre>
+
+<p>Logging this function will yield the following URL to the console:</p>
+<pre class="code-pre "><code><div class="secondary-code-label " title="Output">Output</div>https://github.com/login/oauth/authorize?client_id=abc123&amp;scope=repo,user
+</code></pre>
+<p>Using string interpolation, you no longer have to keep track of opening and closing strings and concatenation operator placement. Here is the same example with template literals:</p>
+<pre class="code-pre "><code class="code-highlight language-js">function createOAuthString(host, clientId, scope) {
+  return `${host}/login/oauth/authorize?client_id=${clientId}&amp;scope=${scope}`
+}
+
+createOAuthString('https://github.com', 'abc123', 'repo,user')
+</code></pre>
+
+<p>This will have the same output as the concatenation example:</p>
+<pre class="code-pre "><code><div class="secondary-code-label " title="Output">Output</div>https://github.com/login/oauth/authorize?client_id=abc123&amp;scope=repo,user
+</code></pre>
+<p>You can also use the <a href="https://www.digitalocean.com/community/tutorials/how-to-index-split-and-manipulate-strings-in-javascript#trimming-whitespace"><code>trim()</code> method</a> on a template literal to remove any whitespace at the beginning or end of the string. For example, the following uses an <a href="https://www.digitalocean.com/community/tutorials/how-to-define-functions-in-javascript#arrow-functions">arrow function</a> to create an HTML <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li"><code>&lt;li&gt;</code> element</a> with a customized link:</p>
+<pre class="code-pre "><code class="code-highlight language-js">const menuItem = (url, link) =&gt;
+  `
+&lt;li&gt;
+  &lt;a href="${url}"&gt;${link}&lt;/a&gt;
+&lt;/li&gt;
+`.trim()
+
+menuItem('https://google.com', 'Google')
+</code></pre>
+
+<p>The result will be trimmed of all the whitespace, ensuring that the element will be rendered correctly:</p>
+<pre class="code-pre "><code><div class="secondary-code-label " title="Output">Output</div>&lt;li&gt;
+  &lt;a href="https://google.com"&gt;Google&lt;/a&gt;
+&lt;/li&gt;
+</code></pre>
+<p>Entire expressions can be interpolated, not just variables, such as in this example of the sum of two numbers:</p>
+<pre class="code-pre "><code class="code-highlight language-js">const sum = (x, y) =&gt; x + y
+const x = 5
+const y = 100
+const string = `The sum of ${x} and ${y} is ${sum(x, y)}.`
+
+console.log(string)
+</code></pre>
+
+<p>This code defines the <code>sum</code> function and the variables <code>x</code> and <code>y</code>, then uses both the function and the variables in a string. The logged result will show the following:</p>
+<pre class="code-pre "><code><div class="secondary-code-label " title="Output">Output</div>The sum of 5 and 100 is 105.
+</code></pre>
+<p>This can be particularly useful with <a href="https://www.digitalocean.com/community/tutorials/how-to-write-conditional-statements-in-javascript#ternary-operator">ternary operators</a>, which allow conditionals within a string:</p>
+<pre class="code-pre "><code class="code-highlight language-js">const age = 19
+const message = `You can ${age &lt; 21 ? 'not' : ''} view this page`
+console.log(message)
+</code></pre>
+<p>The logged message here will change depnding on whether the value of <code>age</code> is over or under <code>21</code>. Since it is <code>19</code> in this example, the following output will be logged:</p>
+<pre class="code-pre "><code><div class="secondary-code-label " title="Output">Output</div>You can not view this page
+</code></pre>
+<p>Now you have an idea of how template literals can be useful when used to interpolate expressions. The next section will take this a step further by examining tagged template literals to work with the expressions passed into placeholders.</p>
+
+<h2 id="tagged-template-literals">Tagged Template Literals</h2>
+
+<p>An advanced feature of template literals is the use of <em>tagged template literals</em>, sometimes referred to as <em>template tags</em>. A tagged template starts with a <em>tag function</em> that parses a template literal, allowing you more control over manipulating and returning a dynamic string.</p>
+
+<p>In this example, you&rsquo;ll create a <code>tag</code> function to use as the function operating on a tagged template. The string literals are the first parameter of the function, named <code>strings</code> here, and any expressions interpolated into the string are packed into the second parameter using <a href="https://www.digitalocean.com/community/tutorials/understanding-destructuring-rest-parameters-and-spread-syntax-in-javascript">rest parameters</a>. You can console out the parameter to see what they will contain:</p>
+<pre class="code-pre "><code class="code-highlight language-js">function tag(strings, ...expressions) {
+  console.log(strings)
+  console.log(expressions)
+}
+</code></pre>
+<p>Use the <code>tag</code> function as the tagged template function and parse the string as follows:</p>
+<pre class="code-pre "><code class="code-highlight language-js">const string = tag`This is a string with ${true} and ${false} and ${100} interpolated inside.`
+</code></pre>
+<p>Since you&rsquo;re console logging <code>strings</code> and <code>expressions</code>, this will be the output:</p>
+<pre class="code-pre "><code><div class="secondary-code-label " title="Output">Output</div>(4) ["This is a string with ", " and ", " and ", " interpolated inside."
+(3) [true, false, 100]
+</code></pre>
+<p>The first parameter, <code>strings</code>, is an <a href="https://www.digitalocean.com/community/tutorials/understanding-arrays-in-javascript">array</a> containing all the string literals:</p>
+
+<ul>
+<li><code>"This is a string with "</code></li>
+<li><code>" and "</code></li>
+<li><code>" and "</code></li>
+<li><code>" interpolated inside."</code></li>
+</ul>
+
+<p>There is also a <code>raw</code> property available on this argument at <code>strings.raw</code>, which contains the strings without any escape sequences being processed. For example, <code>/n</code> would just be the character <code>/n</code> and not be escaped into a newline.</p>
+
+<p>The second parameter, <code>...expressions</code>, is a rest parameter array consisting of all the expressions:</p>
+
+<ul>
+<li><code>true</code></li>
+<li><code>false</code></li>
+<li><code>100</code></li>
+</ul>
+
+<p>The string literals and expressions are passed as parameters to the tagged template function <code>tag</code>. Note that the tagged template does not need to return a string; it can operate on those values and return any type of value. For example, we can have the function ignore everything and return <code>null</code>, as in this <code>returnsNull</code> function:</p>
+<pre class="code-pre "><code class="code-highlight language-js">function returnsNull(strings, ...expressions) {
+  return null
+}
+
+const string = returnsNull`Does this work?`
+console.log(string)
+</code></pre>
+
+<p>Logging the <code>string</code> variable will return:</p>
+<pre class="code-pre "><code><div class="secondary-code-label " title="Output">Output</div>null
+</code></pre>
+<p>An example of an action that can be performed in tagged templates is applying some change to both sides of each expression, such as if you wanted to wrap each expression in an HTML tag. Create a <code>bold</code> function that will add <code>&lt;strong&gt;</code> and <code>&lt;/strong&gt;</code> to each expression:</p>
+<pre class="code-pre "><code class="code-highlight language-js">function bold(strings, ...expressions) {
+  let finalString = ''
+
+// Loop through all expressions
+expressions.forEach((value, i) =&gt; {
+finalString += `${strings[i]}&lt;strong&gt;${value}&lt;/strong&gt;`
+})
+
+// Add the last string literal
+finalString += strings[strings.length - 1]
+
+return finalString
+}
+
+const string = bold`This is a string with ${true} and ${false} and ${100} interpolated inside.`
+
+console.log(string)
+</code></pre>
+
+<p>This code uses the <a href="https://www.digitalocean.com/community/tutorials/how-to-use-array-methods-in-javascript-iteration-methods#foreach()"><code>forEach</code> method</a> to loop over the <code>expressions</code> array and add the bolding element:</p>
+<pre class="code-pre "><code><div class="secondary-code-label " title="Output">Output</div>This is a string with &lt;strong&gt;true&lt;/strong&gt; and &lt;strong&gt;false&lt;/strong&gt; and &lt;strong&gt;100&lt;/strong&gt; interpolated inside.
+</code></pre>
+<p>There are a few examples of tagged template literals in popular JavaScript libraries. The <a href="https://github.com/apollographql/graphql-tag"><code>graphql-tag</code></a> library uses the <code>gql</code> tagged template to parse <a href="https://graphql.org/">GraphQL</a> query strings into the abstract syntax tree (AST) that GraphQL understands:</p>
+<pre class="code-pre "><code class="code-highlight language-js">import gql from 'graphql-tag'
+
+// A query to retrieve the first and last name from user 5
+const query = gql` { user(id: 5) { firstName lastName } }`
+</code></pre>
+
+<p>Another library that uses tagged template functions is <a href="https://github.com/styled-components/styled-components"><code>styled-components</code></a>, which allows you to create new <a href="https://www.digitalocean.com/community/tutorials/how-to-create-custom-components-in-react">React components</a> from regular <a href="https://www.digitalocean.com/community/tutorials/introduction-to-the-dom">DOM</a> elements and apply additional <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS styles</a> to them:</p>
+<pre class="code-pre "><code class="code-highlight language-js">import styled from 'styled-components'
+
+const Button = styled.button` color: magenta;`
+
+// &lt;Button&gt; can now be used as a custom component
+</code></pre>
+
+<p>You can also use the built-in <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/raw"><code>String.raw</code></a> method on tagged template literals to prevent any escape sequences from being processed:</p>
+<pre class="code-pre "><code class="code-highlight language-js">const rawString = String.raw`I want to write /n without it being escaped.`
+console.log(rawString)
+</code></pre>
+<p>This will log the following:</p>
+<pre class="code-pre "><code><div class="secondary-code-label " title="Output">Output</div>I want to write /n without it being escaped.
+</code></pre>
+<h2 id="conclusion">Conclusion</h2>
+
+<p>In this article, you reviewed single- and double-quoted string literals and you learned about template literals and tagged template literals. Template literals make a lot of common string tasks simpler by interpolating expressions in strings and creating multi-line strings without any concatenation or escaping. Template tags are also a useful advanced feature of template literals that many popular libraries have used, such as GraphQL and <code>styled-components</code>.</p>
+
+<p>To learn more about strings in JavaScript, read <a href="https://www.digitalocean.com/community/tutorials/how-to-work-with-strings-in-javascript">How To Work with Strings in JavaScript</a> and <a href="https://www.digitalocean.com/community/tutorials/how-to-index-split-and-manipulate-strings-in-javascript">How To Index, Split, and Manipulate Strings in JavaScript</a>.</p>
+
+
+              </div>
+
+              <div class="entry-footer">
+                <i class="bi bi-folder"></i>
+                <ul class="cats">
+                  
+                  
+                  <li><a href="/categories#fr">
+                    fr
+                  </a></li>
+                  
+                  <li><a href="/categories#javascript">
+                    javascript
+                  </a></li>
+                  
+                </ul>
+
+                <i class="bi bi-tags"></i>
+                <ul class="tags">
+                  
+                  
+                </ul>
+              </div>
+
+            </article><!-- End blog entry -->
+
+            <div class="blog-author d-flex align-items-center">
+              
+              <img src="https://www.gravatar.com/avatar/?s=250&d=mm&r=x" class="rounded-circle float-left" alt="">
+              
+              
+              <div>
+                <h4></h4>
+                <div class="social-links">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="biu bi-instagram"></i></a>
+                </div>
+                <p>
+                  
+                </p>
+              </div>
+            </div><!-- End blog author bio -->
+
+            <div class="blog-comments">
+
+              <h4 class="comments-count">8 Comments</h4>
+
+              <div id="comment-1" class="comment">
+                <div class="d-flex">
+                  <div class="comment-img"><img src="/assets/img/blog/comments-1.jpg" alt=""></div>
+                  <div>
+                    <h5><a href="">Georgia Reader</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                    <time datetime="2020-01-01">01 Jan, 2020</time>
+                    <p>
+                      Et rerum totam nisi. Molestiae vel quam dolorum vel voluptatem et et. Est ad aut sapiente quis molestiae est qui cum soluta.
+                      Vero aut rerum vel. Rerum quos laboriosam placeat ex qui. Sint qui facilis et.
+                    </p>
+                  </div>
+                </div>
+              </div><!-- End comment #1 -->
+
+              <div id="comment-2" class="comment">
+                <div class="d-flex">
+                  <div class="comment-img"><img src="/assets/img/blog/comments-2.jpg" alt=""></div>
+                  <div>
+                    <h5><a href="">Aron Alvarado</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                    <time datetime="2020-01-01">01 Jan, 2020</time>
+                    <p>
+                      Ipsam tempora sequi voluptatem quis sapiente non. Autem itaque eveniet saepe. Officiis illo ut beatae.
+                    </p>
+                  </div>
+                </div>
+
+                <div id="comment-reply-1" class="comment comment-reply">
+                  <div class="d-flex">
+                    <div class="comment-img"><img src="/assets/img/blog/comments-3.jpg" alt=""></div>
+                    <div>
+                      <h5><a href="">Lynda Small</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                      <time datetime="2020-01-01">01 Jan, 2020</time>
+                      <p>
+                        Enim ipsa eum fugiat fuga repellat. Commodi quo quo dicta. Est ullam aspernatur ut vitae quia mollitia id non. Qui ad quas nostrum rerum sed necessitatibus aut est. Eum officiis sed repellat maxime vero nisi natus. Amet nesciunt nesciunt qui illum omnis est et dolor recusandae.
+
+                        Recusandae sit ad aut impedit et. Ipsa labore dolor impedit et natus in porro aut. Magnam qui cum. Illo similique occaecati nihil modi eligendi. Pariatur distinctio labore omnis incidunt et illum. Expedita et dignissimos distinctio laborum minima fugiat.
+
+                        Libero corporis qui. Nam illo odio beatae enim ducimus. Harum reiciendis error dolorum non autem quisquam vero rerum neque.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div id="comment-reply-2" class="comment comment-reply">
+                    <div class="d-flex">
+                      <div class="comment-img"><img src="/assets/img/blog/comments-4.jpg" alt=""></div>
+                      <div>
+                        <h5><a href="">Sianna Ramsay</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                        <time datetime="2020-01-01">01 Jan, 2020</time>
+                        <p>
+                          Et dignissimos impedit nulla et quo distinctio ex nemo. Omnis quia dolores cupiditate et. Ut unde qui eligendi sapiente omnis ullam. Placeat porro est commodi est officiis voluptas repellat quisquam possimus. Perferendis id consectetur necessitatibus.
+                        </p>
+                      </div>
+                    </div>
+
+                  </div><!-- End comment reply #2-->
+
+                </div><!-- End comment reply #1-->
+
+              </div><!-- End comment #2-->
+
+              <div id="comment-3" class="comment">
+                <div class="d-flex">
+                  <div class="comment-img"><img src="/assets/img/blog/comments-5.jpg" alt=""></div>
+                  <div>
+                    <h5><a href="">Nolan Davidson</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                    <time datetime="2020-01-01">01 Jan, 2020</time>
+                    <p>
+                      Distinctio nesciunt rerum reprehenderit sed. Iste omnis eius repellendus quia nihil ut accusantium tempore. Nesciunt expedita id dolor exercitationem aspernatur aut quam ut. Voluptatem est accusamus iste at.
+                      Non aut et et esse qui sit modi neque. Exercitationem et eos aspernatur. Ea est consequuntur officia beatae ea aut eos soluta. Non qui dolorum voluptatibus et optio veniam. Quam officia sit nostrum dolorem.
+                    </p>
+                  </div>
+                </div>
+
+              </div><!-- End comment #3 -->
+
+              <div id="comment-4" class="comment">
+                <div class="d-flex">
+                  <div class="comment-img"><img src="/assets/img/blog/comments-6.jpg" alt=""></div>
+                  <div>
+                    <h5><a href="">Kay Duggan</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                    <time datetime="2020-01-01">01 Jan, 2020</time>
+                    <p>
+                      Dolorem atque aut. Omnis doloremque blanditiis quia eum porro quis ut velit tempore. Cumque sed quia ut maxime. Est ad aut cum. Ut exercitationem non in fugiat.
+                    </p>
+                  </div>
+                </div>
+
+              </div><!-- End comment #4 -->
+
+              <div class="reply-form">
+                <h4>Leave a Reply</h4>
+                <p>Your email address will not be published. Required fields are marked * </p>
+                <form action="">
+                  <div class="row">
+                    <div class="col-md-6 form-group">
+                      <input name="name" type="text" class="form-control" placeholder="Your Name*">
+                    </div>
+                    <div class="col-md-6 form-group">
+                      <input name="email" type="text" class="form-control" placeholder="Your Email*">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col form-group">
+                      <input name="website" type="text" class="form-control" placeholder="Your Website">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col form-group">
+                      <textarea name="comment" class="form-control" placeholder="Your Comment*"></textarea>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Post Comment</button>
+
+                </form>
+
+              </div>
+
+            </div><!-- End blog comments -->
+
+          </div><!-- End blog entries list -->
+
+          <div class="col-lg-4">
+
+            <div class="sidebar">
+              
+
+              <h3 class="sidebar-title">Search</h3>
+              <div class="sidebar-item search-form">
+                <form onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+                  <input type="text" class="launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter...">
+                  <button type="submit"><i class="bi bi-search"></i></button>
+                </form>
+              </div><div id="lunrsearchresults">
+                  <ul></ul>
+              </div>
+
+              
+              <!-- End sidebar search formn-->
+
+              <h3 class="sidebar-title">Categories</h3>
+              <div class="sidebar-item categories">
+                <ul>
+                  
+                  
+                  
+                  <li><a href="/category/en">en <span>(33)</span></a></li>
+                  
+                  <li><a href="/category/aws">aws <span>(3)</span></a></li>
+                  
+                  <li><a href="/category/data-analysis">data-analysis <span>(2)</span></a></li>
+                  
+                  <li><a href="/category/fr">fr <span>(29)</span></a></li>
+                  
+                  <li><a href="/category/docker">docker <span>(12)</span></a></li>
+                  
+                  <li><a href="/category/kubernetes">kubernetes <span>(11)</span></a></li>
+                  
+                  <li><a href="/category/web development">web development <span>(2)</span></a></li>
+                  
+                  <li><a href="/category/wordpress">wordpress <span>(4)</span></a></li>
+                  
+                  <li><a href="/category/ubuntu">ubuntu <span>(4)</span></a></li>
+                  
+                  <li><a href="/category/javascript">javascript <span>(4)</span></a></li>
+                  
+                  <li><a href="/category/database">database <span>(2)</span></a></li>
+                  
+                  <li><a href="/category/slack">slack <span>(2)</span></a></li>
+                  
+                  <li><a href="/category/productivity">productivity <span>(8)</span></a></li>
+                  
+                  <li><a href="/category/backup-restore">backup-restore <span>(2)</span></a></li>
+                  
+                  <li><a href="/category/fax">fax <span>(2)</span></a></li>
+                  
+                  <li><a href="/category/screenshot">screenshot <span>(2)</span></a></li>
+                  
+                  <li><a href="/category/security">security <span>(1)</span></a></li>
+                  
+                </ul>
+              </div><!-- End sidebar categories-->
+
+              <h3 class="sidebar-title">Recent Posts</h3>
+              <div class="sidebar-item recent-posts">
+                
+
+                
+                <div class="post-item clearfix">
+                  <!-- <img src="/assets/img/blog/blog-recent-1.jpg" alt="How to Send and Receive Faxes Online Without a Fax Machine or Phone Line"> -->
+                   
+                     
+                    
+                    <img class="img-fluid" src="https://sergio.afanou.com/assets/images/image-midres-26.jpg" alt="How to Send and Receive Faxes Online Without a Fax Machine or Phone Line"> 
+                     
+                  
+                  <h4><a href="/blog/fr/fax/how-to-send-and-receive-faxes-online-without-a-fax-machine-or-phone-line">How to Send and Receive Faxes Online Without a Fax Machine or Phone Line</a></h4>
+                  <time datetime="2020-09-01 00:00">Tuesday 01 September, 2020</time>
+                </div>
+                
+                <div class="post-item clearfix">
+                  <!-- <img src="/assets/img/blog/blog-recent-1.jpg" alt="Comment prendre une capture d'écran dans windows"> -->
+                   
+                     
+                    
+                    <img class="img-fluid" src="https://sergio.afanou.com/assets/images/image-midres-52.jpg" alt="Comment prendre une capture d'écran dans windows"> 
+                     
+                  
+                  <h4><a href="/blog/fr/screenshot/comment-prendre-une-capture-ecran-dans-windows">Comment prendre une capture d'écran dans windows</a></h4>
+                  <time datetime="2020-09-01 00:00">Tuesday 01 September, 2020</time>
+                </div>
+                
+                <div class="post-item clearfix">
+                  <!-- <img src="/assets/img/blog/blog-recent-1.jpg" alt="Travailler avec Kubernetes et Minikube"> -->
+                   
+                     
+                    
+                    <img class="img-fluid" src="https://sergio.afanou.com/assets/images/image-midres-38.jpg" alt="Travailler avec Kubernetes et Minikube"> 
+                     
+                  
+                  <h4><a href="/blog/fr/kubernetes/travailler-avec-kubernetes-et-minikube">Travailler avec Kubernetes et Minikube</a></h4>
+                  <time datetime="2020-08-13 00:00">Thursday 13 August, 2020</time>
+                </div>
+                
+                <div class="post-item clearfix">
+                  <!-- <img src="/assets/img/blog/blog-recent-1.jpg" alt="Play with Kubernetes with Minikube"> -->
+                   
+                     
+                    
+                    <img class="img-fluid" src="https://sergio.afanou.com/assets/images/image-midres-38.jpg" alt="Play with Kubernetes with Minikube"> 
+                     
+                  
+                  <h4><a href="/blog/fr/kubernetes/play-with-kubernetes-with-minikube">Play with Kubernetes with Minikube</a></h4>
+                  <time datetime="2020-08-12 00:00">Wednesday 12 August, 2020</time>
+                </div>
+                
+
+              </div><!-- End sidebar recent posts-->
+
+              <h3 class="sidebar-title">Tags</h3>
+              <div class="sidebar-item tags">
+                <ul>
+                  
+                  
+                </ul>
+              </div><!-- End sidebar tags-->
+
+            </div><!-- End sidebar -->
+
+          </div><!-- End blog sidebar -->
+
+        </div>
+
+      </div>
+    </section><!-- End Blog Single Section -->
+
+  </main><!-- End #main -->
+ 
+    
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h2>Contact</h2>
+          <p>Contact Us</p>
+          <h3 class="mt-3">To order one of our services, navigate to the <a href="/order-service">order service</a> page</h3>
+        </header>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6">
+
+            <div class="row gy-4">
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-geo-alt"></i>
+                  <h3>Address</h3>
+                  <p>10 rue de Penthièvre,<br>75008 Paris</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-envelope"></i>
+                  <h3>Email Us</h3>
+                  <p>hello at bright-softwares dot com</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-clock"></i>
+                  <h3>Open Hours</h3>
+                  <p>Monday - Friday<br>9:00AM - 05:00PM</p>
+                </div>
+              </div>
+              <!-- <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-telephone"></i>
+                  <h3></h3>
+                  <p><br></p>
+                </div>
+              </div> -->
+            </div>
+
+          </div>
+
+          <div id="mauticform_wrapper_brightsoftwarescontact" class="mauticform_wrapper col-lg-6">
+            <form class="php-email-form" autocomplete="false" role="form" method="post" action="https://marketing.bright-softwares.com/form/submit?formId=5" id="mauticform_brightsoftwarescontact" data-mautic-form="brightsoftwarescontact" enctype="multipart/form-data">
+                <div class="mauticform-innerform">
+
+                    
+                  <div class="mauticform-page-wrapper mauticform-page-1 row gy-4">
+
+                    <div id="mauticform_brightsoftwarescontact_first_name" class="mauticform-row mauticform-text mauticform-field-1 mauticform-required col-md-6 " data-validate="first_name" data-validation-type="text">
+                        <input id="mauticform_input_brightsoftwarescontact_first_name" name="mauticform[first_name]" value="" placeholder="Your first name" class="mauticform-input form-control" type="text">
+                        <span class="mauticform-errormsg" style="display: none;">Please enter your first name</span>
+                    </div>
+
+                    <div id="mauticform_brightsoftwarescontact_your_last_name" class="mauticform-row mauticform-text mauticform-field-2 mauticform-required col-md-6 " data-validate="your_last_name" data-validation-type="text">
+                        <!-- <span class="mauticform-helpmessage">Please enter your last name.</span> -->
+                        <input id="mauticform_input_brightsoftwarescontact_your_last_name" name="mauticform[your_last_name]" value="" placeholder="Your last name" class="mauticform-input form-control" type="text">
+                        <span class="mauticform-errormsg" style="display: none;">Please enter your last name.</span>
+                    </div>
+
+                    <div id="mauticform_brightsoftwarescontact_email" class="mauticform-row mauticform-email mauticform-field-3 mauticform-required col-md-6 " data-validate="email" data-validation-type="email">
+                        <!-- <span class="mauticform-helpmessage">Please enter your e-mail address.</span> -->
+                        <input id="mauticform_input_brightsoftwarescontact_email" name="mauticform[email]" value="" placeholder="Your e-mail address" class="mauticform-input form-control" type="email">
+                        <span class="mauticform-errormsg" style="display: none;">Please enter your e-mail address.</span>
+                    </div>
+
+                    <div id="mauticform_brightsoftwarescontact_phone" class="mauticform-row mauticform-tel mauticform-field-4 col-md-6 ">
+                        <!-- <span class="mauticform-helpmessage">Please enter your phone number.</span> -->
+                        <input id="mauticform_input_brightsoftwarescontact_phone" name="mauticform[phone]" value="" placeholder="Your phone number" class="mauticform-input form-control" type="tel">
+                        <span class="mauticform-errormsg" style="display: none;"></span>
+                    </div>
+
+                    <div id="mauticform_brightsoftwarescontact_subject" class="mauticform-row mauticform-text mauticform-field-5 mauticform-required col-md-12" data-validate="subject" data-validation-type="text">
+                        <!-- <span class="mauticform-helpmessage">Please enter your contact message.</span> -->
+                        <input id="mauticform_input_brightsoftwarescontact_subject" name="mauticform[subject]" value="" placeholder="Your contact message" class="mauticform-input form-control" type="text">
+                        <span class="mauticform-errormsg" style="display: none;">Please enter the contact subject.</span>
+                    </div>
+
+                    <div id="mauticform_brightsoftwarescontact_f_message" class="mauticform-row mauticform-text mauticform-field-6 mauticform-required col-md-12 text-center" data-validate="f_message" data-validation-type="textarea">
+                        <!-- <span class="mauticform-helpmessage">Please enter your message.</span> -->
+                        <textarea class="form-control" rows=6 placeholder="Message" id="mauticform_input_brightsoftwarescontact_f_message" name="mauticform[f_message]" class="mauticform-textarea"></textarea>
+                        <span class="mauticform-errormsg" style="display: none;">Please enter your message.</span>
+                    </div>
+
+                    <div id="mauticform_brightsoftwarescontact_submit" class="mauticform-row mauticform-button-wrapper mauticform-field-7 col-md-12 text-center">
+                        <div class="mauticform-error" id="mauticform_brightsoftwarescontact_error"></div>
+                        <div class="mauticform-message" id="mauticform_brightsoftwarescontact_message"></div>
+                        
+                        <button type="submit" name="mauticform[submit]" id="mauticform_input_brightsoftwarescontact_submit" value="" class="mauticform-button btn btn-default">Send message</button>
+                    </div>
+                  </div>
+                </div>
+
+                <input type="hidden" name="mauticform[formId]" id="mauticform_brightsoftwarescontact_id" value="5">
+                <input type="hidden" name="mauticform[return]" id="mauticform_brightsoftwarescontact_return" value="">
+                <input type="hidden" name="mauticform[formName]" id="mauticform_brightsoftwarescontact_name" value="brightsoftwarescontact">
+
+                </form>
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+
+
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+  <div class="footer-newsletter">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-12 text-center">
+          <h4>Our Newsletter</h4>
+          <p>We won't spam you, we promise. 😇</p>
+        </div>
+        <div
+          id="mauticform_wrapper_brightsoftwaresnewsletter"
+          class="mauticform_wrapper col-lg-6"
+        >
+          <form
+            autocomplete="false"
+            role="form"
+            method="post"
+            action="https://marketing.bright-softwares.com/form/submit?formId=4"
+            id="mauticform_brightsoftwaresnewsletter"
+            data-mautic-form="brightsoftwaresnewsletter"
+            enctype="multipart/form-data"
+          >
+            <div
+              class="mauticform-error"
+              id="mauticform_brightsoftwaresnewsletter_error"
+            ></div>
+            <div
+              class="mauticform-message"
+              id="mauticform_brightsoftwaresnewsletter_message"
+            ></div>
+            <div class="mauticform-innerform">
+              <div
+                class="mauticform-page-wrapper mauticform-page-1"
+                data-mautic-form-page="1"
+              >
+                <div
+                  id="mauticform_brightsoftwaresnewsletter_email"
+                  data-validate="email"
+                  data-validation-type="email"
+                  class="
+                    mauticform-row
+                    mauticform-email
+                    mauticform-field-1
+                    mauticform-required
+                  "
+                >
+                  <input
+                    id="mauticform_input_brightsoftwaresnewsletter_email"
+                    name="mauticform[email]"
+                    value=""
+                    placeholder="E-mail address"
+                    class="mauticform-input"
+                    type="email"
+                  />
+                  <span class="mauticform-errormsg" style="display: none"
+                    >Please enter your e-mail address</span
+                  >
+                </div>
+
+                <div
+                  id="mauticform_brightsoftwaresnewsletter_submit"
+                  class="
+                    mauticform-row mauticform-button-wrapper mauticform-field-2
+                  "
+                >
+                  <input
+                    type="submit"
+                    name="mauticform[submit]"
+                    id="mauticform_input_brightsoftwaresnewsletter_submit"
+                    value="Subscribe"
+                    class="mauticform-button btn btn-default"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <input
+              type="hidden"
+              name="mauticform[formId]"
+              id="mauticform_brightsoftwaresnewsletter_id"
+              value="4"
+            />
+            <input
+              type="hidden"
+              name="mauticform[return]"
+              id="mauticform_brightsoftwaresnewsletter_return"
+              value=""
+            />
+            <input
+              type="hidden"
+              name="mauticform[formName]"
+              id="mauticform_brightsoftwaresnewsletter_name"
+              value="brightsoftwaresnewsletter"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-top">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-info">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <img src="/assets/flexstart-img/logo.png" alt="" />
+            <span>Bright Softwares</span>
+          </a>
+          <p>
+            We provide solutions to our customers challenges. Our teams based in
+            Paris and Lomé provide high value expertise to engineer the best
+            solutions.
+          </p>
+          <div class="social-links mt-3">
+            
+            <a href="http://twitter.com/brightsoftwares" class="twitter"
+              ><i class="bi bi-twitter"></i
+            ></a>
+            
+            <a href="http://fb.me/bright-softwares" class="facebook"
+              ><i class="bi bi-facebook"></i
+            ></a>
+            
+            <a href="" class="stack-overflow"
+              ><i class="bi bi-stack-overflow"></i
+            ></a>
+            
+            <a href="http://github.com/brightsoftwares" class="github"
+              ><i class="bi bi-github"></i
+            ></a>
+            
+            <a href="" class="instagram"
+              ><i class="bi bi-instagram"></i
+            ></a>
+            
+            <a href="" class="linkedin"
+              ><i class="bi bi-linkedin"></i
+            ></a>
+            
+            <!-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bi bi-instagram bx bxl-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bi bi-linkedin bx bxl-linkedin"></i></a> -->
+          </div>
+
+          <!-- ======= Read page in alternate language ======= -->
+          <div class="flexstart-blog-single mt-3">
+            
+                
+                
+                
+                <footer class="lang-options">
+                    <p>Lire cette page dans une autre langue:</p>
+                    <ul class="nav flex-column">
+                    
+                      
+                        <li class="nav-item">
+                          <a href="/blog/en/javascript/understanding-template-literals-in-javascript" class="nav-link en" title="View in en">
+                            🇺🇸 English
+                          </a>
+                        </li>
+                      
+                    
+                      
+                    
+                    </ul>
+                </footer>
+                
+            
+          </div>
+    
+
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li>
+              <i class="bi bi-chevron-right"></i> <a href="index.html">Home</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i> <a href="#">About us</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i> <a href="#">Services</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i>
+              <a href="/conditions">Terms of service</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i>
+              <a href="/privacy">Privacy policy</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li>
+              <i class="bi bi-chevron-right"></i> <a href="#">Web solutions</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i> <a href="#">e-commerce</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i>
+              <a href="#">AI powered apps</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i> <a href="#">AI Models</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i>
+              <a href="#">Automated revenue</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i>
+              <a href="#">Cloud infrastructure</a>
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="col-lg-3 col-md-12 footer-contact text-center text-md-start"
+        >
+          <h4>Contact Us</h4>
+          <p>
+            10 rue de Penthièvre <br />
+            75008, Paris<br />
+            France <br /><br />
+            <!--<strong>Phone:</strong> +1 5589 55488 55<br>-->
+            <strong>Email:</strong> hello at bright-softwares dot com<br />
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="copyright">
+      &copy; Copyright
+      <strong><span>Bright Softwares 2021</span></strong
+      >. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexstart-bootstrap-startup-template/ -->
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+  </div>
+</footer>
+<!-- End Footer -->
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"
+  ><i class="bi bi-arrow-up-short"></i
+></a>
+
+<!-- Vendor JS Files -->
+<script src="/assets/flexstart-vendor/bootstrap/js/bootstrap.bundle.js"></script>
+<script src="/assets/flexstart-vendor/aos/aos.js"></script>
+<script src="/assets/flexstart-vendor/php-email-form/validate.js"></script>
+<script src="/assets/flexstart-vendor/swiper/swiper-bundle.min.js"></script>
+<script src="/assets/flexstart-vendor/purecounter/purecounter.js"></script>
+<script src="/assets/flexstart-vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="/assets/flexstart-vendor/glightbox/js/glightbox.min.js"></script>
+
+<!-- Template Main JS File -->
+<script src="/assets/flexstart-js/main.js"></script>
+<script src="/assets/flexstart-js/flexstart_contact.js"></script>
+
+<!-- Search engine -->
+<script src="/assets/js/lunr.js"></script>
+<script src="/assets/js/lunrsearchengine.js"></script>
+<script src="/assets/js/copycode.js"></script>
+
+  </body>
+</html>

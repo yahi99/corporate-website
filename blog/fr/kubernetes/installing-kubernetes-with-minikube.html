@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <title>
+    Installing Kubernetes with Minikube
+  </title>
+  <meta content="We provide solutions to our customers challenges. Our teams based in Paris and Lomé provide high value expertise to engineer the best solutions." name="description" />
+
+  <meta
+    content="web e-commerce articifial intelligence ai automation"
+    name="keywords"
+  />
+  <link
+    rel="canonical"
+    href="https://bright-softwares.com/blog/fr/kubernetes/installing-kubernetes-with-minikube"
+  />
+  <link rel="manifest" href="manifest.json" />
+
+  <!-- Favicons -->
+  <!-- <link href="/assets/flexstart-img/favicon.png" rel="icon">
+  <link href="/assets/flexstart-img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+  <!-- The favicon items -->
+  <link
+    rel="apple-touch-icon"
+    sizes="57x57"
+    href="/assets/favicon.ico/apple-icon-57x57.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="60x60"
+    href="/assets/favicon.ico/apple-icon-60x60.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="72x72"
+    href="/assets/favicon.ico/apple-icon-72x72.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="76x76"
+    href="/assets/favicon.ico/apple-icon-76x76.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="114x114"
+    href="/assets/favicon.ico/apple-icon-114x114.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="120x120"
+    href="/assets/favicon.ico/apple-icon-120x120.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="144x144"
+    href="/assets/favicon.ico/apple-icon-144x144.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="152x152"
+    href="/assets/favicon.ico/apple-icon-152x152.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="/assets/favicon.ico/apple-icon-180x180.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="192x192"
+    href="/assets/favicon.ico/android-icon-192x192.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="/assets/favicon.ico/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="96x96"
+    href="/assets/favicon.ico/favicon-96x96.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="/assets/favicon.ico/favicon-16x16.png"
+  />
+  <!--<link rel="manifest" href="/assets/favicon.ico/manifest.json">-->
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta
+    name="msapplication-TileImage"
+    content="/assets/favicon.ico/ms-icon-144x144.png"
+  />
+  <meta name="theme-color" content="#ffffff" />
+
+  
+  <!-- Language handling -->
+  
+    
+    
+    
+      
+    <link rel="alternate" hreflang="en" href="/blog/en/kubernetes/installing-kubernetes-with-minikube" />
+      
+    <link rel="alternate" hreflang="fr" href="/blog/fr/kubernetes/installing-kubernetes-with-minikube" />
+      
+    
+  
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet"
+  />
+
+  <!-- Vendor CSS Files -->
+  <link
+    href="/assets/flexstart-vendor/bootstrap/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="/assets/flexstart-vendor/bootstrap-icons/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+  <link
+    href="/assets/flexstart-vendor/aos/aos.css"
+    rel="stylesheet"
+  />
+  <link
+    href="/assets/flexstart-vendor/remixicon/remixicon.css"
+    rel="stylesheet"
+  />
+  <link
+    href="/assets/flexstart-vendor/swiper/swiper-bundle.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="/assets/flexstart-vendor/glightbox/css/glightbox.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Template Main CSS File -->
+  <link
+    href="/assets/flexstart-css/style.css"
+    rel="stylesheet"
+  />
+
+  <!-- =======================================================
+  * Template Name: FlexStart - v1.1.1
+  * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134921119-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-134921119-1');
+</script> 
+</head>
+
+  <body>
+    <!-- ======= Header ======= -->
+<header id="header" class="header fixed-top">
+  <div
+    class="
+      container-fluid container-xl
+      d-flex
+      align-items-center
+      justify-content-between
+    "
+  >
+    <a href="/index.html" class="logo d-flex align-items-center">
+      <img src="/img/logos/large/brightsoftwares-light.png" alt="Bright Softwares logo" />
+      <span>Bright Softwares</span>
+    </a>
+
+    <nav id="navbar" class="navbar">
+      <ul>
+        <!-- <li><a class="nav-link scrollto active" href="#hero">Home</a></li> -->
+        <li class="dropdown">
+          <a class="nav-link scrollto" href="#services"
+            ><span>Services</span> <i class="bi bi-chevron-down"></i
+          ></a>
+          <ul>
+            <li><a href="#">Web solutions</a></li>
+            <li><a href="#">e-commerce</a></li>
+            <li><a href="#">AI powered apps</a></li>
+            <li><a href="#">AI Models</a></li>
+            <li><a href="#">Automated revenue</a></li>
+            <li><a href="#">Cloud infrastructure</a></li>
+          </ul>
+        </li>
+        
+        
+        <li>
+          <a class="nav-link scrollto" href="/fr/blog.html">Blog</a>
+        </li>
+        
+        <li>
+          <a class="nav-link scrollto" href="/fr/index.html#team">Equipe</a>
+        </li>
+        
+        <li>
+          <a class="nav-link scrollto" href="/fr/index.html#about">A propos</a>
+        </li>
+        
+        <li>
+          <a class="nav-link scrollto" href="/fr/index.html#contact">Contactez-nous</a>
+        </li>
+        
+        <li>
+          <a class="getstarted scrollto" href="/order-service">Order now</a>
+        </li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav>
+    <!-- .navbar -->
+  </div>
+</header>
+<!-- End Header -->
+   <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <ol>
+          <li><a href="/fr/index.html">Home</a></li>
+          <li><a href="/fr/blog.html">Blog</a></li>
+          <li>Installing Kubernetes with Minikube</li>
+        </ol>
+        <h2>Installing Kubernetes with Minikube</h2>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Single Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-8 entries">
+
+            <article class="entry entry-single">
+
+              <div class="entry-img">
+                <img src="/assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="entry-title">
+                <a href="">Installing Kubernetes with Minikube</a>
+              </h2>
+
+              <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+              
+              <!-- End Adsense -->
+
+              <div class="entry-meta">
+                
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href=""></a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> 
+                    <a href="">
+                      <time datetime="2020-08-12 00:00">Aug 12, 2020 (1 year and 4 months ago)</time>
+                      <small>
+                        
+                      </small>
+                    </a>
+                  </li>
+                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="">12 Comments</a></li>
+                </ul>
+              </div>
+
+              <div class="entry-content">
+
+                <h1 id="installing-kubernetes-with-minikube">Installing Kubernetes with Minikube</h1>
+
+<p>Minikube is a tool that makes it easy to run Kubernetes locally. Minikube runs a single-node Kubernetes cluster inside a Virtual Machine (VM) on your laptop for users looking to try out Kubernetes or develop with it day-to-day.</p>
+
+<h2 id="minikube-features-">Minikube Features<a href="#minikube-features"> </a></h2>
+
+<p>Minikube supports the following Kubernetes features:</p>
+
+<ul>
+  <li>DNS</li>
+  <li>NodePorts</li>
+  <li>ConfigMaps and Secrets</li>
+  <li>Dashboards</li>
+  <li>Container Runtime: <a href="https://www.docker.com/">Docker</a>, <a href="https://cri-o.io/">CRI-O</a>, and <a href="https://github.com/containerd/containerd">containerd</a></li>
+  <li>Enabling CNI (Container Network Interface)</li>
+  <li>Ingress
+Installation<a href="#installation"> </a></li>
+</ul>
+
+<hr />
+
+<p>See <a href="/docs/tasks/tools/install-minikube/">Installing Minikube</a>.</p>
+
+<h2 id="quickstart-">Quickstart<a href="#quickstart"> </a></h2>
+
+<p>This brief demo guides you on how to start, use, and delete Minikube locally. Follow the steps given below to start and explore Minikube.</p>
+
+<ol>
+  <li>Start Minikube and create a cluster:</li>
+</ol>
+
+<p>minikube start The output is similar to this:</p>
+
+<p>Starting local Kubernetes cluster… Running pre-create checks… Creating machine… Starting local Kubernetes cluster… For more information on starting your cluster on a specific Kubernetes version, VM, or container runtime, see <a href="#starting-a-cluster">Starting a Cluster</a>.</p>
+
+<ol>
+  <li>Now, you can interact with your cluster using kubectl. For more information, see <a href="#interacting-with-your-cluster">Interacting with Your Cluster</a>.</li>
+</ol>
+
+<p>Let’s create a Kubernetes Deployment using an existing image named echoserver, which is a simple HTTP server and expose it on port 8080 using –port.</p>
+
+<p>kubectl create deployment hello-minikube –image=k8s.gcr.io/echoserver:1.10 The output is similar to this:</p>
+
+<p>deployment.apps/hello-minikube created 3. To access the hello-minikube Deployment, expose it as a Service:</p>
+
+<p>kubectl expose deployment hello-minikube –type=NodePort –port=8080 The option –type=NodePort specifies the type of the Service.</p>
+
+<p>The output is similar to this:</p>
+
+<p>service/hello-minikube exposed 4. The hello-minikube Pod is now launched but you have to wait until the Pod is up before accessing it via the exposed Service.</p>
+
+<p>Check if the Pod is up and running:</p>
+
+<p>kubectl get pod If the output shows the STATUS as ContainerCreating, the Pod is still being created:</p>
+
+<p>NAME READY STATUS RESTARTS AGE hello-minikube-3383150820-vctvh 0/1 ContainerCreating 0 3s If the output shows the STATUS as Running, the Pod is now up and running:</p>
+
+<p>NAME READY STATUS RESTARTS AGE hello-minikube-3383150820-vctvh 1/1 Running 0 13s 5. Get the URL of the exposed Service to view the Service details:</p>
+
+<p>minikube service hello-minikube –url 6. To view the details of your local cluster, copy and paste the URL you got as the output, on your browser.</p>
+
+<p>The output is similar to this:</p>
+
+<p>Hostname: hello-minikube-7c77b68cff-8wdzq Pod Information: -no pod information available- Server values: server_version=nginx: 1.13.3 - lua: 10008 Request Information: client_address=172.17.0.1 method=GET real path=/ query= request_version=1.1 request_scheme=http request_uri=http://192.168.99.100:8080/ Request Headers: accept=<em>/</em> host=192.168.99.100:30674 user-agent=curl/7.47.0 Request Body: -no body in request- If you no longer want the Service and cluster to run, you can delete them.</p>
+
+<ol>
+  <li>Delete the hello-minikube Service:</li>
+</ol>
+
+<p>kubectl delete services hello-minikube The output is similar to this:</p>
+
+<p>service “hello-minikube” deleted 8. Delete the hello-minikube Deployment:</p>
+
+<p>kubectl delete deployment hello-minikube The output is similar to this:</p>
+
+<p>deployment.extensions “hello-minikube” deleted 9. Stop the local Minikube cluster:</p>
+
+<p>minikube stop The output is similar to this:</p>
+
+<p>Stopping “minikube”… “minikube” stopped. For more information, see <a href="#stopping-a-cluster">Stopping a Cluster</a>.</p>
+
+<ol>
+  <li>Delete the local Minikube cluster:</li>
+</ol>
+
+<p>minikube delete The output is similar to this:</p>
+
+<p>Deleting “minikube” … The “minikube” cluster has been deleted. For more information, see <a href="#deleting-a-cluster">Deleting a cluster</a>.</p>
+
+<h2 id="managing-your-cluster-">Managing your Cluster<a href="#managing-your-cluster"> </a></h2>
+
+<h3 id="starting-a-cluster-">Starting a Cluster<a href="#starting-a-cluster"> </a></h3>
+
+<p>The minikube start command can be used to start your cluster. This command creates and configures a Virtual Machine that runs a single-node Kubernetes cluster. This command also configures your <a href="/docs/reference/kubectl/overview/">kubectl</a> installation to communicate with this cluster.</p>
+
+<blockquote>
+  <p><strong>Note:</strong>If you are behind a web proxy, you need to pass this information to the minikube start command:</p>
+
+  <p>https_proxy=<my proxy=""> minikube start --docker-env http_proxy=<my proxy=""> --docker-env https_proxy=<my proxy=""> --docker-env no_proxy=192.168.99.0/24 Unfortunately, setting the environment variables alone does not work.</my></my></my></p>
+
+  <p>Minikube also creates a “minikube” context, and sets it to default in kubectl. To switch back to this context, run this command: kubectl config use-context minikube.</p>
+
+  <h4 id="specifying-the-kubernetes-version-">Specifying the Kubernetes version<a href="#specifying-the-kubernetes-version"> </a></h4>
+</blockquote>
+
+<p>You can specify the version of Kubernetes for Minikube to use by adding the –kubernetes-version string to the minikube start command. For example, to run version v1.18.0, you would run the following:</p>
+
+<p>minikube start –kubernetes-version v1.18.0 #### Specifying the VM driver<a href="#specifying-the-vm-driver"> </a></p>
+
+<p>You can change the VM driver by adding the –driver=<enter_driver_name> flag to minikube start. For example the command would be.</enter_driver_name></p>
+
+<p>minikube start –driver=<driver_name> Minikube supports the following drivers:</driver_name></p>
+
+<blockquote>
+  <p><strong>Note:</strong> See <a href="https://minikube.sigs.k8s.io/docs/reference/drivers/">DRIVERS</a> for details on supported drivers and how to install plugins.* docker (<a href="https://minikube.sigs.k8s.io/docs/drivers/docker/">driver installation</a>)</p>
+</blockquote>
+
+<ul>
+  <li>virtualbox (<a href="https://minikube.sigs.k8s.io/docs/drivers/virtualbox/">driver installation</a>)</li>
+  <li>podman (<a href="https://minikube.sigs.k8s.io/docs/drivers/podman/">driver installation</a>) (EXPERIMENTAL)</li>
+  <li>vmwarefusion</li>
+  <li>kvm2 (<a href="https://minikube.sigs.k8s.io/docs/reference/drivers/kvm2/">driver installation</a>)</li>
+  <li>hyperkit (<a href="https://minikube.sigs.k8s.io/docs/reference/drivers/hyperkit/">driver installation</a>)</li>
+  <li>hyperv (<a href="https://minikube.sigs.k8s.io/docs/reference/drivers/hyperv/">driver installation</a>) Note that the IP below is dynamic and can change. It can be retrieved with minikube ip.</li>
+  <li>vmware (<a href="https://minikube.sigs.k8s.io/docs/reference/drivers/vmware/">driver installation</a>) (VMware unified driver)</li>
+  <li>parallels (<a href="https://minikube.sigs.k8s.io/docs/reference/drivers/parallels/">driver installation</a>)</li>
+  <li>none (Runs the Kubernetes components on the host and not in a virtual machine. You need to be running Linux and to have <a href="https://docs.docker.com/engine/">DockerDocker is a software technology providing operating-system-level virtualization also known as containers.</a> installed.)</li>
+</ul>
+
+<blockquote>
+  <p><strong>Caution:</strong> If you use the none driver, some Kubernetes components run as privileged containers that have side effects outside of the Minikube environment. Those side effects mean that the none driver is not recommended for personal workstations.#### Starting a cluster on alternative container runtimes<a href="#starting-a-cluster-on-alternative-container-runtimes"> </a></p>
+</blockquote>
+
+<p>You can start Minikube on the following container runtimes.</p>
+
+<ul>
+  <li><a href="#container-runtimes-0">containerd</a></li>
+  <li><a href="#container-runtimes-1">CRI-O</a>
+To use <a href="https://github.com/containerd/containerd">containerd</a> as the container runtime, run:</li>
+</ul>
+
+<p>minikube start \ –network-plugin=cni \ –enable-default-cni \ –container-runtime=containerd \ –bootstrapper=kubeadm Or you can use the extended version:</p>
+
+<p>minikube start \ –network-plugin=cni \ –enable-default-cni \ –extra-config=kubelet.container-runtime=remote \ –extra-config=kubelet.container-runtime-endpoint=unix:///run/containerd/containerd.sock \ –extra-config=kubelet.image-service-endpoint=unix:///run/containerd/containerd.sock \ –bootstrapper=kubeadm To use <a href="https://cri-o.io/">CRI-O</a> as the container runtime, run:</p>
+
+<p>minikube start \ –network-plugin=cni \ –enable-default-cni \ –container-runtime=cri-o \ –bootstrapper=kubeadm Or you can use the extended version:</p>
+
+<p>minikube start \ –network-plugin=cni \ –enable-default-cni \ –extra-config=kubelet.container-runtime=remote \ –extra-config=kubelet.container-runtime-endpoint=/var/run/crio.sock \ –extra-config=kubelet.image-service-endpoint=/var/run/crio.sock \ –bootstrapper=kubeadm $(function(){$(“#container-runtimes”).tabs();});#### Use local images by re-using the Docker daemon<a href="#use-local-images-by-re-using-the-docker-daemon"> </a></p>
+
+<p>When using a single VM for Kubernetes, it’s useful to reuse Minikube’s built-in Docker daemon. Reusing the built-in daemon means you don’t have to build a Docker registry on your host machine and push the image into it. Instead, you can build inside the same Docker daemon as Minikube, which speeds up local experiments.</p>
+
+<blockquote>
+  <p><strong>Note:</strong> Be sure to tag your Docker image with something other than latest and use that tag to pull the image. Because :latest is the default value, with a corresponding default image pull policy of Always, an image pull error (ErrImagePull) eventually results if you do not have the Docker image in the default Docker registry (usually DockerHub).To work with the Docker daemon on your Mac/Linux host, run the last line from minikube docker-env.</p>
+</blockquote>
+
+<p>You can now use Docker at the command line of your host Mac/Linux machine to communicate with the Docker daemon inside the Minikube VM:</p>
+
+<p>docker ps</p>
+
+<blockquote>
+  <p><strong>Note:</strong>On Centos 7, Docker may report the following error:</p>
+
+  <p>Could not read CA certificate “/etc/docker/ca.pem”: open /etc/docker/ca.pem: no such file or directory You can fix this by updating /etc/sysconfig/docker to ensure that Minikube’s environment changes are respected:</p>
+
+  <p>&lt; DOCKER_CERT_PATH=/etc/docker — &gt; if [ -z “${DOCKER_CERT_PATH}” ]; then &gt; DOCKER_CERT_PATH=/etc/docker &gt; fi ### Configuring Kubernetes<a href="#configuring-kubernetes"> </a></p>
+</blockquote>
+
+<p>Minikube has a “configurator” feature that allows users to configure the Kubernetes components with arbitrary values. To use this feature, you can use the –extra-config flag on the minikube start command.</p>
+
+<p>This flag is repeated, so you can pass it several times with several different values to set multiple options.</p>
+
+<p>This flag takes a string of the form component.key=value, where component is one of the strings from the below list, key is a value on the configuration struct and value is the value to set.</p>
+
+<p>Valid keys can be found by examining the documentation for the Kubernetes componentconfigs for each component. Here is the documentation for each supported configuration:</p>
+
+<ul>
+  <li><a href="https://godoc.org/k8s.io/kubernetes/pkg/kubelet/apis/config#KubeletConfiguration">kubelet</a></li>
+  <li><a href="https://godoc.org/k8s.io/kubernetes/cmd/kube-apiserver/app/options#ServerRunOptions">apiserver</a></li>
+  <li><a href="https://godoc.org/k8s.io/kubernetes/pkg/proxy/apis/config#KubeProxyConfiguration">proxy</a></li>
+  <li><a href="https://godoc.org/k8s.io/kubernetes/pkg/controller/apis/config#KubeControllerManagerConfiguration">controller-manager</a></li>
+  <li><a href="https://godoc.org/github.com/coreos/etcd/etcdserver#ServerConfig">etcd</a></li>
+  <li><a href="https://godoc.org/k8s.io/kubernetes/pkg/scheduler/apis/config#KubeSchedulerConfiguration">scheduler</a></li>
+</ul>
+
+<h4 id="examples-">Examples<a href="#examples"> </a></h4>
+
+<p>To change the MaxPods setting to 5 on the Kubelet, pass this flag: –extra-config=kubelet.MaxPods=5.</p>
+
+<p>This feature also supports nested structs. To change the LeaderElection.LeaderElect setting to true on the scheduler, pass this flag: –extra-config=scheduler.LeaderElection.LeaderElect=true.</p>
+
+<p>To set the AuthorizationMode on the apiserver to RBAC, you can use: –extra-config=apiserver.authorization-mode=RBAC.</p>
+
+<h3 id="stopping-a-cluster-">Stopping a Cluster<a href="#stopping-a-cluster"> </a></h3>
+
+<p>The minikube stop command can be used to stop your cluster. This command shuts down the Minikube Virtual Machine, but preserves all cluster state and data. Starting the cluster again will restore it to its previous state.</p>
+
+<h3 id="deleting-a-cluster-">Deleting a Cluster<a href="#deleting-a-cluster"> </a></h3>
+
+<p>The minikube delete command can be used to delete your cluster. This command shuts down and deletes the Minikube Virtual Machine. No data or state is preserved.</p>
+
+<h3 id="upgrading-minikube-">Upgrading Minikube<a href="#upgrading-minikube"> </a></h3>
+
+<p>If you are using macOS and <a href="https://brew.sh/">Brew Package Manager</a> is installed run:</p>
+
+<h2 id="brew-update-brew-upgrade-minikube-interacting-with-your-cluster-">brew update brew upgrade minikube Interacting with Your Cluster<a href="#interacting-with-your-cluster"> </a></h2>
+
+<h3 id="kubectl-">Kubectl<a href="#kubectl"> </a></h3>
+
+<p>The minikube start command creates a <a href="/docs/reference/generated/kubectl/kubectl-commands#-em-set-context-em-">kubectl context</a> called “minikube”. This context contains the configuration to communicate with your Minikube cluster.</p>
+
+<p>Minikube sets this context to default automatically, but if you need to switch back to it in the future, run:</p>
+
+<p>kubectl config use-context minikube</p>
+
+<p>Or pass the context on each command like this:</p>
+
+<p>kubectl get pods –context=minikube</p>
+
+<h3 id="dashboard-">Dashboard<a href="#dashboard"> </a></h3>
+
+<p>To access the <a href="/docs/tasks/access-application-cluster/web-ui-dashboard/">Kubernetes Dashboard</a>, run this command in a shell after starting Minikube to get the address:</p>
+
+<p>minikube dashboard ### Services<a href="#services"> </a></p>
+
+<p>To access a Service exposed via a node port, run this command in a shell after starting Minikube to get the address:</p>
+
+<h2 id="minikube-service--n-namespace-url-name-networking-">minikube service [-n NAMESPACE] [–url] NAME Networking<a href="#networking"> </a></h2>
+
+<p>The Minikube VM is exposed to the host system via a host-only IP address, that can be obtained with the minikube ip command. Any services of type NodePort can be accessed over that IP address, on the NodePort.</p>
+
+<p>To determine the NodePort for your service, you can use a kubectl command like this:</p>
+
+<p>kubectl get service $SERVICE –output=’jsonpath=”{.spec.ports[0].nodePort}”’</p>
+
+<h2 id="persistent-volumes-">Persistent Volumes<a href="#persistent-volumes"> </a></h2>
+
+<p>Minikube supports <a href="/docs/concepts/storage/persistent-volumes/">PersistentVolumes</a> of type hostPath. These PersistentVolumes are mapped to a directory inside the Minikube VM.</p>
+
+<p>The Minikube VM boots into a tmpfs, so most directories will not be persisted across reboots (minikube stop). However, Minikube is configured to persist files stored under the following host directories:</p>
+
+<ul>
+  <li>/data</li>
+  <li>/var/lib/minikube</li>
+  <li>/var/lib/docker
+Here is an example PersistentVolume config to persist data in the /data directory:</li>
+</ul>
+
+<h2 id="apiversion-v1-kind-persistentvolume-metadata-name-pv0001-spec-accessmodes---readwriteonce-capacity-storage-5gi-hostpath-path-datapv0001-mounted-host-folders-">apiVersion: v1 kind: PersistentVolume metadata: name: pv0001 spec: accessModes: - ReadWriteOnce capacity: storage: 5Gi hostPath: path: data/pv0001/ Mounted Host Folders<a href="#mounted-host-folders"> </a></h2>
+
+<p>Some drivers will mount a host folder within the VM so that you can easily share files between the VM and host. These are not configurable at the moment and different for the driver and OS you are using.</p>
+
+<blockquote>
+  <p><strong>Note:</strong> Host folder sharing is not implemented in the KVM driver yet.DriverOSHostFolderVMVirtualBoxLinux/home/hosthomeVirtualBoxmacOS/Users/UsersVirtualBoxWindowsC://Users/c/UsersVMware FusionmacOS/Users/mnt/hgfs/UsersXhyvemacOS/Users/UsersPrivate Container Registries<a href="#private-container-registries"> </a></p>
+</blockquote>
+
+<hr />
+
+<p>To access a private container registry, follow the steps on <a href="/docs/concepts/containers/images/">this page</a>.</p>
+
+<p>We recommend you use ImagePullSecrets, but if you would like to configure access on the Minikube VM you can place the .dockercfg in the /home/docker directory or the config.json in the /home/docker/.docker directory.</p>
+
+<h2 id="add-ons-">Add-ons<a href="#add-ons"> </a></h2>
+
+<p>In order to have Minikube properly start or restart custom addons, place the addons you wish to be launched with Minikube in the ~/.minikube/addons directory. Addons in this folder will be moved to the Minikube VM and launched each time Minikube is started or restarted.</p>
+
+<h2 id="using-minikube-with-an-http-proxy-">Using Minikube with an HTTP Proxy<a href="#using-minikube-with-an-http-proxy"> </a></h2>
+
+<p>Minikube creates a Virtual Machine that includes Kubernetes and a Docker daemon. When Kubernetes attempts to schedule containers using Docker, the Docker daemon may require external network access to pull containers.</p>
+
+<p>If you are behind an HTTP proxy, you may need to supply Docker with the proxy settings. To do this, pass the required environment variables as flags during minikube start.</p>
+
+<p>For example:</p>
+
+<p>minikube start –docker-env http_proxy=http://$YOURPROXY:PORT \  –docker-env https_proxy=https://$YOURPROXY:PORT If your Virtual Machine address is 192.168.99.100, then chances are your proxy settings will prevent kubectl from directly reaching it. To by-pass proxy configuration for this IP address, you should modify your no_proxy settings. You can do so with:</p>
+
+<h2 id="export-no_proxyno_proxyminikube-ip-known-issues-">export no_proxy=$no_proxy,$(minikube ip) Known Issues<a href="#known-issues"> </a></h2>
+
+<p>Features that require multiple nodes will not work in Minikube.</p>
+
+<h2 id="design-">Design<a href="#design"> </a></h2>
+
+<p>Minikube uses <a href="https://github.com/docker/machine/tree/master/libmachine">libmachine</a> for provisioning VMs, and <a href="https://github.com/kubernetes/kubeadm">kubeadm</a> to provision a Kubernetes cluster.</p>
+
+<p>For more information about Minikube, see the <a href="https://git.k8s.io/community/contributors/design-proposals/cluster-lifecycle/local-cluster-ux.md">proposal</a>.</p>
+
+<h2 id="additional-links-">Additional Links<a href="#additional-links"> </a></h2>
+
+<ul>
+  <li><strong>Goals and Non-Goals</strong>: For the goals and non-goals of the Minikube project, please see our <a href="https://minikube.sigs.k8s.io/docs/contrib/roadmap/">roadmap</a>.</li>
+  <li><strong>Development Guide</strong>: See <a href="https://minikube.sigs.k8s.io/docs/contrib/">Contributing</a> for an overview of how to send pull requests.</li>
+  <li><strong>Building Minikube</strong>: For instructions on how to build/test Minikube from source, see the <a href="https://minikube.sigs.k8s.io/docs/contrib/building/">build guide</a>.</li>
+  <li><strong>Adding a New Dependency</strong>: For instructions on how to add a new dependency to Minikube, see the <a href="https://minikube.sigs.k8s.io/docs/contrib/drivers/">adding dependencies guide</a>.</li>
+  <li><strong>Adding a New Addon</strong>: For instructions on how to add a new addon for Minikube, see the <a href="https://minikube.sigs.k8s.io/docs/contrib/addons/">adding an addon guide</a>.</li>
+  <li><strong>MicroK8s</strong>: Linux users wishing to avoid running a virtual machine may consider <a href="https://microk8s.io/">MicroK8s</a> as an alternative.
+Community<a href="#community"> </a></li>
+</ul>
+
+<hr />
+
+<p>Contributions, questions, and comments are all welcomed and encouraged! Minikube developers hang out on <a href="https://kubernetes.slack.com">Slack</a> in the #minikube channel (get an invitation <a href="https://slack.kubernetes.io/">here</a>). We also have the <a href="https://groups.google.com/forum/#!forum/kubernetes-dev">kubernetes-dev Google Groups mailing list</a>. If you are posting to the list please prefix your subject with “minikube: “.</p>
+
+<h2 id="feedback">Feedback</h2>
+
+<p>Was this page helpful?</p>
+
+<p>Yes NoThanks for the feedback. If you have a specific, answerable question about how to use Kubernetes, ask it on <a href="https://stackoverflow.com/questions/tagged/kubernetes">Stack Overflow</a>. Open an issue in the GitHub repo if you want to <a href="https://github.com/kubernetes/website/issues/new?title=Issue%20with%20k8s.io/docs/setup/learning-environment/minikube/">report a problem</a> or <a href="https://github.com/kubernetes/website/issues/new?title=Improvement%20for%20k8s.io/docs/setup/learning-environment/minikube/">suggest an improvement</a>.</p>
+
+
+              </div>
+
+              <div class="entry-footer">
+                <i class="bi bi-folder"></i>
+                <ul class="cats">
+                  
+                  
+                  <li><a href="/categories#fr">
+                    fr
+                  </a></li>
+                  
+                  <li><a href="/categories#kubernetes">
+                    kubernetes
+                  </a></li>
+                  
+                </ul>
+
+                <i class="bi bi-tags"></i>
+                <ul class="tags">
+                  
+                  
+                </ul>
+              </div>
+
+            </article><!-- End blog entry -->
+
+            <div class="blog-author d-flex align-items-center">
+              
+              <img src="https://www.gravatar.com/avatar/?s=250&d=mm&r=x" class="rounded-circle float-left" alt="">
+              
+              
+              <div>
+                <h4></h4>
+                <div class="social-links">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="biu bi-instagram"></i></a>
+                </div>
+                <p>
+                  
+                </p>
+              </div>
+            </div><!-- End blog author bio -->
+
+            <div class="blog-comments">
+
+              <h4 class="comments-count">8 Comments</h4>
+
+              <div id="comment-1" class="comment">
+                <div class="d-flex">
+                  <div class="comment-img"><img src="/assets/img/blog/comments-1.jpg" alt=""></div>
+                  <div>
+                    <h5><a href="">Georgia Reader</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                    <time datetime="2020-01-01">01 Jan, 2020</time>
+                    <p>
+                      Et rerum totam nisi. Molestiae vel quam dolorum vel voluptatem et et. Est ad aut sapiente quis molestiae est qui cum soluta.
+                      Vero aut rerum vel. Rerum quos laboriosam placeat ex qui. Sint qui facilis et.
+                    </p>
+                  </div>
+                </div>
+              </div><!-- End comment #1 -->
+
+              <div id="comment-2" class="comment">
+                <div class="d-flex">
+                  <div class="comment-img"><img src="/assets/img/blog/comments-2.jpg" alt=""></div>
+                  <div>
+                    <h5><a href="">Aron Alvarado</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                    <time datetime="2020-01-01">01 Jan, 2020</time>
+                    <p>
+                      Ipsam tempora sequi voluptatem quis sapiente non. Autem itaque eveniet saepe. Officiis illo ut beatae.
+                    </p>
+                  </div>
+                </div>
+
+                <div id="comment-reply-1" class="comment comment-reply">
+                  <div class="d-flex">
+                    <div class="comment-img"><img src="/assets/img/blog/comments-3.jpg" alt=""></div>
+                    <div>
+                      <h5><a href="">Lynda Small</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                      <time datetime="2020-01-01">01 Jan, 2020</time>
+                      <p>
+                        Enim ipsa eum fugiat fuga repellat. Commodi quo quo dicta. Est ullam aspernatur ut vitae quia mollitia id non. Qui ad quas nostrum rerum sed necessitatibus aut est. Eum officiis sed repellat maxime vero nisi natus. Amet nesciunt nesciunt qui illum omnis est et dolor recusandae.
+
+                        Recusandae sit ad aut impedit et. Ipsa labore dolor impedit et natus in porro aut. Magnam qui cum. Illo similique occaecati nihil modi eligendi. Pariatur distinctio labore omnis incidunt et illum. Expedita et dignissimos distinctio laborum minima fugiat.
+
+                        Libero corporis qui. Nam illo odio beatae enim ducimus. Harum reiciendis error dolorum non autem quisquam vero rerum neque.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div id="comment-reply-2" class="comment comment-reply">
+                    <div class="d-flex">
+                      <div class="comment-img"><img src="/assets/img/blog/comments-4.jpg" alt=""></div>
+                      <div>
+                        <h5><a href="">Sianna Ramsay</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                        <time datetime="2020-01-01">01 Jan, 2020</time>
+                        <p>
+                          Et dignissimos impedit nulla et quo distinctio ex nemo. Omnis quia dolores cupiditate et. Ut unde qui eligendi sapiente omnis ullam. Placeat porro est commodi est officiis voluptas repellat quisquam possimus. Perferendis id consectetur necessitatibus.
+                        </p>
+                      </div>
+                    </div>
+
+                  </div><!-- End comment reply #2-->
+
+                </div><!-- End comment reply #1-->
+
+              </div><!-- End comment #2-->
+
+              <div id="comment-3" class="comment">
+                <div class="d-flex">
+                  <div class="comment-img"><img src="/assets/img/blog/comments-5.jpg" alt=""></div>
+                  <div>
+                    <h5><a href="">Nolan Davidson</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                    <time datetime="2020-01-01">01 Jan, 2020</time>
+                    <p>
+                      Distinctio nesciunt rerum reprehenderit sed. Iste omnis eius repellendus quia nihil ut accusantium tempore. Nesciunt expedita id dolor exercitationem aspernatur aut quam ut. Voluptatem est accusamus iste at.
+                      Non aut et et esse qui sit modi neque. Exercitationem et eos aspernatur. Ea est consequuntur officia beatae ea aut eos soluta. Non qui dolorum voluptatibus et optio veniam. Quam officia sit nostrum dolorem.
+                    </p>
+                  </div>
+                </div>
+
+              </div><!-- End comment #3 -->
+
+              <div id="comment-4" class="comment">
+                <div class="d-flex">
+                  <div class="comment-img"><img src="/assets/img/blog/comments-6.jpg" alt=""></div>
+                  <div>
+                    <h5><a href="">Kay Duggan</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                    <time datetime="2020-01-01">01 Jan, 2020</time>
+                    <p>
+                      Dolorem atque aut. Omnis doloremque blanditiis quia eum porro quis ut velit tempore. Cumque sed quia ut maxime. Est ad aut cum. Ut exercitationem non in fugiat.
+                    </p>
+                  </div>
+                </div>
+
+              </div><!-- End comment #4 -->
+
+              <div class="reply-form">
+                <h4>Leave a Reply</h4>
+                <p>Your email address will not be published. Required fields are marked * </p>
+                <form action="">
+                  <div class="row">
+                    <div class="col-md-6 form-group">
+                      <input name="name" type="text" class="form-control" placeholder="Your Name*">
+                    </div>
+                    <div class="col-md-6 form-group">
+                      <input name="email" type="text" class="form-control" placeholder="Your Email*">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col form-group">
+                      <input name="website" type="text" class="form-control" placeholder="Your Website">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col form-group">
+                      <textarea name="comment" class="form-control" placeholder="Your Comment*"></textarea>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Post Comment</button>
+
+                </form>
+
+              </div>
+
+            </div><!-- End blog comments -->
+
+          </div><!-- End blog entries list -->
+
+          <div class="col-lg-4">
+
+            <div class="sidebar">
+              
+
+              <h3 class="sidebar-title">Search</h3>
+              <div class="sidebar-item search-form">
+                <form onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+                  <input type="text" class="launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter...">
+                  <button type="submit"><i class="bi bi-search"></i></button>
+                </form>
+              </div><div id="lunrsearchresults">
+                  <ul></ul>
+              </div>
+
+              
+              <!-- End sidebar search formn-->
+
+              <h3 class="sidebar-title">Categories</h3>
+              <div class="sidebar-item categories">
+                <ul>
+                  
+                  
+                  
+                  <li><a href="/category/en">en <span>(33)</span></a></li>
+                  
+                  <li><a href="/category/aws">aws <span>(3)</span></a></li>
+                  
+                  <li><a href="/category/data-analysis">data-analysis <span>(2)</span></a></li>
+                  
+                  <li><a href="/category/fr">fr <span>(29)</span></a></li>
+                  
+                  <li><a href="/category/docker">docker <span>(12)</span></a></li>
+                  
+                  <li><a href="/category/kubernetes">kubernetes <span>(11)</span></a></li>
+                  
+                  <li><a href="/category/web development">web development <span>(2)</span></a></li>
+                  
+                  <li><a href="/category/wordpress">wordpress <span>(4)</span></a></li>
+                  
+                  <li><a href="/category/ubuntu">ubuntu <span>(4)</span></a></li>
+                  
+                  <li><a href="/category/javascript">javascript <span>(4)</span></a></li>
+                  
+                  <li><a href="/category/database">database <span>(2)</span></a></li>
+                  
+                  <li><a href="/category/slack">slack <span>(2)</span></a></li>
+                  
+                  <li><a href="/category/productivity">productivity <span>(8)</span></a></li>
+                  
+                  <li><a href="/category/backup-restore">backup-restore <span>(2)</span></a></li>
+                  
+                  <li><a href="/category/fax">fax <span>(2)</span></a></li>
+                  
+                  <li><a href="/category/screenshot">screenshot <span>(2)</span></a></li>
+                  
+                  <li><a href="/category/security">security <span>(1)</span></a></li>
+                  
+                </ul>
+              </div><!-- End sidebar categories-->
+
+              <h3 class="sidebar-title">Recent Posts</h3>
+              <div class="sidebar-item recent-posts">
+                
+
+                
+                <div class="post-item clearfix">
+                  <!-- <img src="/assets/img/blog/blog-recent-1.jpg" alt="How to Send and Receive Faxes Online Without a Fax Machine or Phone Line"> -->
+                   
+                     
+                    
+                    <img class="img-fluid" src="https://sergio.afanou.com/assets/images/image-midres-26.jpg" alt="How to Send and Receive Faxes Online Without a Fax Machine or Phone Line"> 
+                     
+                  
+                  <h4><a href="/blog/fr/fax/how-to-send-and-receive-faxes-online-without-a-fax-machine-or-phone-line">How to Send and Receive Faxes Online Without a Fax Machine or Phone Line</a></h4>
+                  <time datetime="2020-09-01 00:00">Tuesday 01 September, 2020</time>
+                </div>
+                
+                <div class="post-item clearfix">
+                  <!-- <img src="/assets/img/blog/blog-recent-1.jpg" alt="Comment prendre une capture d'écran dans windows"> -->
+                   
+                     
+                    
+                    <img class="img-fluid" src="https://sergio.afanou.com/assets/images/image-midres-52.jpg" alt="Comment prendre une capture d'écran dans windows"> 
+                     
+                  
+                  <h4><a href="/blog/fr/screenshot/comment-prendre-une-capture-ecran-dans-windows">Comment prendre une capture d'écran dans windows</a></h4>
+                  <time datetime="2020-09-01 00:00">Tuesday 01 September, 2020</time>
+                </div>
+                
+                <div class="post-item clearfix">
+                  <!-- <img src="/assets/img/blog/blog-recent-1.jpg" alt="Travailler avec Kubernetes et Minikube"> -->
+                   
+                     
+                    
+                    <img class="img-fluid" src="https://sergio.afanou.com/assets/images/image-midres-38.jpg" alt="Travailler avec Kubernetes et Minikube"> 
+                     
+                  
+                  <h4><a href="/blog/fr/kubernetes/travailler-avec-kubernetes-et-minikube">Travailler avec Kubernetes et Minikube</a></h4>
+                  <time datetime="2020-08-13 00:00">Thursday 13 August, 2020</time>
+                </div>
+                
+                <div class="post-item clearfix">
+                  <!-- <img src="/assets/img/blog/blog-recent-1.jpg" alt="Play with Kubernetes with Minikube"> -->
+                   
+                     
+                    
+                    <img class="img-fluid" src="https://sergio.afanou.com/assets/images/image-midres-38.jpg" alt="Play with Kubernetes with Minikube"> 
+                     
+                  
+                  <h4><a href="/blog/fr/kubernetes/play-with-kubernetes-with-minikube">Play with Kubernetes with Minikube</a></h4>
+                  <time datetime="2020-08-12 00:00">Wednesday 12 August, 2020</time>
+                </div>
+                
+
+              </div><!-- End sidebar recent posts-->
+
+              <h3 class="sidebar-title">Tags</h3>
+              <div class="sidebar-item tags">
+                <ul>
+                  
+                  
+                </ul>
+              </div><!-- End sidebar tags-->
+
+            </div><!-- End sidebar -->
+
+          </div><!-- End blog sidebar -->
+
+        </div>
+
+      </div>
+    </section><!-- End Blog Single Section -->
+
+  </main><!-- End #main -->
+ 
+    
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h2>Contact</h2>
+          <p>Contact Us</p>
+          <h3 class="mt-3">To order one of our services, navigate to the <a href="/order-service">order service</a> page</h3>
+        </header>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6">
+
+            <div class="row gy-4">
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-geo-alt"></i>
+                  <h3>Address</h3>
+                  <p>10 rue de Penthièvre,<br>75008 Paris</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-envelope"></i>
+                  <h3>Email Us</h3>
+                  <p>hello at bright-softwares dot com</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-clock"></i>
+                  <h3>Open Hours</h3>
+                  <p>Monday - Friday<br>9:00AM - 05:00PM</p>
+                </div>
+              </div>
+              <!-- <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-telephone"></i>
+                  <h3></h3>
+                  <p><br></p>
+                </div>
+              </div> -->
+            </div>
+
+          </div>
+
+          <div id="mauticform_wrapper_brightsoftwarescontact" class="mauticform_wrapper col-lg-6">
+            <form class="php-email-form" autocomplete="false" role="form" method="post" action="https://marketing.bright-softwares.com/form/submit?formId=5" id="mauticform_brightsoftwarescontact" data-mautic-form="brightsoftwarescontact" enctype="multipart/form-data">
+                <div class="mauticform-innerform">
+
+                    
+                  <div class="mauticform-page-wrapper mauticform-page-1 row gy-4">
+
+                    <div id="mauticform_brightsoftwarescontact_first_name" class="mauticform-row mauticform-text mauticform-field-1 mauticform-required col-md-6 " data-validate="first_name" data-validation-type="text">
+                        <input id="mauticform_input_brightsoftwarescontact_first_name" name="mauticform[first_name]" value="" placeholder="Your first name" class="mauticform-input form-control" type="text">
+                        <span class="mauticform-errormsg" style="display: none;">Please enter your first name</span>
+                    </div>
+
+                    <div id="mauticform_brightsoftwarescontact_your_last_name" class="mauticform-row mauticform-text mauticform-field-2 mauticform-required col-md-6 " data-validate="your_last_name" data-validation-type="text">
+                        <!-- <span class="mauticform-helpmessage">Please enter your last name.</span> -->
+                        <input id="mauticform_input_brightsoftwarescontact_your_last_name" name="mauticform[your_last_name]" value="" placeholder="Your last name" class="mauticform-input form-control" type="text">
+                        <span class="mauticform-errormsg" style="display: none;">Please enter your last name.</span>
+                    </div>
+
+                    <div id="mauticform_brightsoftwarescontact_email" class="mauticform-row mauticform-email mauticform-field-3 mauticform-required col-md-6 " data-validate="email" data-validation-type="email">
+                        <!-- <span class="mauticform-helpmessage">Please enter your e-mail address.</span> -->
+                        <input id="mauticform_input_brightsoftwarescontact_email" name="mauticform[email]" value="" placeholder="Your e-mail address" class="mauticform-input form-control" type="email">
+                        <span class="mauticform-errormsg" style="display: none;">Please enter your e-mail address.</span>
+                    </div>
+
+                    <div id="mauticform_brightsoftwarescontact_phone" class="mauticform-row mauticform-tel mauticform-field-4 col-md-6 ">
+                        <!-- <span class="mauticform-helpmessage">Please enter your phone number.</span> -->
+                        <input id="mauticform_input_brightsoftwarescontact_phone" name="mauticform[phone]" value="" placeholder="Your phone number" class="mauticform-input form-control" type="tel">
+                        <span class="mauticform-errormsg" style="display: none;"></span>
+                    </div>
+
+                    <div id="mauticform_brightsoftwarescontact_subject" class="mauticform-row mauticform-text mauticform-field-5 mauticform-required col-md-12" data-validate="subject" data-validation-type="text">
+                        <!-- <span class="mauticform-helpmessage">Please enter your contact message.</span> -->
+                        <input id="mauticform_input_brightsoftwarescontact_subject" name="mauticform[subject]" value="" placeholder="Your contact message" class="mauticform-input form-control" type="text">
+                        <span class="mauticform-errormsg" style="display: none;">Please enter the contact subject.</span>
+                    </div>
+
+                    <div id="mauticform_brightsoftwarescontact_f_message" class="mauticform-row mauticform-text mauticform-field-6 mauticform-required col-md-12 text-center" data-validate="f_message" data-validation-type="textarea">
+                        <!-- <span class="mauticform-helpmessage">Please enter your message.</span> -->
+                        <textarea class="form-control" rows=6 placeholder="Message" id="mauticform_input_brightsoftwarescontact_f_message" name="mauticform[f_message]" class="mauticform-textarea"></textarea>
+                        <span class="mauticform-errormsg" style="display: none;">Please enter your message.</span>
+                    </div>
+
+                    <div id="mauticform_brightsoftwarescontact_submit" class="mauticform-row mauticform-button-wrapper mauticform-field-7 col-md-12 text-center">
+                        <div class="mauticform-error" id="mauticform_brightsoftwarescontact_error"></div>
+                        <div class="mauticform-message" id="mauticform_brightsoftwarescontact_message"></div>
+                        
+                        <button type="submit" name="mauticform[submit]" id="mauticform_input_brightsoftwarescontact_submit" value="" class="mauticform-button btn btn-default">Send message</button>
+                    </div>
+                  </div>
+                </div>
+
+                <input type="hidden" name="mauticform[formId]" id="mauticform_brightsoftwarescontact_id" value="5">
+                <input type="hidden" name="mauticform[return]" id="mauticform_brightsoftwarescontact_return" value="">
+                <input type="hidden" name="mauticform[formName]" id="mauticform_brightsoftwarescontact_name" value="brightsoftwarescontact">
+
+                </form>
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+
+
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+  <div class="footer-newsletter">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-12 text-center">
+          <h4>Our Newsletter</h4>
+          <p>We won't spam you, we promise. 😇</p>
+        </div>
+        <div
+          id="mauticform_wrapper_brightsoftwaresnewsletter"
+          class="mauticform_wrapper col-lg-6"
+        >
+          <form
+            autocomplete="false"
+            role="form"
+            method="post"
+            action="https://marketing.bright-softwares.com/form/submit?formId=4"
+            id="mauticform_brightsoftwaresnewsletter"
+            data-mautic-form="brightsoftwaresnewsletter"
+            enctype="multipart/form-data"
+          >
+            <div
+              class="mauticform-error"
+              id="mauticform_brightsoftwaresnewsletter_error"
+            ></div>
+            <div
+              class="mauticform-message"
+              id="mauticform_brightsoftwaresnewsletter_message"
+            ></div>
+            <div class="mauticform-innerform">
+              <div
+                class="mauticform-page-wrapper mauticform-page-1"
+                data-mautic-form-page="1"
+              >
+                <div
+                  id="mauticform_brightsoftwaresnewsletter_email"
+                  data-validate="email"
+                  data-validation-type="email"
+                  class="
+                    mauticform-row
+                    mauticform-email
+                    mauticform-field-1
+                    mauticform-required
+                  "
+                >
+                  <input
+                    id="mauticform_input_brightsoftwaresnewsletter_email"
+                    name="mauticform[email]"
+                    value=""
+                    placeholder="E-mail address"
+                    class="mauticform-input"
+                    type="email"
+                  />
+                  <span class="mauticform-errormsg" style="display: none"
+                    >Please enter your e-mail address</span
+                  >
+                </div>
+
+                <div
+                  id="mauticform_brightsoftwaresnewsletter_submit"
+                  class="
+                    mauticform-row mauticform-button-wrapper mauticform-field-2
+                  "
+                >
+                  <input
+                    type="submit"
+                    name="mauticform[submit]"
+                    id="mauticform_input_brightsoftwaresnewsletter_submit"
+                    value="Subscribe"
+                    class="mauticform-button btn btn-default"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <input
+              type="hidden"
+              name="mauticform[formId]"
+              id="mauticform_brightsoftwaresnewsletter_id"
+              value="4"
+            />
+            <input
+              type="hidden"
+              name="mauticform[return]"
+              id="mauticform_brightsoftwaresnewsletter_return"
+              value=""
+            />
+            <input
+              type="hidden"
+              name="mauticform[formName]"
+              id="mauticform_brightsoftwaresnewsletter_name"
+              value="brightsoftwaresnewsletter"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-top">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-info">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <img src="/assets/flexstart-img/logo.png" alt="" />
+            <span>Bright Softwares</span>
+          </a>
+          <p>
+            We provide solutions to our customers challenges. Our teams based in
+            Paris and Lomé provide high value expertise to engineer the best
+            solutions.
+          </p>
+          <div class="social-links mt-3">
+            
+            <a href="http://twitter.com/brightsoftwares" class="twitter"
+              ><i class="bi bi-twitter"></i
+            ></a>
+            
+            <a href="http://fb.me/bright-softwares" class="facebook"
+              ><i class="bi bi-facebook"></i
+            ></a>
+            
+            <a href="" class="stack-overflow"
+              ><i class="bi bi-stack-overflow"></i
+            ></a>
+            
+            <a href="http://github.com/brightsoftwares" class="github"
+              ><i class="bi bi-github"></i
+            ></a>
+            
+            <a href="" class="instagram"
+              ><i class="bi bi-instagram"></i
+            ></a>
+            
+            <a href="" class="linkedin"
+              ><i class="bi bi-linkedin"></i
+            ></a>
+            
+            <!-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bi bi-instagram bx bxl-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bi bi-linkedin bx bxl-linkedin"></i></a> -->
+          </div>
+
+          <!-- ======= Read page in alternate language ======= -->
+          <div class="flexstart-blog-single mt-3">
+            
+                
+                
+                
+                <footer class="lang-options">
+                    <p>Lire cette page dans une autre langue:</p>
+                    <ul class="nav flex-column">
+                    
+                      
+                        <li class="nav-item">
+                          <a href="/blog/en/kubernetes/installing-kubernetes-with-minikube" class="nav-link en" title="View in en">
+                            🇺🇸 English
+                          </a>
+                        </li>
+                      
+                    
+                      
+                    
+                    </ul>
+                </footer>
+                
+            
+          </div>
+    
+
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li>
+              <i class="bi bi-chevron-right"></i> <a href="index.html">Home</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i> <a href="#">About us</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i> <a href="#">Services</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i>
+              <a href="/conditions">Terms of service</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i>
+              <a href="/privacy">Privacy policy</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li>
+              <i class="bi bi-chevron-right"></i> <a href="#">Web solutions</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i> <a href="#">e-commerce</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i>
+              <a href="#">AI powered apps</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i> <a href="#">AI Models</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i>
+              <a href="#">Automated revenue</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i>
+              <a href="#">Cloud infrastructure</a>
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="col-lg-3 col-md-12 footer-contact text-center text-md-start"
+        >
+          <h4>Contact Us</h4>
+          <p>
+            10 rue de Penthièvre <br />
+            75008, Paris<br />
+            France <br /><br />
+            <!--<strong>Phone:</strong> +1 5589 55488 55<br>-->
+            <strong>Email:</strong> hello at bright-softwares dot com<br />
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="copyright">
+      &copy; Copyright
+      <strong><span>Bright Softwares 2021</span></strong
+      >. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexstart-bootstrap-startup-template/ -->
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+  </div>
+</footer>
+<!-- End Footer -->
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"
+  ><i class="bi bi-arrow-up-short"></i
+></a>
+
+<!-- Vendor JS Files -->
+<script src="/assets/flexstart-vendor/bootstrap/js/bootstrap.bundle.js"></script>
+<script src="/assets/flexstart-vendor/aos/aos.js"></script>
+<script src="/assets/flexstart-vendor/php-email-form/validate.js"></script>
+<script src="/assets/flexstart-vendor/swiper/swiper-bundle.min.js"></script>
+<script src="/assets/flexstart-vendor/purecounter/purecounter.js"></script>
+<script src="/assets/flexstart-vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="/assets/flexstart-vendor/glightbox/js/glightbox.min.js"></script>
+
+<!-- Template Main JS File -->
+<script src="/assets/flexstart-js/main.js"></script>
+<script src="/assets/flexstart-js/flexstart_contact.js"></script>
+
+<!-- Search engine -->
+<script src="/assets/js/lunr.js"></script>
+<script src="/assets/js/lunrsearchengine.js"></script>
+<script src="/assets/js/copycode.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,2993 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+    
+      <url>
+        <loc>/blog/en/security/log4j-flaw-am-i-impacted-and-how-can-i-protect-myself</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/security/log4j-flaw-am-i-impacted-and-how-can-i-protect-myself" />
+        
+        <lastmod>2021-12-15T13:36:11+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/en/docker/docker-tip-inspect-and-jq</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/docker/docker-tip-inspect-and-jq" />
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/docker/docker-tip-inspect-and-jq" />
+        
+        <lastmod>2021-12-15T09:32:28+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/en/kubernetes/how-to-use-local-docker-images-with-minikube</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/kubernetes/how-to-use-local-docker-images-with-minikube" />
+        
+        <lastmod>2021-12-14T13:42:20+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/en/kubernetes/kubernetes-helm-how-to-show-multi-line-properties</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/kubernetes/kubernetes-helm-how-to-show-multi-line-properties" />
+        
+        <lastmod>2021-12-10T13:28:16+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/en/slack/how-to-build-a-slackbot-in-python-on-ubuntu-2004</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/slack/how-to-build-a-slackbot-in-python-on-ubuntu-2004" />
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/slack/how-to-build-a-slackbot-in-python-on-ubuntu-2004" />
+        
+        <lastmod>2021-11-16T23:17:26+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/en/backup-restore/how-do-i-get-my-data-off-an-old-computer</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/backup-restore/how-do-i-get-my-data-off-an-old-computer" />
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/backup-restore/how-do-i-get-my-data-off-an-old-computer" />
+        
+        <lastmod>2021-11-15T16:42:24+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/en/kubernetes/how-to-set-up-the-codeserver-cloud-ide-platform-on-digitalocean-kubernetes</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/kubernetes/how-to-set-up-the-codeserver-cloud-ide-platform-on-digitalocean-kubernetes" />
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/kubernetes/how-to-set-up-the-codeserver-cloud-ide-platform-on-digitalocean-kubernetes" />
+        
+        <lastmod>2021-11-03T18:00:07+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/fr/fax/how-to-send-and-receive-faxes-online-without-a-fax-machine-or-phone-line</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/fax/how-to-send-and-receive-faxes-online-without-a-fax-machine-or-phone-line" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/fax/how-to-send-and-receive-faxes-online-without-a-fax-machine-or-phone-line" />
+        
+        <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/fr/screenshot/comment-prendre-une-capture-ecran-dans-windows</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/screenshot/comment-prendre-une-capture-ecran-dans-windows" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/screenshot/how-to-take-a-screenshot-in-windows" />
+        
+        <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/en/screenshot/how-to-take-a-screenshot-in-windows</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/screenshot/comment-prendre-une-capture-ecran-dans-windows" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/screenshot/how-to-take-a-screenshot-in-windows" />
+        
+        <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/en/fax/how-to-send-and-receive-faxes-online-without-a-fax-machine-or-phone-line</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/fax/how-to-send-and-receive-faxes-online-without-a-fax-machine-or-phone-line" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/fax/how-to-send-and-receive-faxes-online-without-a-fax-machine-or-phone-line" />
+        
+        <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/fr/kubernetes/travailler-avec-kubernetes-et-minikube</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/kubernetes/travailler-avec-kubernetes-et-minikube" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/kubernetes/work-with-kubernetes-with-minikube" />
+        
+        <lastmod>2020-08-13T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/en/kubernetes/work-with-kubernetes-with-minikube</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/kubernetes/travailler-avec-kubernetes-et-minikube" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/kubernetes/work-with-kubernetes-with-minikube" />
+        
+        <lastmod>2020-08-13T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/fr/kubernetes/play-with-kubernetes-with-minikube</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/kubernetes/play-with-kubernetes-with-minikube" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/kubernetes/play-with-kubernetes-with-minikube" />
+        
+        <lastmod>2020-08-12T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/fr/kubernetes/installing-kubernetes-with-minikube</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/kubernetes/installing-kubernetes-with-minikube" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/kubernetes/installing-kubernetes-with-minikube" />
+        
+        <lastmod>2020-08-12T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/en/kubernetes/play-with-kubernetes-with-minikube</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/kubernetes/play-with-kubernetes-with-minikube" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/kubernetes/play-with-kubernetes-with-minikube" />
+        
+        <lastmod>2020-08-12T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/en/kubernetes/installing-kubernetes-with-minikube</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/kubernetes/installing-kubernetes-with-minikube" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/kubernetes/installing-kubernetes-with-minikube" />
+        
+        <lastmod>2020-08-12T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/fr/backup-restore/how-do-i-get-my-data-off-an-old-computer</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/backup-restore/how-do-i-get-my-data-off-an-old-computer" />
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/backup-restore/how-do-i-get-my-data-off-an-old-computer" />
+        
+        <lastmod>2020-08-11T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/fr/productivity/how-do-i-fix-my-cracked-iphone-screen-during-the-shutdown</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/productivity/how-do-i-fix-my-cracked-iphone-screen-during-the-shutdown" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/productivity/how-do-i-fix-my-cracked-iphone-screen-during-the-shutdown" />
+        
+        <lastmod>2020-08-11T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/fr/productivity/help-windows-wont-boot-correctly-after-a-recent-os-update</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/productivity/help-windows-wont-boot-correctly-after-a-recent-os-update" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/productivity/help-windows-wont-boot-correctly-after-a-recent-os-update" />
+        
+        <lastmod>2020-08-11T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/en/productivity/how-do-i-fix-my-cracked-iphone-screen-during-the-shutdown</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/productivity/how-do-i-fix-my-cracked-iphone-screen-during-the-shutdown" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/productivity/how-do-i-fix-my-cracked-iphone-screen-during-the-shutdown" />
+        
+        <lastmod>2020-08-11T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/en/productivity/help-windows-wont-boot-correctly-after-a-recent-os-update</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/productivity/help-windows-wont-boot-correctly-after-a-recent-os-update" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/productivity/help-windows-wont-boot-correctly-after-a-recent-os-update" />
+        
+        <lastmod>2020-08-11T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/fr/kubernetes/playing-kubernetes-with-minikube</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/kubernetes/playing-kubernetes-with-minikube" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/playing-kubernetes-with-minikube" />
+        
+        <lastmod>2020-08-04T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/fr/docker/docker-tip-inspect-and-less</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/docker/docker-tip-inspect-and-less" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/docker/docker-tip-inspect-and-less" />
+        
+        <lastmod>2020-08-04T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/fr/docker/docker-tip-inspect-and-jq</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/docker/docker-tip-inspect-and-jq" />
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/docker/docker-tip-inspect-and-jq" />
+        
+        <lastmod>2020-08-04T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/fr/docker/docker-tip-inspect-and-grep</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/docker/docker-tip-inspect-and-grep" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/docker/docker-tip-inspect-and-grep" />
+        
+        <lastmod>2020-08-04T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/fr/productivity/do-i-need-a-new-cable-modem-if-im-stuck-working-from-home</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/productivity/do-i-need-a-new-cable-modem-if-im-stuck-working-from-home" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/productivity/do-i-need-a-new-cable-modem-if-im-stuck-working-from-home" />
+        
+        <lastmod>2020-08-04T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/en/playing-kubernetes-with-minikube</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/kubernetes/playing-kubernetes-with-minikube" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/playing-kubernetes-with-minikube" />
+        
+        <lastmod>2020-08-04T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/en/docker/docker-tip-inspect-and-less</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/docker/docker-tip-inspect-and-less" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/docker/docker-tip-inspect-and-less" />
+        
+        <lastmod>2020-08-04T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/en/docker/docker-tip-inspect-and-grep</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/docker/docker-tip-inspect-and-grep" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/docker/docker-tip-inspect-and-grep" />
+        
+        <lastmod>2020-08-04T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/en/productivity/do-i-need-a-new-cable-modem-if-im-stuck-working-from-home</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/productivity/do-i-need-a-new-cable-modem-if-im-stuck-working-from-home" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/productivity/do-i-need-a-new-cable-modem-if-im-stuck-working-from-home" />
+        
+        <lastmod>2020-08-04T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/fr/productivity/why-do-my-download-speeds-differ-so-drastically-between-computers</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/productivity/why-do-my-download-speeds-differ-so-drastically-between-computers" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/productivity/why-do-my-download-speeds-differ-so-drastically-between-computers" />
+        
+        <lastmod>2020-07-28T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/en/productivity/why-do-my-download-speeds-differ-so-drastically-between-computers</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/productivity/why-do-my-download-speeds-differ-so-drastically-between-computers" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/productivity/why-do-my-download-speeds-differ-so-drastically-between-computers" />
+        
+        <lastmod>2020-07-28T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/fr/javascript/understanding-template-literals-in-javascript</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/javascript/understanding-template-literals-in-javascript" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/javascript/understanding-template-literals-in-javascript" />
+        
+        <lastmod>2020-07-05T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/fr/database/how-to-use-onetomany-database-relationships-with-flask-and-sqlite</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/database/how-to-use-onetomany-database-relationships-with-flask-and-sqlite" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/database/how-to-use-onetomany-database-relationships-with-flask-and-sqlite" />
+        
+        <lastmod>2020-07-05T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/fr/javascript/how-to-manage-state-on-react-class-components</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/javascript/how-to-manage-state-on-react-class-components" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/javascript/how-to-manage-state-on-react-class-components" />
+        
+        <lastmod>2020-07-05T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/fr/ubuntu/how-to-create-a-selfsigned-ssl-certificate-for-apache-on-centos-8</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/ubuntu/how-to-create-a-selfsigned-ssl-certificate-for-apache-on-centos-8" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/ubuntu/how-to-create-a-selfsigned-ssl-certificate-for-apache-on-centos-8" />
+        
+        <lastmod>2020-07-05T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/fr/ubuntu/how-to-create-a-new-sudoenabled-user-on-ubuntu-2004-quickstart</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/ubuntu/how-to-create-a-new-sudoenabled-user-on-ubuntu-2004-quickstart" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/ubuntu/how-to-create-a-new-sudoenabled-user-on-ubuntu-2004-quickstart" />
+        
+        <lastmod>2020-07-05T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/fr/docker/how-to-configure-jenkins-with-ssl-using-an-nginx-reverse-proxy-on-ubuntu-2004</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/docker/how-to-configure-jenkins-with-ssl-using-an-nginx-reverse-proxy-on-ubuntu-2004" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/docker/how-to-configure-jenkins-with-ssl-using-an-nginx-reverse-proxy-on-ubuntu-2004" />
+        
+        <lastmod>2020-07-05T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/fr/slack/how-to-build-a-slackbot-in-python-on-ubuntu-2004</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/slack/how-to-build-a-slackbot-in-python-on-ubuntu-2004" />
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/slack/how-to-build-a-slackbot-in-python-on-ubuntu-2004" />
+        
+        <lastmod>2020-07-05T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/en/javascript/understanding-template-literals-in-javascript</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/javascript/understanding-template-literals-in-javascript" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/javascript/understanding-template-literals-in-javascript" />
+        
+        <lastmod>2020-07-05T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/en/database/how-to-use-onetomany-database-relationships-with-flask-and-sqlite</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/database/how-to-use-onetomany-database-relationships-with-flask-and-sqlite" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/database/how-to-use-onetomany-database-relationships-with-flask-and-sqlite" />
+        
+        <lastmod>2020-07-05T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/en/javascript/how-to-manage-state-on-react-class-components</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/javascript/how-to-manage-state-on-react-class-components" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/javascript/how-to-manage-state-on-react-class-components" />
+        
+        <lastmod>2020-07-05T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/en/ubuntu/how-to-create-a-selfsigned-ssl-certificate-for-apache-on-centos-8</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/ubuntu/how-to-create-a-selfsigned-ssl-certificate-for-apache-on-centos-8" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/ubuntu/how-to-create-a-selfsigned-ssl-certificate-for-apache-on-centos-8" />
+        
+        <lastmod>2020-07-05T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/en/ubuntu/how-to-create-a-new-sudoenabled-user-on-ubuntu-2004-quickstart</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/ubuntu/how-to-create-a-new-sudoenabled-user-on-ubuntu-2004-quickstart" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/ubuntu/how-to-create-a-new-sudoenabled-user-on-ubuntu-2004-quickstart" />
+        
+        <lastmod>2020-07-05T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/en/docker/how-to-configure-jenkins-with-ssl-using-an-nginx-reverse-proxy-on-ubuntu-2004</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/docker/how-to-configure-jenkins-with-ssl-using-an-nginx-reverse-proxy-on-ubuntu-2004" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/docker/how-to-configure-jenkins-with-ssl-using-an-nginx-reverse-proxy-on-ubuntu-2004" />
+        
+        <lastmod>2020-07-05T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/fr/wordpress/how-to-set-up-a-remote-database-to-optimize-site-performance-with-mysql-on-ubuntu-1604</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/wordpress/how-to-set-up-a-remote-database-to-optimize-site-performance-with-mysql-on-ubuntu-1604" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/wordpress/how-to-set-up-a-remote-database-to-optimize-site-performance-with-mysql-on-ubuntu-1604" />
+        
+        <lastmod>2020-04-04T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/fr/wordpress/how-to-install-wordpress-with-lemp-on-ubuntu-1604</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/wordpress/how-to-install-wordpress-with-lemp-on-ubuntu-1604" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/wordpress/how-to-install-wordpress-with-lemp-on-ubuntu-1604" />
+        
+        <lastmod>2020-04-04T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/fr/web%20development/how-to-install-wordpress-with-lamp-on-ubuntu-1604</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/web%20development/how-to-install-wordpress-with-lamp-on-ubuntu-1604" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/web%20development/how-to-install-wordpress-with-lamp-on-ubuntu-1604" />
+        
+        <lastmod>2020-04-04T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/en/wordpress/how-to-set-up-a-remote-database-to-optimize-site-performance-with-mysql-on-ubuntu-1604</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/wordpress/how-to-set-up-a-remote-database-to-optimize-site-performance-with-mysql-on-ubuntu-1604" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/wordpress/how-to-set-up-a-remote-database-to-optimize-site-performance-with-mysql-on-ubuntu-1604" />
+        
+        <lastmod>2020-04-04T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/en/wordpress/how-to-install-wordpress-with-lemp-on-ubuntu-1604</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/wordpress/how-to-install-wordpress-with-lemp-on-ubuntu-1604" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/wordpress/how-to-install-wordpress-with-lemp-on-ubuntu-1604" />
+        
+        <lastmod>2020-04-04T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/en/web%20development/how-to-install-wordpress-with-lamp-on-ubuntu-1604</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/web%20development/how-to-install-wordpress-with-lamp-on-ubuntu-1604" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/web%20development/how-to-install-wordpress-with-lamp-on-ubuntu-1604" />
+        
+        <lastmod>2020-04-04T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/fr/docker/top-5-questions-from-how-to-become-a-docker-power-user-session-at-dockercon-2020</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/docker/top-5-questions-from-how-to-become-a-docker-power-user-session-at-dockercon-2020" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/docker/top-5-questions-from-how-to-become-a-docker-power-user-session-at-dockercon-2020" />
+        
+        <lastmod>2020-04-03T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/fr/docker/how-to-setup-your-local-nodejs-development-environment-using-docker</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/docker/how-to-setup-your-local-nodejs-development-environment-using-docker" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/docker/how-to-setup-your-local-nodejs-development-environment-using-docker" />
+        
+        <lastmod>2020-04-03T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/fr/kubernetes/how-to-set-up-the-codeserver-cloud-ide-platform-on-digitalocean-kubernetes</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/kubernetes/how-to-set-up-the-codeserver-cloud-ide-platform-on-digitalocean-kubernetes" />
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/kubernetes/how-to-set-up-the-codeserver-cloud-ide-platform-on-digitalocean-kubernetes" />
+        
+        <lastmod>2020-04-03T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/en/docker/top-5-questions-from-how-to-become-a-docker-power-user-session-at-dockercon-2020</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/docker/top-5-questions-from-how-to-become-a-docker-power-user-session-at-dockercon-2020" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/docker/top-5-questions-from-how-to-become-a-docker-power-user-session-at-dockercon-2020" />
+        
+        <lastmod>2020-04-03T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/en/docker/how-to-setup-your-local-nodejs-development-environment-using-docker</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/docker/how-to-setup-your-local-nodejs-development-environment-using-docker" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/docker/how-to-setup-your-local-nodejs-development-environment-using-docker" />
+        
+        <lastmod>2020-04-03T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/en/aws/migrate-your-current-vps-linode-rackspace-aws-ec2-to-digitalocean</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/aws/migrate-your-current-vps-linode-rackspace-aws-ec2-to-digitalocean" />
+        
+        <lastmod>2020-04-02T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/fr/data-analysis/how-to-copy-a-formula-down-an-entire-column-in-google-sheets</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/data-analysis/how-to-copy-a-formula-down-an-entire-column-in-google-sheets" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/data-analysis/how-to-copy-a-formula-down-an-entire-column-in-google-sheets" />
+        
+        <lastmod>2020-02-12T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/fr/aws/amazons-t3-qui-doit-utiliser-quand-comment-et-pourquoi</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/aws/amazons-t3-qui-doit-utiliser-quand-comment-et-pourquoi" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/aws/amazons-t3-who-should-use-it-when-how-and-the-why" />
+        
+        <lastmod>2020-02-12T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/en/data-analysis/how-to-copy-a-formula-down-an-entire-column-in-google-sheets</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/data-analysis/how-to-copy-a-formula-down-an-entire-column-in-google-sheets" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/data-analysis/how-to-copy-a-formula-down-an-entire-column-in-google-sheets" />
+        
+        <lastmod>2020-02-12T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/en/aws/amazons-t3-who-should-use-it-when-how-and-the-why</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blog/fr/aws/amazons-t3-qui-doit-utiliser-quand-comment-et-pourquoi" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/en/aws/amazons-t3-who-should-use-it-when-how-and-the-why" />
+        
+        <lastmod>2020-02-12T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+  
+    
+      <url>
+        <loc>/about</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/about" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/.well-known/assetlinks.json</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="" href="/.well-known/assetlinks.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/feed.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/js/lunrsearchengine.js" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/fr/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/en/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemaps.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/style.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/en/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/aws/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/data-analysis/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fr/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/docker/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/kubernetes/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/web-development/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/wordpress/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/ubuntu/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/javascript/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/database/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/slack/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/productivity/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/backup-restore/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fax/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/screenshot/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/security/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemap.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/robots.txt" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css.map" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/en/blog.html</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/en/blog.html" />
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/fr/blog.html" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/fr/blog.html</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/en/blog.html" />
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/fr/blog.html" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/en/blog.html" />
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/fr/blog.html" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/categories</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/categories" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/conditions</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/conditions" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/feed.xml</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="" href="/.well-known/assetlinks.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/feed.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/js/lunrsearchengine.js" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/fr/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/en/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemaps.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/style.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/en/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/aws/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/data-analysis/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fr/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/docker/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/kubernetes/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/web-development/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/wordpress/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/ubuntu/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/javascript/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/database/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/slack/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/productivity/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/backup-restore/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fax/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/screenshot/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/security/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemap.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/robots.txt" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css.map" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/fr/</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/fr/" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/en/" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/en/</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/fr/" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/en/" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/legal</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/legal" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/assets/js/lunrsearchengine.js</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="" href="/.well-known/assetlinks.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/feed.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/js/lunrsearchengine.js" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/fr/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/en/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemaps.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/style.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/en/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/aws/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/data-analysis/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fr/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/docker/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/kubernetes/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/web-development/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/wordpress/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/ubuntu/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/javascript/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/database/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/slack/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/productivity/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/backup-restore/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fax/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/screenshot/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/security/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemap.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/robots.txt" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css.map" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/assets/css/main.css</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="" href="/.well-known/assetlinks.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/feed.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/js/lunrsearchengine.js" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/fr/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/en/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemaps.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/style.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/en/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/aws/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/data-analysis/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fr/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/docker/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/kubernetes/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/web-development/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/wordpress/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/ubuntu/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/javascript/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/database/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/slack/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/productivity/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/backup-restore/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fax/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/screenshot/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/security/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemap.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/robots.txt" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css.map" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/manifest.json</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="" href="/.well-known/assetlinks.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/feed.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/js/lunrsearchengine.js" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/fr/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/en/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemaps.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/style.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/en/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/aws/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/data-analysis/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fr/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/docker/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/kubernetes/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/web-development/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/wordpress/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/ubuntu/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/javascript/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/database/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/slack/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/productivity/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/backup-restore/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fax/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/screenshot/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/security/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemap.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/robots.txt" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css.map" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/fr/manifest.json</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="" href="/.well-known/assetlinks.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/feed.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/js/lunrsearchengine.js" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/fr/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/en/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemaps.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/style.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/en/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/aws/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/data-analysis/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fr/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/docker/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/kubernetes/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/web-development/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/wordpress/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/ubuntu/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/javascript/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/database/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/slack/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/productivity/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/backup-restore/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fax/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/screenshot/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/security/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemap.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/robots.txt" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css.map" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/en/manifest.json</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="" href="/.well-known/assetlinks.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/feed.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/js/lunrsearchengine.js" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/fr/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/en/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemaps.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/style.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/en/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/aws/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/data-analysis/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fr/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/docker/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/kubernetes/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/web-development/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/wordpress/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/ubuntu/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/javascript/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/database/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/slack/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/productivity/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/backup-restore/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fax/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/screenshot/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/security/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemap.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/robots.txt" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css.map" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/pay</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/pay" />
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/paiement" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/paiement</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/pay" />
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/paiement" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/pay/canceled</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/pay/canceled" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/pay/success</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/pay/success" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/privacy</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/privacy" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/sitemaps.xml</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="" href="/.well-known/assetlinks.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/feed.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/js/lunrsearchengine.js" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/fr/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/en/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemaps.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/style.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/en/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/aws/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/data-analysis/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fr/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/docker/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/kubernetes/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/web-development/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/wordpress/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/ubuntu/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/javascript/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/database/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/slack/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/productivity/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/backup-restore/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fax/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/screenshot/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/security/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemap.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/robots.txt" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css.map" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/style.css</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="" href="/.well-known/assetlinks.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/feed.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/js/lunrsearchengine.js" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/fr/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/en/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemaps.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/style.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/en/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/aws/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/data-analysis/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fr/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/docker/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/kubernetes/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/web-development/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/wordpress/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/ubuntu/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/javascript/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/database/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/slack/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/productivity/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/backup-restore/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fax/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/screenshot/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/security/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemap.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/robots.txt" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css.map" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/tags</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/tags" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/category/en/</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="" href="/.well-known/assetlinks.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/feed.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/js/lunrsearchengine.js" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/fr/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/en/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemaps.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/style.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/en/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/aws/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/data-analysis/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fr/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/docker/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/kubernetes/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/web-development/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/wordpress/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/ubuntu/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/javascript/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/database/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/slack/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/productivity/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/backup-restore/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fax/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/screenshot/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/security/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemap.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/robots.txt" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css.map" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/category/aws/</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="" href="/.well-known/assetlinks.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/feed.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/js/lunrsearchengine.js" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/fr/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/en/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemaps.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/style.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/en/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/aws/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/data-analysis/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fr/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/docker/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/kubernetes/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/web-development/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/wordpress/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/ubuntu/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/javascript/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/database/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/slack/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/productivity/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/backup-restore/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fax/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/screenshot/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/security/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemap.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/robots.txt" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css.map" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/category/data-analysis/</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="" href="/.well-known/assetlinks.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/feed.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/js/lunrsearchengine.js" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/fr/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/en/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemaps.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/style.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/en/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/aws/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/data-analysis/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fr/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/docker/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/kubernetes/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/web-development/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/wordpress/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/ubuntu/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/javascript/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/database/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/slack/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/productivity/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/backup-restore/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fax/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/screenshot/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/security/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemap.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/robots.txt" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css.map" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/category/fr/</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="" href="/.well-known/assetlinks.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/feed.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/js/lunrsearchengine.js" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/fr/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/en/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemaps.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/style.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/en/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/aws/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/data-analysis/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fr/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/docker/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/kubernetes/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/web-development/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/wordpress/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/ubuntu/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/javascript/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/database/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/slack/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/productivity/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/backup-restore/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fax/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/screenshot/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/security/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemap.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/robots.txt" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css.map" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/category/docker/</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="" href="/.well-known/assetlinks.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/feed.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/js/lunrsearchengine.js" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/fr/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/en/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemaps.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/style.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/en/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/aws/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/data-analysis/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fr/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/docker/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/kubernetes/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/web-development/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/wordpress/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/ubuntu/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/javascript/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/database/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/slack/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/productivity/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/backup-restore/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fax/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/screenshot/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/security/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemap.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/robots.txt" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css.map" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/category/kubernetes/</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="" href="/.well-known/assetlinks.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/feed.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/js/lunrsearchengine.js" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/fr/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/en/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemaps.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/style.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/en/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/aws/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/data-analysis/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fr/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/docker/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/kubernetes/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/web-development/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/wordpress/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/ubuntu/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/javascript/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/database/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/slack/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/productivity/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/backup-restore/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fax/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/screenshot/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/security/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemap.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/robots.txt" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css.map" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/category/web-development/</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="" href="/.well-known/assetlinks.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/feed.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/js/lunrsearchengine.js" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/fr/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/en/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemaps.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/style.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/en/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/aws/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/data-analysis/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fr/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/docker/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/kubernetes/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/web-development/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/wordpress/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/ubuntu/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/javascript/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/database/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/slack/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/productivity/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/backup-restore/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fax/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/screenshot/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/security/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemap.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/robots.txt" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css.map" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/category/wordpress/</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="" href="/.well-known/assetlinks.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/feed.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/js/lunrsearchengine.js" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/fr/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/en/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemaps.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/style.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/en/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/aws/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/data-analysis/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fr/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/docker/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/kubernetes/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/web-development/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/wordpress/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/ubuntu/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/javascript/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/database/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/slack/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/productivity/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/backup-restore/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fax/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/screenshot/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/security/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemap.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/robots.txt" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css.map" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/category/ubuntu/</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="" href="/.well-known/assetlinks.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/feed.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/js/lunrsearchengine.js" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/fr/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/en/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemaps.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/style.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/en/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/aws/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/data-analysis/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fr/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/docker/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/kubernetes/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/web-development/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/wordpress/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/ubuntu/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/javascript/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/database/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/slack/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/productivity/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/backup-restore/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fax/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/screenshot/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/security/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemap.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/robots.txt" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css.map" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/category/javascript/</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="" href="/.well-known/assetlinks.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/feed.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/js/lunrsearchengine.js" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/fr/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/en/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemaps.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/style.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/en/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/aws/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/data-analysis/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fr/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/docker/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/kubernetes/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/web-development/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/wordpress/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/ubuntu/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/javascript/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/database/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/slack/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/productivity/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/backup-restore/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fax/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/screenshot/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/security/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemap.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/robots.txt" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css.map" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/category/database/</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="" href="/.well-known/assetlinks.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/feed.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/js/lunrsearchengine.js" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/fr/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/en/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemaps.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/style.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/en/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/aws/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/data-analysis/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fr/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/docker/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/kubernetes/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/web-development/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/wordpress/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/ubuntu/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/javascript/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/database/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/slack/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/productivity/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/backup-restore/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fax/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/screenshot/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/security/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemap.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/robots.txt" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css.map" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/category/slack/</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="" href="/.well-known/assetlinks.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/feed.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/js/lunrsearchengine.js" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/fr/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/en/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemaps.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/style.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/en/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/aws/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/data-analysis/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fr/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/docker/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/kubernetes/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/web-development/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/wordpress/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/ubuntu/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/javascript/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/database/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/slack/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/productivity/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/backup-restore/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fax/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/screenshot/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/security/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemap.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/robots.txt" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css.map" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/category/productivity/</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="" href="/.well-known/assetlinks.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/feed.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/js/lunrsearchengine.js" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/fr/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/en/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemaps.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/style.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/en/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/aws/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/data-analysis/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fr/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/docker/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/kubernetes/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/web-development/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/wordpress/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/ubuntu/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/javascript/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/database/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/slack/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/productivity/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/backup-restore/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fax/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/screenshot/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/security/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemap.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/robots.txt" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css.map" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/category/backup-restore/</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="" href="/.well-known/assetlinks.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/feed.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/js/lunrsearchengine.js" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/fr/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/en/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemaps.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/style.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/en/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/aws/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/data-analysis/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fr/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/docker/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/kubernetes/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/web-development/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/wordpress/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/ubuntu/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/javascript/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/database/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/slack/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/productivity/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/backup-restore/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fax/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/screenshot/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/security/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemap.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/robots.txt" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css.map" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/category/fax/</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="" href="/.well-known/assetlinks.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/feed.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/js/lunrsearchengine.js" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/fr/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/en/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemaps.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/style.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/en/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/aws/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/data-analysis/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fr/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/docker/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/kubernetes/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/web-development/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/wordpress/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/ubuntu/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/javascript/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/database/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/slack/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/productivity/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/backup-restore/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fax/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/screenshot/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/security/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemap.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/robots.txt" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css.map" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/category/screenshot/</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="" href="/.well-known/assetlinks.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/feed.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/js/lunrsearchengine.js" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/fr/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/en/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemaps.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/style.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/en/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/aws/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/data-analysis/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fr/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/docker/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/kubernetes/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/web-development/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/wordpress/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/ubuntu/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/javascript/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/database/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/slack/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/productivity/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/backup-restore/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fax/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/screenshot/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/security/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemap.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/robots.txt" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css.map" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/category/security/</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="" href="/.well-known/assetlinks.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/feed.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/js/lunrsearchengine.js" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/fr/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/en/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemaps.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/style.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/en/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/aws/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/data-analysis/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fr/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/docker/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/kubernetes/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/web-development/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/wordpress/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/ubuntu/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/javascript/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/database/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/slack/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/productivity/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/backup-restore/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fax/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/screenshot/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/security/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemap.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/robots.txt" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css.map" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/sitemap.xml</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="" href="/.well-known/assetlinks.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/feed.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/js/lunrsearchengine.js" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/fr/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/en/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemaps.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/style.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/en/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/aws/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/data-analysis/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fr/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/docker/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/kubernetes/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/web-development/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/wordpress/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/ubuntu/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/javascript/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/database/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/slack/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/productivity/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/backup-restore/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fax/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/screenshot/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/security/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemap.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/robots.txt" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css.map" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/robots.txt</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="" href="/.well-known/assetlinks.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/feed.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/js/lunrsearchengine.js" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/fr/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/en/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemaps.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/style.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/en/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/aws/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/data-analysis/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fr/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/docker/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/kubernetes/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/web-development/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/wordpress/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/ubuntu/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/javascript/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/database/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/slack/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/productivity/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/backup-restore/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fax/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/screenshot/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/security/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemap.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/robots.txt" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css.map" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/assets/css/main.css.map</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="" href="/.well-known/assetlinks.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/feed.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/js/lunrsearchengine.js" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/fr/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/en/manifest.json" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemaps.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/style.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/en/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/aws/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/data-analysis/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fr/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/docker/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/kubernetes/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/web-development/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/wordpress/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/ubuntu/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/javascript/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/database/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/slack/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/productivity/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/backup-restore/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/fax/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/screenshot/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/security/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemap.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/robots.txt" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/css/main.css.map" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+</urlset>

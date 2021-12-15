@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <title>
+    How To Setup Your Local Node.js Development Environment Using Docker
+  </title>
+  <meta content="We provide solutions to our customers challenges. Our teams based in Paris and Lomé provide high value expertise to engineer the best solutions." name="description" />
+
+  <meta
+    content="web e-commerce articifial intelligence ai automation"
+    name="keywords"
+  />
+  <link
+    rel="canonical"
+    href="https://bright-softwares.com/blog/fr/docker/how-to-setup-your-local-nodejs-development-environment-using-docker"
+  />
+  <link rel="manifest" href="manifest.json" />
+
+  <!-- Favicons -->
+  <!-- <link href="/assets/flexstart-img/favicon.png" rel="icon">
+  <link href="/assets/flexstart-img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+  <!-- The favicon items -->
+  <link
+    rel="apple-touch-icon"
+    sizes="57x57"
+    href="/assets/favicon.ico/apple-icon-57x57.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="60x60"
+    href="/assets/favicon.ico/apple-icon-60x60.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="72x72"
+    href="/assets/favicon.ico/apple-icon-72x72.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="76x76"
+    href="/assets/favicon.ico/apple-icon-76x76.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="114x114"
+    href="/assets/favicon.ico/apple-icon-114x114.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="120x120"
+    href="/assets/favicon.ico/apple-icon-120x120.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="144x144"
+    href="/assets/favicon.ico/apple-icon-144x144.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="152x152"
+    href="/assets/favicon.ico/apple-icon-152x152.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="/assets/favicon.ico/apple-icon-180x180.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="192x192"
+    href="/assets/favicon.ico/android-icon-192x192.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="/assets/favicon.ico/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="96x96"
+    href="/assets/favicon.ico/favicon-96x96.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="/assets/favicon.ico/favicon-16x16.png"
+  />
+  <!--<link rel="manifest" href="/assets/favicon.ico/manifest.json">-->
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta
+    name="msapplication-TileImage"
+    content="/assets/favicon.ico/ms-icon-144x144.png"
+  />
+  <meta name="theme-color" content="#ffffff" />
+
+  
+  <!-- Language handling -->
+  
+    
+    
+    
+      
+    <link rel="alternate" hreflang="en" href="/blog/en/docker/how-to-setup-your-local-nodejs-development-environment-using-docker" />
+      
+    <link rel="alternate" hreflang="fr" href="/blog/fr/docker/how-to-setup-your-local-nodejs-development-environment-using-docker" />
+      
+    
+  
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet"
+  />
+
+  <!-- Vendor CSS Files -->
+  <link
+    href="/assets/flexstart-vendor/bootstrap/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="/assets/flexstart-vendor/bootstrap-icons/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+  <link
+    href="/assets/flexstart-vendor/aos/aos.css"
+    rel="stylesheet"
+  />
+  <link
+    href="/assets/flexstart-vendor/remixicon/remixicon.css"
+    rel="stylesheet"
+  />
+  <link
+    href="/assets/flexstart-vendor/swiper/swiper-bundle.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="/assets/flexstart-vendor/glightbox/css/glightbox.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Template Main CSS File -->
+  <link
+    href="/assets/flexstart-css/style.css"
+    rel="stylesheet"
+  />
+
+  <!-- =======================================================
+  * Template Name: FlexStart - v1.1.1
+  * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134921119-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-134921119-1');
+</script> 
+</head>
+
+  <body>
+    <!-- ======= Header ======= -->
+<header id="header" class="header fixed-top">
+  <div
+    class="
+      container-fluid container-xl
+      d-flex
+      align-items-center
+      justify-content-between
+    "
+  >
+    <a href="/index.html" class="logo d-flex align-items-center">
+      <img src="/img/logos/large/brightsoftwares-light.png" alt="Bright Softwares logo" />
+      <span>Bright Softwares</span>
+    </a>
+
+    <nav id="navbar" class="navbar">
+      <ul>
+        <!-- <li><a class="nav-link scrollto active" href="#hero">Home</a></li> -->
+        <li class="dropdown">
+          <a class="nav-link scrollto" href="#services"
+            ><span>Services</span> <i class="bi bi-chevron-down"></i
+          ></a>
+          <ul>
+            <li><a href="#">Web solutions</a></li>
+            <li><a href="#">e-commerce</a></li>
+            <li><a href="#">AI powered apps</a></li>
+            <li><a href="#">AI Models</a></li>
+            <li><a href="#">Automated revenue</a></li>
+            <li><a href="#">Cloud infrastructure</a></li>
+          </ul>
+        </li>
+        
+        
+        <li>
+          <a class="nav-link scrollto" href="/fr/blog.html">Blog</a>
+        </li>
+        
+        <li>
+          <a class="nav-link scrollto" href="/fr/index.html#team">Equipe</a>
+        </li>
+        
+        <li>
+          <a class="nav-link scrollto" href="/fr/index.html#about">A propos</a>
+        </li>
+        
+        <li>
+          <a class="nav-link scrollto" href="/fr/index.html#contact">Contactez-nous</a>
+        </li>
+        
+        <li>
+          <a class="getstarted scrollto" href="/order-service">Order now</a>
+        </li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav>
+    <!-- .navbar -->
+  </div>
+</header>
+<!-- End Header -->
+   <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <ol>
+          <li><a href="/fr/index.html">Home</a></li>
+          <li><a href="/fr/blog.html">Blog</a></li>
+          <li>How To Setup Your Local Node.js Development Environment Using Docker</li>
+        </ol>
+        <h2>How To Setup Your Local Node.js Development Environment Using Docker</h2>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Single Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-8 entries">
+
+            <article class="entry entry-single">
+
+              <div class="entry-img">
+                <img src="/assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="entry-title">
+                <a href="">How To Setup Your Local Node.js Development Environment Using Docker</a>
+              </h2>
+
+              <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+              
+              <!-- End Adsense -->
+
+              <div class="entry-meta">
+                
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href=""></a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> 
+                    <a href="">
+                      <time datetime="2020-04-03 00:00">Apr 3, 2020 (1 year and 8 months ago)</time>
+                      <small>
+                        
+                      </small>
+                    </a>
+                  </li>
+                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="">12 Comments</a></li>
+                </ul>
+              </div>
+
+              <div class="entry-content">
+
+                <p>Docker is the defacto toolset for building modern applications and setting up a CI/CD pipeline &#8211; helping you build, ship and run your applications in containers on-prem and in the cloud.&nbsp;</p>
+
+<p>Whether you&#8217;re running on simple compute instances such as AWS EC2 or Azure VMs or something a little more fancy like a hosted Kubernetes service like AWS EKS or Azure AKS, Docker’s toolset is your new BFF.&nbsp;</p>
+
+<p>But what about your local development environment? Setting up local dev environments can be frustrating to say the least.</p>
+
+<p>Remember the last time you joined a new development team?</p>
+
+<p>You needed to configure your local machine, install development tools, pull repositories, fight through out-of-date onboarding docs and READMEs, get everything running and working locally without knowing a thing about the code and it’s architecture. Oh and don’t forget about databases, caching layers and message queues. These are notoriously hard to set up and develop on locally.</p>
+
+<p>I’ve never worked at a place where we didn’t expect at least a week or more of on-boarding for new developers.&nbsp;</p>
+
+<p>So what are we to do? Well, there is no silver bullet and these things are hard to do (that’s why you get paid the big bucks) but with the help of Docker and it’s toolset, we can make things a whole lot easier.</p>
+
+<p>In Part I of this tutorial we’ll walk through setting up a local development environment for a relatively complex application that uses React for it’s front end, Node and Express for a couple of micro-services and MongoDb for our datastore. We’ll use Docker to build our images and Docker Compose to make everything a whole lot easier.</p>
+
+<p>If you have any questions, comments or just want to connect. You can reach me in our <a href="http://dockr.ly/slack">Community Slack</a> or on twitter at <a href="https://twitter.com/pmckee">@pmckee</a>.</p>
+
+<p>Let’s get started.</p>
+
+<h2>Prerequisites</h2>
+
+<p>To complete this tutorial, you will need:</p>
+
+<ul><li>Docker installed on your development machine. You can download and install Docker Desktop from the links below:<ul><li><a href="https://download.docker.com/mac/stable/Docker.dmg">Docker Desktop for Mac</a></li><li><a href="https://download.docker.com/win/stable/Docker%20Desktop%20Installer.exe">Docker Desktop for Windows</a></li></ul></li><li><a href="https://git-scm.com/downloads">Git</a> installed on your development machine.</li><li>An IDE or text editor to use for editing files. I would recommend <a href="https://code.visualstudio.com/Download">VSCode</a></li></ul>
+
+<h2>Fork the Code Repository</h2>
+
+<p>The first thing we want to do is download the code to our local development machine. Let’s do this using the following git command:</p>
+
+<p><em>git clone git@github.com:pmckeetx/memphis.git</em></p>
+
+<p>Now that we have the code local, let’s take a look at the project structure. Open the code in your favorite IDE and expand the root level directories. You’ll see the following file structure.</p>
+
+<p>├── docker-compose.yml<br />├── notes-service<br />│ &nbsp; ├── config<br />│ &nbsp; ├── node_modules<br />│ &nbsp; ├── nodemon.json<br />│ &nbsp; ├── package-lock.json<br />│ &nbsp; ├── package.json<br />│ &nbsp; └── server.js<br />├── reading-list-service<br />│ &nbsp; ├── config<br />│ &nbsp; ├── node_modules<br />│ &nbsp; ├── nodemon.json<br />│ &nbsp; ├── package-lock.json<br />│ &nbsp; ├── package.json<br />│ &nbsp; └── server.js<br />├── users-service<br />│ &nbsp; ├── Dockerfile<br />│ &nbsp; ├── config<br />│ &nbsp; ├── node_modules<br />│ &nbsp; ├── nodemon.json<br />│ &nbsp; ├── package-lock.json<br />│ &nbsp; ├── package.json<br />│ &nbsp; └── server.js<br />└── yoda-ui<br />&nbsp; &nbsp; ├── README.md<br />&nbsp; &nbsp; ├── node_modules<br />&nbsp; &nbsp; ├── package.json<br />&nbsp; &nbsp; ├── public<br />&nbsp; &nbsp; ├── src<br /> &nbsp; └── yarn.lock</p>
+
+<p>The application is made up of a couple simple microservices and a front-end written in React.js. It uses MongoDB as it’s datastore.</p>
+
+<p>Typically at this point, we would start a local version of MongoDB or start looking through the project to find out where our applications will be looking for MongoDB.</p>
+
+<p>Then we would start each of our microservices independently and then finally start the UI and hope that the default configuration just works.</p>
+
+<p>This can be very complicated and frustrating. Especially if our micro-services are using different versions of node.js and are configured differently.</p>
+
+<p>So let&#8217;s walk through making this process easier by dockerizing our application and putting our database into a container.&nbsp;</p>
+
+<h2>Dockerizing Applications</h2>
+
+<p>Docker is a great way to provide consistent development environments. It will allow us to run each of our services and UI in a container. We’ll also set up things so that we can develop locally and start our dependencies with one docker command.</p>
+
+<p>The first thing we want to do is dockerize each of our applications. Let’s start with the microservices because they are all written in node.js and we’ll be able to use the same Dockerfile.</p>
+
+<h2>Create Dockerfiles</h2>
+
+<p>Create a Dockerfile in the notes-services directory and add the following commands.</p>
+
+<figure class="wp-block-image size-large is-resized"><img data-attachment-id="26571" data-permalink="https://www.docker.com/blog/how-to-setup-your-local-node-js-development-environment-using-docker/screen-shot-2020-07-01-at-5-12-36-pm/" data-orig-file="https://i1.wp.com/www.docker.com/blog/wp-content/uploads/2020/07/Screen-Shot-2020-07-01-at-5.12.36-PM.jpeg?fit=713%2C321&amp;ssl=1" data-orig-size="713,321" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Screen-Shot-2020-07-01-at-5.12.36-PM" data-image-description="" data-medium-file="https://i1.wp.com/www.docker.com/blog/wp-content/uploads/2020/07/Screen-Shot-2020-07-01-at-5.12.36-PM.jpeg?fit=666%2C300&amp;ssl=1" data-large-file="https://i1.wp.com/www.docker.com/blog/wp-content/uploads/2020/07/Screen-Shot-2020-07-01-at-5.12.36-PM.jpeg?fit=713%2C321&amp;ssl=1" src="https://i1.wp.com/www.docker.com/blog/wp-content/uploads/2020/07/Screen-Shot-2020-07-01-at-5.12.36-PM.jpeg?resize=576%2C260&#038;ssl=1" alt="" class="wp-image-26571" width="576" height="260" srcset="https://i1.wp.com/www.docker.com/blog/wp-content/uploads/2020/07/Screen-Shot-2020-07-01-at-5.12.36-PM.jpeg?w=713&amp;ssl=1 713w, https://i1.wp.com/www.docker.com/blog/wp-content/uploads/2020/07/Screen-Shot-2020-07-01-at-5.12.36-PM.jpeg?resize=666%2C300&amp;ssl=1 666w" sizes="(max-width: 576px) 100vw, 576px" data-recalc-dims="1" /></figure>
+
+<p>This is a very basic Dockerfile to use with node.js. If you are not familiar with the commands, you can start with our <a href="https://docs.docker.com/get-started/">getting started guide</a>. Also take a look at our reference <a href="https://docs.docker.com/engine/reference/builder/">documentation</a>.</p>
+
+<h2>Building Docker Images</h2>
+
+<p>Now that we’ve created our Dockerfile, let’s build our image. Make sure you’re still located in the notes-services directory and run the following command:</p>
+
+<p><em>docker build -t notes-service.</em></p>
+
+<figure class="wp-block-image size-large"><img data-attachment-id="26576" data-permalink="https://www.docker.com/blog/how-to-setup-your-local-node-js-development-environment-using-docker/screen-shot-2020-07-01-at-5-38-21-pm/" data-orig-file="https://i1.wp.com/www.docker.com/blog/wp-content/uploads/2020/07/Screen-Shot-2020-07-01-at-5.38.21-PM.jpeg?fit=720%2C202&amp;ssl=1" data-orig-size="720,202" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Screen Shot 2020-07-01 at 5.38.21 PM" data-image-description="" data-medium-file="https://i1.wp.com/www.docker.com/blog/wp-content/uploads/2020/07/Screen-Shot-2020-07-01-at-5.38.21-PM.jpeg?fit=720%2C202&amp;ssl=1" data-large-file="https://i1.wp.com/www.docker.com/blog/wp-content/uploads/2020/07/Screen-Shot-2020-07-01-at-5.38.21-PM.jpeg?fit=720%2C202&amp;ssl=1" src="https://i1.wp.com/www.docker.com/blog/wp-content/uploads/2020/07/Screen-Shot-2020-07-01-at-5.38.21-PM.jpeg?ssl=1" alt="" class="wp-image-26576" data-recalc-dims="1" /></figure>
+
+<p>Now that we have our image built,&nbsp; let’s run it as a container and test that it’s working.</p>
+
+<p><em>docker run &#8211;rm -p 8081:8081 &#8211;name notes notes-service</em></p>
+
+<figure class="wp-block-image size-large is-resized"><img data-attachment-id="26572" data-permalink="https://www.docker.com/blog/how-to-setup-your-local-node-js-development-environment-using-docker/screen-shot-2020-07-01-at-5-11-54-pm/" data-orig-file="https://i1.wp.com/www.docker.com/blog/wp-content/uploads/2020/07/Screen-Shot-2020-07-01-at-5.11.54-PM.jpeg?fit=710%2C299&amp;ssl=1" data-orig-size="710,299" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Screen-Shot-2020-07-01-at-5.11.54-PM" data-image-description="" data-medium-file="https://i1.wp.com/www.docker.com/blog/wp-content/uploads/2020/07/Screen-Shot-2020-07-01-at-5.11.54-PM.jpeg?fit=710%2C299&amp;ssl=1" data-large-file="https://i1.wp.com/www.docker.com/blog/wp-content/uploads/2020/07/Screen-Shot-2020-07-01-at-5.11.54-PM.jpeg?fit=710%2C299&amp;ssl=1" src="https://i1.wp.com/www.docker.com/blog/wp-content/uploads/2020/07/Screen-Shot-2020-07-01-at-5.11.54-PM.jpeg?resize=568%2C239&#038;ssl=1" alt="" class="wp-image-26572" width="568" height="239" data-recalc-dims="1" /></figure>
+
+<p>Looks like we have an issue connecting to the mongodb. Two things are broken at this point. We didn’t provide a connection string to the application. The second is that we do not have MongoDB running locally.</p>
+
+<p>At this point we could provide a connection string to a shared instance of our database but we want to be able to manage our database locally and not have to worry about messing up our colleagues&#8217; data they might be using to develop.&nbsp;</p>
+
+<h2>Local Database and Containers</h2>
+
+<p>Instead of downloading MongoDB, installing, configuring and then running the Mongo database service. We can use the <a href="https://hub.docker.com/_/mongo/">Docker Official Image</a> for MongoDB and run it in a container.</p>
+
+<p>Before we run MongoDB in a container, we want to create a couple of volumes that Docker can manage to store our persistent data and configuration. I like to use the managed volumes that docker provides instead of using bind mounts. You can read all about <a href="https://docs.docker.com/storage/">volumes in our documentation</a>.</p>
+
+<p>Let’s create our volumes now. We’ll create one for the data and one for configuration of MongoDB.</p>
+
+<p><em>docker volume create mongodb<br />docker volume create mongodb_config</em></p>
+
+<p>Now we’ll create a network that our application and database will use to talk with each other. The network is called a user defined bridge network and gives us a nice DNS lookup service which we can use when creating our connection string.</p>
+
+<p><em>docker network create mongodb</em></p>
+
+<p>Now we can run MongoDB in a container and attach to the volumes and network we created above. Docker will pull the image from Hub and run it for you locally.</p>
+
+<p><em>docker run -it &#8211;rm -d -v mongodb:/data/db -v mongodb_config:/data/configdb -p 27017:27017 &#8211;network mongodb &#8211;name mongodb mongo</em></p>
+
+<p>Okay, now that we have a&nbsp; running mongodb, we also need to set a couple of environment variables so our application knows what port to listen on and what connection string to use to access the database. We’ll do this right in the docker run command.</p>
+
+<p><em>docker run \</em><br /><em>-it &#8211;rm -d \<br />&#8211;network mongodb \<br />&#8211;name notes \<br />-p 8081:8081 \<br />-e SERVER_PORT=8081 \<br />-e SERVER_PORT=8081 \<br />-e DATABASE_CONNECTIONSTRING=mongodb://mongodb:27017/yoda_notes  \ notes-service</em></p>
+
+<p>Let’s test that our application is connected to the database and is able to add a note.</p>
+
+<p><em>curl &#8211;request POST \<br />&#8211;url http://localhost:8081/services/m/notes \<br />&nbsp;&nbsp;&#8211;header &#8216;content-type: application/json&#8217; \<br />&nbsp;&nbsp;&#8211;data &#8216;{<br />           &#8220;name&#8221;: &#8220;this is a note&#8221;,<br />            &#8220;text&#8221;: &#8220;this is a note that I wanted to take while I was working on writing a blog post.&#8221;,<br /> &#8220;owner&#8221;: &#8220;peter&#8221;<br />}</em></p>
+
+<p>You should receive the following json back from our service.</p>
+
+<p><em>{&#8220;code&#8221;:&#8221;success&#8221;,&#8221;payload&#8221;:{&#8220;_id&#8221;:&#8221;5efd0a1552cd422b59d4f994&#8243;,&#8221;name&#8221;:&#8221;this is a note&#8221;,&#8221;text&#8221;:&#8221;this is a note that I wanted to take while I was working on writing a blog post.&#8221;,&#8221;owner&#8221;:&#8221;peter&#8221;,&#8221;createDate&#8221;:&#8221;2020-07-01T22:11:33.256Z&#8221;}}</em></p>
+
+<h2>Conclusion</h2>
+
+<p>Awesome! We’ve completed the first steps in Dockerizing our local development environment for Node.js.</p>
+
+<p>In Part II of the series, we’ll take a look at how we can use Docker Compose to simplify the process we just went through.</p>
+
+<p>In the meantime, you can read more about networking, volumes and Dockerfile best practices with the below links:</p>
+
+<ul><li><a href="https://docs.docker.com/network/">Docker Networking</a></li><li><a href="https://docs.docker.com/storage/">Volumes</a></li><li><a href="https://docs.docker.com/develop/develop-images/dockerfile_best-practices/">Best practices for writing Dockerfiles</a></li></ul>
+<p>The post <a rel="nofollow" href="https://www.docker.com/blog/how-to-setup-your-local-node-js-development-environment-using-docker/">How To Setup Your Local Node.js Development Environment Using Docker</a> appeared first on <a rel="nofollow" href="https://www.docker.com/blog">Docker Blog</a>.</p>
+
+
+              </div>
+
+              <div class="entry-footer">
+                <i class="bi bi-folder"></i>
+                <ul class="cats">
+                  
+                  
+                  <li><a href="/categories#docker">
+                    docker
+                  </a></li>
+                  
+                  <li><a href="/categories#fr">
+                    fr
+                  </a></li>
+                  
+                </ul>
+
+                <i class="bi bi-tags"></i>
+                <ul class="tags">
+                  
+                  
+                </ul>
+              </div>
+
+            </article><!-- End blog entry -->
+
+            <div class="blog-author d-flex align-items-center">
+              
+              <img src="https://www.gravatar.com/avatar/?s=250&d=mm&r=x" class="rounded-circle float-left" alt="">
+              
+              
+              <div>
+                <h4></h4>
+                <div class="social-links">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="biu bi-instagram"></i></a>
+                </div>
+                <p>
+                  
+                </p>
+              </div>
+            </div><!-- End blog author bio -->
+
+            <div class="blog-comments">
+
+              <h4 class="comments-count">8 Comments</h4>
+
+              <div id="comment-1" class="comment">
+                <div class="d-flex">
+                  <div class="comment-img"><img src="/assets/img/blog/comments-1.jpg" alt=""></div>
+                  <div>
+                    <h5><a href="">Georgia Reader</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                    <time datetime="2020-01-01">01 Jan, 2020</time>
+                    <p>
+                      Et rerum totam nisi. Molestiae vel quam dolorum vel voluptatem et et. Est ad aut sapiente quis molestiae est qui cum soluta.
+                      Vero aut rerum vel. Rerum quos laboriosam placeat ex qui. Sint qui facilis et.
+                    </p>
+                  </div>
+                </div>
+              </div><!-- End comment #1 -->
+
+              <div id="comment-2" class="comment">
+                <div class="d-flex">
+                  <div class="comment-img"><img src="/assets/img/blog/comments-2.jpg" alt=""></div>
+                  <div>
+                    <h5><a href="">Aron Alvarado</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                    <time datetime="2020-01-01">01 Jan, 2020</time>
+                    <p>
+                      Ipsam tempora sequi voluptatem quis sapiente non. Autem itaque eveniet saepe. Officiis illo ut beatae.
+                    </p>
+                  </div>
+                </div>
+
+                <div id="comment-reply-1" class="comment comment-reply">
+                  <div class="d-flex">
+                    <div class="comment-img"><img src="/assets/img/blog/comments-3.jpg" alt=""></div>
+                    <div>
+                      <h5><a href="">Lynda Small</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                      <time datetime="2020-01-01">01 Jan, 2020</time>
+                      <p>
+                        Enim ipsa eum fugiat fuga repellat. Commodi quo quo dicta. Est ullam aspernatur ut vitae quia mollitia id non. Qui ad quas nostrum rerum sed necessitatibus aut est. Eum officiis sed repellat maxime vero nisi natus. Amet nesciunt nesciunt qui illum omnis est et dolor recusandae.
+
+                        Recusandae sit ad aut impedit et. Ipsa labore dolor impedit et natus in porro aut. Magnam qui cum. Illo similique occaecati nihil modi eligendi. Pariatur distinctio labore omnis incidunt et illum. Expedita et dignissimos distinctio laborum minima fugiat.
+
+                        Libero corporis qui. Nam illo odio beatae enim ducimus. Harum reiciendis error dolorum non autem quisquam vero rerum neque.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div id="comment-reply-2" class="comment comment-reply">
+                    <div class="d-flex">
+                      <div class="comment-img"><img src="/assets/img/blog/comments-4.jpg" alt=""></div>
+                      <div>
+                        <h5><a href="">Sianna Ramsay</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                        <time datetime="2020-01-01">01 Jan, 2020</time>
+                        <p>
+                          Et dignissimos impedit nulla et quo distinctio ex nemo. Omnis quia dolores cupiditate et. Ut unde qui eligendi sapiente omnis ullam. Placeat porro est commodi est officiis voluptas repellat quisquam possimus. Perferendis id consectetur necessitatibus.
+                        </p>
+                      </div>
+                    </div>
+
+                  </div><!-- End comment reply #2-->
+
+                </div><!-- End comment reply #1-->
+
+              </div><!-- End comment #2-->
+
+              <div id="comment-3" class="comment">
+                <div class="d-flex">
+                  <div class="comment-img"><img src="/assets/img/blog/comments-5.jpg" alt=""></div>
+                  <div>
+                    <h5><a href="">Nolan Davidson</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                    <time datetime="2020-01-01">01 Jan, 2020</time>
+                    <p>
+                      Distinctio nesciunt rerum reprehenderit sed. Iste omnis eius repellendus quia nihil ut accusantium tempore. Nesciunt expedita id dolor exercitationem aspernatur aut quam ut. Voluptatem est accusamus iste at.
+                      Non aut et et esse qui sit modi neque. Exercitationem et eos aspernatur. Ea est consequuntur officia beatae ea aut eos soluta. Non qui dolorum voluptatibus et optio veniam. Quam officia sit nostrum dolorem.
+                    </p>
+                  </div>
+                </div>
+
+              </div><!-- End comment #3 -->
+
+              <div id="comment-4" class="comment">
+                <div class="d-flex">
+                  <div class="comment-img"><img src="/assets/img/blog/comments-6.jpg" alt=""></div>
+                  <div>
+                    <h5><a href="">Kay Duggan</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                    <time datetime="2020-01-01">01 Jan, 2020</time>
+                    <p>
+                      Dolorem atque aut. Omnis doloremque blanditiis quia eum porro quis ut velit tempore. Cumque sed quia ut maxime. Est ad aut cum. Ut exercitationem non in fugiat.
+                    </p>
+                  </div>
+                </div>
+
+              </div><!-- End comment #4 -->
+
+              <div class="reply-form">
+                <h4>Leave a Reply</h4>
+                <p>Your email address will not be published. Required fields are marked * </p>
+                <form action="">
+                  <div class="row">
+                    <div class="col-md-6 form-group">
+                      <input name="name" type="text" class="form-control" placeholder="Your Name*">
+                    </div>
+                    <div class="col-md-6 form-group">
+                      <input name="email" type="text" class="form-control" placeholder="Your Email*">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col form-group">
+                      <input name="website" type="text" class="form-control" placeholder="Your Website">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col form-group">
+                      <textarea name="comment" class="form-control" placeholder="Your Comment*"></textarea>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Post Comment</button>
+
+                </form>
+
+              </div>
+
+            </div><!-- End blog comments -->
+
+          </div><!-- End blog entries list -->
+
+          <div class="col-lg-4">
+
+            <div class="sidebar">
+              
+
+              <h3 class="sidebar-title">Search</h3>
+              <div class="sidebar-item search-form">
+                <form onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+                  <input type="text" class="launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter...">
+                  <button type="submit"><i class="bi bi-search"></i></button>
+                </form>
+              </div><div id="lunrsearchresults">
+                  <ul></ul>
+              </div>
+
+              
+              <!-- End sidebar search formn-->
+
+              <h3 class="sidebar-title">Categories</h3>
+              <div class="sidebar-item categories">
+                <ul>
+                  
+                  
+                  
+                  <li><a href="/category/en">en <span>(33)</span></a></li>
+                  
+                  <li><a href="/category/aws">aws <span>(3)</span></a></li>
+                  
+                  <li><a href="/category/data-analysis">data-analysis <span>(2)</span></a></li>
+                  
+                  <li><a href="/category/fr">fr <span>(29)</span></a></li>
+                  
+                  <li><a href="/category/docker">docker <span>(12)</span></a></li>
+                  
+                  <li><a href="/category/kubernetes">kubernetes <span>(11)</span></a></li>
+                  
+                  <li><a href="/category/web development">web development <span>(2)</span></a></li>
+                  
+                  <li><a href="/category/wordpress">wordpress <span>(4)</span></a></li>
+                  
+                  <li><a href="/category/ubuntu">ubuntu <span>(4)</span></a></li>
+                  
+                  <li><a href="/category/javascript">javascript <span>(4)</span></a></li>
+                  
+                  <li><a href="/category/database">database <span>(2)</span></a></li>
+                  
+                  <li><a href="/category/slack">slack <span>(2)</span></a></li>
+                  
+                  <li><a href="/category/productivity">productivity <span>(8)</span></a></li>
+                  
+                  <li><a href="/category/backup-restore">backup-restore <span>(2)</span></a></li>
+                  
+                  <li><a href="/category/fax">fax <span>(2)</span></a></li>
+                  
+                  <li><a href="/category/screenshot">screenshot <span>(2)</span></a></li>
+                  
+                  <li><a href="/category/security">security <span>(1)</span></a></li>
+                  
+                </ul>
+              </div><!-- End sidebar categories-->
+
+              <h3 class="sidebar-title">Recent Posts</h3>
+              <div class="sidebar-item recent-posts">
+                
+
+                
+                <div class="post-item clearfix">
+                  <!-- <img src="/assets/img/blog/blog-recent-1.jpg" alt="How to Send and Receive Faxes Online Without a Fax Machine or Phone Line"> -->
+                   
+                     
+                    
+                    <img class="img-fluid" src="https://sergio.afanou.com/assets/images/image-midres-26.jpg" alt="How to Send and Receive Faxes Online Without a Fax Machine or Phone Line"> 
+                     
+                  
+                  <h4><a href="/blog/fr/fax/how-to-send-and-receive-faxes-online-without-a-fax-machine-or-phone-line">How to Send and Receive Faxes Online Without a Fax Machine or Phone Line</a></h4>
+                  <time datetime="2020-09-01 00:00">Tuesday 01 September, 2020</time>
+                </div>
+                
+                <div class="post-item clearfix">
+                  <!-- <img src="/assets/img/blog/blog-recent-1.jpg" alt="Comment prendre une capture d'écran dans windows"> -->
+                   
+                     
+                    
+                    <img class="img-fluid" src="https://sergio.afanou.com/assets/images/image-midres-52.jpg" alt="Comment prendre une capture d'écran dans windows"> 
+                     
+                  
+                  <h4><a href="/blog/fr/screenshot/comment-prendre-une-capture-ecran-dans-windows">Comment prendre une capture d'écran dans windows</a></h4>
+                  <time datetime="2020-09-01 00:00">Tuesday 01 September, 2020</time>
+                </div>
+                
+                <div class="post-item clearfix">
+                  <!-- <img src="/assets/img/blog/blog-recent-1.jpg" alt="Travailler avec Kubernetes et Minikube"> -->
+                   
+                     
+                    
+                    <img class="img-fluid" src="https://sergio.afanou.com/assets/images/image-midres-38.jpg" alt="Travailler avec Kubernetes et Minikube"> 
+                     
+                  
+                  <h4><a href="/blog/fr/kubernetes/travailler-avec-kubernetes-et-minikube">Travailler avec Kubernetes et Minikube</a></h4>
+                  <time datetime="2020-08-13 00:00">Thursday 13 August, 2020</time>
+                </div>
+                
+                <div class="post-item clearfix">
+                  <!-- <img src="/assets/img/blog/blog-recent-1.jpg" alt="Play with Kubernetes with Minikube"> -->
+                   
+                     
+                    
+                    <img class="img-fluid" src="https://sergio.afanou.com/assets/images/image-midres-38.jpg" alt="Play with Kubernetes with Minikube"> 
+                     
+                  
+                  <h4><a href="/blog/fr/kubernetes/play-with-kubernetes-with-minikube">Play with Kubernetes with Minikube</a></h4>
+                  <time datetime="2020-08-12 00:00">Wednesday 12 August, 2020</time>
+                </div>
+                
+
+              </div><!-- End sidebar recent posts-->
+
+              <h3 class="sidebar-title">Tags</h3>
+              <div class="sidebar-item tags">
+                <ul>
+                  
+                  
+                </ul>
+              </div><!-- End sidebar tags-->
+
+            </div><!-- End sidebar -->
+
+          </div><!-- End blog sidebar -->
+
+        </div>
+
+      </div>
+    </section><!-- End Blog Single Section -->
+
+  </main><!-- End #main -->
+ 
+    
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h2>Contact</h2>
+          <p>Contact Us</p>
+          <h3 class="mt-3">To order one of our services, navigate to the <a href="/order-service">order service</a> page</h3>
+        </header>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6">
+
+            <div class="row gy-4">
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-geo-alt"></i>
+                  <h3>Address</h3>
+                  <p>10 rue de Penthièvre,<br>75008 Paris</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-envelope"></i>
+                  <h3>Email Us</h3>
+                  <p>hello at bright-softwares dot com</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-clock"></i>
+                  <h3>Open Hours</h3>
+                  <p>Monday - Friday<br>9:00AM - 05:00PM</p>
+                </div>
+              </div>
+              <!-- <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-telephone"></i>
+                  <h3></h3>
+                  <p><br></p>
+                </div>
+              </div> -->
+            </div>
+
+          </div>
+
+          <div id="mauticform_wrapper_brightsoftwarescontact" class="mauticform_wrapper col-lg-6">
+            <form class="php-email-form" autocomplete="false" role="form" method="post" action="https://marketing.bright-softwares.com/form/submit?formId=5" id="mauticform_brightsoftwarescontact" data-mautic-form="brightsoftwarescontact" enctype="multipart/form-data">
+                <div class="mauticform-innerform">
+
+                    
+                  <div class="mauticform-page-wrapper mauticform-page-1 row gy-4">
+
+                    <div id="mauticform_brightsoftwarescontact_first_name" class="mauticform-row mauticform-text mauticform-field-1 mauticform-required col-md-6 " data-validate="first_name" data-validation-type="text">
+                        <input id="mauticform_input_brightsoftwarescontact_first_name" name="mauticform[first_name]" value="" placeholder="Your first name" class="mauticform-input form-control" type="text">
+                        <span class="mauticform-errormsg" style="display: none;">Please enter your first name</span>
+                    </div>
+
+                    <div id="mauticform_brightsoftwarescontact_your_last_name" class="mauticform-row mauticform-text mauticform-field-2 mauticform-required col-md-6 " data-validate="your_last_name" data-validation-type="text">
+                        <!-- <span class="mauticform-helpmessage">Please enter your last name.</span> -->
+                        <input id="mauticform_input_brightsoftwarescontact_your_last_name" name="mauticform[your_last_name]" value="" placeholder="Your last name" class="mauticform-input form-control" type="text">
+                        <span class="mauticform-errormsg" style="display: none;">Please enter your last name.</span>
+                    </div>
+
+                    <div id="mauticform_brightsoftwarescontact_email" class="mauticform-row mauticform-email mauticform-field-3 mauticform-required col-md-6 " data-validate="email" data-validation-type="email">
+                        <!-- <span class="mauticform-helpmessage">Please enter your e-mail address.</span> -->
+                        <input id="mauticform_input_brightsoftwarescontact_email" name="mauticform[email]" value="" placeholder="Your e-mail address" class="mauticform-input form-control" type="email">
+                        <span class="mauticform-errormsg" style="display: none;">Please enter your e-mail address.</span>
+                    </div>
+
+                    <div id="mauticform_brightsoftwarescontact_phone" class="mauticform-row mauticform-tel mauticform-field-4 col-md-6 ">
+                        <!-- <span class="mauticform-helpmessage">Please enter your phone number.</span> -->
+                        <input id="mauticform_input_brightsoftwarescontact_phone" name="mauticform[phone]" value="" placeholder="Your phone number" class="mauticform-input form-control" type="tel">
+                        <span class="mauticform-errormsg" style="display: none;"></span>
+                    </div>
+
+                    <div id="mauticform_brightsoftwarescontact_subject" class="mauticform-row mauticform-text mauticform-field-5 mauticform-required col-md-12" data-validate="subject" data-validation-type="text">
+                        <!-- <span class="mauticform-helpmessage">Please enter your contact message.</span> -->
+                        <input id="mauticform_input_brightsoftwarescontact_subject" name="mauticform[subject]" value="" placeholder="Your contact message" class="mauticform-input form-control" type="text">
+                        <span class="mauticform-errormsg" style="display: none;">Please enter the contact subject.</span>
+                    </div>
+
+                    <div id="mauticform_brightsoftwarescontact_f_message" class="mauticform-row mauticform-text mauticform-field-6 mauticform-required col-md-12 text-center" data-validate="f_message" data-validation-type="textarea">
+                        <!-- <span class="mauticform-helpmessage">Please enter your message.</span> -->
+                        <textarea class="form-control" rows=6 placeholder="Message" id="mauticform_input_brightsoftwarescontact_f_message" name="mauticform[f_message]" class="mauticform-textarea"></textarea>
+                        <span class="mauticform-errormsg" style="display: none;">Please enter your message.</span>
+                    </div>
+
+                    <div id="mauticform_brightsoftwarescontact_submit" class="mauticform-row mauticform-button-wrapper mauticform-field-7 col-md-12 text-center">
+                        <div class="mauticform-error" id="mauticform_brightsoftwarescontact_error"></div>
+                        <div class="mauticform-message" id="mauticform_brightsoftwarescontact_message"></div>
+                        
+                        <button type="submit" name="mauticform[submit]" id="mauticform_input_brightsoftwarescontact_submit" value="" class="mauticform-button btn btn-default">Send message</button>
+                    </div>
+                  </div>
+                </div>
+
+                <input type="hidden" name="mauticform[formId]" id="mauticform_brightsoftwarescontact_id" value="5">
+                <input type="hidden" name="mauticform[return]" id="mauticform_brightsoftwarescontact_return" value="">
+                <input type="hidden" name="mauticform[formName]" id="mauticform_brightsoftwarescontact_name" value="brightsoftwarescontact">
+
+                </form>
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+
+
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+  <div class="footer-newsletter">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-12 text-center">
+          <h4>Our Newsletter</h4>
+          <p>We won't spam you, we promise. 😇</p>
+        </div>
+        <div
+          id="mauticform_wrapper_brightsoftwaresnewsletter"
+          class="mauticform_wrapper col-lg-6"
+        >
+          <form
+            autocomplete="false"
+            role="form"
+            method="post"
+            action="https://marketing.bright-softwares.com/form/submit?formId=4"
+            id="mauticform_brightsoftwaresnewsletter"
+            data-mautic-form="brightsoftwaresnewsletter"
+            enctype="multipart/form-data"
+          >
+            <div
+              class="mauticform-error"
+              id="mauticform_brightsoftwaresnewsletter_error"
+            ></div>
+            <div
+              class="mauticform-message"
+              id="mauticform_brightsoftwaresnewsletter_message"
+            ></div>
+            <div class="mauticform-innerform">
+              <div
+                class="mauticform-page-wrapper mauticform-page-1"
+                data-mautic-form-page="1"
+              >
+                <div
+                  id="mauticform_brightsoftwaresnewsletter_email"
+                  data-validate="email"
+                  data-validation-type="email"
+                  class="
+                    mauticform-row
+                    mauticform-email
+                    mauticform-field-1
+                    mauticform-required
+                  "
+                >
+                  <input
+                    id="mauticform_input_brightsoftwaresnewsletter_email"
+                    name="mauticform[email]"
+                    value=""
+                    placeholder="E-mail address"
+                    class="mauticform-input"
+                    type="email"
+                  />
+                  <span class="mauticform-errormsg" style="display: none"
+                    >Please enter your e-mail address</span
+                  >
+                </div>
+
+                <div
+                  id="mauticform_brightsoftwaresnewsletter_submit"
+                  class="
+                    mauticform-row mauticform-button-wrapper mauticform-field-2
+                  "
+                >
+                  <input
+                    type="submit"
+                    name="mauticform[submit]"
+                    id="mauticform_input_brightsoftwaresnewsletter_submit"
+                    value="Subscribe"
+                    class="mauticform-button btn btn-default"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <input
+              type="hidden"
+              name="mauticform[formId]"
+              id="mauticform_brightsoftwaresnewsletter_id"
+              value="4"
+            />
+            <input
+              type="hidden"
+              name="mauticform[return]"
+              id="mauticform_brightsoftwaresnewsletter_return"
+              value=""
+            />
+            <input
+              type="hidden"
+              name="mauticform[formName]"
+              id="mauticform_brightsoftwaresnewsletter_name"
+              value="brightsoftwaresnewsletter"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-top">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-info">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <img src="/assets/flexstart-img/logo.png" alt="" />
+            <span>Bright Softwares</span>
+          </a>
+          <p>
+            We provide solutions to our customers challenges. Our teams based in
+            Paris and Lomé provide high value expertise to engineer the best
+            solutions.
+          </p>
+          <div class="social-links mt-3">
+            
+            <a href="http://twitter.com/brightsoftwares" class="twitter"
+              ><i class="bi bi-twitter"></i
+            ></a>
+            
+            <a href="http://fb.me/bright-softwares" class="facebook"
+              ><i class="bi bi-facebook"></i
+            ></a>
+            
+            <a href="" class="stack-overflow"
+              ><i class="bi bi-stack-overflow"></i
+            ></a>
+            
+            <a href="http://github.com/brightsoftwares" class="github"
+              ><i class="bi bi-github"></i
+            ></a>
+            
+            <a href="" class="instagram"
+              ><i class="bi bi-instagram"></i
+            ></a>
+            
+            <a href="" class="linkedin"
+              ><i class="bi bi-linkedin"></i
+            ></a>
+            
+            <!-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bi bi-instagram bx bxl-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bi bi-linkedin bx bxl-linkedin"></i></a> -->
+          </div>
+
+          <!-- ======= Read page in alternate language ======= -->
+          <div class="flexstart-blog-single mt-3">
+            
+                
+                
+                
+                <footer class="lang-options">
+                    <p>Lire cette page dans une autre langue:</p>
+                    <ul class="nav flex-column">
+                    
+                      
+                        <li class="nav-item">
+                          <a href="/blog/en/docker/how-to-setup-your-local-nodejs-development-environment-using-docker" class="nav-link en" title="View in en">
+                            🇺🇸 English
+                          </a>
+                        </li>
+                      
+                    
+                      
+                    
+                    </ul>
+                </footer>
+                
+            
+          </div>
+    
+
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li>
+              <i class="bi bi-chevron-right"></i> <a href="index.html">Home</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i> <a href="#">About us</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i> <a href="#">Services</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i>
+              <a href="/conditions">Terms of service</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i>
+              <a href="/privacy">Privacy policy</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li>
+              <i class="bi bi-chevron-right"></i> <a href="#">Web solutions</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i> <a href="#">e-commerce</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i>
+              <a href="#">AI powered apps</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i> <a href="#">AI Models</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i>
+              <a href="#">Automated revenue</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i>
+              <a href="#">Cloud infrastructure</a>
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="col-lg-3 col-md-12 footer-contact text-center text-md-start"
+        >
+          <h4>Contact Us</h4>
+          <p>
+            10 rue de Penthièvre <br />
+            75008, Paris<br />
+            France <br /><br />
+            <!--<strong>Phone:</strong> +1 5589 55488 55<br>-->
+            <strong>Email:</strong> hello at bright-softwares dot com<br />
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="copyright">
+      &copy; Copyright
+      <strong><span>Bright Softwares 2021</span></strong
+      >. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexstart-bootstrap-startup-template/ -->
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+  </div>
+</footer>
+<!-- End Footer -->
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"
+  ><i class="bi bi-arrow-up-short"></i
+></a>
+
+<!-- Vendor JS Files -->
+<script src="/assets/flexstart-vendor/bootstrap/js/bootstrap.bundle.js"></script>
+<script src="/assets/flexstart-vendor/aos/aos.js"></script>
+<script src="/assets/flexstart-vendor/php-email-form/validate.js"></script>
+<script src="/assets/flexstart-vendor/swiper/swiper-bundle.min.js"></script>
+<script src="/assets/flexstart-vendor/purecounter/purecounter.js"></script>
+<script src="/assets/flexstart-vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="/assets/flexstart-vendor/glightbox/js/glightbox.min.js"></script>
+
+<!-- Template Main JS File -->
+<script src="/assets/flexstart-js/main.js"></script>
+<script src="/assets/flexstart-js/flexstart_contact.js"></script>
+
+<!-- Search engine -->
+<script src="/assets/js/lunr.js"></script>
+<script src="/assets/js/lunrsearchengine.js"></script>
+<script src="/assets/js/copycode.js"></script>
+
+  </body>
+</html>
