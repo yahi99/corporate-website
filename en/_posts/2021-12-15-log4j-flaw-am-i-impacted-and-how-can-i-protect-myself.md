@@ -18,6 +18,8 @@ Read more at [Internet infrastructure provider Cloudflare said Log4j exploits st
 
 # What devices and applications are at risk? 
 
+![Are my devices impacted by the Log4j flaw](https://res.cloudinary.com/brightsoftwares/image/upload/v1639579714/log4j_detection_nkqvl4.png)
+
 Here are the criteria:
 
 1. Your device must be exposed to the internet.
@@ -63,6 +65,8 @@ Vendors with popular products known to be still vulnerable include Atlassian, Am
 
 
 # What you should do: Discover your devices and patch them
+
+![Steps to the solution](https://res.cloudinary.com/brightsoftwares/image/upload/v1639579711/log4j_solution_zbuf59.png)
 
 
 Part of the challenge will be identifying software harboring the Log4j vulnerability. The Netherland's Nationaal Cyber Security Centrum (NCSC) has posted a [comprehensive and sourced A-Z list on GitHub](https://github.com/NCSC-NL/log4shell/tree/main/software) of all affected products it is aware are either vulnerable, not vulnerable, are under investigation, or where a fix is available. The list of products illustrates how widespread the vulnerability is, spanning cloud services, developer services, security devices, mapping services, and more.    
